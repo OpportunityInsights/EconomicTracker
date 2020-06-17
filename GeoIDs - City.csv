@@ -1,0 +1,54 @@
+cityid,cityname,stateabbrev,statename,statefips,city_pop2019
+1,Los Angeles,CA,California,6,10039107
+2,New York City,NY,New York,36,8336817
+3,Chicago,IL,Illinois,17,5150233
+4,Houston,TX,Texas,48,4713325
+5,Phoenix,AZ,Arizona,4,4485414
+6,San Diego,CA,California,6,3338330
+7,Dallas,TX,Texas,48,2635516
+8,Las Vegas,NV,Nevada,32,2266715
+9,Seattle,WA,Washington,53,2252782
+10,Fort Worth,TX,Texas,48,2102515
+11,San Antonio,TX,Texas,48,2003554
+12,San Jose,CA,California,6,1927852
+13,Detroit,MI,Michigan,26,1749343
+14,Philadelphia,PA,Pennsylvania,42,1584064
+15,Columbus,OH,Ohio,39,1316756
+16,Austin,TX,Texas,48,1273954
+17,Charlotte,NC,North Carolina,37,1110356
+18,Indianapolis,IN,Indiana,18,964582
+19,Jacksonville,FL,Florida,12,957755
+20,Memphis,TN,Tennessee,47,937166
+21,San Francisco,CA,California,6,881549
+22,El Paso,TX,Texas,48,839238
+23,Baltimore,MD,Maryland,24,827370
+24,Portland,OR,Oregon,41,812855
+25,Boston,MA,Massachusetts,25,803907
+26,Oklahoma City,OK,Oklahoma,40,797434
+27,Louisville,KY,Kentucky,21,766757
+28,Denver,CO,Colorado,8,727211
+29,Washington,DC,District of Columbia,11,705749
+30,Nashville,TN,Tennessee,47,694144
+31,Milwaukee,WI,Wisconsin,55,945726
+32,Albuquerque,NM,New Mexico,35,679121
+33,Tucson,AZ,Arizona,4,1047279
+34,Fresno,CA,California,6,999101
+35,Sacramento,CA,California,6,1552058
+36,Atlanta,GA,Georgia,13,1063937
+37,Kansas City,MO,Missouri,29,703011
+38,Miami,FL,Florida,12,2716940
+39,Raleigh,NC,North Carolina,37,1111761
+40,Omaha,NE,Nebraska,31,571327
+41,Oakland,CA,California,6,1671329
+42,Minneapolis,MN,Minnesota,27,1265843
+43,Tampa,FL,Florida,12,1471968
+44,New Orleans,LA,Louisiana,22,390144
+45,Wichita,KS,Kansas,20,516042
+46,Cleveland,OH,Ohio,39,1235072
+47,Bakersfield,CA,California,6,900202
+48,Honolulu,HI,Hawaii,15,974563
+49,Boise,ID,Idaho,16,481587
+50,Salt Lake City,UT,Utah,49,1160437
+51,Virginia Beach,VA,Virginia,51,449974
+52,Colorado Springs,CO,Colorado,8,720403
+53,Tulsa,OK,Oklahoma,40,651552
