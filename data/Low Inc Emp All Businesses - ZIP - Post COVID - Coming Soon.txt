@@ -1,0 +1,2 @@
+ZIP-level data underlying the interactive map at https://opportunityinsights.org/emp-rate-zip-map/
+will be available for download in late June.
