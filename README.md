@@ -133,17 +133,17 @@ Earnings data relative to Jan 4-31 for low-income workers from [Earnin](https://
 
 #### Low Inc Emp All Businesses / Low Inc Emp Small Businesses
 
-Employment data for low-income workers from [Earnin](https://www.earnin.com/) and [Homebase](https://joinhomebase.com/).
+Employment data relative to Jan 4-31 for low-income workers from [Earnin](https://www.earnin.com/) and [Homebase](https://joinhomebase.com/).
 
-- `emp`: Employment level
-- `emp31_33`: Employment level for workers in Sector 31-33: Manufacturing.
-- `emp44_45`: Employment level for workers in Sector 44-45: Retail Trade.
-- `emp48_49`: Employment level for workers in Sector 48-49: Transportation and Warehousing.
-- `emp62`: Employment level for workers in Sector 62: Health Care and Social Assistance.
-- `emp72`: Employment level for workers in Sector 72: Accommodation and Food Services. 
-- `emp_inclow`: Employment level for workers in the bottom quartile of the national income distribution.
-- `emp_incmiddle`: Employment level for workers in the middle two quartiles of the national income distribution.
-- `emp_inchigh`: Employment level for workers in the middle two quartiles of the national income distribution.
+- `emp`: Employment level for low-income workers.
+- `emp31_33`: Employment level for low-income workers in Sector 31-33: Manufacturing.
+- `emp44_45`: Employment level for low-income workers in Sector 44-45: Retail Trade.
+- `emp48_49`: Employment level for low-income workers in Sector 48-49: Transportation and Warehousing.
+- `emp62`: Employment level for low-income workers in Sector 62: Health Care and Social Assistance.
+- `emp72`: Employment level for low-income workers in Sector 72: Accommodation and Food Services. 
+- `emp_inclow`: Employment level for low-income employees working in ZIP codes in the bottom quartile of national median income.
+- `emp_incmiddle`: Employment level for low-income employees working in ZIP codes in the middle two quartile of national median income.
+- `emp_inchigh`: Employment level for low-income employees working in ZIP codes in the top quartile of national median income.
 
 #### UI Claims
 
