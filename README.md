@@ -119,33 +119,18 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 - `gps_workplaces`: Time spent at work places.
 - `gps_residential`: Time spent at residential locations.
 
-#### Low Inc Earnings All Businesses / Low Inc Earnings Small Businesses
+### Employment 
 
-Earnings data relative to Jan 4-31 for low-income workers from [Earnin](https://www.earnin.com/) and [Homebase](https://joinhomebase.com/).
+Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Earnin](https://www.earnin.com/), and [Intuit](https://www.intuit.com/). 
 
-- `pay`: Earnings received by low-income workers.
-- `pay31_33`: Earnings received by low-income workers in Sector 31-33: Manufacturing.
-- `pay44_45`: Earnings received by low-income workers in Sector 44-45: Retail Trade.
-- `pay48_49`: Earnings received by low-income workers in Sector 48-49: Transportation and Warehousing.
-- `pay62`: Earnings received by low-income workers in Sector 62: Health Care and Social Assistance.
-- `pay72`: Earnings received by low-income workers in Sector 72: Accommodation and Food Services. 
-- `pay_inclow`: Earnings received by low-income employees working in ZIP codes in the bottom quartile of national median income.
-- `pay_incmiddle`: Earnings received by low-income employees working in ZIP codes in the middle two quartile of national median income.
-- `pay_inchigh`: Earnings received by low-income employees working in ZIP codes in the top quartile of national median income.
-
-#### Low Inc Emp All Businesses / Low Inc Emp Small Businesses
-
-Employment data relative to Jan 4-31 for low-income workers from [Earnin](https://www.earnin.com/) and [Homebase](https://joinhomebase.com/).
-
-- `emp`: Employment level for low-income workers.
-- `emp31_33`: Employment level for low-income workers in Sector 31-33: Manufacturing.
-- `emp44_45`: Employment level for low-income workers in Sector 44-45: Retail Trade.
-- `emp48_49`: Employment level for low-income workers in Sector 48-49: Transportation and Warehousing.
-- `emp62`: Employment level for low-income workers in Sector 62: Health Care and Social Assistance.
-- `emp72`: Employment level for low-income workers in Sector 72: Accommodation and Food Services. 
-- `emp_inclow`: Employment level for low-income employees working in ZIP codes in the bottom quartile of national median income.
-- `emp_incmiddle`: Employment level for low-income employees working in ZIP codes in the middle two quartile of national median income.
-- `emp_inchigh`: Employment level for low-income employees working in ZIP codes in the top quartile of national median income.
+- `emp_combined`: Employment level for all workers. 
+- `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
+- `emp_combined_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
+- `emp_combined_inchigh`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000). 
+- `emp_combined_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
+- `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
+- `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
+- `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
 
 #### UI Claims
 
