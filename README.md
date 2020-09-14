@@ -10,7 +10,7 @@ Anyone is welcome to use this data; we simply we ask that you attribute our work
 
 # Data Dictionary
 
-### Overview 
+### Overview
 
 Each data source and level of aggregation has a separate CSV, named using the following convention: *Data source* — *Geographic Level of Aggregation* — *Temporal Level of Aggregation*
 
@@ -113,20 +113,20 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 
 - `gps_away_from_home`: Time spent outside of residential locations.
 - `gps_retail_and_recreation`: Time spent at retail and recreation locations.
-- `gps_grocery_and_pharmacy`: Time spent at grocery and pharmacy locations. 
+- `gps_grocery_and_pharmacy`: Time spent at grocery and pharmacy locations.
 - `gps_parks`: Time spent at parks.
 - `gps_transit_stations`: Time at inside transit stations.
 - `gps_workplaces`: Time spent at work places.
 - `gps_residential`: Time spent at residential locations.
 
-### Employment 
+#### Employment
 
-Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Earnin](https://www.earnin.com/), and [Intuit](https://www.intuit.com/). 
+Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Earnin](https://www.earnin.com/), and [Intuit](https://www.intuit.com/).
 
-- `emp_combined`: Employment level for all workers. 
+- `emp_combined`: Employment level for all workers.
 - `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
 - `emp_combined_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
-- `emp_combined_inchigh`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000). 
+- `emp_combined_inchigh`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).
 - `emp_combined_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
 - `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
@@ -136,16 +136,26 @@ Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/),
 
 Unemployment insurance claims data from the [Department of Labor](https://oui.doleta.gov/unemploy/DataDashboard.asp) (national and state-level) and numerous individual state agencies (county-level).
 
-- `initial_claims`: Count of newly requested claims to begin a period of unemployment insurance eligibility.
-- `initial_claims_rate`: Initial claims per 100 people in the 2019 labor force.
-- `total_claims`: Count of initial claims plus the count of continuing claims from people continuing to receive unemployment insurance benefits.
-- `total_claims_rate`: Total claims per 100 people in the 2019 labor force.
+- `initclaims_rate_regular`: Number of initial claims per 100 people in the 2019 labor force, Regular UI only
+  - `initclaims_count_regular`: Count of initial claims, Regular UI only
+- `initclaims_rate_pua`: Number of initial claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
+  - `initclaims_count_pua`: Count of initial claims, PUA (Pandemic Unemployment Assistance) only
+- `initclaims_rate_combined`: Number of initial claims per 100 people in the 2019 labor force, combining Regular and PUA claims
+  - `initclaims_count_combined`: Count of initial claims, combining Regular and PUA claims
+- `contclaims_rate_regular`: Number of continued claims per 100 people in the 2019 labor force, Regular UI only
+  - `contclaims_count_regular`: Count of continued claims, Regular UI only
+- `contclaims_rate_pua`: Number of continued claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
+  - `contclaims_count_pua`: Count of continued claims, PUA (Pandemic Unemployment Assistance) only
+- `contclaims_rate_peuc`: Number of continued claims per 100 people in the 2019 labor force, PEUC (Pandemic Emergency Unemployment Compensation) only
+  - `contclaims_count_peuc`: Count of continued claims, PEUC (Pandemic Emergency Unemployment Compensation) only
+- `contclaims_rate_combined`: Number of continued claims per 100 people in the 2019 labor force, combining Regular, PUA and PEUC claims
+  - `contclaims_count_combined`: Count of continued claims, combining Regular, PUA and PEUC claims
 
 #### Womply Merchants
 
 Small business openings data from [Womply](https://www.womply.com/).
 
-- `merchants_all`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020. 
+- `merchants_all`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.
 - `merchants_inchigh`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.
 - `merchants_incmiddle`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) ZIP codes.
 - `merchants_inclow`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.
