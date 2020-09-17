@@ -189,6 +189,7 @@ Online math learning data from [Zearn](https://www.zearn.org/).
 - `badges_incmiddle`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.
 - `badges_inchigh`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
 
+Note that for every variable listed here, there is a corresponding variable with the prefix `break_` (for example, `break_engagement`). During the period in which schools are on summer or winter break, we records the outcomes in these `break_` variables instead of the usual variables. These numbers are not displayed on the [Economic Tracker](https://tracktherecovery.org) because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.
 
 # Privacy and Integrity Statement
 
