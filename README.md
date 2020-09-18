@@ -91,21 +91,27 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 COVID case rates from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data).
 
 - `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
+    - `case_count`: Confirmed COVID-19 cases, seven day moving average.
 - `new_case_rate`: New confirmed COVID-19 cases per 100,000 people, seven day moving average.
+    - `new_case_count`: New confirmed COVID-19 cases, seven day moving average.
 
 #### COVID Deaths
 
 COVID death rates from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data).
 
 - `death_rate`: Confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+    - `death_count`: Confirmed COVID-19 deaths, seven day moving average.
 - `new_death_rate`: New confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+    - `new_death_count`: New confirmed COVID-19 deaths, seven day moving average.
 
 #### COVID Tests
 
 COVID test rates from the [COVID Tracking Project](https://covidtracking.com/).
 
 - `test_rate`: Confirmed COVID-19 tests per 100,000 people, seven day moving average.
+    - `test_count`: Confirmed COVID-19 tests, seven day moving average.
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
+    - `new_test_count`: New confirmed COVID-19 tests, seven day moving average.
 
 #### Google Mobility
 
