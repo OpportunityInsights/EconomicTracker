@@ -86,28 +86,18 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 - `bg_posts_jzgrp12`: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).
 - `bg_posts_jzgrp345`: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).
 
-#### COVID Cases
+#### COVID
 
-COVID case rates from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data).
+COVID case numbers and death numbers from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data). COVID test numbers from the [COVID Tracking Project](https://covidtracking.com/).
 
 - `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
     - `case_count`: Confirmed COVID-19 cases, seven day moving average.
 - `new_case_rate`: New confirmed COVID-19 cases per 100,000 people, seven day moving average.
     - `new_case_count`: New confirmed COVID-19 cases, seven day moving average.
-
-#### COVID Deaths
-
-COVID death rates from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data).
-
 - `death_rate`: Confirmed COVID-19 deaths per 100,000 people, seven day moving average.
     - `death_count`: Confirmed COVID-19 deaths, seven day moving average.
 - `new_death_rate`: New confirmed COVID-19 deaths per 100,000 people, seven day moving average.
     - `new_death_count`: New confirmed COVID-19 deaths, seven day moving average.
-
-#### COVID Tests
-
-COVID test rates from the [COVID Tracking Project](https://covidtracking.com/).
-
 - `test_rate`: Confirmed COVID-19 tests per 100,000 people, seven day moving average.
     - `test_count`: Confirmed COVID-19 tests, seven day moving average.
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
@@ -127,7 +117,7 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 
 #### Employment
 
-Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Earnin](https://www.earnin.com/), and [Intuit](https://www.intuit.com/).
+Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
 
 - `emp_combined`: Employment level for all workers.
 - `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
@@ -137,6 +127,7 @@ Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/),
 - `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
 - `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
+- `emp_combined_inclow_advance`: Indicator (0 or 1) for whether `emp_combined_inclow` is a forecasted employment level based on timecard data from Kronos.
 
 #### UI Claims
 
@@ -162,25 +153,30 @@ Unemployment insurance claims data from the [Department of Labor](https://oui.do
 Small business openings data from [Womply](https://www.womply.com/).
 
 - `merchants_all`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.
-- `merchants_inchigh`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.
-- `merchants_incmiddle`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) ZIP codes.
-- `merchants_inclow`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.
+- ~~`merchants_inchigh`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.~~
+- ~~`merchants_incmiddle`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) ZIP codes.~~
+- ~~`merchants_inclow`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.~~
 - `merchants_ss40`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in transportation (NAICS supersector 40).
+- `merchants_ss60`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).
 - `merchants_ss65`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).
 - `merchants_ss70`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).
+
+**Note:** County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
 #### Womply Revenue
 
 Small business revenue data from [Womply](https://www.womply.com/).
 
 - `revenue_all`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
-- `revenue_inchigh`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.
-- `revenue_inclow`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.
-- `revenue_incmiddle`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) zipcodes.
+- ~~`revenue_inchigh`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.~~
+- ~~`revenue_incmiddle`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) zipcodes.~~
+- ~~`revenue_inclow`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.~~
 - `revenue_ss40`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in transportation (NAICS supersector 40).
+- `revenue_ss60`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).
 - `revenue_ss65`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).
 - `revenue_ss70`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).
 
+**Note:** County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
 #### Zearn
 
