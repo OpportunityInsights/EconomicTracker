@@ -1,0 +1,13 @@
+cmd: pandoc "{FILE_ACTIVE}" --filter pandoc-citeproc -o "{FILE_ACTIVE_PATH}/$(echo "{FILE_ACTIVE_NAME_BASE}" | cut -f 1 -d '.').pdf"
+name: pdf
+sh: true,
+cwd: '{FILE_ACTIVE_PATH}'
+targets:
+  htmlbody:
+    cmd: pandoc
+    args:
+      - '"{FILE_ACTIVE}"'
+      - --standalone
+      - --filter pandoc-citeproc | awk '/<body>/,/<\/body>/' > "{FILE_ACTIVE_PATH}/$(echo "{FILE_ACTIVE_NAME_BASE}" | cut -f 1 -d '.').md"
+    sh: true,
+    cwd: '{FILE_ACTIVE_PATH}'
