@@ -4,19 +4,20 @@
 Data Dictionary</div></h1>
 <p class="subtitle">last updated on 2020-09-23</p>
 </header>
-<h1 id="overview">Overview</h1>
+<p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.png" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
+<h2 id="overview">Overview</h2>
 <p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> — <em>Geographic Level of Aggregation</em> — <em>Temporal Level of Aggregation</em></p>
 <p>Additionally, we have three files, <strong>GeoIDs – State</strong> and <strong>GeoIDs – County</strong> and <strong>GeoIDs - City</strong>, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, <strong>GeoIDs – County</strong> indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under “Metro” on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).</p>
 <p>A description of the columns in each file follows.</p>
-<h1 id="geoid-file-descriptions">GeoID File Descriptions</h1>
-<h2 id="geoids---state.csv">GeoIDs - State.csv</h2>
+<h2 id="geoid-file-descriptions">GeoID File Descriptions</h2>
+<h3 id="geoids---state.csv">GeoIDs - State.csv</h3>
 <p>Geographic identifier: <code>statefips</code></p>
 <ul>
 <li><code>statename</code>: The name of the state.</li>
 <li><code>stateabbrev</code>: The 2-letter state abbreviation.</li>
 <li><code>state_pop2019</code>: The population of the state in 2019, from Census Bureau estimates.</li>
 </ul>
-<h2 id="geoids---county.csv">GeoIDs - County.csv</h2>
+<h3 id="geoids---county.csv">GeoIDs - County.csv</h3>
 <p>Geographic identifier: <code>countyfips</code></p>
 <ul>
 <li><code>countyname</code>: The name of the county.</li>
@@ -27,7 +28,7 @@ Data Dictionary</div></h1>
 <li><code>stateabbrev</code>: The 2-letter abbreviation of the state in which the county is contained.</li>
 <li><code>county_pop2019</code>: The population of the county in 2019, from Census Bureau estimates.</li>
 </ul>
-<h2 id="geoids---city.csv">GeoIDs - City.csv</h2>
+<h3 id="geoids---city.csv">GeoIDs - City.csv</h3>
 <p>Geographic identifier: <code>cityid</code></p>
 <ul>
 <li><code>cityname</code>: The name of the city.</li>
@@ -36,8 +37,8 @@ Data Dictionary</div></h1>
 <li><code>statefips</code>: The fips code of the state in which the city is contained.</li>
 <li><code>city_pop2019</code>: The population of the city in 2019.</li>
 </ul>
-<h1 id="file-descriptions">File Descriptions</h1>
-<h2 id="affinity">Affinity</h2>
+<h2 id="file-descriptions">File Descriptions</h2>
+<h3 id="affinity">Affinity</h3>
 <p>Spending data from <a href="https://www.affinity.solutions">Affinity Solutions</a>.</p>
 <ul>
 <li><code>spend_all</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
@@ -51,7 +52,7 @@ Data Dictionary</div></h1>
 <li><code>spend_all_incmiddle</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 </ul>
-<h2 id="burning-glass">Burning Glass</h2>
+<h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
 <ul>
 <li><code>bg_posts</code>: Average level of job postings relative to January 4-31 2020.</li>
@@ -68,7 +69,7 @@ Data Dictionary</div></h1>
 <li><code>bg_posts_jzgrp12</code>: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).</li>
 <li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
 </ul>
-<h2 id="covid">COVID</h2>
+<h3 id="covid">COVID</h3>
 <p>COVID case numbers and death numbers from the <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 repository</a>. COVID test numbers from the <a href="https://covidtracking.com/">COVID Tracking Project</a>.</p>
 <ul>
 <li><code>case_rate</code>: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
@@ -96,7 +97,7 @@ Data Dictionary</div></h1>
 <li><code>new_test_count</code>: New confirmed COVID-19 tests, seven day moving average.</li>
 </ul></li>
 </ul>
-<h2 id="google-mobility">Google Mobility</h2>
+<h3 id="google-mobility">Google Mobility</h3>
 <p>GPS mobility data indexed to Jan 3-Feb 6 2020 from <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>.</p>
 <ul>
 <li><code>gps_away_from_home</code>: Time spent outside of residential locations.</li>
@@ -107,7 +108,7 @@ Data Dictionary</div></h1>
 <li><code>gps_workplaces</code>: Time spent at work places.</li>
 <li><code>gps_residential</code>: Time spent at residential locations.</li>
 </ul>
-<h2 id="employment">Employment</h2>
+<h3 id="employment">Employment</h3>
 <p>Employment levels relative to Jan 4-31 from <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a> and <a href="https://www.kronos.com/">Kronos</a>.</p>
 <ul>
 <li><code>emp_combined</code>: Employment level for all workers.</li>
@@ -120,7 +121,7 @@ Data Dictionary</div></h1>
 <li><code>emp_combined_ss70</code>: Employment level for workers in leisure and hospitality (NAICS supersector 70).</li>
 <li><code>emp_combined_inclow_advance</code>: Indicator (0 or 1) for whether <code>emp_combined_inclow</code> is a forecasted employment level based on timecard data from Kronos.</li>
 </ul>
-<h2 id="ui-claims">UI Claims</h2>
+<h3 id="ui-claims">UI Claims</h3>
 <p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>
 <ul>
 <li><code>initclaims_rate_regular</code>: Number of initial claims per 100 people in the 2019 labor force, Regular UI only
@@ -152,7 +153,7 @@ Data Dictionary</div></h1>
 <li><code>contclaims_count_combined</code>: Count of continued claims, combining Regular, PUA and PEUC claims</li>
 </ul></li>
 </ul>
-<h2 id="womply-merchants">Womply Merchants</h2>
+<h3 id="womply-merchants">Womply Merchants</h3>
 <p>Small business openings data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
 <li><code>merchants_all</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.</li>
@@ -165,7 +166,7 @@ Data Dictionary</div></h1>
 <li><code>merchants_ss70</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
 <p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
-<h2 id="womply-revenue">Womply Revenue</h2>
+<h3 id="womply-revenue">Womply Revenue</h3>
 <p>Small business revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
 <li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.</li>
@@ -178,7 +179,7 @@ Data Dictionary</div></h1>
 <li><code>revenue_ss70</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
 <p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
-<h2 id="zearn">Zearn</h2>
+<h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>
 <li><code>engagement</code>: Average level of students using platform relative to January 6-February 21 2020.</li>

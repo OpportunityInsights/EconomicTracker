@@ -13,7 +13,10 @@ documentclass: scrartcl
 
 <a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.png" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a>
 
-# Overview
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+## Overview
 
 Each data source and level of aggregation has a separate CSV, named using the following convention: *Data source* — *Geographic Level of Aggregation* — *Temporal Level of Aggregation*
 
@@ -21,9 +24,9 @@ Additionally, we have three files, **GeoIDs – State** and **GeoIDs – County*
 
 A description of the columns in each file follows.
 
-# GeoID File Descriptions
+## GeoID File Descriptions
 
-## GeoIDs - State.csv
+### GeoIDs - State.csv
 
 Geographic identifier: `statefips`
 
@@ -31,7 +34,7 @@ Geographic identifier: `statefips`
 - `stateabbrev`: The 2-letter state abbreviation.
 - `state_pop2019`: The population of the state in 2019, from Census Bureau estimates.
 
-## GeoIDs - County.csv
+### GeoIDs - County.csv
 
 Geographic identifier: `countyfips`
 
@@ -43,7 +46,7 @@ Geographic identifier: `countyfips`
 - `stateabbrev`: The 2-letter abbreviation of the state in which the county is contained.
 - `county_pop2019`: The population of the county in 2019, from Census Bureau estimates.
 
-## GeoIDs - City.csv
+### GeoIDs - City.csv
 
 Geographic identifier: `cityid`
 
@@ -53,10 +56,10 @@ Geographic identifier: `cityid`
 - `statefips`: The fips code of the state in which the city is contained.
 - `city_pop2019`: The population of the city in 2019.
 
-# File Descriptions
+## File Descriptions
 
 
-## Affinity
+### Affinity
 
 Spending data from [Affinity Solutions](https://www.affinity.solutions).
 
@@ -71,7 +74,7 @@ Spending data from [Affinity Solutions](https://www.affinity.solutions).
 - `spend_all_incmiddle`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 - `spend_all_inclow`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 
-## Burning Glass
+### Burning Glass
 
 Job postings data from [Burning Glass Technologies](https://www.burning-glass.com/).
 
@@ -89,7 +92,7 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 - `bg_posts_jzgrp12`: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).
 - `bg_posts_jzgrp345`: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).
 
-## COVID
+### COVID
 
 COVID case numbers and death numbers from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data). COVID test numbers from the [COVID Tracking Project](https://covidtracking.com/).
 
@@ -106,7 +109,7 @@ COVID case numbers and death numbers from the [New York Times COVID-19 repositor
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
     - `new_test_count`: New confirmed COVID-19 tests, seven day moving average.
 
-## Google Mobility
+### Google Mobility
 
 GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mobility Reports](https://www.google.com/covid19/mobility/).
 
@@ -118,7 +121,7 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 - `gps_workplaces`: Time spent at work places.
 - `gps_residential`: Time spent at residential locations.
 
-## Employment
+### Employment
 
 Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
 
@@ -132,7 +135,7 @@ Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/),
 - `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
 - `emp_combined_inclow_advance`: Indicator (0 or 1) for whether `emp_combined_inclow` is a forecasted employment level based on timecard data from Kronos.
 
-## UI Claims
+### UI Claims
 
 Unemployment insurance claims data from the [Department of Labor](https://oui.doleta.gov/unemploy/DataDashboard.asp) (national and state-level) and numerous individual state agencies (county-level).
 
@@ -151,7 +154,7 @@ Unemployment insurance claims data from the [Department of Labor](https://oui.do
 - `contclaims_rate_combined`: Number of continued claims per 100 people in the 2019 labor force, combining Regular, PUA and PEUC claims
   - `contclaims_count_combined`: Count of continued claims, combining Regular, PUA and PEUC claims
 
-## Womply Merchants
+### Womply Merchants
 
 Small business openings data from [Womply](https://www.womply.com/).
 
@@ -166,7 +169,7 @@ Small business openings data from [Womply](https://www.womply.com/).
 
 **Note:** County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
-## Womply Revenue
+### Womply Revenue
 
 Small business revenue data from [Womply](https://www.womply.com/).
 
@@ -181,7 +184,7 @@ Small business revenue data from [Womply](https://www.womply.com/).
 
 **Note:** County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
-## Zearn
+### Zearn
 
 Online math learning data from [Zearn](https://www.zearn.org/).
 
