@@ -1,0 +1,194 @@
+<body>
+<header id="title-block-header">
+<h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
+Data Dictionary</div></h1>
+<p class="subtitle">last updated on 2020-09-23</p>
+</header>
+<h1 id="overview">Overview</h1>
+<p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> — <em>Geographic Level of Aggregation</em> — <em>Temporal Level of Aggregation</em></p>
+<p>Additionally, we have three files, <strong>GeoIDs – State</strong> and <strong>GeoIDs – County</strong> and <strong>GeoIDs - City</strong>, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, <strong>GeoIDs – County</strong> indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under “Metro” on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).</p>
+<p>A description of the columns in each file follows.</p>
+<h1 id="geoid-file-descriptions">GeoID File Descriptions</h1>
+<h2 id="geoids---state.csv">GeoIDs - State.csv</h2>
+<p>Geographic identifier: <code>statefips</code></p>
+<ul>
+<li><code>statename</code>: The name of the state.</li>
+<li><code>stateabbrev</code>: The 2-letter state abbreviation.</li>
+<li><code>state_pop2019</code>: The population of the state in 2019, from Census Bureau estimates.</li>
+</ul>
+<h2 id="geoids---county.csv">GeoIDs - County.csv</h2>
+<p>Geographic identifier: <code>countyfips</code></p>
+<ul>
+<li><code>countyname</code>: The name of the county.</li>
+<li><code>cz</code>: The numeric identifier of the commuting zone (CZ) in which the county is contained.</li>
+<li><code>czname</code>: The name of the commuting zone (CZ) in which the county is contained.</li>
+<li><code>statename</code>: The name of the state in which the county is contained.</li>
+<li><code>statefips</code>: The fips code of the state in which the county is contained.</li>
+<li><code>stateabbrev</code>: The 2-letter abbreviation of the state in which the county is contained.</li>
+<li><code>county_pop2019</code>: The population of the county in 2019, from Census Bureau estimates.</li>
+</ul>
+<h2 id="geoids---city.csv">GeoIDs - City.csv</h2>
+<p>Geographic identifier: <code>cityid</code></p>
+<ul>
+<li><code>cityname</code>: The name of the city.</li>
+<li><code>stateabbrev</code>: The 2-letter abbreviation of the state in which the city is contained.</li>
+<li><code>statename</code>: The name of the state in which the city is contained.</li>
+<li><code>statefips</code>: The fips code of the state in which the city is contained.</li>
+<li><code>city_pop2019</code>: The population of the city in 2019.</li>
+</ul>
+<h1 id="file-descriptions">File Descriptions</h1>
+<h2 id="affinity">Affinity</h2>
+<p>Spending data from <a href="https://www.affinity.solutions">Affinity Solutions</a>.</p>
+<ul>
+<li><code>spend_all</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_acf</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average, 7 day moving average.</li>
+<li><code>spend_aer</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.</li>
+<li><code>spend_apg</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.</li>
+<li><code>spend_grf</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.</li>
+<li><code>spend_hcs</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in health care and social assistance (HCS) MCCs, 7 day moving average.</li>
+<li><code>spend_tws</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in transportation and warehousing (TWS) MCCs, 7 day moving average.</li>
+<li><code>spend_all_inchigh</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_incmiddle</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+</ul>
+<h2 id="burning-glass">Burning Glass</h2>
+<p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
+<ul>
+<li><code>bg_posts</code>: Average level of job postings relative to January 4-31 2020.</li>
+<li><code>bg_posts_ss30</code>: Average level of job postings relative to January 4-31 2020 in manufacturing (NAICS supersector 30).</li>
+<li><code>bg_posts_ss55</code>: Average level of job postings relative to January 4-31 2020 in financial activities (NAICS supersector 55).</li>
+<li><code>bg_posts_ss60</code>: Average level of job postings relative to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
+<li><code>bg_posts_ss65</code>: Average level of job postings relative to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
+<li><code>bg_posts_ss70</code>: Average level of job postings relative to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
+<li><code>bg_posts_jz1</code>: Average level of job postings relative to January 4-31 2020 requiring little/no preparation (ONET jobzone level 1).</li>
+<li><code>bg_posts_jz2</code>: Average level of job postings relative to January 4-31 2020 requiring some preparation (ONET jobzone level 2).</li>
+<li><code>bg_posts_jz3</code>: Average level of job postings relative to January 4-31 2020 requiring medium preparation (ONET jobzone level 3).</li>
+<li><code>bg_posts_jz4</code>: Average level of job postings relative to January 4-31 2020 requiring considerable preparation (ONET jobzone level 4).</li>
+<li><code>bg_posts_jz5</code>: Average level of job postings relative to January 4-31 2020 requiring extensive preparation (ONET jobzone level 5).</li>
+<li><code>bg_posts_jzgrp12</code>: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).</li>
+<li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
+</ul>
+<h2 id="covid">COVID</h2>
+<p>COVID case numbers and death numbers from the <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 repository</a>. COVID test numbers from the <a href="https://covidtracking.com/">COVID Tracking Project</a>.</p>
+<ul>
+<li><code>case_rate</code>: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
+<ul>
+<li><code>case_count</code>: Confirmed COVID-19 cases, seven day moving average.</li>
+</ul></li>
+<li><code>new_case_rate</code>: New confirmed COVID-19 cases per 100,000 people, seven day moving average.
+<ul>
+<li><code>new_case_count</code>: New confirmed COVID-19 cases, seven day moving average.</li>
+</ul></li>
+<li><code>death_rate</code>: Confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+<ul>
+<li><code>death_count</code>: Confirmed COVID-19 deaths, seven day moving average.</li>
+</ul></li>
+<li><code>new_death_rate</code>: New confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+<ul>
+<li><code>new_death_count</code>: New confirmed COVID-19 deaths, seven day moving average.</li>
+</ul></li>
+<li><code>test_rate</code>: Confirmed COVID-19 tests per 100,000 people, seven day moving average.
+<ul>
+<li><code>test_count</code>: Confirmed COVID-19 tests, seven day moving average.</li>
+</ul></li>
+<li><code>new_test_rate</code>: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
+<ul>
+<li><code>new_test_count</code>: New confirmed COVID-19 tests, seven day moving average.</li>
+</ul></li>
+</ul>
+<h2 id="google-mobility">Google Mobility</h2>
+<p>GPS mobility data indexed to Jan 3-Feb 6 2020 from <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>.</p>
+<ul>
+<li><code>gps_away_from_home</code>: Time spent outside of residential locations.</li>
+<li><code>gps_retail_and_recreation</code>: Time spent at retail and recreation locations.</li>
+<li><code>gps_grocery_and_pharmacy</code>: Time spent at grocery and pharmacy locations.</li>
+<li><code>gps_parks</code>: Time spent at parks.</li>
+<li><code>gps_transit_stations</code>: Time at inside transit stations.</li>
+<li><code>gps_workplaces</code>: Time spent at work places.</li>
+<li><code>gps_residential</code>: Time spent at residential locations.</li>
+</ul>
+<h2 id="employment">Employment</h2>
+<p>Employment levels relative to Jan 4-31 from <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a> and <a href="https://www.kronos.com/">Kronos</a>.</p>
+<ul>
+<li><code>emp_combined</code>: Employment level for all workers.</li>
+<li><code>emp_combined_inclow</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
+<li><code>emp_combined_incmiddle</code>: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
+<li><code>emp_combined_inchigh</code>: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).</li>
+<li><code>emp_combined_ss40</code>: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).</li>
+<li><code>emp_combined_ss60</code>: Employment level for workers in professional and business services (NAICS supersector 60).</li>
+<li><code>emp_combined_ss65</code>: Employment level for workers in education and health services (NAICS supersector 65).</li>
+<li><code>emp_combined_ss70</code>: Employment level for workers in leisure and hospitality (NAICS supersector 70).</li>
+<li><code>emp_combined_inclow_advance</code>: Indicator (0 or 1) for whether <code>emp_combined_inclow</code> is a forecasted employment level based on timecard data from Kronos.</li>
+</ul>
+<h2 id="ui-claims">UI Claims</h2>
+<p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>
+<ul>
+<li><code>initclaims_rate_regular</code>: Number of initial claims per 100 people in the 2019 labor force, Regular UI only
+<ul>
+<li><code>initclaims_count_regular</code>: Count of initial claims, Regular UI only</li>
+</ul></li>
+<li><code>initclaims_rate_pua</code>: Number of initial claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
+<ul>
+<li><code>initclaims_count_pua</code>: Count of initial claims, PUA (Pandemic Unemployment Assistance) only</li>
+</ul></li>
+<li><code>initclaims_rate_combined</code>: Number of initial claims per 100 people in the 2019 labor force, combining Regular and PUA claims
+<ul>
+<li><code>initclaims_count_combined</code>: Count of initial claims, combining Regular and PUA claims</li>
+</ul></li>
+<li><code>contclaims_rate_regular</code>: Number of continued claims per 100 people in the 2019 labor force, Regular UI only
+<ul>
+<li><code>contclaims_count_regular</code>: Count of continued claims, Regular UI only</li>
+</ul></li>
+<li><code>contclaims_rate_pua</code>: Number of continued claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
+<ul>
+<li><code>contclaims_count_pua</code>: Count of continued claims, PUA (Pandemic Unemployment Assistance) only</li>
+</ul></li>
+<li><code>contclaims_rate_peuc</code>: Number of continued claims per 100 people in the 2019 labor force, PEUC (Pandemic Emergency Unemployment Compensation) only
+<ul>
+<li><code>contclaims_count_peuc</code>: Count of continued claims, PEUC (Pandemic Emergency Unemployment Compensation) only</li>
+</ul></li>
+<li><code>contclaims_rate_combined</code>: Number of continued claims per 100 people in the 2019 labor force, combining Regular, PUA and PEUC claims
+<ul>
+<li><code>contclaims_count_combined</code>: Count of continued claims, combining Regular, PUA and PEUC claims</li>
+</ul></li>
+</ul>
+<h2 id="womply-merchants">Womply Merchants</h2>
+<p>Small business openings data from <a href="https://www.womply.com/">Womply</a>.</p>
+<ul>
+<li><code>merchants_all</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.</li>
+<li><del><code>merchants_inchigh</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.</del></li>
+<li><del><code>merchants_incmiddle</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) ZIP codes.</del></li>
+<li><del><code>merchants_inclow</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.</del></li>
+<li><code>merchants_ss40</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in transportation (NAICS supersector 40).</li>
+<li><code>merchants_ss60</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
+<li><code>merchants_ss65</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
+<li><code>merchants_ss70</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
+</ul>
+<p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
+<h2 id="womply-revenue">Womply Revenue</h2>
+<p>Small business revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
+<ul>
+<li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.</li>
+<li><del><code>revenue_inchigh</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.</del></li>
+<li><del><code>revenue_incmiddle</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) zipcodes.</del></li>
+<li><del><code>revenue_inclow</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.</del></li>
+<li><code>revenue_ss40</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in transportation (NAICS supersector 40).</li>
+<li><code>revenue_ss60</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
+<li><code>revenue_ss65</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
+<li><code>revenue_ss70</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
+</ul>
+<p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
+<h2 id="zearn">Zearn</h2>
+<p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
+<ul>
+<li><code>engagement</code>: Average level of students using platform relative to January 6-February 21 2020.</li>
+<li><code>engagement_inclow</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
+<li><code>engagement_incmiddle</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
+<li><code>engagement_inchigh</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.</li>
+<li><code>badges</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020.</li>
+<li><code>badges_inclow</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
+<li><code>badges_incmiddle</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
+<li><code>badges_inchigh</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.</li>
+</ul>
+<p>Note that for every variable listed here, there is a corresponding variable with the prefix <code>break_</code> (for example, <code>break_engagement</code>). During the period in which schools are on summer or winter break, we records the outcomes in these <code>break_</code> variables instead of the usual variables. These numbers are not displayed on the <a href="https://tracktherecovery.org">Economic Tracker</a> because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.</p>
+</body>
