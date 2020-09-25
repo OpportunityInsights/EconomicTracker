@@ -165,7 +165,7 @@ Data Dictionary</div></h1>
 <li><code>merchants_ss65</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
 <li><code>merchants_ss70</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
-<p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
+<p><strong>Note:</strong> County-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h3 id="womply-revenue">Womply Revenue</h3>
 <p>Small business revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
@@ -178,7 +178,7 @@ Data Dictionary</div></h1>
 <li><code>revenue_ss65</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
 <li><code>revenue_ss70</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
-<p><strong>Note:</strong> County-level and city-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
+<p><strong>Note:</strong> County-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>
