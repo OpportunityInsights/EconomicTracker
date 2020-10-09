@@ -36,7 +36,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Date Range:** January 13th until the most recent date available.
 
-**Data Frequency:** Data is daily through July 4th 2020, and presented as a 7 day lookback moving average. Beginning July 5th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.
+**Data Frequency:** Data is daily through September 12th 2020, and presented as a 7 day lookback moving average. Beginning July 13th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.
 
 **Index Period:** January 4th - January 31st
 

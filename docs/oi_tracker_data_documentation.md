@@ -19,7 +19,7 @@ Data Documentation</div></h1>
 <p><strong>Data Source:</strong> <a href="https://www.affinity.solutions/dataforgood">Affinity Solutions</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 13th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong> Data is daily through July 4th 2020, and presented as a 7 day lookback moving average. Beginning July 5th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.</p>
+<p><strong>Data Frequency:</strong> Data is daily through September 12th 2020, and presented as a 7 day lookback moving average. Beginning July 13th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.</p>
 <p><strong>Index Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
