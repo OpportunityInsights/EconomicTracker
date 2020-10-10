@@ -4,7 +4,7 @@
 Data Dictionary</div></h1>
 <p class="subtitle">last updated on 2020-09-23</p>
 </header>
-<p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.png" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
+<p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
 <p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> — <em>Geographic Level of Aggregation</em> — <em>Temporal Level of Aggregation</em></p>
 <p>Additionally, we have three files, <strong>GeoIDs – State</strong> and <strong>GeoIDs – County</strong> and <strong>GeoIDs - City</strong>, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, <strong>GeoIDs – County</strong> indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under “Metro” on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).</p>

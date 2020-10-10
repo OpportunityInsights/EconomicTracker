@@ -18,7 +18,7 @@ The data dictionary lists each data file and variable available for public use, 
 
 [<img src="docs/GitHub-Mark-64px.png" alt="GH Viewer" width="40" style="display:inline;"/> View Data Dictionary on Github](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md)
 
-[<img src="docs/pdf-icon.png" alt="PDF Download" width="40" style="display:inline;"/> Download Data Dictionary as PDF](https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf)
+[<img src="docs/pdf-icon.svg" alt="PDF Download" width="40" style="display:inline;"/> Download Data Dictionary as PDF](https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf)
 
 ### Data Documentation
 
@@ -26,13 +26,13 @@ The data documentation provides an overview of the data sources and processing a
 
 [<img src="docs/GitHub-Mark-64px.png" alt="GH Viewer" width="40" style="display:inline;"/> View Data Documentation on Github](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md)
 
-[<img src="docs/pdf-icon.png" alt="PDF Download" width="40" style="display:inline;"/> Download Data Documentation as PDF](https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf)
+[<img src="docs/pdf-icon.svg" alt="PDF Download" width="40" style="display:inline;"/> Download Data Documentation as PDF](https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf)
 
 ### Academic Paper with detailed methodology
 
 The academic paper provides a detailed description of the data sources and processing methodology, along with economic analysis.
 
-[<img src="docs/pdf-icon.png" alt="PDF Download" width="40" style="display:inline;"/> Download Academic Paper as PDF](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)
+[<img src="docs/pdf-icon.svg" alt="PDF Download" width="40" style="display:inline;"/> Download Academic Paper as PDF](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)
 
 # Privacy and Integrity Statement
 
