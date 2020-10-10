@@ -1,3 +1,5 @@
+### [<img src="docs/download-icon.svg" alt="Download Link" width="40" style="display:inline;"/> Download ZIP file containing all OI Economic Tracker data](https://github.com/OpportunityInsights/EconomicTracker/archive/main.zip)
+
 # Opportunity Insights Economic Tracker Data Downloads
 
 The Opportunity Insights Economic Tracker (https://tracktherecovery.org) combines anonymized data from leading private companies – from credit card processors to payroll firms – to provide a real-time picture of indicators such as employment rates, consumer spending, and job postings across counties, industries, and income groups.
