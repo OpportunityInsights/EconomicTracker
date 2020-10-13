@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-09-23</p>
+<p class="subtitle">last updated on 2020-10-13</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -19,7 +19,7 @@ Data Documentation</div></h1>
 <p><strong>Data Source:</strong> <a href="https://www.affinity.solutions/dataforgood">Affinity Solutions</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 13th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong> Data is daily through September 12th 2020, and presented as a 7 day lookback moving average. Beginning July 13th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.</p>
+<p><strong>Data Frequency:</strong> Data is daily until the final two weeks of the series, and the daily data is presented as a 7 day lookback moving average. For the final two weeks of the series, the data is weekly and presented as weekly data points.</p>
 <p><strong>Index Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
@@ -133,6 +133,7 @@ Data Documentation</div></h1>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
+<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of a county’s total employment at any point in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Wage</em>.</p>
@@ -280,7 +281,7 @@ Data Documentation</div></h1>
 <li>Grocery</li>
 <li>Workplace</li>
 </ul>
-<p><strong>Notes:</strong> Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain breakdowns.</p>
+<p><strong>Notes:</strong> Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain finer breakdowns while the release of others can be delayed while under review. When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.</p>
 <p>Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong>.</p>
 <!--
 ## Policy Milestones  

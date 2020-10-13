@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-09-23
+subtitle: last updated on 2020-10-13
 documentclass: scrartcl
 ---  
 
@@ -36,7 +36,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Date Range:** January 13th until the most recent date available.
 
-**Data Frequency:** Data is daily through September 12th 2020, and presented as a 7 day lookback moving average. Beginning July 13th 2020, the data is weekly and presented as weekly data points with a linear interpolation between each weekly point.
+**Data Frequency:** Data is daily until the final two weeks of the series, and the daily data is presented as a 7 day lookback moving average. For the final two weeks of the series, the data is weekly and presented as weekly data points.
 
 **Index Period:** January 4th - January 31st
 
@@ -195,7 +195,9 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
-**Geographies:** National, State, County, Metro  
+**Geographies:** National, State, County, Metro
+
+To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of a county's total employment at any point in the current year. For more details on the specifics of these thresholds see the appendix of the [accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 **Breakdowns:**  
 
@@ -401,7 +403,7 @@ Note that testing counts and rates are only available at the national and state 
 * Grocery
 * Workplace
 
-**Notes:** Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain breakdowns.
+**Notes:** Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain finer breakdowns while the release of others can be delayed while under review. When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.
 
 Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the **[accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)**.
 
