@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-10-13
+subtitle: last updated on 2020-10-19
 documentclass: scrartcl
 ---  
 
@@ -55,13 +55,13 @@ Please note that both the data and this data documentation is updated regularly 
   - Resturants and Hotels
   - Transportation
 
-* *By Consumer Zip Code Income*. Transactions are linked to zip codes where the consumer lives and zip codes are classified into income cateogories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
+* *By Consumer Zip Code Income*. Transactions are linked to zip codes where the consumer lives and zip codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
 
   - High Income (median household income greater than $78,000 per year)
   - Middle Income (median household income between $46,000 per year and $78,000 per year)
   - Low Income (median household income less than $46,000 per year)
 
-**Notes:** The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. We generally correct for this using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. However, at the county-level when are there more than one structurual breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Additionally Affinity solutions suppresses any cut of the data with fewer than five transactions.    
+**Notes:** The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Small Business Revenue  
 
@@ -97,7 +97,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Notes:**
 
-Small businesses are defined as those with annual revenue below the Small Business Adminstration's <a href = "https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
+Small businesses are defined as those with annual revenue below the Small Business Administration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
 
 County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
@@ -138,7 +138,7 @@ the indexing period (January 4-31). Additionally we omit spending categories for
   - Low Income (median household income less than $46,000 per year)
 
 
-**Notes:** Small businesses are defined as those with annual revenue below the Small Business Adminstration's <a href = "https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
+**Notes:** Small businesses are defined as those with annual revenue below the Small Business Adminstration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
 
 County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
@@ -241,7 +241,7 @@ The county-level series is only available for states whose respective state agen
 - Iowa: State of Iowa
 - Kentucky: Kentucky Center for Statistics
 - Maryland: Maryland Department of Labor
-- Massachusetts: Masschusetts Department of Unemployment Assistance
+- Massachusetts: Massachusetts Department of Unemployment Assistance
 - Missouri: State of Missouri
 - Nebraska: NEworks (Government of Nebraska)
 - Nevada: Nevada Department of Employment; Training and Rehabilitation

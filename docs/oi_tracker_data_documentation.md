@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-10-13</p>
+<p class="subtitle">last updated on 2020-10-19</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -34,14 +34,14 @@ Data Documentation</div></h1>
 <li>Resturants and Hotels</li>
 <li>Transportation</li>
 </ul></li>
-<li><p><em>By Consumer Zip Code Income</em>. Transactions are linked to zip codes where the consumer lives and zip codes are classified into income cateogories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
+<li><p><em>By Consumer Zip Code Income</em>. Transactions are linked to zip codes where the consumer lives and zip codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>
 <li>High Income (median household income greater than $78,000 per year)</li>
 <li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. We generally correct for this using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. However, at the county-level when are there more than one structurual breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Additionally Affinity solutions suppresses any cut of the data with fewer than five transactions.</p>
+<p><strong>Notes:</strong> The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
@@ -67,7 +67,7 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Notes:</strong></p>
-<p>Small businesses are defined as those with annual revenue below the Small Business Adminstration’s <a href = "https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p>Small businesses are defined as those with annual revenue below the Small Business Administration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="small-businesses-open">Small Businesses Open</h2>
 <p><strong>Summary:</strong> Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.</p>
@@ -94,7 +94,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Adminstration’s <a href = "https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Adminstration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
@@ -172,7 +172,7 @@ Data Documentation</div></h1>
 <li>Iowa: State of Iowa</li>
 <li>Kentucky: Kentucky Center for Statistics</li>
 <li>Maryland: Maryland Department of Labor</li>
-<li>Massachusetts: Masschusetts Department of Unemployment Assistance</li>
+<li>Massachusetts: Massachusetts Department of Unemployment Assistance</li>
 <li>Missouri: State of Missouri</li>
 <li>Nebraska: NEworks (Government of Nebraska)</li>
 <li>Nevada: Nevada Department of Employment; Training and Rehabilitation</li>
@@ -283,15 +283,9 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Notes:</strong> Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain finer breakdowns while the release of others can be delayed while under review. When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.</p>
 <p>Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong>.</p>
-<!--
-## Policy Milestones  
-
-**Summary:** Key policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.   
-
-**Data Source(s):** New York Times, MCH Strategic Data, the Insitute for Health Metrics and Evaluation, and local news and government sources.
-
-**Update Frequency:** Monthly  
-
-**Geographies:** National, State  
--->
+<h2 id="policy-milestones">Policy Milestones</h2>
+<p><strong>Summary:</strong> Key policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.</p>
+<p><strong>Data Source(s):</strong> New York Times, MCH Strategic Data, the Institute for Health Metrics and Evaluation, and local news and government sources.</p>
+<p><strong>Update Frequency:</strong> Monthly</p>
+<p><strong>Geographies:</strong> National, State</p>
 </body>
