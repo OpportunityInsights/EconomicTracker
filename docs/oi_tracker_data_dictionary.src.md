@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2020-09-23
+subtitle: last updated on 2020-10-25
 documentclass: scrartcl
 ---  
 
@@ -21,6 +21,8 @@ documentclass: scrartcl
 Each data source and level of aggregation has a separate CSV, named using the following convention: *Data source* — *Geographic Level of Aggregation* — *Temporal Level of Aggregation*
 
 Additionally, we have three files, **GeoIDs – State** and **GeoIDs – County** and **GeoIDs - City**, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, **GeoIDs – County** indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under "Metro" on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).
+
+Finally, we have gathered a collection of key state-level policy dates relevant for changes in other series trends and values. These are contained in the **Policy Milestones - State** file.
 
 A description of the columns in each file follows.
 
@@ -56,8 +58,7 @@ Geographic identifier: `cityid`
 - `statefips`: The fips code of the state in which the city is contained.
 - `city_pop2019`: The population of the city in 2019.
 
-## File Descriptions
-
+## Data File Descriptions
 
 ### Affinity
 
@@ -198,3 +199,19 @@ Online math learning data from [Zearn](https://www.zearn.org/).
 - `badges_inchigh`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
 
 Note that for every variable listed here, there is a corresponding variable with the prefix `break_` (for example, `break_engagement`). During the period in which schools are on summer or winter break, we records the outcomes in these `break_` variables instead of the usual variables. These numbers are not displayed on the [Economic Tracker](https://tracktherecovery.org) because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.
+
+## Policy Milestones
+
+Key state-level policy dates relevant for changes in other series trends and values.
+
+- `statename`: The name of the U.S. state
+- `statefips`: 2-digit FIPS code of the U.S. state
+- `schools_closed`: The date at which the state ordered all public K-12 schools statewide to physically close
+- `nonessential_biz_closed`: The date on which the state government ordered all nonessential businesses to close
+- `stayathome_start`: The date on which the state government told residents to stay home, save for excepted activities
+- `regional_stayathome_end`: The date on which the state’s order telling residents to stay home expired, was lifted, or relaxed for one or more regions in the state
+- `statewide_stayathome_end`: The date on which the state’s order telling residents to stay home expired, was lifted, or changed from mandatory to recommended. Either for the entire state all at once, or for the very last locality with a remaining stay at home order.
+- `regional_biz_opened`: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing) for one or more regions in the state
+- `statewide_biz_opened`: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing). Either for the entire state all at once, or for the very last locality which hadn’t yet reopened any businesses.
+- `regional_biz_reclosed`: The date on which the state began reclosing businesses (of any sector) that had been reopened previously for one or more regions in the state
+- `statewide_biz_reclosed`: The date on which the state began reclosing businesses (of any sector) that had been reopened previously. Either for the entire state all at once, or for the very last locality which hadn’t yet reclosed any businesses.

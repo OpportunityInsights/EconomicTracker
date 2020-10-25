@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-10-19
+subtitle: last updated on 2020-10-25
 documentclass: scrartcl
 ---  
 
@@ -407,14 +407,12 @@ Note that testing counts and rates are only available at the national and state 
 
 Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the **[accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)**.
 
-<!--
-## Policy Milestones  
-
-**Summary:** Key policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.   
-
-**Data Source(s):** New York Times, MCH Strategic Data, the Insitute for Health Metrics and Evaluation, and local news and government sources.
-
-**Update Frequency:** Monthly  
-
-**Geographies:** National, State  
--->
+## Policy Milestones  
+
+**Summary:** Key state-level policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.   
+
+**Data Source(s):** New York Times, MCH Strategic Data, the Institute for Health Metrics and Evaluation, and local news and government sources.
+
+**Update Frequency:** Monthly  
+
+**Geographies:** State
