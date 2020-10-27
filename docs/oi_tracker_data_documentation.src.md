@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-10-25
+subtitle: last updated on 2020-10-26
 documentclass: scrartcl
 ---  
 
@@ -197,7 +197,7 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Geographies:** National, State, County, Metro
 
-To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of a county's total employment at any point in the current year. For more details on the specifics of these thresholds see the appendix of the [accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
+To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile's total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the [accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 **Breakdowns:**  
 
@@ -315,9 +315,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
   - Low Income (median household income less than $46,000 per year)
 
 
-**Notes:** We exclude schools who did not use Zearn Math for at least one week
-from January 6 to February 7 and schools that never have more than five students using Zearn
-Math during our analysis period.
+**Notes:** We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
 ## Student Progress in Math
 
@@ -347,9 +345,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
   - Middle Income (median household income between $46,000 per year and $78,000 per year)
   - Low Income (median household income less than $46,000 per year)
 
-**Notes:** We exclude schools who did not use Zearn Math for at least one week
-from January 6 to February 7 and schools that never have more than five students using Zearn
-Math during our analysis period.
+**Notes:** We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
 ## COVID-19 Cases, Deaths and Tests
 

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-10-25</p>
+<p class="subtitle">last updated on 2020-10-26</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -133,7 +133,7 @@ Data Documentation</div></h1>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of a county’s total employment at any point in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
+<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile’s total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Wage</em>.</p>
@@ -227,7 +227,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> We exclude schools who did not use Zearn Math for at least one week from January 6 to February 7 and schools that never have more than five students using Zearn Math during our analysis period.</p>
+<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="student-progress-in-math">Student Progress in Math</h2>
 <p><strong>Summary:</strong> Number of lessons completed by students each week using Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
@@ -247,7 +247,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> We exclude schools who did not use Zearn Math for at least one week from January 6 to February 7 and schools that never have more than five students using Zearn Math during our analysis period.</p>
+<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="covid-19-cases-deaths-and-tests">COVID-19 Cases, Deaths and Tests</h2>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.</p>
 <p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 Data</a>, <a href="https://covidtracking.com/">The COVID Tracking Project</a>.</p>
