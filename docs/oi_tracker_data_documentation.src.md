@@ -7,13 +7,13 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-10-26
+subtitle: last updated on 2020-10-28
 documentclass: scrartcl
 ---  
 
 <a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a>  
 
-# Overview  
+# Overview
 
 This document provides an overview of the sources and processing applied to each data series within the [Opportunity Insights Economic Tracker](https://tracktherecovery.org). The documentation is organized sequentially by series in the tracker, then broken down into categories of information describing each series, its source data, and our processing steps.
 
@@ -61,7 +61,7 @@ Please note that both the data and this data documentation is updated regularly 
   - Middle Income (median household income between $46,000 per year and $78,000 per year)
   - Low Income (median household income less than $46,000 per year)
 
-**Notes:** The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
+**Notes:** The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. In order to reliably identify and correct these breaks, we require at least 3 weeks of data. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Small Business Revenue  
 
@@ -214,12 +214,11 @@ To prevent the introduction of new Paychex clients from artificially creating no
   - Retail and Transportation
   - Leisure and Hospitality
 
-
 **Notes:**
 
 * For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.
 
-* We forecast the national trend in employment for the Low Income subgroup past the most recent data from Paychex and Earnin using data from Kronos. The Kronos timestamp data tracks closely with low-income employment constructed from payroll data, but for payroll data there is a lag in reporting until the end of a payroll cycle. To get information closer to real time we use the Kronos timestamp data, which is reported more frequently with a shorter lag. We predict low-income employment using a distributed lag model, regressing a given week's low income employment measure on the corresponding week's and 3 previous lagged weeks' Kronos timestamp measure.
+* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)
 
 ## Unemployment Claims
 
