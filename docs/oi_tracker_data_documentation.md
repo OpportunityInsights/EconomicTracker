@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-10-28</p>
+<p class="subtitle">last updated on 2020-11-03</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -209,7 +209,7 @@ Data Documentation</div></h1>
 <p><strong>Notes:</strong> Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.</p>
 <p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). “Combined Claims” are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
 <h2 id="online-math-participation">Online Math Participation</h2>
-<p><strong>Summary:</strong> Number of students using an online math curriculum, Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.</p>
+<p><strong>Summary:</strong> Number of students using Zearn Math, a curriculum from the non-profit Zearn, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
 <p><strong>Update Frequency:</strong> Weekly, except during summer and winter school breaks.</p>
 <p><strong>Date Range:</strong> January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.</p>
@@ -227,7 +227,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
+<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.</p>
 <h2 id="student-progress-in-math">Student Progress in Math</h2>
 <p><strong>Summary:</strong> Number of lessons completed by students each week using Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>

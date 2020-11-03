@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-10-28
+subtitle: last updated on 2020-11-03
 documentclass: scrartcl
 ---  
 
@@ -286,7 +286,7 @@ Under the CARES Act, all states provide 13 additional weeks of federally funded 
 
 ## Online Math Participation  
 
-**Summary:** Number of students using an online math curriculum, Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.
+**Summary:** Number of students using Zearn Math, a curriculum from the non-profit Zearn, among schools that already used Zearn Math in course instruction before the pandemic.
 
 **Data Source:** [Zearn](https://about.zearn.org)  
 
@@ -314,7 +314,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
   - Low Income (median household income less than $46,000 per year)
 
 
-**Notes:** We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
+**Notes:** We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.
 
 ## Student Progress in Math
 
