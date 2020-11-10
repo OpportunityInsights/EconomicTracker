@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-11-03
+subtitle: last updated on 2020-11-09
 documentclass: scrartcl
 ---  
 
@@ -299,7 +299,6 @@ Under the CARES Act, all states provide 13 additional weeks of federally funded 
 **Indexing Period:** January 6th - February 7th
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
-
 
 **Geographies:** National, States, County, Metro
 
@@ -307,12 +306,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Breakdowns:**  
 
-* *School Zip Code Income*. Schools are linked back to their ZIP code and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
+* *School Income*. Schools are classified by income based on the share of students in the school eligible for free and reduced lunch based on data provided by Zearn.
 
-  - High Income (median household income greater than $78,000 per year)
-  - Middle Income (median household income between $46,000 per year and $78,000 per year)
-  - Low Income (median household income less than $46,000 per year)
-
+  - High Income (35.7% students are free and reduced lunch eligible)
+  - Middle Income (56.9% students are free and reduced lunch eligible)
+  - Low Income (80.4% students are free and reduced lunch eligible)
 
 **Notes:** We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.
 
@@ -338,11 +336,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Breakdowns:**  
 
-* *School Zip Code Income*. Schools are linked back to their ZIP code and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
+* *School Income*. Schools are classified by income based on the share of students in the school eligible for free and reduced lunch based on data provided by Zearn.
 
-  - High Income (median household income greater than $78,000 per year)
-  - Middle Income (median household income between $46,000 per year and $78,000 per year)
-  - Low Income (median household income less than $46,000 per year)
+  - High Income (35.7% students are free and reduced lunch eligible)
+  - Middle Income (56.9% students are free and reduced lunch eligible)
+  - Low Income (80.4% students are free and reduced lunch eligible)
 
 **Notes:** We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 

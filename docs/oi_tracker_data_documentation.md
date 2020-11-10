@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-11-03</p>
+<p class="subtitle">last updated on 2020-11-09</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -220,11 +220,11 @@ Data Documentation</div></h1>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
-<li><p><em>School Zip Code Income</em>. Schools are linked back to their ZIP code and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
+<li><p><em>School Income</em>. Schools are classified by income based on the share of students in the school eligible for free and reduced lunch based on data provided by Zearn.</p>
 <ul>
-<li>High Income (median household income greater than $78,000 per year)</li>
-<li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
-<li>Low Income (median household income less than $46,000 per year)</li>
+<li>High Income (35.7% students are free and reduced lunch eligible)</li>
+<li>Middle Income (56.9% students are free and reduced lunch eligible)</li>
+<li>Low Income (80.4% students are free and reduced lunch eligible)</li>
 </ul></li>
 </ul>
 <p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.</p>
@@ -240,11 +240,11 @@ Data Documentation</div></h1>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
-<li><p><em>School Zip Code Income</em>. Schools are linked back to their ZIP code and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
+<li><p><em>School Income</em>. Schools are classified by income based on the share of students in the school eligible for free and reduced lunch based on data provided by Zearn.</p>
 <ul>
-<li>High Income (median household income greater than $78,000 per year)</li>
-<li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
-<li>Low Income (median household income less than $46,000 per year)</li>
+<li>High Income (35.7% students are free and reduced lunch eligible)</li>
+<li>Middle Income (56.9% students are free and reduced lunch eligible)</li>
+<li>Low Income (80.4% students are free and reduced lunch eligible)</li>
 </ul></li>
 </ul>
 <p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
