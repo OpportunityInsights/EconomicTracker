@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-11-09</p>
+<p class="subtitle">last updated on 2020-11-11</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -57,6 +57,7 @@ Data Documentation</div></h1>
 <ul>
 <li>Education and Health Services</li>
 <li>Leisure and Hospitality</li>
+<li>Professional &amp; Business Services</li>
 <li>Retail and Transportation</li>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
@@ -85,6 +86,7 @@ Data Documentation</div></h1>
 <ul>
 <li>Education and Health Services</li>
 <li>Leisure and Hospitality</li>
+<li>Professional &amp; Business Services</li>
 <li>Retail and Transportation</li>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>

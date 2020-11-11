@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2020-10-25</p>
+<p class="subtitle">last updated on 2020-11-11</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -158,28 +158,26 @@ Data Dictionary</div></h1>
 <p>Small business openings data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
 <li><code>merchants_all</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.</li>
-<li><del><code>merchants_inchigh</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.</del></li>
-<li><del><code>merchants_incmiddle</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) ZIP codes.</del></li>
-<li><del><code>merchants_inclow</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.</del></li>
+<li><code>merchants_inchigh</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.</li>
+<li><code>merchants_incmiddle</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) ZIP codes.</li>
+<li><code>merchants_inclow</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.</li>
 <li><code>merchants_ss40</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in transportation (NAICS supersector 40).</li>
 <li><code>merchants_ss60</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
 <li><code>merchants_ss65</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
 <li><code>merchants_ss70</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
-<p><strong>Note:</strong> County-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h3 id="womply-revenue">Womply Revenue</h3>
 <p>Small business revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
 <li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.</li>
-<li><del><code>revenue_inchigh</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.</del></li>
-<li><del><code>revenue_incmiddle</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) zipcodes.</del></li>
-<li><del><code>revenue_inclow</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.</del></li>
+<li><code>revenue_inchigh</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.</li>
+<li><code>revenue_incmiddle</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) zipcodes.</li>
+<li><code>revenue_inclow</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.</li>
 <li><code>revenue_ss40</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in transportation (NAICS supersector 40).</li>
 <li><code>revenue_ss60</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
 <li><code>revenue_ss65</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
 <li><code>revenue_ss70</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
 </ul>
-<p><strong>Note:</strong> County-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>

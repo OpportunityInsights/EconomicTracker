@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-11-09
+subtitle: last updated on 2020-11-11
 documentclass: scrartcl
 ---  
 
@@ -87,6 +87,7 @@ Please note that both the data and this data documentation is updated regularly 
 
   - Education and Health Services
   - Leisure and Hospitality
+  - Professional & Business Services
   - Retail and Transportation
 
 * *Business Zip Code Income*. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
@@ -129,6 +130,7 @@ the indexing period (January 4-31). Additionally we omit spending categories for
 
   - Education and Health Services
   - Leisure and Hospitality
+  - Professional & Business Services
   - Retail and Transportation
 
 * *Business Zip Code Income*. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
