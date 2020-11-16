@@ -1,28 +1,27 @@
----  
-geometry: margin=1in
-fontsize: 11pt
-linestretch: 1
-colorlinks: true
-numbersections: true
+---
+geometry: margin=1in
+fontsize: 11pt
+linestretch: 1
+colorlinks: true
+numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
 subtitle: last updated on 2020-11-11
-documentclass: scrartcl
+documentclass: scrartcl
 ---  
 
 <a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a>
 
 \renewcommand{\thesubsection}{\arabic{subsection}}
 
-
 ## Overview
 
-Each data source and level of aggregation has a separate CSV, named using the following convention: *Data source* — *Geographic Level of Aggregation* — *Temporal Level of Aggregation*
+Each data source and level of aggregation has a separate CSV, named using the following convention: *Data source* – *Geographic Level of Aggregation* – *Temporal Level of Aggregation*
 
-Additionally, we have three files, **GeoIDs – State** and **GeoIDs – County** and **GeoIDs - City**, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, **GeoIDs – County** indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under "Metro" on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).
+Additionally, we have three files, **GeoIDs – State** and **GeoIDs – County** and **GeoIDs – City**, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, **GeoIDs – County** indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under "Metro" on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).
 
-Finally, we have gathered a collection of key state-level policy dates relevant for changes in other series trends and values. These are contained in the **Policy Milestones - State** file.
+Finally, we have gathered a collection of key state-level policy dates relevant for changes in other series trends and values. These are contained in the **Policy Milestones – State** file.
 
 A description of the columns in each file follows.
 
@@ -141,19 +140,19 @@ Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/),
 Unemployment insurance claims data from the [Department of Labor](https://oui.doleta.gov/unemploy/DataDashboard.asp) (national and state-level) and numerous individual state agencies (county-level).
 
 - `initclaims_rate_regular`: Number of initial claims per 100 people in the 2019 labor force, Regular UI only
-  - `initclaims_count_regular`: Count of initial claims, Regular UI only
+    - `initclaims_count_regular`: Count of initial claims, Regular UI only
 - `initclaims_rate_pua`: Number of initial claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
-  - `initclaims_count_pua`: Count of initial claims, PUA (Pandemic Unemployment Assistance) only
+    - `initclaims_count_pua`: Count of initial claims, PUA (Pandemic Unemployment Assistance) only
 - `initclaims_rate_combined`: Number of initial claims per 100 people in the 2019 labor force, combining Regular and PUA claims
-  - `initclaims_count_combined`: Count of initial claims, combining Regular and PUA claims
+    - `initclaims_count_combined`: Count of initial claims, combining Regular and PUA claims
 - `contclaims_rate_regular`: Number of continued claims per 100 people in the 2019 labor force, Regular UI only
-  - `contclaims_count_regular`: Count of continued claims, Regular UI only
+    - `contclaims_count_regular`: Count of continued claims, Regular UI only
 - `contclaims_rate_pua`: Number of continued claims per 100 people in the 2019 labor force, PUA (Pandemic Unemployment Assistance) only
-  - `contclaims_count_pua`: Count of continued claims, PUA (Pandemic Unemployment Assistance) only
+    - `contclaims_count_pua`: Count of continued claims, PUA (Pandemic Unemployment Assistance) only
 - `contclaims_rate_peuc`: Number of continued claims per 100 people in the 2019 labor force, PEUC (Pandemic Emergency Unemployment Compensation) only
-  - `contclaims_count_peuc`: Count of continued claims, PEUC (Pandemic Emergency Unemployment Compensation) only
+    - `contclaims_count_peuc`: Count of continued claims, PEUC (Pandemic Emergency Unemployment Compensation) only
 - `contclaims_rate_combined`: Number of continued claims per 100 people in the 2019 labor force, combining Regular, PUA and PEUC claims
-  - `contclaims_count_combined`: Count of continued claims, combining Regular, PUA and PEUC claims
+    - `contclaims_count_combined`: Count of continued claims, combining Regular, PUA and PEUC claims
 
 ### Womply Merchants
 

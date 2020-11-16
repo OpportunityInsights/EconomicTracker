@@ -1,15 +1,15 @@
 <body>
-<header id="title-block-header">
-<h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
+<div id="header">
+<h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-11-11</p>
-</header>
+<h1 class="subtitle">last updated on 2020-11-11</h1>
+</div>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
 <p>This document provides an overview of the sources and processing applied to each data series within the <a href="https://tracktherecovery.org">Opportunity Insights Economic Tracker</a>. The documentation is organized sequentially by series in the tracker, then broken down into categories of information describing each series, its source data, and our processing steps.</p>
 <p>You can refer to additional documentation published by Opportunity Insights for complementary information:</p>
 <ul>
-<li>The Economic Tracker’s <strong><a href="https://github.com/OpportunityInsights/EconomicTracker">Data Dictionary</a></strong> lists each data file and variable available for public use, with short descriptions of the contents of each variable.</li>
+<li>The Economic Tracker's <strong><a href="https://github.com/OpportunityInsights/EconomicTracker">Data Dictionary</a></strong> lists each data file and variable available for public use, with short descriptions of the contents of each variable.</li>
 <li>The <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong> provides detailed information about the methodology used to construct the series.</li>
 </ul>
 <p>Please note that both the data and this data documentation is updated regularly and that the following information is subject to change.</p>
@@ -41,7 +41,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. In order to reliably identify and correct these breaks, we require at least 3 weeks of data. The most recent 3 weeks of data are therefore marked ‘provisional’ and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
+<p><strong>Notes:</strong> The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. In order to reliably identify and correct these breaks, we require at least 3 weeks of data. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
@@ -68,7 +68,7 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Notes:</strong></p>
-<p>Small businesses are defined as those with annual revenue below the Small Business Administration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p>Small businesses are defined as those with annual revenue below the Small Business Administration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="small-businesses-open">Small Businesses Open</h2>
 <p><strong>Summary:</strong> Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.</p>
@@ -96,7 +96,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Adminstration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Adminstration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
@@ -117,7 +117,7 @@ Data Documentation</div></h1>
 <li>Manufactoring</li>
 <li>Professional and Business Services</li>
 </ul></li>
-<li><p><em>Education Requirement</em>, by <a href="https://www.onetonline.org/help/online/zones">ONET Jobzone’s Education Requirement Classification</a>.</p>
+<li><p><em>Education Requirement</em>, by <a href="https://www.onetonline.org/help/online/zones">ONET Jobzone's Education Requirement Classification</a>.</p>
 <ul>
 <li>Minimal - Jobzone 1</li>
 <li>Some - Jobzone 2</li>
@@ -135,7 +135,7 @@ Data Documentation</div></h1>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile’s total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
+<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile's total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Wage</em>.</p>
@@ -209,7 +209,7 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Notes:</strong> Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.</p>
-<p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). “Combined Claims” are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
+<p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). &quot;Combined Claims&quot; are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
 <h2 id="online-math-participation">Online Math Participation</h2>
 <p><strong>Summary:</strong> Number of students using Zearn Math, a curriculum from the non-profit Zearn, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
