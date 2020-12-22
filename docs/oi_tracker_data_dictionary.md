@@ -1,9 +1,9 @@
 <body>
-<div id="header">
+<header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<h1 class="subtitle">last updated on 2020-11-11</h1>
-</div>
+<p class="subtitle">last updated on 2020-11-11</p>
+</header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
 <p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> – <em>Geographic Level of Aggregation</em> – <em>Temporal Level of Aggregation</em></p>
@@ -52,6 +52,8 @@ Data Dictionary</div></h1>
 <li><code>spend_all_inchigh</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_incmiddle</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_q2</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_q3</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 </ul>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
