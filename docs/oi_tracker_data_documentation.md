@@ -1,9 +1,9 @@
 <body>
-<div id="header">
+<header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Documentation</div></h1>
-<h1 class="subtitle">last updated on 2020-11-11</h1>
-</div>
+<p class="subtitle">last updated on 2020-11-11</p>
+</header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
 <p>This document provides an overview of the sources and processing applied to each data series within the <a href="https://tracktherecovery.org">Opportunity Insights Economic Tracker</a>. The documentation is organized sequentially by series in the tracker, then broken down into categories of information describing each series, its source data, and our processing steps.</p>
