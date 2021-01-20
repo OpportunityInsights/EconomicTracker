@@ -207,5 +207,7 @@ Data Dictionary</div></h1>
 <li><code>statewide_biz_opened</code>: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing). Either for the entire state all at once, or for the very last locality which hadn’t yet reopened any businesses.</li>
 <li><code>regional_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously for one or more regions in the state</li>
 <li><code>statewide_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously. Either for the entire state all at once, or for the very last locality which hadn’t yet reclosed any businesses.</li>
+<li><code>state_milestone#</code>: The dates on which the state enacted significant new policy milestones that go beyond the existing policy dates tracked. Examples include, ending a reclosure, enacting a new regional reopening system, or issuing a stay-at-home advisory, or enacting an additional reclosure after a state's first. The column name suffix indicates both the chronological order of the milestones within the particular state and corresponds to the particular milestone type as indicated in the description# column.</li>
+<li><code>description#</code>: A description of the policy action represented by the state_milestone# column with the same suffix number. For instance state_milestone1 is described in description1.</li>
 </ul>
 </body>
