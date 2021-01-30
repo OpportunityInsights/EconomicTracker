@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2020-11-11</p>
+<p class="subtitle">last updated on 2021-01-30</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -156,8 +156,8 @@ Data Dictionary</div></h1>
 <li><code>contclaims_count_combined</code>: Count of continued claims, combining Regular, PUA and PEUC claims</li>
 </ul></li>
 </ul>
-<h3 id="womply-merchants">Womply Merchants</h3>
-<p>Small business openings data from <a href="https://www.womply.com/">Womply</a>.</p>
+<h3 id="womply">Womply</h3>
+<p>Small business openings and revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
 <li><code>merchants_all</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.</li>
 <li><code>merchants_inchigh</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.</li>
@@ -167,10 +167,6 @@ Data Dictionary</div></h1>
 <li><code>merchants_ss60</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
 <li><code>merchants_ss65</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
 <li><code>merchants_ss70</code>: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
-</ul>
-<h3 id="womply-revenue">Womply Revenue</h3>
-<p>Small business revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
-<ul>
 <li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.</li>
 <li><code>revenue_inchigh</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.</li>
 <li><code>revenue_incmiddle</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 &amp; 3 of median income) zipcodes.</li>
