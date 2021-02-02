@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-01-30
+subtitle: last updated on 2021-02-02
 documentclass: scrartcl
 ---  
 
@@ -189,8 +189,21 @@ Online math learning data from [Zearn](https://www.zearn.org/).
 - `badges_inclow`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.
 - `badges_incmiddle`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.
 - `badges_inchigh`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+- `break_engagement`:
+- `break_badges`:
+- `break_engagement_inchigh`:
+- `break_badges_inchigh`:
+- `break_engagement_inclow`:
+- `break_badges_inclow`:
+- `break_engagement_incmiddle`:
+- `break_badges_incmiddle`:
+- `imputed_from_cz`:
+-->
 
-Note that for every variable listed here, there is a corresponding variable with the prefix `break_` (for example, `break_engagement`). During the period in which schools are on summer or winter break, we records the outcomes in these `break_` variables instead of the usual variables. These numbers are not displayed on the [Economic Tracker](https://tracktherecovery.org) because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.
+Note that for every variable listed here, there is a corresponding variable with the prefix `break_` (for example, `break_engagement`). During the period in which schools are on summer or winter break, we record the outcomes in these `break_` variables instead of the usual variables. These numbers are not displayed on the [Economic Tracker](https://tracktherecovery.org) because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.
+
+To ensure privacy, the results for some counties are masked. Where possible, masked county levels values are replaced by commuting zone means, as indicated by the `imputed_from_cz` variable. The masking criteria are explained in further detail in our [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md#online-math-participation).
 
 ## Policy Milestones
 

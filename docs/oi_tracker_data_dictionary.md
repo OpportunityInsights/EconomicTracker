@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-01-30</p>
+<p class="subtitle">last updated on 2021-02-02</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -186,9 +186,20 @@ Data Dictionary</div></h1>
 <li><code>badges</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020.</li>
 <li><code>badges_inclow</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
 <li><code>badges_incmiddle</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
-<li><code>badges_inchigh</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.</li>
+<li><code>badges_inchigh</code>: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income. <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+- `break_engagement`:
+- `break_badges`:
+- `break_engagement_inchigh`:
+- `break_badges_inchigh`:
+- `break_engagement_inclow`:
+- `break_badges_inclow`:
+- `break_engagement_incmiddle`:
+- `break_badges_incmiddle`:
+- `imputed_from_cz`:
+--></li>
 </ul>
-<p>Note that for every variable listed here, there is a corresponding variable with the prefix <code>break_</code> (for example, <code>break_engagement</code>). During the period in which schools are on summer or winter break, we records the outcomes in these <code>break_</code> variables instead of the usual variables. These numbers are not displayed on the <a href="https://tracktherecovery.org">Economic Tracker</a> because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.</p>
+<p>Note that for every variable listed here, there is a corresponding variable with the prefix <code>break_</code> (for example, <code>break_engagement</code>). During the period in which schools are on summer or winter break, we record the outcomes in these <code>break_</code> variables instead of the usual variables. These numbers are not displayed on the <a href="https://tracktherecovery.org">Economic Tracker</a> because they do not reliably measure differences in student learning across geography and income groups when many schools are on break.</p>
+<p>To ensure privacy, the results for some counties are masked. Where possible, masked county levels values are replaced by commuting zone means, as indicated by the <code>imputed_from_cz</code> variable. The masking criteria are explained in further detail in our <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md#online-math-participation">data documentation</a>.</p>
 <h2 id="policy-milestones">Policy Milestones</h2>
 <p>Key state-level policy dates relevant for changes in other series trends and values.</p>
 <ul>
