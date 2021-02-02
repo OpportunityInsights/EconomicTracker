@@ -1,4 +1,4 @@
----
+﻿---
 geometry: margin=1in
 fontsize: 11pt
 linestretch: 1
@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2020-11-11
+subtitle: last updated on 2021-02-02
 documentclass: scrartcl
 ---
 
@@ -62,7 +62,9 @@ Please note that both the data and this data documentation is updated regularly 
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Notes:** The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. In order to reliably identify and correct these breaks, we require at least 3 weeks of data. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
+**Data masking:** For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending < $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
+
+**Notes:** We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Small Business Revenue  
 
@@ -96,6 +98,8 @@ Please note that both the data and this data documentation is updated regularly 
     - High Income (median household income greater than $78,000 per year)
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
+
+**Data masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.
 
 **Notes:**
 
@@ -139,7 +143,9 @@ the indexing period (January 4-31). Additionally we omit spending categories for
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Notes:** Small businesses are defined as those with annual revenue below the Small Business Adminstration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
+**Data masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.
+
+**Notes:** Small businesses are defined as those with annual revenue below the Small Business Administration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
 
 County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
@@ -179,6 +185,8 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
     - Considerable - Jobzone 4
     - Extensive - Jobzone 5
 
+**Data Masking:** In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold.
+
 ## Employment  
 
 **Summary:** Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.  
@@ -213,6 +221,19 @@ To prevent the introduction of new Paychex clients from artificially creating no
     - Education and Health Services
     - Retail and Transportation
     - Leisure and Hospitality
+
+**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.  
+
+*In the Paychex series*, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define "influential cells" that are most sensitive to the introduction of new clients to the data and drop those "influential cells" that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an "influential cell" if either
+
+- the county contains 100 or fewer unique county x quartile x industry x firm size cuts and that cut accounts for over 10% of employment in the corresponding county x wage quartile at any date in 2020 or,
+- the county contains greater than 100 unique county x quartile x industry x firm size cuts and that cut accounts for over 5% of employment in the corresponding county x wage quartile at any date in 2020.
+
+We then drop “influential cells” that record growth in employment exceeding 50% relative to January 2020 on any date, in order to omit trends likely arising due to changes in Paychex’s client base rather than true employment changes.
+
+*In the Earnin series*, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).
+
+*In the Kronos and Intuit series*, we do not make any sample restrictions.
 
 **Notes:**
 
@@ -280,6 +301,8 @@ Note that county-level claims in California, Georgia, Kentucky, and Illinois are
     - PEUC Claims
     - Combined Claims
 
+**Data masking:** No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state's particular masking rules.
+
 **Notes:** Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.
 
 Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). "Combined Claims" are defined as the sum of regular, PUA and PEUC unemployment benefit claims.
@@ -312,7 +335,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
     - Middle Income (56.9% students are free and reduced lunch eligible)
     - Low Income (80.4% students are free and reduced lunch eligible)
 
-**Notes:** We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.
+**Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
 ## Student Progress in Math
 
@@ -342,7 +365,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
     - Middle Income (56.9% students are free and reduced lunch eligible)
     - Low Income (80.4% students are free and reduced lunch eligible)
 
-**Notes:** We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
+**Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
 ## COVID-19 Cases, Deaths and Tests
 
@@ -368,6 +391,8 @@ Note that testing counts and rates are only available at the national and state 
 
 * *New* Cases, Deaths, or Tests (presented as a 7-day moving average)
 * *Total* Cases, Deaths, or Tests
+
+**Data masking:** No masking is performed by Opportunity Insights.
 
 ## Time Outside Home
 
@@ -396,7 +421,9 @@ Note that testing counts and rates are only available at the national and state 
 * Grocery
 * Workplace
 
-**Notes:** Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain finer breakdowns while the release of others can be delayed while under review. When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.
+**Data masking:** Google does not release data for geographies where their [internal quality and privacy thresholds](https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data) are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.
+
+**Notes:**  When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.
 
 Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the **[accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)**.
 

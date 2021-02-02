@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2020-11-11</p>
+<p class="subtitle">last updated on 2021-02-02</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -41,7 +41,8 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample. In order to reliably identify and correct these breaks, we require at least 3 weeks of data. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Additionally, at the county-level when are there more than one structural breaks the data is too noisy to correct for these breaks and counties with multiple breaks are dropped from the sample. Lastly, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
+<p><strong>Data masking:</strong> For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending &lt; $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
+<p><strong>Notes:</strong> We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
@@ -67,6 +68,7 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
+<p><strong>Data masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.</p>
 <p><strong>Notes:</strong></p>
 <p>Small businesses are defined as those with annual revenue below the Small Business Administration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
@@ -96,7 +98,8 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Adminstration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p><strong>Data masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.</p>
+<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Administration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
@@ -126,6 +129,7 @@ Data Documentation</div></h1>
 <li>Extensive - Jobzone 5</li>
 </ul></li>
 </ul>
+<p><strong>Data Masking:</strong> In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold.</p>
 <h2 id="employment">Employment</h2>
 <p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.</p>
 <p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a>, <a href="https://www.kronos.com/">Kronos</a></p>
@@ -152,6 +156,15 @@ Data Documentation</div></h1>
 <li>Leisure and Hospitality</li>
 </ul></li>
 </ul>
+<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
+<p><em>In the Paychex series</em>, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define &quot;influential cells&quot; that are most sensitive to the introduction of new clients to the data and drop those &quot;influential cells&quot; that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an &quot;influential cell&quot; if either</p>
+<ul>
+<li>the county contains 100 or fewer unique county x quartile x industry x firm size cuts and that cut accounts for over 10% of employment in the corresponding county x wage quartile at any date in 2020 or,</li>
+<li>the county contains greater than 100 unique county x quartile x industry x firm size cuts and that cut accounts for over 5% of employment in the corresponding county x wage quartile at any date in 2020.</li>
+</ul>
+<p>We then drop “influential cells” that record growth in employment exceeding 50% relative to January 2020 on any date, in order to omit trends likely arising due to changes in Paychex’s client base rather than true employment changes.</p>
+<p><em>In the Earnin series</em>, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).</p>
+<p><em>In the Kronos and Intuit series</em>, we do not make any sample restrictions.</p>
 <p><strong>Notes:</strong></p>
 <ul>
 <li><p>For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.</p></li>
@@ -208,6 +221,7 @@ Data Documentation</div></h1>
 <li>Combined Claims</li>
 </ul></li>
 </ul>
+<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state's particular masking rules.</p>
 <p><strong>Notes:</strong> Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.</p>
 <p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). &quot;Combined Claims&quot; are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
 <h2 id="online-math-participation">Online Math Participation</h2>
@@ -229,7 +243,7 @@ Data Documentation</div></h1>
 <li>Low Income (80.4% students are free and reduced lunch eligible)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math, a curriculum from the non-profit Zearn, for at least one week from January 6 to February 7.</p>
+<p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="student-progress-in-math">Student Progress in Math</h2>
 <p><strong>Summary:</strong> Number of lessons completed by students each week using Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
@@ -249,7 +263,7 @@ Data Documentation</div></h1>
 <li>Low Income (80.4% students are free and reduced lunch eligible)</li>
 </ul></li>
 </ul>
-<p><strong>Notes:</strong> We exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
+<p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="covid-19-cases-deaths-and-tests">COVID-19 Cases, Deaths and Tests</h2>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.</p>
 <p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 Data</a>, <a href="https://covidtracking.com/">The COVID Tracking Project</a>.</p>
@@ -265,6 +279,7 @@ Data Documentation</div></h1>
 <li><em>New</em> Cases, Deaths, or Tests (presented as a 7-day moving average)</li>
 <li><em>Total</em> Cases, Deaths, or Tests</li>
 </ul>
+<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
 <h2 id="time-outside-home">Time Outside Home</h2>
 <p><strong>Summary:</strong> Time spent away from home, estimated using cellphone location data from Google users who have enabled the Location History setting.</p>
 <p><strong>Data Source:</strong> <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>, <a href="https://www.bls.gov/tus/">American Time Use Survey</a></p>
@@ -283,7 +298,8 @@ Data Documentation</div></h1>
 <li>Grocery</li>
 <li>Workplace</li>
 </ul>
-<p><strong>Notes:</strong> Google does not release data for geographies where their internal quality and privacy thresholds are not met. Therefore some geographic areas are omitted from the series for certain finer breakdowns while the release of others can be delayed while under review. When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.</p>
+<p><strong>Data masking:</strong> Google does not release data for geographies where their <a href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data">internal quality and privacy thresholds</a> are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.</p>
+<p><strong>Notes:</strong> When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.</p>
 <p>Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong>.</p>
 <h2 id="policy-milestones">Policy Milestones</h2>
 <p><strong>Summary:</strong> Key state-level policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.</p>
