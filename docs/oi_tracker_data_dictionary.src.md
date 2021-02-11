@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-02-07
+subtitle: last updated on 2021-02-10
 documentclass: scrartcl
 ---  
 
@@ -75,7 +75,7 @@ Spending data from [Affinity Solutions](https://www.affinity.solutions).
 - `spend_all_inclow`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 - `spend_all_q2`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 - `spend_all_q3`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_retail_with_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.
+- `spend_retail_w_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.
 - `spend_retail_no_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, ETC, SGH) MCCs excluding grocery spending, 7 day moving average.
 - `provisional`: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.
 - `freq`: Marks whether the data represents a daily ("d") or weekly ("w") value.

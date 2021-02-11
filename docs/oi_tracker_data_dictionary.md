@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-02-07</p>
+<p class="subtitle">last updated on 2021-02-10</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -54,7 +54,7 @@ Data Dictionary</div></h1>
 <li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_q2</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_q3</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
-<li><code>spend_retail_with_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.</li>
+<li><code>spend_retail_w_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.</li>
 <li><code>spend_retail_no_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, ETC, SGH) MCCs excluding grocery spending, 7 day moving average.</li>
 <li><code>provisional</code>: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.</li>
 <li><code>freq</code>: Marks whether the data represents a daily (&quot;d&quot;) or weekly (&quot;w&quot;) value.</li>
