@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-02-02
+subtitle: last updated on 2021-02-19
 documentclass: scrartcl
 ---
 
@@ -195,7 +195,7 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Update Frequency:** Weekly  
 
-**Date Range:** January 15th until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend for the Low Income employment subgroup by using Kronos timecard data to forecast beyond the end of the Paychex, Intuit and Earnin data.
+**Date Range:** January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend of aggregate employment and employment by income quartile by using Kronos timecard data and Paychex data for workers paid on a weekly paycycle to forecast beyond the end of the Paychex, Intuit and Earnin data.
 
 **Data Frequency:** Daily, presented as a 7-day moving average
 
@@ -222,6 +222,10 @@ To prevent the introduction of new Paychex clients from artificially creating no
     - Retail and Transportation
     - Leisure and Hospitality
 
+* *Industry*, by [NAICS sector](https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html).
+
+    - Retail
+
 **Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.  
 
 *In the Paychex series*, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define "influential cells" that are most sensitive to the introduction of new clients to the data and drop those "influential cells" that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an "influential cell" if either
@@ -239,7 +243,7 @@ We then drop “influential cells” that record growth in employment exceeding 
 
 * For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.
 
-* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)
+* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). 
 
 ## Unemployment Claims
 

@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2021-02-02</p>
+<p class="subtitle">last updated on 2021-02-19</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -134,7 +134,7 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.</p>
 <p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a>, <a href="https://www.kronos.com/">Kronos</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 15th until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend for the Low Income employment subgroup by using Kronos timecard data to forecast beyond the end of the Paychex, Intuit and Earnin data.</p>
+<p><strong>Date Range:</strong> January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend of aggregate employment and employment by income quartile by using Kronos timecard data and Paychex data for workers paid on a weekly paycycle to forecast beyond the end of the Paychex, Intuit and Earnin data.</p>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
@@ -155,6 +155,10 @@ Data Documentation</div></h1>
 <li>Retail and Transportation</li>
 <li>Leisure and Hospitality</li>
 </ul></li>
+<li><p><em>Industry</em>, by <a href="https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html">NAICS sector</a>.</p>
+<ul>
+<li>Retail</li>
+</ul></li>
 </ul>
 <p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
 <p><em>In the Paychex series</em>, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define &quot;influential cells&quot; that are most sensitive to the introduction of new clients to the data and drop those &quot;influential cells&quot; that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an &quot;influential cell&quot; if either</p>
@@ -168,7 +172,7 @@ Data Documentation</div></h1>
 <p><strong>Notes:</strong></p>
 <ul>
 <li><p>For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.</p></li>
-<li><p>In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure. For more details, please refer to the appendix of the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a></p></li>
+<li><p>In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure. For more details, please refer to the appendix of the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p></li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Summary:</strong> Weekly unimployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.</p>

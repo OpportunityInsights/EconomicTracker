@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-02-10</p>
+<p class="subtitle">last updated on 2021-02-19</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -126,7 +126,11 @@ Data Dictionary</div></h1>
 <li><code>emp_combined_ss60</code>: Employment level for workers in professional and business services (NAICS supersector 60).</li>
 <li><code>emp_combined_ss65</code>: Employment level for workers in education and health services (NAICS supersector 65).</li>
 <li><code>emp_combined_ss70</code>: Employment level for workers in leisure and hospitality (NAICS supersector 70).</li>
-<li><code>emp_combined_inclow_advance</code>: Indicator (0 or 1) for whether <code>emp_combined_inclow</code> is a forecasted employment level based on timecard data from Kronos.</li>
+<li><code>emp_combined_retail</code>: Employment level for workers in retail (NAICS sector 44-45).</li>
+<li><code>emp_combined_retail_inclow</code>: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
+<li><code>emp_combined_retail_incmiddle</code>: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
+<li><code>emp_combined_retail_inchigh</code>: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).</li>
+<li><code>emp_combined_advance</code>: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.</li>
 </ul>
 <h3 id="ui-claims">UI Claims</h3>
 <p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>

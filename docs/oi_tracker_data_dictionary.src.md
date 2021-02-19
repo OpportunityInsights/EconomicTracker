@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-02-10
+subtitle: last updated on 2021-02-19
 documentclass: scrartcl
 ---  
 
@@ -139,7 +139,11 @@ Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/),
 - `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
 - `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
-- `emp_combined_inclow_advance`: Indicator (0 or 1) for whether `emp_combined_inclow` is a forecasted employment level based on timecard data from Kronos.
+- `emp_combined_retail`: Employment level for workers in retail (NAICS sector 44-45). 
+- `emp_combined_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000). 
+- `emp_combined_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
+- `emp_combined_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).
+- `emp_combined_advance`: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.
 
 ### UI Claims
 
