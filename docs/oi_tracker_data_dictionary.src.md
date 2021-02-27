@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-02-19
+subtitle: last updated on 2021-02-27
 documentclass: scrartcl
 ---  
 
@@ -40,22 +40,26 @@ Geographic identifier: `statefips`
 Geographic identifier: `countyfips`
 
 - `countyname`: The name of the county.
+- `cityid`: The city identifier that the county is assigned to.
+- `cityname`: The name of the city that the county is assigned to.
 - `cz`: The numeric identifier of the commuting zone (CZ) in which the county is contained.
 - `czname`: The name of the commuting zone (CZ) in which the county is contained.
 - `statename`: The name of the state in which the county is contained.
-- `statefips`: The fips code of the state in which the county is contained.
+- `statefips`: The FIPS code of the state in which the county is contained.
 - `stateabbrev`: The 2-letter abbreviation of the state in which the county is contained.
-- `county_pop2019`: The population of the county in 2019, from Census Bureau estimates.
+- `county_pop2019`: The population of the county in 2019 according to Census Bureau estimates.
 
 ### GeoIDs - City.csv
 
 Geographic identifier: `cityid`
 
 - `cityname`: The name of the city.
-- `stateabbrev`: The 2-letter abbreviation of the state in which the city is contained.
-- `statename`: The name of the state in which the city is contained.
-- `statefips`: The fips code of the state in which the city is contained.
-- `city_pop2019`: The population of the city in 2019.
+- `stateabbrev`: The 2-letter abbreviation of the primary state in which the city is contained.
+- `statename`: The name of the primary state in which the city is contained.
+- `statefips`: The FIPS code of the primary state in which the city is contained.
+- `lat`: Latitude of the city.
+- `lon`: Longitude of the city.
+- `city_pop2019`: The population of the city in 2019 according to Census Bureau estimates, calculated as population of the county or counties assigned to the city.
 
 ## Data File Descriptions
 

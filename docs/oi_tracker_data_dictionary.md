@@ -2,7 +2,7 @@
 <header>
 <h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-02-19</p>
+<p class="subtitle">last updated on 2021-02-27</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h2 id="overview">Overview</h2>
@@ -22,21 +22,25 @@ Data Dictionary</div></h1>
 <p>Geographic identifier: <code>countyfips</code></p>
 <ul>
 <li><code>countyname</code>: The name of the county.</li>
+<li><code>cityid</code>: The city identifier that the county is assigned to.</li>
+<li><code>cityname</code>: The name of the city that the county is assigned to.</li>
 <li><code>cz</code>: The numeric identifier of the commuting zone (CZ) in which the county is contained.</li>
 <li><code>czname</code>: The name of the commuting zone (CZ) in which the county is contained.</li>
 <li><code>statename</code>: The name of the state in which the county is contained.</li>
-<li><code>statefips</code>: The fips code of the state in which the county is contained.</li>
+<li><code>statefips</code>: The FIPS code of the state in which the county is contained.</li>
 <li><code>stateabbrev</code>: The 2-letter abbreviation of the state in which the county is contained.</li>
-<li><code>county_pop2019</code>: The population of the county in 2019, from Census Bureau estimates.</li>
+<li><code>county_pop2019</code>: The population of the county in 2019 according to Census Bureau estimates.</li>
 </ul>
 <h3 id="geoids---city.csv">GeoIDs - City.csv</h3>
 <p>Geographic identifier: <code>cityid</code></p>
 <ul>
 <li><code>cityname</code>: The name of the city.</li>
-<li><code>stateabbrev</code>: The 2-letter abbreviation of the state in which the city is contained.</li>
-<li><code>statename</code>: The name of the state in which the city is contained.</li>
-<li><code>statefips</code>: The fips code of the state in which the city is contained.</li>
-<li><code>city_pop2019</code>: The population of the city in 2019.</li>
+<li><code>stateabbrev</code>: The 2-letter abbreviation of the primary state in which the city is contained.</li>
+<li><code>statename</code>: The name of the primary state in which the city is contained.</li>
+<li><code>statefips</code>: The FIPS code of the primary state in which the city is contained.</li>
+<li><code>lat</code>: Latitude of the city.</li>
+<li><code>lon</code>: Longitude of the city.</li>
+<li><code>city_pop2019</code>: The population of the city in 2019 according to Census Bureau estimates, calculated as population of the county or counties assigned to the city.</li>
 </ul>
 <h2 id="data-file-descriptions">Data File Descriptions</h2>
 <h3 id="affinity">Affinity</h3>
