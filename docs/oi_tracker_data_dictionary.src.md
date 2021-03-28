@@ -137,7 +137,7 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 
 ### Employment
 
-Employment levels relative to Jan 4-31 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
+Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
 
 - `emp_combined`: Employment level for all workers.
 - `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).

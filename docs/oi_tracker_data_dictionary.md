@@ -129,7 +129,7 @@ Data Dictionary</div></h1>
 <li><code>gps_residential</code>: Time spent at residential locations.</li>
 </ul>
 <h3 id="employment">Employment</h3>
-<p>Employment levels relative to Jan 4-31 from <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a> and <a href="https://www.kronos.com/">Kronos</a>.</p>
+<p>Employment levels relative to Jan 4-31 2020 from <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a> and <a href="https://www.kronos.com/">Kronos</a>.</p>
 <ul>
 <li><code>emp_combined</code>: Employment level for all workers.</li>
 <li><code>emp_combined_inclow</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
