@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-03-03
+subtitle: last updated on 2021-03-27
 documentclass: scrartcl
 ---  
 
@@ -104,7 +104,7 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 
 ### COVID
 
-COVID case numbers and death numbers from the [New York Times COVID-19 repository](https://github.com/nytimes/covid-19-data). COVID test numbers from the [COVID Tracking Project](https://covidtracking.com/).
+COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). 
 
 - `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
     - `case_count`: Confirmed COVID-19 cases, seven day moving average.
@@ -118,6 +118,10 @@ COVID case numbers and death numbers from the [New York Times COVID-19 repositor
     - `test_count`: Confirmed COVID-19 tests, seven day moving average.
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
     - `new_test_count`: New confirmed COVID-19 tests, seven day moving average.
+- `vaccine_rate`: First vaccine doses administered per 100 people, seven day moving average.
+    - `vaccine_count`: First vaccine doses administered, seven day moving average.
+- `new_vaccine_rate`: New first vaccine doses administered per 100 people, seven day moving average.
+    - `new_vaccine_count`: New first vaccine doses administered, seven day moving average.
 
 ### Google Mobility
 

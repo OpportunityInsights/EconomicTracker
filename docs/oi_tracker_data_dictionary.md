@@ -1,13 +1,14 @@
 <body>
-<header>
-<h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
+<header id="title-block-header">
+<h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-03-03</p>
+<p class="subtitle">last updated on 2021-03-27</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
+
 <h2 id="overview">Overview</h2>
 <p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> – <em>Geographic Level of Aggregation</em> – <em>Temporal Level of Aggregation</em></p>
-<p>Additionally, we have three files, <strong>GeoIDs – State</strong> and <strong>GeoIDs – County</strong> and <strong>GeoIDs – City</strong>, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, <strong>GeoIDs – County</strong> indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under &quot;Metro&quot; on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).</p>
+<p>Additionally, we have three files, <strong>GeoIDs – State</strong> and <strong>GeoIDs – County</strong> and <strong>GeoIDs – City</strong>, that provide information on geographic crosswalks and aggregation. These can be merged to any file sharing the same geographic level of aggregation using the geographic identifier. Additionally, <strong>GeoIDs – County</strong> indicates the commuting zone (CZ) and state that each county belongs to. The City-level data (listed under “Metro” on the tracker site) associates the largest cities in the United States with a representative county one-to-one (except in the case of New York City which includes the 5 boroughs).</p>
 <p>Finally, we have gathered a collection of key state-level policy dates relevant for changes in other series trends and values. These are contained in the <strong>Policy Milestones – State</strong> file.</p>
 <p>A description of the columns in each file follows.</p>
 <h2 id="geoid-file-descriptions">GeoID File Descriptions</h2>
@@ -56,12 +57,12 @@ Data Dictionary</div></h1>
 <li><code>spend_all_inchigh</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_incmiddle</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
-<li><code>spend_all_q2</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
-<li><code>spend_all_q3</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_q2</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
+<li><code>spend_all_q3</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_retail_w_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.</li>
 <li><code>spend_retail_no_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, ETC, SGH) MCCs excluding grocery spending, 7 day moving average.</li>
 <li><code>provisional</code>: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.</li>
-<li><code>freq</code>: Marks whether the data represents a daily (&quot;d&quot;) or weekly (&quot;w&quot;) value.</li>
+<li><code>freq</code>: Marks whether the data represents a daily (“d”) or weekly (“w”) value.</li>
 </ul>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
@@ -81,7 +82,7 @@ Data Dictionary</div></h1>
 <li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
 </ul>
 <h3 id="covid">COVID</h3>
-<p>COVID case numbers and death numbers from the <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 repository</a>. COVID test numbers from the <a href="https://covidtracking.com/">COVID Tracking Project</a>.</p>
+<p>COVID cases, deaths, tests, and vaccination numbers are from the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">CDC</a>.</p>
 <ul>
 <li><code>case_rate</code>: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
 <ul>
@@ -106,6 +107,14 @@ Data Dictionary</div></h1>
 <li><code>new_test_rate</code>: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
 <ul>
 <li><code>new_test_count</code>: New confirmed COVID-19 tests, seven day moving average.</li>
+</ul></li>
+<li><code>vaccine_rate</code>: First vaccine doses administered per 100 people, seven day moving average.
+<ul>
+<li><code>vaccine_count</code>: First vaccine doses administered, seven day moving average.</li>
+</ul></li>
+<li><code>new_vaccine_rate</code>: New first vaccine doses administered per 100 people, seven day moving average.
+<ul>
+<li><code>new_vaccine_count</code>: New first vaccine doses administered, seven day moving average.</li>
 </ul></li>
 </ul>
 <h3 id="google-mobility">Google Mobility</h3>
@@ -230,7 +239,7 @@ Data Dictionary</div></h1>
 <li><code>statewide_biz_opened</code>: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing). Either for the entire state all at once, or for the very last locality which hadn’t yet reopened any businesses.</li>
 <li><code>regional_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously for one or more regions in the state</li>
 <li><code>statewide_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously. Either for the entire state all at once, or for the very last locality which hadn’t yet reclosed any businesses.</li>
-<li><code>state_milestone#</code>: The dates on which the state enacted significant new policy milestones that go beyond the existing policy dates tracked. Examples include, ending a reclosure, enacting a new regional reopening system, or issuing a stay-at-home advisory, or enacting an additional reclosure after a state's first. The column name suffix indicates both the chronological order of the milestones within the particular state and corresponds to the particular milestone type as indicated in the description# column.</li>
+<li><code>state_milestone#</code>: The dates on which the state enacted significant new policy milestones that go beyond the existing policy dates tracked. Examples include, ending a reclosure, enacting a new regional reopening system, or issuing a stay-at-home advisory, or enacting an additional reclosure after a state’s first. The column name suffix indicates both the chronological order of the milestones within the particular state and corresponds to the particular milestone type as indicated in the description# column.</li>
 <li><code>description#</code>: A description of the policy action represented by the state_milestone# column with the same suffix number. For instance state_milestone1 is described in description1.</li>
 </ul>
 </body>
