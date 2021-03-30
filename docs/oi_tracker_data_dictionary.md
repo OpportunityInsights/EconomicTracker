@@ -108,9 +108,9 @@ Data Dictionary</div></h1>
 <ul>
 <li><code>new_test_count</code>: New confirmed COVID-19 tests, seven day moving average.</li>
 </ul></li>
-<li><code>vaccine_rate</code>: First vaccine doses administered per 100 people, seven day moving average.
+<li><code>vaccine_rate</code>: First vaccine doses administered per 100 people.
 <ul>
-<li><code>vaccine_count</code>: First vaccine doses administered, seven day moving average.</li>
+<li><code>vaccine_count</code>: First vaccine doses administered.</li>
 </ul></li>
 <li><code>new_vaccine_rate</code>: New first vaccine doses administered per 100 people, seven day moving average.
 <ul>
