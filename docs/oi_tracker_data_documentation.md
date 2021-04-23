@@ -1,15 +1,15 @@
 <body>
-<header>
-<h1 class="title"><div style="white-space: pre-line;">Opportunity Insights Economic Tracker
+<header id="title-block-header">
+<h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2021-02-19</p>
+<p class="subtitle">last updated on 2021-04-23</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
 <p>This document provides an overview of the sources and processing applied to each data series within the <a href="https://tracktherecovery.org">Opportunity Insights Economic Tracker</a>. The documentation is organized sequentially by series in the tracker, then broken down into categories of information describing each series, its source data, and our processing steps.</p>
 <p>You can refer to additional documentation published by Opportunity Insights for complementary information:</p>
 <ul>
-<li>The Economic Tracker's <strong><a href="https://github.com/OpportunityInsights/EconomicTracker">Data Dictionary</a></strong> lists each data file and variable available for public use, with short descriptions of the contents of each variable.</li>
+<li>The Economic Tracker’s <strong><a href="https://github.com/OpportunityInsights/EconomicTracker">Data Dictionary</a></strong> lists each data file and variable available for public use, with short descriptions of the contents of each variable.</li>
 <li>The <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong> provides detailed information about the methodology used to construct the series.</li>
 </ul>
 <p>Please note that both the data and this data documentation is updated regularly and that the following information is subject to change.</p>
@@ -42,15 +42,19 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Data masking:</strong> For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending &lt; $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
-<p><strong>Notes:</strong> We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
+<p><strong>Notes:</strong> We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked ‘provisional’ and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
+<p><strong>Data Frequency:</strong></p>
+<ul>
+<li><em>National, State, Metro</em>: Daily, presented as a 7-day moving average</li>
+<li><em>County</em>: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday</li>
+</ul>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
-<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.</p>
+<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
@@ -68,20 +72,25 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.</p>
+<p><strong>Data Masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.</p>
+<p>For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.</p>
+<p>We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.</p>
 <p><strong>Notes:</strong></p>
-<p>Small businesses are defined as those with annual revenue below the Small Business Administration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p>Small businesses are defined as those with annual revenue below the Small Business Administration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="small-businesses-open">Small Businesses Open</h2>
 <p><strong>Summary:</strong> Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
+<p><strong>Data Frequency:</strong></p>
+<ul>
+<li><em>National, State, Metro</em>: Daily, presented as a 7-day moving average</li>
+<li><em>County</em>: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday</li>
+</ul>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
-<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.</p>
+<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p>We exclude counties with a total average revenue of less than $250,000 during the indexing period (January 4-31). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
@@ -98,8 +107,10 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.</p>
-<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Administration's <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
+<p><strong>Data Masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.</p>
+<p>For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.</p>
+<p>We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.</p>
+<p><strong>Notes:</strong> Small businesses are defined as those with annual revenue below the Small Business Administration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
@@ -120,7 +131,7 @@ Data Documentation</div></h1>
 <li>Manufactoring</li>
 <li>Professional and Business Services</li>
 </ul></li>
-<li><p><em>Education Requirement</em>, by <a href="https://www.onetonline.org/help/online/zones">ONET Jobzone's Education Requirement Classification</a>.</p>
+<li><p><em>Education Requirement</em>, by <a href="https://www.onetonline.org/help/online/zones">ONET Jobzone’s Education Requirement Classification</a>.</p>
 <ul>
 <li>Minimal - Jobzone 1</li>
 <li>Some - Jobzone 2</li>
@@ -139,7 +150,7 @@ Data Documentation</div></h1>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile's total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
+<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile’s total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Wage</em>.</p>
@@ -161,7 +172,7 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
-<p><em>In the Paychex series</em>, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define &quot;influential cells&quot; that are most sensitive to the introduction of new clients to the data and drop those &quot;influential cells&quot; that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an &quot;influential cell&quot; if either</p>
+<p><em>In the Paychex series</em>, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define “influential cells” that are most sensitive to the introduction of new clients to the data and drop those “influential cells” that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an “influential cell” if either</p>
 <ul>
 <li>the county contains 100 or fewer unique county x quartile x industry x firm size cuts and that cut accounts for over 10% of employment in the corresponding county x wage quartile at any date in 2020 or,</li>
 <li>the county contains greater than 100 unique county x quartile x industry x firm size cuts and that cut accounts for over 5% of employment in the corresponding county x wage quartile at any date in 2020.</li>
@@ -225,9 +236,9 @@ Data Documentation</div></h1>
 <li>Combined Claims</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state's particular masking rules.</p>
+<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state’s particular masking rules.</p>
 <p><strong>Notes:</strong> Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.</p>
-<p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). &quot;Combined Claims&quot; are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
+<p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). “Combined Claims” are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
 <h2 id="online-math-participation">Online Math Participation</h2>
 <p><strong>Summary:</strong> Number of students using Zearn Math, a curriculum from the non-profit Zearn, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
@@ -268,9 +279,9 @@ Data Documentation</div></h1>
 </ul></li>
 </ul>
 <p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
-<h2 id="covid-19-cases-deaths-and-tests">COVID-19 Cases, Deaths and Tests</h2>
+<h2 id="covid-19-infections">COVID-19 Infections</h2>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.</p>
-<p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">New York Times COVID-19 Data</a>, <a href="https://covidtracking.com/">The COVID Tracking Project</a>.</p>
+<p><strong>Data Source:</strong> <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
 <p><strong>Update Frequency:</strong> Daily</p>
 <p><strong>Date Range:</strong> January 22th until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
@@ -284,6 +295,22 @@ Data Documentation</div></h1>
 <li><em>Total</em> Cases, Deaths, or Tests</li>
 </ul>
 <p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
+<h2 id="covid-19-vaccinations">COVID-19 Vaccinations</h2>
+<p><strong>Summary:</strong> Percentage of the population who have received one or more doses of any COVID-19 vaccine.</p>
+<p><strong>Data Source:</strong> <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
+<p><strong>Update Frequency:</strong> Daily</p>
+<p><strong>Date Range:</strong> February 24th 2021 until the most recent date available.</p>
+<p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average for new vaccinations</p>
+<p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
+<p><strong>Indexing Type:</strong> No indexing applied, the published numbers directly report quantities.</p>
+<p><strong>Geographies:</strong> National, State</p>
+<p><strong>Breakdowns:</strong></p>
+<ul>
+<li><em>New Vaccinations</em> Percent of population newly vaccinated with at least one vaccine dose</li>
+<li><em>Total Vaccinations</em> Percent of population in total vaccinated with at least one vaccine dose</li>
+</ul>
+<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
+<p><strong>Notes:</strong> CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.</p>
 <h2 id="time-outside-home">Time Outside Home</h2>
 <p><strong>Summary:</strong> Time spent away from home, estimated using cellphone location data from Google users who have enabled the Location History setting.</p>
 <p><strong>Data Source:</strong> <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>, <a href="https://www.bls.gov/tus/">American Time Use Survey</a></p>

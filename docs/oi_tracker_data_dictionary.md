@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-03-27</p>
+<p class="subtitle">last updated on 2021-04-23</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 
@@ -59,11 +59,12 @@ Data Dictionary</div></h1>
 <li><code>spend_all_inclow</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_q2</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
 <li><code>spend_all_q3</code>: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.</li>
-<li><code>spend_retail_w_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.</li>
-<li><code>spend_retail_no_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, ETC, SGH) MCCs excluding grocery spending, 7 day moving average.</li>
+<li><code>spend_retail_w_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending, 7 day moving average.</li>
+<li><code>spend_retail_no_grocery</code>: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending, 7 day moving average.</li>
 <li><code>provisional</code>: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.</li>
 <li><code>freq</code>: Marks whether the data represents a daily (“d”) or weekly (“w”) value.</li>
 </ul>
+<p>The merchant category codes (MCC) making up the retail spending measures are: AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.</p>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
 <ul>
@@ -201,6 +202,7 @@ Data Dictionary</div></h1>
 <li><code>revenue_retail</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in retail businesses (NAICS 2-digit codes 44-45).</li>
 <li><code>revenue_food_accommodation</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in food and accommodation businesses (NAICS 2-digit code 72).</li>
 </ul>
+<p>Note at the County level, these variables are calculated on a weekly basis as a 6-day average of days Monday through Saturday. Omitting Sunday reduces the influence of imputations in small geographic areas, as discussed in the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
 <h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>

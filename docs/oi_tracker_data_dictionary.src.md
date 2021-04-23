@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-03-27
+subtitle: last updated on 2021-04-23
 documentclass: scrartcl
 ---  
 
@@ -79,10 +79,12 @@ Spending data from [Affinity Solutions](https://www.affinity.solutions).
 - `spend_all_inclow`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 - `spend_all_q2`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
 - `spend_all_q3`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_retail_w_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, ETC, SGH) MCCs including grocery spending, 7 day moving average.
-- `spend_retail_no_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, ETC, SGH) MCCs excluding grocery spending, 7 day moving average.
+- `spend_retail_w_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending, 7 day moving average.
+- `spend_retail_no_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending, 7 day moving average.
 - `provisional`: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.
 - `freq`: Marks whether the data represents a daily ("d") or weekly ("w") value.
+
+The merchant category codes (MCC) making up the retail spending measures are: AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.
 
 ### Burning Glass
 
@@ -104,7 +106,7 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 
 ### COVID
 
-COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). 
+COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).
 
 - `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
     - `case_count`: Confirmed COVID-19 cases, seven day moving average.
@@ -118,8 +120,8 @@ COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://c
     - `test_count`: Confirmed COVID-19 tests, seven day moving average.
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.
     - `new_test_count`: New confirmed COVID-19 tests, seven day moving average.
-- `vaccine_rate`: First vaccine doses administered per 100 people, seven day moving average.
-    - `vaccine_count`: First vaccine doses administered, seven day moving average.
+- `vaccine_rate`: First vaccine doses administered per 100 people.
+    - `vaccine_count`: First vaccine doses administered.
 - `new_vaccine_rate`: New first vaccine doses administered per 100 people, seven day moving average.
     - `new_vaccine_count`: New first vaccine doses administered, seven day moving average.
 
@@ -147,8 +149,8 @@ Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.c
 - `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
 - `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
-- `emp_combined_retail`: Employment level for workers in retail (NAICS sector 44-45). 
-- `emp_combined_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000). 
+- `emp_combined_retail`: Employment level for workers in retail (NAICS sector 44-45).
+- `emp_combined_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).
 - `emp_combined_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
 - `emp_combined_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).
 - `emp_combined_advance`: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.
@@ -196,6 +198,8 @@ Small business openings and revenue data from [Womply](https://www.womply.com/).
 - `revenue_ss70`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).
 - `revenue_retail`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in retail businesses (NAICS 2-digit codes 44-45).
 - `revenue_food_accommodation`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in food and accommodation businesses (NAICS 2-digit code 72).
+
+Note at the County level, these variables are calculated on a weekly basis as a 6-day average of days Monday through Saturday. Omitting Sunday reduces the influence of imputations in small geographic areas, as discussed in the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ### Zearn
 

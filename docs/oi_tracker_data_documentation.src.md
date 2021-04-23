@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-02-19
+subtitle: last updated on 2021-04-23
 documentclass: scrartcl
 ---
 
@@ -76,11 +76,14 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Date Range:** January 15th until the most recent date available.
 
-**Data Frequency:** Daily, presented as a 7-day moving average
+**Data Frequency:**
+
+* *National, State, Metro*: Daily, presented as a 7-day moving average
+* *County*: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday
 
 **Indexing Period:** January 4th - January 31st  
 
-**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
+**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.
 
 **Geographies:** National, State, County, Metro
 
@@ -99,7 +102,11 @@ Please note that both the data and this data documentation is updated regularly 
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Data masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.
+**Data Masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.
+
+For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.
+
+We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.
 
 **Notes:**
 
@@ -117,16 +124,16 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Date Range:** January 15th until the most recent date available.
 
-**Data Frequency:** Daily, presented as a 7-day moving average
+**Data Frequency:**
+
+* *National, State, Metro*: Daily, presented as a 7-day moving average
+* *County*: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday
 
 **Indexing Period:** January 4th - January 31st  
 
-**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
+**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.
 
 **Geographies:** National, State, County, Metro
-
-We exclude counties with a total average revenue of less than $250,000 during
-the indexing period (January 4-31). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.
 
 **Breakdowns:**  
 
@@ -143,7 +150,11 @@ the indexing period (January 4-31). Additionally we omit spending categories for
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Data masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants. We therefore filter out series with an overreliance on imputation by masking any series where more than 25% of the revenue or merchants reported come from cells containing 1 or 2 merchants. We also mask series that report less than $250,000 in total revenue during the base period of January 4-31 2020.
+**Data Masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.
+
+For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.
+
+We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.
 
 **Notes:** Small businesses are defined as those with annual revenue below the Small Business Administration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
 
@@ -243,7 +254,7 @@ We then drop “influential cells” that record growth in employment exceeding 
 
 * For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.
 
-* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). 
+* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Unemployment Claims
 
@@ -371,11 +382,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
-## COVID-19 Cases, Deaths and Tests
+## COVID-19 Infections
 
 **Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.
 
-**Data Source:** [New York Times COVID-19 Data](https://github.com/nytimes/covid-19-data), [The COVID Tracking Project](https://covidtracking.com/).
+**Data Source:** [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
 
 **Update Frequency:** Daily
 
@@ -397,6 +408,33 @@ Note that testing counts and rates are only available at the national and state 
 * *Total* Cases, Deaths, or Tests
 
 **Data masking:** No masking is performed by Opportunity Insights.
+
+## COVID-19 Vaccinations
+
+**Summary:** Percentage of the population who have received one or more doses of any COVID-19 vaccine.
+
+**Data Source:** [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
+
+**Update Frequency:** Daily
+
+**Date Range:** February 24th 2021 until the most recent date available.
+
+**Data Frequency:** Daily, presented as a 7-day moving average for new vaccinations
+
+**Indexing Period:** No indexing applied, the published numbers directly report quantities.
+
+**Indexing Type:** No indexing applied, the published numbers directly report quantities.
+
+**Geographies:** National, State
+
+**Breakdowns:**  
+
+* *New Vaccinations* Percent of population newly vaccinated with at least one vaccine dose
+* *Total Vaccinations* Percent of population in total vaccinated with at least one vaccine dose
+
+**Data masking:** No masking is performed by Opportunity Insights.
+
+**Notes:** CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.
 
 ## Time Outside Home
 
