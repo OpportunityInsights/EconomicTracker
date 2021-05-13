@@ -6,7 +6,11 @@ The Opportunity Insights Economic Tracker (https://tracktherecovery.org) combine
 
 All of the data displayed on the Economic Tracker can be downloaded here. In collaboration with our data partners, we are making this data freely available in order to assist in efforts to inform the public, policymakers, and researchers about the real-time state of the economy and the effects of COVID-19.
 
-Anyone is welcome to use this data; we simply we ask that you attribute our work by citing or linking to [the accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf) and the Economic Tracker at https://tracktherecovery.org.
+Anyone is welcome to use this data; we simply we ask that you:
+
+1. List the name of the data provider(s) for the particular series you use.
+
+2. Attribute our work by citing or linking to [the accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf) and the Economic Tracker at https://tracktherecovery.org.
 
 > "The Economic Impacts of COVID-19: Evidence from a New Public Database Built Using Private Sector Data", by Raj Chetty, John Friedman, Nathaniel Hendren, Michael Stepner, and the Opportunity Insights Team. November 2020. Available at: https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf
 
