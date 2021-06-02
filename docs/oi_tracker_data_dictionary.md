@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-04-23</p>
+<p class="subtitle">last updated on 2021-06-02</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 
@@ -134,8 +134,12 @@ Data Dictionary</div></h1>
 <ul>
 <li><code>emp_combined</code>: Employment level for all workers.</li>
 <li><code>emp_combined_inclow</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
+<li><code>emp_combined_incq2</code>: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).</li>
 <li><code>emp_combined_incmiddle</code>: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
+<li><code>emp_combined_incq3</code>: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).</li>
 <li><code>emp_combined_inchigh</code>: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).</li>
+<li><code>emp_combined_incbelowmed</code>: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).</li>
+<li><code>emp_combined_incabovemed</code>: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).</li>
 <li><code>emp_combined_ss40</code>: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).</li>
 <li><code>emp_combined_ss60</code>: Employment level for workers in professional and business services (NAICS supersector 60).</li>
 <li><code>emp_combined_ss65</code>: Employment level for workers in education and health services (NAICS supersector 65).</li>

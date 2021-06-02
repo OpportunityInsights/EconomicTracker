@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-04-23
+subtitle: last updated on 2021-06-02
 documentclass: scrartcl
 ---  
 
@@ -143,8 +143,12 @@ Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.c
 
 - `emp_combined`: Employment level for all workers.
 - `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
+- `emp_combined_incq2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).
 - `emp_combined_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
+- `emp_combined_incq3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).
 - `emp_combined_inchigh`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).
+- `emp_combined_incbelowmed`: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).
+- `emp_combined_incabovemed`: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).
 - `emp_combined_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
 - `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
