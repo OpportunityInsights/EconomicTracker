@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-06-10
+subtitle: last updated on 2021-06-16
 documentclass: scrartcl
 ---  
 
@@ -65,56 +65,31 @@ Geographic identifier: `cityid`
 
 ### Affinity
 
-Spending data from [Affinity Solutions](https://www.affinity.solutions).
+Credit/debit card spending data from [Affinity Solutions](https://www.affinity.solutions).
 
-- `spend_all`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_acf`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average, 7 day moving average.
-- `spend_aer`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.
-- `spend_apg`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.
-- `spend_grf`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.
-- `spend_hcs`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in health care and social assistance (HCS) MCCs, 7 day moving average.
-- `spend_tws`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in transportation and warehousing (TWS) MCCs, 7 day moving average.
-- `spend_all_inchigh`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_all_incmiddle`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with middle (middle two quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_all_inclow`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_all_q2`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_all_q3`: Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes, relative to January 4-31 2020 in all merchant category codes (MCC), 7 day moving average.
-- `spend_retail_w_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending, 7 day moving average.
-- `spend_retail_no_grocery`: Seasonally adjusted credit/debit card spending relative to January 4-31 2020 in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending, 7 day moving average.
-- `spend_q1_acf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average.
-- `spend_q1_aer': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.
-- `spend_q1_apg': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.
-- `spend_q1_grf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.
-- `spend_q1_hcs': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in  health care and social assistance (HCS) MCCs, 7 day moving average.
-- `spend_q1_tws': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in  transportation and warehousing (TWS) MCCs, 7 day moving average.
-- `spend_q1_retail_no_grocery': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery, 7 day moving average.
-- `spend_q1_retail_w_grocery': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with low (bottom quartiles) median income relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs including grocery, 7 day moving average.
-- `spend_q2_acf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average.
-- `spend_q2_aer': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.
-- `spend_q2_apg': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.
-- `spend_q2_grf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.
-- `spend_q2_hcs': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in  health care and social assistance (HCS) MCCs, 7 day moving average.
-- `spend_q2_tws': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in  transportation and warehousing (TWS) MCCs, 7 day moving average.
-- `spend_q2_retail_no_grocery': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery, 7 day moving average.
-- `spend_q2_retail_w_grocery': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the second quartile (i.e. second lowest) of median incomes relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs including grocery, 7 day moving average.
-- `spend_q3_acf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average.
-- `spend_q3_aer': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.
-- `spend_q3_apg': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.
-- `spend_q3_grf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.
-- `spend_q3_hcs': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in  health care and social assistance (HCS) MCCs, 7 day moving average.
-- `spend_q3_tws': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in  transportation and warehousing (TWS) MCCs, 7 day moving average.
-- `spend_q3_retail_no_grocery': Seasonally adjusted credit/debit card spending by consumers living in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery, 7 day moving average.
-- `spend_q3_retail_w_grocery': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes in the third quartile (i.e. second highest) of median incomes relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs including grocery, 7 day moving average.
-- `spend_q4_acf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in accomodation and food service (ACF) MCCs, 7 day moving average.
-- `spend_q4_aer': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in arts, entertainment, and recreation (AER) MCCs, 7 day moving average.
-- `spend_q4_apg': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs, 7 day moving average.
-- `spend_q4_grf': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in grocery and food store (GRF) MCCs, 7 day moving average.
-- `spend_q4_hcs': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in  health care and social assistance (HCS) MCCs, 7 day moving average.
-- `spend_q4_tws': Seasonally adjusted credit/debit card spending by consumers living in ZIP codes with high (top quartile) median income relative to January 4-31 2020 in  transportation and warehousing (TWS) MCCs, 7 day moving average.
-- `spend_q4_retail_no_grocery': Seasonally adjusted credit/debit card spending by consumers living with high (top quartile) median income relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery, 7 day moving average.
-- `spend_q4_retail_w_grocery': Seasonally adjusted credit/debit card spending by consumers living with high (top quartile) median income relative to January 4-31 2020 in  retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs including grocery, 7 day moving average.
+- `spend_all`: Spending in all merchant category codes (MCCs).
+- `spend_acf`: Spending in accomodation and food service (ACF) MCCs.
+- `spend_aer`: Spending in arts, entertainment, and recreation (AER) MCCs.
+- `spend_apg`: Spending in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs.
+- `spend_grf`: Spending in grocery and food store (GRF) MCCs.
+- `spend_hcs`: Spending in health care and social assistance (HCS) MCCs.
+- `spend_tws`: Spending in transportation and warehousing (TWS) MCCs.
+- `spend_retail_w_grocery`: Spending in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.
+- `spend_retail_no_grocery`: Spending in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.
+- `spend_all_incmiddle`: Spending by consumers living in ZIP codes with middle (middle two quartiles) median income, in all MCCs.
+- `spend_all_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in all MCCs.
+- `spend_acf_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in accomodation and food service (ACF) MCCs.
+- `spend_aer_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in arts, entertainment, and recreation (AER) MCCs.
+- `spend_apg_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs.
+- `spend_grf_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in grocery and food store (GRF) MCCs.
+- `spend_hcs_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in  health care and social assistance (HCS) MCCs.
+- `spend_tws_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in  transportation and warehousing (TWS) MCCs.
+- `spend_retail_w_grocery_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.
+- `spend_retail_no_grocery_q#`: Spending by consumers living in ZIP codes with median income in quartile `#`, in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.
 - `provisional`: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.
 - `freq`: Marks whether the data represents a daily ("d") or weekly ("w") value.
+
+All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income.
 
 The merchant category codes (MCC) making up the retail spending measures are: AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.
 
