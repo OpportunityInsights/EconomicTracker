@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-06-16</p>
+<p class="subtitle">last updated on 2021-06-30</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 
@@ -47,30 +47,108 @@ Data Dictionary</div></h1>
 <h3 id="affinity">Affinity</h3>
 <p>Credit/debit card spending data from <a href="https://www.affinity.solutions">Affinity Solutions</a>.</p>
 <ul>
-<li><code>spend_all</code>: Spending in all merchant category codes (MCCs).</li>
-<li><code>spend_acf</code>: Spending in accomodation and food service (ACF) MCCs.</li>
-<li><code>spend_aer</code>: Spending in arts, entertainment, and recreation (AER) MCCs.</li>
-<li><code>spend_apg</code>: Spending in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs.</li>
-<li><code>spend_grf</code>: Spending in grocery and food store (GRF) MCCs.</li>
-<li><code>spend_hcs</code>: Spending in health care and social assistance (HCS) MCCs.</li>
-<li><code>spend_tws</code>: Spending in transportation and warehousing (TWS) MCCs.</li>
-<li><code>spend_retail_w_grocery</code>: Spending in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.</li>
-<li><code>spend_retail_no_grocery</code>: Spending in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.</li>
-<li><code>spend_all_incmiddle</code>: Spending by consumers living in ZIP codes with middle (middle two quartiles) median income, in all MCCs.</li>
-<li><code>spend_all_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in all MCCs.</li>
-<li><code>spend_acf_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in accomodation and food service (ACF) MCCs.</li>
-<li><code>spend_aer_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in arts, entertainment, and recreation (AER) MCCs.</li>
-<li><code>spend_apg_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs.</li>
-<li><code>spend_grf_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in grocery and food store (GRF) MCCs.</li>
-<li><code>spend_hcs_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in health care and social assistance (HCS) MCCs.</li>
-<li><code>spend_tws_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in transportation and warehousing (TWS) MCCs.</li>
-<li><code>spend_retail_w_grocery_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.</li>
-<li><code>spend_retail_no_grocery_q#</code>: Spending by consumers living in ZIP codes with median income in quartile <code>#</code>, in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.</li>
+<li><code>spend_all</code>: Spending in all merchant category codes (MCCs).
+<ul>
+<li><code>spend_all_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+<li><code>spend_all_incmiddle</code>: …by consumers living in ZIP codes with middle (middle two quartiles) median income.</li>
+</ul></li>
+<li><code>spend_aap</code>: Spending in apparel and accessories (AAP) MCCs.
+<ul>
+<li><code>spend_aap_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_acf</code>: Spending in accomodation and food service (ACF) MCCs.
+<ul>
+<li><code>spend_acf_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_aer</code>: Spending in arts, entertainment, and recreation (AER) MCCs.
+<ul>
+<li><code>spend_aer_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_apg</code>: Spending in general merchandise stores (GEN) and apparel and accessories (AAP) MCCs.
+<ul>
+<li><code>spend_apg_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_gen</code>: Spending in general merchandise stores (GEN) MCCs.
+<ul>
+<li><code>spend_gen_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_grf</code>: Spending in grocery and food store (GRF) MCCs.
+<ul>
+<li><code>spend_grf_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_hcs</code>: Spending in health care and social assistance (HCS) MCCs.
+<ul>
+<li><code>spend_hcs_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_hic</code>: Spending in home improvement centers (HIS) MCCs.
+<ul>
+<li><code>spend_hic_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_sgh</code>: Spending in sporting goods and hobby (SGH) MCCs.
+<ul>
+<li><code>spend_sgh_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_tws</code>: Spending in transportation and warehousing (TWS) MCCs.
+<ul>
+<li><code>spend_tws_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_retail_w_grocery</code>: Spending in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.
+<ul>
+<li><code>spend_retail_w_grocery_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_retail_no_grocery</code>: Spending in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.
+<ul>
+<li><code>spend_retail_no_grocery_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_durables</code>: Spending in durable goods (CEC, CTE, HIC, MOV, SGH, ETC) MCCs.
+<ul>
+<li><code>spend_durables_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_nondurables</code>: Spending in non-durable goods (AAP, AFH, GEN, GRF, HPC, WHT) MCCs.
+<ul>
+<li><code>spend_nondurables_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_remoteservices</code>: Spending in remote services (AWS, CNS, EDS, FAI, INF, PST, PUA, UTL) MCCs.
+<ul>
+<li><code>spend_remoteservices_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
+<li><code>spend_inpersonmisc</code>: Spending in other in-person services (MOS, RLL) MCCs.
+<ul>
+<li><code>spend_inpersonmisc_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
 <li><code>provisional</code>: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.</li>
 <li><code>freq</code>: Marks whether the data represents a daily (“d”) or weekly (“w”) value.</li>
 </ul>
-<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income.</p>
-<p>The merchant category codes (MCC) making up the retail spending measures are: AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.</p>
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `spend_s_all`:
+  - `spend_s_all_q#`:
+  - `spend_s_all_incmiddle`:
+  - `spend_s_aap`:
+  - `spend_s_acf`:
+  - `spend_s_aer`:
+  - `spend_s_apg`:
+  - `spend_s_durables`:
+  - `spend_s_nondurables`:
+  - `spend_s_remoteservices`:
+  - `spend_s_inpersonmisc`:
+  - `spend_s_gen`:
+  - `spend_s_grf`:
+  - `spend_s_hcs`:
+  - `spend_s_hic`:
+  - `spend_s_sgh`:
+  - `spend_s_tws`:
+  - `spend_s_retail_w_grocery`:
+  - `spend_s_retail_no_grocery`:
+-->
+<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> instead of <code>spend_</code>.</p>
+<p>The merchant category codes (MCC) making up the grouped spending categories are:</p>
+<ul>
+<li><strong>Retail spending:</strong> AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.</li>
+<li><strong>Durable goods:</strong> CEC consumer electronics, CTE telecommunications equipment, HIC home improvement centers, MOV motor vehicles, SGH sporting goods and hobby, ETC miscellaneous.</li>
+<li><strong>Non-durable goods:</strong> AAP apparel and accessories, AFH agriculture forestry and hunting, GEN general merchandise stores, GRF groceries, HPC health and personal care stores, WHT wholesale trade.</li>
+<li><strong>Remote services:</strong> AWS administration and waste services, CNS construction, EDS education, FAI finance and insurance, INF information, PST professional/scientific services, PUA public administration, UTL utilities.</li>
+<li><strong>Other in-person services:</strong> MOS barber shops and spas, RLL real estate and leasing.</li>
+</ul>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
 <ul>
