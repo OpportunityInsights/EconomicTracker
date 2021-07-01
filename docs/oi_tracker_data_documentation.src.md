@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-05-31
+subtitle: last updated on 2021-07-01
 documentclass: scrartcl
 ---
 
@@ -19,7 +19,7 @@ This document provides an overview of the sources and processing applied to each
 
 You can refer to additional documentation published by Opportunity Insights for complementary information:
 
-* The Economic Tracker's **[Data Dictionary](https://github.com/OpportunityInsights/EconomicTracker)** lists each data file and variable available for public use, with short descriptions of the contents of each variable.
+* The Economic Tracker's **[Data Dictionary](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md)** lists each data file and variable available for public use, with short descriptions of the contents of each variable.
 * The **[accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf)** provides detailed information about the methodology used to construct the series.
 
 Please note that both the data and this data documentation is updated regularly and that the following information is subject to change.
@@ -239,16 +239,17 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
 **Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.  
 
-*In the Paychex series*, we perform masking in order to avoid the introduction of new Paychex clients from artificially distorting a series through structural breaks in the underlying data. We define "influential cells" that are most sensitive to the introduction of new clients to the data and drop those "influential cells" that change significantly over the course of the year. We specifically denote county x wage quartile x industry x firm size bin cuts as an "influential cell" if either
-
-- the county contains 100 or fewer unique county x quartile x industry x firm size cuts and that cut accounts for over 10% of employment in the corresponding county x wage quartile at any date in 2020 or,
-- the county contains greater than 100 unique county x quartile x industry x firm size cuts and that cut accounts for over 5% of employment in the corresponding county x wage quartile at any date in 2020.
-
-We then drop “influential cells” that record growth in employment exceeding 50% relative to January 2020 on any date, in order to omit trends likely arising due to changes in Paychex’s client base rather than true employment changes.
+*In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells with over 50 employees at any point between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.
 
 *In the Earnin series*, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).
 
 *In the Kronos and Intuit series*, we do not make any sample restrictions.
+
+*In the combined series*, we mask the series in two additional ways:
+
+* We do not report changes in employment among low-income or middle-income workers around the date of minimum wage changes. We use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This results in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers' wages in response to the minimum wage change. As these trends are driven by the legislative change in minimum wages, rather than by underlying economic conditions, we suppress the low-income and middle-income series in these states. Instead, the below-median-income and above-median-income series we have made available can be used to describe trends in employment by income in these states. (As the median wage in the Paychex data is $18.18, the assignment of workers to below-median or above-median income is substantially unaffected by wage changes caused by minimum wage laws.)
+
+* We do not report employment trends in Washington, DC or South Dakota, where our analysis sample is small. 
 
 **Notes:**
 

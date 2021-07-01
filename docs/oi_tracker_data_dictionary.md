@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-06-30</p>
+<p class="subtitle">last updated on 2021-07-01</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 
@@ -216,23 +216,31 @@ Data Dictionary</div></h1>
 <h3 id="employment">Employment</h3>
 <p>Employment levels relative to Jan 4-31 2020 from <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a> and <a href="https://www.kronos.com/">Kronos</a>.</p>
 <ul>
-<li><code>emp_combined</code>: Employment level for all workers.</li>
-<li><code>emp_combined_inclow</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
-<li><code>emp_combined_incq2</code>: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).</li>
-<li><code>emp_combined_incmiddle</code>: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
-<li><code>emp_combined_incq3</code>: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).</li>
-<li><code>emp_combined_inchigh</code>: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).</li>
-<li><code>emp_combined_incbelowmed</code>: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).</li>
-<li><code>emp_combined_incabovemed</code>: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).</li>
-<li><code>emp_combined_ss40</code>: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).</li>
-<li><code>emp_combined_ss60</code>: Employment level for workers in professional and business services (NAICS supersector 60).</li>
-<li><code>emp_combined_ss65</code>: Employment level for workers in education and health services (NAICS supersector 65).</li>
-<li><code>emp_combined_ss70</code>: Employment level for workers in leisure and hospitality (NAICS supersector 70).</li>
-<li><code>emp_combined_retail</code>: Employment level for workers in retail (NAICS sector 44-45).</li>
-<li><code>emp_combined_retail_inclow</code>: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
-<li><code>emp_combined_retail_incmiddle</code>: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
-<li><code>emp_combined_retail_inchigh</code>: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).</li>
-<li><code>emp_combined_advance</code>: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.</li>
+<li><code>emp</code>: Employment level for all workers.</li>
+<li><code>emp_incq1</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
+<li><code>emp_incq2</code>: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).</li>
+<li><code>emp_incmiddle</code>: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
+<li><code>emp_incq3</code>: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).</li>
+<li><code>emp_incq4</code>: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).</li>
+<li><code>emp_incbelowmed</code>: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).</li>
+<li><code>emp_incabovemed</code>: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).</li>
+<li><code>emp_ss40</code>: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).</li>
+<li><code>emp_ss60</code>: Employment level for workers in professional and business services (NAICS supersector 60).</li>
+<li><code>emp_ss65</code>: Employment level for workers in education and health services (NAICS supersector 65).</li>
+<li><code>emp_ss70</code>: Employment level for workers in leisure and hospitality (NAICS supersector 70).</li>
+<li><code>emp_retail</code>: Employment level for workers in retail (NAICS sector 44-45).</li>
+<li><code>emp_retail_inclow</code>: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).</li>
+<li><code>emp_retail_incmiddle</code>: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).</li>
+<li><code>emp_retail_inchigh</code>: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).</li>
+<li><code>emp_s72</code>: Employment level for workers in accommodation and food services (NAICS sector 72).</li>
+<li><code>emp_subset_unweighted_q1</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.</li>
+<li><code>emp_subset_unweighted_q2</code>: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.</li>
+<li><code>emp_subset_unweighted_q3</code>: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.</li>
+<li><code>emp_subset_unweighted_q4</code>: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.</li>
+<li><code>emp_subset_reweighted_q1</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
+<li><code>emp_subset_reweighted_q2</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
+<li><code>emp_subset_reweighted_q3</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry cells with nonzero employment for all four income quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
+<li><code>emp_advance</code>: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.</li>
 </ul>
 <h3 id="ui-claims">UI Claims</h3>
 <p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>

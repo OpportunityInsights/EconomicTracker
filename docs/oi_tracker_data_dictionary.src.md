@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-06-30
+subtitle: last updated on 2021-07-01
 documentclass: scrartcl
 ---  
 
@@ -192,23 +192,31 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 
 Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
 
-- `emp_combined`: Employment level for all workers.
-- `emp_combined_inclow`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
-- `emp_combined_incq2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).
-- `emp_combined_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
-- `emp_combined_incq3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).
-- `emp_combined_inchigh`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).
-- `emp_combined_incbelowmed`: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).
-- `emp_combined_incabovemed`: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).
-- `emp_combined_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
-- `emp_combined_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
-- `emp_combined_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
-- `emp_combined_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
-- `emp_combined_retail`: Employment level for workers in retail (NAICS sector 44-45).
-- `emp_combined_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).
-- `emp_combined_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
-- `emp_combined_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).
-- `emp_combined_advance`: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.
+- `emp`: Employment level for all workers.
+- `emp_incq1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
+- `emp_incq2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).
+- `emp_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
+- `emp_incq3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).
+- `emp_incq4`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).
+- `emp_incbelowmed`: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).
+- `emp_incabovemed`: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).
+- `emp_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
+- `emp_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
+- `emp_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
+- `emp_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
+- `emp_retail`: Employment level for workers in retail (NAICS sector 44-45).
+- `emp_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).
+- `emp_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
+- `emp_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).
+- `emp_s72`: Employment level for workers in accommodation and food services (NAICS sector 72).
+- `emp_subset_unweighted_q1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
+- `emp_subset_unweighted_q2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
+- `emp_subset_unweighted_q3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
+- `emp_subset_unweighted_q4`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
+- `emp_subset_reweighted_q1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
+- `emp_subset_reweighted_q2`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
+- `emp_subset_reweighted_q3`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry cells with nonzero employment for all four income quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
+- `emp_advance`: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.
 
 ### UI Claims
 
