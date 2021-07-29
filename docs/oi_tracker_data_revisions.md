@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2021-07-01</p>
+<p class="subtitle">last updated on 2021-07-29</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -27,4 +27,7 @@ Data Revisions</div></h1>
 <p>Though the tracker data for these states accurately represented trends in employment among workers earning below $13, the movement of workers around the minimum wage threshold created difficulties when comparing trends in low-wage employment across states. We have taken four steps to address this problem. First, we have created additional series for below-median-income and above-median-income employment, which can be downloaded from this repository. As the national median wage threshold in the Paychex data is $18.18, the below-median-income series is not affected by the shifting of workers induced by the minimum wage change. Second, we have added annotations to the tracker data indicating minimum wage changes in the relevant states. Third, we have suppressed series cut by income quartile in these states after December 1 2020, to avoid displaying series that are substantially affected by minimum wage changes. Finally, the impacts of the minimum wage on low-income employment in these states also affected trends at the national level: as workers’ wages increased above the $13 threshold, national employment fell. When computing the national-level trend in employment, we now exclude trends in CA, MA, AZ and NY between December 10 2020 and February 10 2021. We continue to use trends in these states when computing national-level employment from February 11 2021 forward.</p></li>
 </ul>
 <p>After making these changes, the (population-weighted) RMSE (root mean square error) of the state-level employment series relative to the CPS is 4.55 percentage points as of April 2021, after removing public sector and furloughed workers and expressing employment in seasonally-unadjusted terms relative to January 2020. Though we will continue to assess our series relative to the CPS, users should note that some amount of noise remains in both our state-level series estimates and in the CPS estimates. Particularly in instances where these two measures of employment differ, users may consider both the Opportunity Insights series and the CPS as helpful inputs in identifying local patterns.</p>
+<h2 id="unemployment-claims">Unemployment Claims</h2>
+<p><strong>Revisions on July 29th 2021</strong></p>
+<p>The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the <a href="https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx">Department of Labor data</a>. Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We’ve corrected this, and claims now align to the appropriate week.</p>
 </body>
