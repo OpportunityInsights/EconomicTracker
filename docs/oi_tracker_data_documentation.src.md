@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-07-01
+subtitle: last updated on 2021-07-30
 documentclass: scrartcl
 ---
 
@@ -249,7 +249,7 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
 * We do not report changes in employment among low-income or middle-income workers around the date of minimum wage changes. We use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This results in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers' wages in response to the minimum wage change. As these trends are driven by the legislative change in minimum wages, rather than by underlying economic conditions, we suppress the low-income and middle-income series in these states. Instead, the below-median-income and above-median-income series we have made available can be used to describe trends in employment by income in these states. (As the median wage in the Paychex data is $18.18, the assignment of workers to below-median or above-median income is substantially unaffected by wage changes caused by minimum wage laws.)
 
-* We do not report employment trends in Washington, DC or South Dakota, where our analysis sample is small. 
+* We do not report employment trends in Washington, DC or South Dakota, where our analysis sample is small.
 
 **Notes:**
 
@@ -259,7 +259,7 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
 ## Unemployment Claims
 
-**Summary:** Weekly unimployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.
+**Summary:** Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.
 
 **Data Source:** State-level and national statistics are reported by the U.S. Department of Labor.
 
@@ -322,6 +322,8 @@ Note that county-level claims in California, Georgia, Kentucky, and Illinois are
 **Notes:** Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.
 
 Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). "Combined Claims" are defined as the sum of regular, PUA and PEUC unemployment benefit claims.
+
+National totals for all programs' unemployment benefit claims are the sum of the claims counts for all states and DC and exclude other territories such as Puerto Rico and the U.S. Virgin Islands.
 
 ## Online Math Participation  
 
