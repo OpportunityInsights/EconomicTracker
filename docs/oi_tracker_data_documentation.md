@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2021-07-30</p>
+<p class="subtitle">last updated on 2021-08-02</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -155,9 +155,11 @@ Data Documentation</div></h1>
 <ul>
 <li><p><em>Wage</em>.</p>
 <ul>
-<li>High Income (wage greater than $60,000 per year)</li>
-<li>Middle Income (wage between $27,000 per year and $60,000 per year)</li>
-<li>Low Income (wage less than $27,000 per year)</li>
+<li>High Income (top wage quartile, annualized income greater than ~$60,000 per year)</li>
+<li>Middle Income (middle wage quartiles, annualized income between ~$27,000 per year and ~$60,000 per year)</li>
+<li>Low Income (bottom wage quartile, annualized income less than ~$27,000 per year)</li>
+<li>Above Median (annualized income greater than ~$37,000 per year)</li>
+<li>Below Median (annualized income less than ~$37,000 per year)</li>
 </ul></li>
 <li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
 <ul>
@@ -171,7 +173,7 @@ Data Documentation</div></h1>
 <li>Retail</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
+<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. Additionally for states where the minimum wage was raised to $13 dollars per hour or higher, we suppress the breakdowns that split out the first quartile from the second quartile as the minimum wage increase pushes a number of workers from the first into the second quartile.</p>
 <p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells with over 50 employees at any point between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.</p>
 <p><em>In the Earnin series</em>, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).</p>
 <p><em>In the Kronos and Intuit series</em>, we do not make any sample restrictions.</p>

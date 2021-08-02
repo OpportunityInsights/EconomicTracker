@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-07-30
+subtitle: last updated on 2021-08-02
 documentclass: scrartcl
 ---
 
@@ -222,9 +222,11 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
 * *Wage*.
 
-    - High Income (wage greater than $60,000 per year)
-    - Middle Income (wage between $27,000 per year and $60,000 per year)
-    - Low Income (wage less than $27,000 per year)
+    - High Income (top wage quartile, annualized income greater than ~$60,000 per year)
+    - Middle Income (middle wage quartiles, annualized income between ~$27,000 per year and ~$60,000 per year)
+    - Low Income (bottom wage quartile, annualized income less than ~$27,000 per year)
+    - Above Median (annualized income greater than ~$37,000 per year)
+    - Below Median (annualized income less than ~$37,000 per year)
 
 * *Industry*, by [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm).
 
@@ -237,7 +239,7 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
     - Retail
 
-**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.  
+**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. Additionally for states where the minimum wage was raised to $13 dollars per hour or higher, we suppress the breakdowns that split out the first quartile from the second quartile as the minimum wage increase pushes a number of workers from the first into the second quartile.    
 
 *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells with over 50 employees at any point between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.
 
