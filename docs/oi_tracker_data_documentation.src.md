@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-08-02
+subtitle: last updated on 2021-08-18
 documentclass: scrartcl
 ---
 
@@ -391,7 +391,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.
 
-**Data Source:** [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
+**Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
 
 **Update Frequency:** Daily
 
@@ -404,8 +404,6 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 **Indexing Type:** No indexing applied, the published numbers directly report quantities.
 
 **Geographies:** National, State, Country, Metro
-
-Note that testing counts and rates are only available at the national and state level, not at the county or metro levels.
 
 **Breakdowns:**  
 
@@ -430,12 +428,14 @@ Note that testing counts and rates are only available at the national and state 
 
 **Indexing Type:** No indexing applied, the published numbers directly report quantities.
 
-**Geographies:** National, State
+**Geographies:** National, State, County
 
 **Breakdowns:**  
 
 * *New Vaccinations* Percent of population newly vaccinated with at least one vaccine dose
 * *Total Vaccinations* Percent of population in total vaccinated with at least one vaccine dose
+* *New Completed Vaccinations* Percent of population newly having completed a vaccine series
+* *Total Completed Vaccinations* Percent of population in total having completed a vaccine series
 
 **Data masking:** No masking is performed by Opportunity Insights.
 

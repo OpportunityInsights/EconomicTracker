@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2021-07-29</p>
+<p class="subtitle">last updated on 2021-08-18</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -30,4 +30,9 @@ Data Revisions</div></h1>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Revisions on July 29th 2021</strong></p>
 <p>The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the <a href="https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx">Department of Labor data</a>. Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We’ve corrected this, and claims now align to the appropriate week.</p>
+<h2 id="covid-19-infections">COVID-19 Infections</h2>
+<p><strong>Revisions on March 17th 2021</strong></p>
+<p>Previously we pulled reported cases and deaths from the New York Times’ <a href="https://github.com/nytimes/covid-19-data">COVID-19 database</a> and reported tests from the <a href="https://covidtracking.com/">COVID Tracking Project</a>. At the conclusion of the COVID Tracking Project’s efforts in order to collect testing data we instead began pulling reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention’s <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">COVID Data Tracker</a> and aggregated to other geographies.</p>
+<p><strong>Revisions on August 4th 2021</strong></p>
+<p>Previously we pulled reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention’s COVID Data Tracker and aggregated to other geographies. On July 17th the Centers For Disease Control and Prevention began suppressing reported cases and deaths making aggregations across counties no longer feasible and we began to instead pull reported cases and deaths from the New York Times’ <a href="https://github.com/nytimes/covid-19-data">COVID-19 database</a>, state level reported tests from the Johns Hopkins Coronavirus Resource Center’s <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">U.S. testing database</a>, and county level reported tests from <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a>.</p>
 </body>

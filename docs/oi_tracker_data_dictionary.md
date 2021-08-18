@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2021-07-01</p>
+<p class="subtitle">last updated on 2021-08-18</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 
@@ -200,6 +200,14 @@ Data Dictionary</div></h1>
 <li><code>new_vaccine_rate</code>: New first vaccine doses administered per 100 people, seven day moving average.
 <ul>
 <li><code>new_vaccine_count</code>: New first vaccine doses administered, seven day moving average.</li>
+</ul></li>
+<li><code>fullvaccine_rate</code>: Vaccine series completed per 100 people.
+<ul>
+<li><code>fullvaccine_count</code>: Vaccine series completed.</li>
+</ul></li>
+<li><code>new_fullvaccine_rate</code>: New vaccine series completed per 100 people, seven day moving average.
+<ul>
+<li><code>new_fullvaccine_count</code>: New vaccine series completed, seven day moving average.</li>
 </ul></li>
 </ul>
 <h3 id="google-mobility">Google Mobility</h3>

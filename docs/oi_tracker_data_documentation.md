@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2021-08-02</p>
+<p class="subtitle">last updated on 2021-08-18</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -284,14 +284,13 @@ Data Documentation</div></h1>
 <p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="covid-19-infections">COVID-19 Infections</h2>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.</p>
-<p><strong>Data Source:</strong> <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
+<p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">The New York Times</a>, <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">The Johns Hopkins Coronavirus Resource Center</a>, <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
 <p><strong>Update Frequency:</strong> Daily</p>
 <p><strong>Date Range:</strong> January 22th until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
 <p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
 <p><strong>Indexing Type:</strong> No indexing applied, the published numbers directly report quantities.</p>
 <p><strong>Geographies:</strong> National, State, Country, Metro</p>
-<p>Note that testing counts and rates are only available at the national and state level, not at the county or metro levels.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><em>New</em> Cases, Deaths, or Tests (presented as a 7-day moving average)</li>
@@ -306,11 +305,13 @@ Data Documentation</div></h1>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average for new vaccinations</p>
 <p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
 <p><strong>Indexing Type:</strong> No indexing applied, the published numbers directly report quantities.</p>
-<p><strong>Geographies:</strong> National, State</p>
+<p><strong>Geographies:</strong> National, State, County</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><em>New Vaccinations</em> Percent of population newly vaccinated with at least one vaccine dose</li>
 <li><em>Total Vaccinations</em> Percent of population in total vaccinated with at least one vaccine dose</li>
+<li><em>New Completed Vaccinations</em> Percent of population newly having completed a vaccine series</li>
+<li><em>Total Completed Vaccinations</em> Percent of population in total having completed a vaccine series</li>
 </ul>
 <p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
 <p><strong>Notes:</strong> CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.</p>

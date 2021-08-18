@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2021-07-29
+subtitle: last updated on 2021-08-18
 documentclass: scrartcl
 ---  
 
@@ -61,3 +61,13 @@ After making these changes, the (population-weighted) RMSE (root mean square err
 **Revisions on July 29th 2021**
 
 The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the [Department of Labor data](https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx). Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We've corrected this, and claims now align to the appropriate week.
+
+## COVID-19 Infections
+
+**Revisions on March 17th 2021**
+
+Previously we pulled reported cases and deaths from the New York Times' [COVID-19 database](https://github.com/nytimes/covid-19-data) and reported tests from the [COVID Tracking Project](https://covidtracking.com/). At the conclusion of the COVID Tracking Project's efforts in order to collect testing data we instead began pulling reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention's [COVID Data Tracker](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) and aggregated to other geographies.
+
+**Revisions on August 4th 2021**
+
+Previously we pulled reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention's COVID Data Tracker and aggregated to other geographies. On July 17th the Centers For Disease Control and Prevention began suppressing reported cases and deaths making aggregations across counties no longer feasible and we began to instead pull reported cases and deaths from the New York Times' [COVID-19 database](https://github.com/nytimes/covid-19-data), state level reported tests from the Johns Hopkins Coronavirus Resource Center's [U.S. testing database](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), and county level reported tests from [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).    

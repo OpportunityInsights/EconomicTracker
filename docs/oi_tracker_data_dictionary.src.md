@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-07-01
+subtitle: last updated on 2021-08-18
 documentclass: scrartcl
 ---  
 
@@ -175,6 +175,10 @@ COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://c
     - `vaccine_count`: First vaccine doses administered.
 - `new_vaccine_rate`: New first vaccine doses administered per 100 people, seven day moving average.
     - `new_vaccine_count`: New first vaccine doses administered, seven day moving average.
+- `fullvaccine_rate`: Vaccine series completed per 100 people.
+    - `fullvaccine_count`: Vaccine series completed.
+- `new_fullvaccine_rate`: New vaccine series completed per 100 people, seven day moving average.
+    - `new_fullvaccine_count`: New vaccine series completed, seven day moving average.
 
 ### Google Mobility
 
