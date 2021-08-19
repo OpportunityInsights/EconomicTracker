@@ -432,10 +432,10 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Breakdowns:**  
 
-* *New Vaccinations* Percent of population newly vaccinated with at least one vaccine dose
-* *Total Vaccinations* Percent of population in total vaccinated with at least one vaccine dose
-* *New Completed Vaccinations* Percent of population newly having completed a vaccine series
-* *Total Completed Vaccinations* Percent of population in total having completed a vaccine series
+* *New Vaccinations*. Percent of population newly vaccinated with at least one vaccine dose
+* *Total Vaccinations*. Percent of population in total vaccinated with at least one vaccine dose
+* *New Completed Vaccinations*. Percent of population newly having completed a vaccine series
+* *Total Completed Vaccinations*. Percent of population in total having completed a vaccine series
 
 **Data masking:** No masking is performed by Opportunity Insights.
 

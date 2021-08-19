@@ -308,10 +308,10 @@ Data Documentation</div></h1>
 <p><strong>Geographies:</strong> National, State, County</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
-<li><em>New Vaccinations</em> Percent of population newly vaccinated with at least one vaccine dose</li>
-<li><em>Total Vaccinations</em> Percent of population in total vaccinated with at least one vaccine dose</li>
-<li><em>New Completed Vaccinations</em> Percent of population newly having completed a vaccine series</li>
-<li><em>Total Completed Vaccinations</em> Percent of population in total having completed a vaccine series</li>
+<li><em>New Vaccinations</em>. Percent of population newly vaccinated with at least one vaccine dose</li>
+<li><em>Total Vaccinations</em>. Percent of population in total vaccinated with at least one vaccine dose</li>
+<li><em>New Completed Vaccinations</em>. Percent of population newly having completed a vaccine series</li>
+<li><em>Total Completed Vaccinations</em>. Percent of population in total having completed a vaccine series</li>
 </ul>
 <p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
 <p><strong>Notes:</strong> CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.</p>
