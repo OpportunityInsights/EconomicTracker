@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-08-18
+subtitle: last updated on 2021-08-23
 documentclass: scrartcl
 ---
 
@@ -428,7 +428,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Indexing Type:** No indexing applied, the published numbers directly report quantities.
 
-**Geographies:** National, State, County
+**Geographies:** National, State, County, Metro
 
 **Breakdowns:**  
 

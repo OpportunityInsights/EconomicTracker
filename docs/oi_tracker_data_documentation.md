@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2021-08-18</p>
+<p class="subtitle">last updated on 2021-08-23</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -305,7 +305,7 @@ Data Documentation</div></h1>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average for new vaccinations</p>
 <p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
 <p><strong>Indexing Type:</strong> No indexing applied, the published numbers directly report quantities.</p>
-<p><strong>Geographies:</strong> National, State, County</p>
+<p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><em>New Vaccinations</em>. Percent of population newly vaccinated with at least one vaccine dose</li>
