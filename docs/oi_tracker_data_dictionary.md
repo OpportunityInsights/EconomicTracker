@@ -142,42 +142,24 @@ Data Dictionary</div></h1>
   - `spend_19_all`:
   - `spend_19_all_q#`:
   - `spend_19_all_incmiddle`:
-  - `spend_19_all_inclow`:
-  - `spend_19_all_inchigh`:
   - `spend_19_aap`:
-  - `spend_19_q#_aap`:
   - `spend_19_acf`:
-  - `spend_19_q#_acf`:
   - `spend_19_aer`:
-  - `spend_19_q#_aer`:
   - `spend_19_apg`:
-  - `spend_19_q#_apg`:
-  - `spend_19_dur`:
-  - `spend_19_q#_dur`:
-  - `spend_19_gms`:
-  - `spend_19_q#_gms`:
+  - `spend_19_gen`:
   - `spend_19_grf`:
-  - `spend_19_q#_grf`:
   - `spend_19_hcs`:
-  - `spend_19_q#_hcs`:
   - `spend_19_hic`:
-  - `spend_19_q#_hic`:
-  - `spend_19_inp`:
-  - `spend_19_q#_inp`:
-  - `spend_19_ndur`:
-  - `spend_19_q#_ndur`:
-  - `spend_19_rem`:
-  - `spend_19_q#_rem`:
   - `spend_19_sgh`:
-  - `spend_19_q#_sgh`:
   - `spend_19_tws`:
-  - `spend_19_q#_tws`:
+  - `spend_19_inpersonmisc`:
+  - `spend_19_durables`:
+  - `spend_19_nondurables`:
+  - `spend_19_remoteservices`:
   - `spend_19_retail_no_grocery`:
-  - `spend_19_q#_retail_no_grocery`:
   - `spend_19_retail_w_grocery`:
-  - `spend_19_q#_retail_w_grocery`:
 -->
-<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> instead of <code>spend_</code>.</p>
+<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to Jan 2020) or <code>spend_19_</code> (relative to Jan 2019) instead of <code>spend_</code>.</p>
 <p>The merchant category codes (MCC) making up the grouped spending categories are:</p>
 <ul>
 <li><strong>Retail spending:</strong> AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.</li>
