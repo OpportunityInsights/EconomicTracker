@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-08-18
+subtitle: last updated on 2021-09-10
 documentclass: scrartcl
 ---  
 
@@ -125,6 +125,43 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_s_tws`:
   - `spend_s_retail_w_grocery`:
   - `spend_s_retail_no_grocery`:
+  - `spend_19_all`:
+  - `spend_19_all_q#`:
+  - `spend_19_all_incmiddle`:
+  - `spend_19_all_inclow`:
+  - `spend_19_all_inchigh`:
+  - `spend_19_aap`:
+  - `spend_19_q#_aap`:
+  - `spend_19_acf`:
+  - `spend_19_q#_acf`:
+  - `spend_19_aer`:
+  - `spend_19_q#_aer`:
+  - `spend_19_apg`:
+  - `spend_19_q#_apg`:
+  - `spend_19_dur`:
+  - `spend_19_q#_dur`:
+  - `spend_19_gms`:
+  - `spend_19_q#_gms`:
+  - `spend_19_grf`:
+  - `spend_19_q#_grf`:
+  - `spend_19_hcs`:
+  - `spend_19_q#_hcs`:
+  - `spend_19_hic`:
+  - `spend_19_q#_hic`:
+  - `spend_19_inp`:
+  - `spend_19_q#_inp`:
+  - `spend_19_ndur`:
+  - `spend_19_q#_ndur`:
+  - `spend_19_rem`:
+  - `spend_19_q#_rem`:
+  - `spend_19_sgh`:
+  - `spend_19_q#_sgh`:
+  - `spend_19_tws`:
+  - `spend_19_q#_tws`:
+  - `spend_19_retail_no_grocery`:
+  - `spend_19_q#_retail_no_grocery`:
+  - `spend_19_retail_w_grocery`:
+  - `spend_19_q#_retail_w_grocery`:
 -->
 
 All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` instead of `spend_`.
