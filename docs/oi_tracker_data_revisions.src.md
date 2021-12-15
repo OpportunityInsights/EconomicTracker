@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2021-12-14
+subtitle: last updated on 2021-12-15
 documentclass: scrartcl
 ---  
 
@@ -76,6 +76,15 @@ Previously we pulled reported cases, deaths, and tests at the county level from 
 
 **Revisions on December 14th 2021**
 
-As schools have attritioned from the sample we've revised our methodology to impute missing values for an otherwise active school. Previously school retention in the sample was very high and we imputed across the sample observations missing in a given week for a given school as zeros as the likelihood the omission of data was a sign of no usage but continuity in the sample was quite high. Overtime, and particularly during the 2021 fall semester, a subset of schools naturally attritioned from the sample of schools using Zearn prior to the onset of the COVID-19 pandemic and we paused our imputation procedure for the newest sample. As such we've now revised our methodology to impute missing values within semester based on semester activity. For this subset of schools that are missing observations for a given week within a semester and are active Zearn users at any point within a semester, we impute these values as zeros within the given semester. As such we avoid imputation of schools observations where a school has dropped from the sample in a given semester and identify weeks missing for schools that remain within the sample for a given semester and impute them as zeros appropriately. This change has resulted in a small downward revision to the estimates post summer 2020. 
+As schools have attritioned from the sample we've revised our methodology to impute missing values for an otherwise active school. Previously school retention in the sample was very high and we imputed across the sample observations missing in a given week for a given school as zeros as the likelihood the omission of data was a sign of no usage but continuity in the sample was quite high. Overtime, and particularly during the 2021 fall semester, a subset of schools naturally attritioned from the sample of schools using Zearn prior to the onset of the COVID-19 pandemic and we paused our imputation procedure for the newest sample. As such we've now revised our methodology to impute missing values within semester based on semester activity. For this subset of schools that are missing observations for a given week within a semester and are active Zearn users at any point within a semester, we impute these values as zeros within the given semester. As such we avoid imputation of schools observations where a school has dropped from the sample in a given semester and identify weeks missing for schools that remain within the sample for a given semester and impute them as zeros appropriately. This change has resulted in a small downward revision to the estimates post summer 2020.
 
 In addition, previously in the case when correcting for transitory anomalous spikes, week to week changes in the underlying levels of greater than 50 percentage points that immediately revert by an equally sized change in the subsequent week, for a given week for a given school we have changed how both the procedure overall operates and how one sided spikes bounded by a missing value are handled. Overall previously the procedure for spike correction detected and applied the correction sequentially for positive and the negative value spikes. This has been revised to apply these changes simultaneously to a series. Given the size of anomalous change needed for a spike to be identified this has a small impact on the overall series. In the case where a one sided spike was bounded by a missing observation we previously in the 2021 fall semester imputed the transitory anomalous spike as a missing observations as well. As we now impute within semester active schools' missing observations as zeros, we now no longer impute these one sided spikes as missing and instead impute them with the 3 week moving average identically to all other transitory spike corrections in the series. This applies to a small number of cases within certain states and has minimal impact.       
+
+## Job Postings
+
+**Revisions on December 15th 2021**
+
+At the request of Burning Glass we've suppressed the historical data we publish for the following Job Postings series:
+
+* The state aggregate series, state by education level series, and county aggregate series are now only published for the present and previous 12 months
+* The state by supersector series, county by education level series, and county by supersector series are only published for the present and previous 6 months  
