@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2021-09-14
+subtitle: last updated on 2022-01-07
 documentclass: scrartcl
 ---  
 
@@ -198,6 +198,8 @@ COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://c
     - `fullvaccine_count`: Vaccine series completed.
 - `new_fullvaccine_rate`: New vaccine series completed per 100 people, seven day moving average.
     - `new_fullvaccine_count`: New vaccine series completed, seven day moving average.
+- `hospitalized_rate`: New patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 per 100,000 people, seven day moving average.
+    - `hospitalized_count`: Newly patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19, seven day moving average.
 
 ### Google Mobility
 

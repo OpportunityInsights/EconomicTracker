@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2021-08-23
+subtitle: last updated on 2022-01-07
 documentclass: scrartcl
 ---
 
@@ -391,7 +391,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.
 
-**Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
+**Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home), [U.S. Department of Health & Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh)
 
 **Update Frequency:** Daily
 
@@ -409,6 +409,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 * *New* Cases, Deaths, or Tests (presented as a 7-day moving average)
 * *Total* Cases, Deaths, or Tests
+* *Other* Hospitalized
 
 **Data masking:** No masking is performed by Opportunity Insights.
 
