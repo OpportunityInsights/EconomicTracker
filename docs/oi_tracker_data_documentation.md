@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-01-07</p>
+<p class="subtitle">last updated on 2022-01-14</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
 <h1 id="overview">Overview</h1>
@@ -283,7 +283,7 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="covid-19-infections">COVID-19 Infections</h2>
-<p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.</p>
+<p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths, hospitalizations, or tests performed.</p>
 <p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">The New York Times</a>, <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">The Johns Hopkins Coronavirus Resource Center</a>, <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a>, <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health &amp; Human Services</a></p>
 <p><strong>Update Frequency:</strong> Daily</p>
 <p><strong>Date Range:</strong> January 22th until the most recent date available.</p>
@@ -299,7 +299,7 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
 <h2 id="covid-19-vaccinations">COVID-19 Vaccinations</h2>
-<p><strong>Summary:</strong> Percentage of the population who have received one or more doses of any COVID-19 vaccine.</p>
+<p><strong>Summary:</strong> Percentage of the population who have received one or more doses of any COVID-19 vaccine, completed a COVID-19 vaccination series, or received a COVID-19 booster or additional dose.</p>
 <p><strong>Data Source:</strong> <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
 <p><strong>Update Frequency:</strong> Daily</p>
 <p><strong>Date Range:</strong> February 24th 2021 until the most recent date available.</p>
@@ -313,6 +313,8 @@ Data Documentation</div></h1>
 <li><em>Total Vaccinations</em>. Percent of population in total vaccinated with at least one vaccine dose</li>
 <li><em>New Completed Vaccinations</em>. Percent of population newly having completed a vaccine series</li>
 <li><em>Total Completed Vaccinations</em>. Percent of population in total having completed a vaccine series</li>
+<li><em>New Boosters</em>. Percent of population newly vaccinated with a booster (or additional) dose</li>
+<li><em>Total Boosters</em>. Percent of population in total vaccinated with a booster (or additional) dose</li>
 </ul>
 <p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
 <p><strong>Notes:</strong> CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.</p>

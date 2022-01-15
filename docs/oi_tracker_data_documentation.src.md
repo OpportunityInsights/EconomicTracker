@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-01-07
+subtitle: last updated on 2022-01-14
 documentclass: scrartcl
 ---
 
@@ -389,7 +389,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 ## COVID-19 Infections
 
-**Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths or tests performed.
+**Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths, hospitalizations, or tests performed.
 
 **Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home), [U.S. Department of Health & Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh)
 
@@ -415,7 +415,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 ## COVID-19 Vaccinations
 
-**Summary:** Percentage of the population who have received one or more doses of any COVID-19 vaccine.
+**Summary:** Percentage of the population who have received one or more doses of any COVID-19 vaccine, completed a COVID-19 vaccination series, or received a COVID-19 booster or additional dose.
 
 **Data Source:** [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)
 
@@ -437,6 +437,8 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 * *Total Vaccinations*. Percent of population in total vaccinated with at least one vaccine dose
 * *New Completed Vaccinations*. Percent of population newly having completed a vaccine series
 * *Total Completed Vaccinations*. Percent of population in total having completed a vaccine series
+* *New Boosters*. Percent of population newly vaccinated with a booster (or additional) dose
+* *Total Boosters*. Percent of population in total vaccinated with a booster (or additional) dose
 
 **Data masking:** No masking is performed by Opportunity Insights.
 
