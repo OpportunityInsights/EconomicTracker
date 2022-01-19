@@ -2,9 +2,9 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-01-14</p>
+<p class="subtitle">last updated on 2022-01-18</p>
 </header>
-<p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> <img src="null.png" alt="Click here to download a PDF version of this document" /></a></p>
+<p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
 <h2 id="overview">Overview</h2>
 <p>Each data source and level of aggregation has a separate CSV, named using the following convention: <em>Data source</em> – <em>Geographic Level of Aggregation</em> – <em>Temporal Level of Aggregation</em></p>
