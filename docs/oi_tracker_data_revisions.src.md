@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-01-18
+subtitle: last updated on 2022-03-04
 documentclass: scrartcl
 ---  
 
@@ -88,3 +88,18 @@ At the request of Burning Glass we've suppressed the historical data we publish 
 
 * The state aggregate series, state by education level series, and county aggregate series are now only published for the present and previous 12 months
 * The state by supersector series, county by education level series, and county by supersector series are only published for the present and previous 6 months  
+
+## Small Business Revenue & Small Business Open
+
+**Revisions on March 4th 2022**
+
+We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.
+
+We detect cases where a payment processor disappears by detecting sharp drops in businesses operating, at the national and the state level. We then adjust the series to remove these drops at the State x Industry level, using the following assumptions:
+
+- In the initial Covid period (March - July 2020) we assume momentum, and impute the value of merchants/sales for the week to continue the rate of change we observe in the 4 weeks prior. 
+- In the rest of the series (before March 2020 and after July 2020) we assume the series stays constant for the adjusted week.
+	
+After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level. 
+
+Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data. 

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-01-18</p>
+<p class="subtitle">last updated on 2022-03-04</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -47,23 +47,20 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 15th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong></p>
-<ul>
-<li><em>National, State, Metro</em>: Daily, presented as a 7-day moving average</li>
-<li><em>County</em>: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday</li>
-</ul>
+<p><strong>Date Range:</strong> January 15th 2020 until the most recent date available.</p>
+<p><strong>Data Frequency:</strong> Weekly</p>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
-<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.</p>
+<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
-<li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
+<li><p><em>Industry</em>, by <a href="https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html#par_textimage_1">2-digit NAICS</a>.</p>
 <ul>
-<li>Education and Health Services</li>
-<li>Leisure and Hospitality</li>
-<li>Professional &amp; Business Services</li>
-<li>Retail and Transportation</li>
+<li>Health &amp; Social Services</li>
+<li>Food &amp; Accommodation</li>
+<li>Professional Services</li>
+<li>Retail</li>
+<li>Other Services</li>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>
@@ -72,9 +69,9 @@ Data Documentation</div></h1>
 <li>Low Income (median household income less than $46,000 per year)</li>
 </ul></li>
 </ul>
-<p><strong>Data Masking:</strong> The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.</p>
-<p>For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.</p>
-<p>We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.</p>
+<p><strong>Data Masking:</strong> The sample is restricted to businesses that have an annual revenue that is less than the SBA thresholds by industry, and have an average revenue that is within 3 standard deviations of the state average. For each breakdown of the data, there is a minimum number of businesses that have to be active in the cell. If the cell has less active businesses than that minimum, it is dropped from the sample in that week.</p>
+<p>We omit counties that don’t have a minimum of 3 businesses operating in the first week of January of each calendar year. We exclude some state x industry breakdowns that present extreme variation from our state and national level calculations.</p>
+<p>For the zip level data, our raw dataset imputes the revenue of zip codes that have less than 3 active businesses with a value based on the state average. To reduce the effect of this imputation, we drop zip codes for which more than 25% of weeks are imputed. We also drop zip codes that have a total revenue of less than 100,000 dollars in January 2020.</p>
 <p><strong>Notes:</strong></p>
 <p>Small businesses are defined as those with annual revenue below the Small Business Administration’s <a href="https://www.sba.gov/document/support--table-size-standards">thresholds</a>. Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.</p>
 <p>County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
@@ -82,23 +79,20 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 15th until the most recent date available.</p>
-<p><strong>Data Frequency:</strong></p>
-<ul>
-<li><em>National, State, Metro</em>: Daily, presented as a 7-day moving average</li>
-<li><em>County</em>: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday</li>
-</ul>
+<p><strong>Date Range:</strong> January 15th 2020 until the most recent date available.</p>
+<p><strong>Data Frequency:</strong> Weekly</p>
 <p><strong>Indexing Period:</strong> January 4th - January 31st</p>
-<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.</p>
+<p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
-<li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
+<li><p><em>Industry</em>, by <a href="https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html#par_textimage_1">2-digit NAICS</a>.</p>
 <ul>
-<li>Education and Health Services</li>
-<li>Leisure and Hospitality</li>
-<li>Professional &amp; Business Services</li>
-<li>Retail and Transportation</li>
+<li>Health &amp; Social Services</li>
+<li>Food &amp; Accommodation</li>
+<li>Professional Services</li>
+<li>Retail</li>
+<li>Other Services</li>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>

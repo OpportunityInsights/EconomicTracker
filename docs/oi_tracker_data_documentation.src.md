@@ -1,4 +1,4 @@
-﻿---
+---
 geometry: margin=1in
 fontsize: 11pt
 linestretch: 1
@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-01-18
+subtitle: last updated on 2022-03-04
 documentclass: scrartcl
 ---
 
@@ -74,27 +74,25 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 15th until the most recent date available.
+**Date Range:** January 15th 2020 until the most recent date available.
 
-**Data Frequency:**
+**Data Frequency:** Weekly
 
-* *National, State, Metro*: Daily, presented as a 7-day moving average
-* *County*: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday
+**Indexing Period:** January 4th - January 31st
 
-**Indexing Period:** January 4th - January 31st  
-
-**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
 **Geographies:** National, State, County, Metro
 
 **Breakdowns:**  
 
-* *Industry*, by [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm).
+* *Industry*, by [2-digit NAICS](https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html#par_textimage_1).
 
-    - Education and Health Services
-    - Leisure and Hospitality
-    - Professional & Business Services
-    - Retail and Transportation
+    - Health & Social Services
+    - Food & Accommodation
+    - Professional Services
+    - Retail
+    - Other Services
 
 * *Business Zip Code Income*. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
 
@@ -102,11 +100,14 @@ Please note that both the data and this data documentation is updated regularly 
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Data Masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.
+**Data Masking:**
+The sample is restricted to businesses that have an annual revenue that is less than the SBA thresholds by industry, and have an average revenue that is within 3 standard deviations of the state average. 
+For each breakdown of the data, there is a minimum number of businesses that have to be active in the cell. If the cell has less active businesses than that minimum, it is dropped from the sample in that week.
 
-For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.
+We omit counties that don't have a minimum of 3 businesses operating in the first week of January of each calendar year.
+We exclude some state x industry breakdowns that present extreme variation from our state and national level calculations. 
 
-We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.
+For the zip level data, our raw dataset imputes the revenue of zip codes that have less than 3 active businesses with a value based on the state average. To reduce the effect of this imputation, we drop zip codes for which more than 25% of weeks are imputed. We also drop zip codes that have a total revenue of less than 100,000 dollars in January 2020.
 
 **Notes:**
 
@@ -122,27 +123,25 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 15th until the most recent date available.
+**Date Range:** January 15th 2020 until the most recent date available.
 
-**Data Frequency:**
-
-* *National, State, Metro*: Daily, presented as a 7-day moving average
-* *County*: Weekly, presented as a 6-day average Monday through Saturday, omitting Sunday
+**Data Frequency:** Weekly
 
 **Indexing Period:** January 4th - January 31st  
 
-**Indexing Type:** Seasonally adjusted change since January 2020. Data is indexed in 2019 and 2020 as the change relative to the January index period. We then seasonally adjust by dividing year-over-year, which represents the difference between the change since January observed in 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division. For series at the weekly frequency, we define weeks to run from Monday through Saturday and drop Sunday data. (See the Data Masking section below.) Weeks that span the end of the year are treated as the first week of the later year.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
 **Geographies:** National, State, County, Metro
 
 **Breakdowns:**  
 
-* *Industry*, by [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm).
+* *Industry*, by [2-digit NAICS](https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html#par_textimage_1).
 
-    - Education and Health Services
-    - Leisure and Hospitality
-    - Professional & Business Services
-    - Retail and Transportation
+    - Health & Social Services
+    - Food & Accommodation
+    - Professional Services
+    - Retail
+    - Other Services
 
 * *Business Zip Code Income*. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).
 

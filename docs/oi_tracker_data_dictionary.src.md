@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-01-18
+subtitle: last updated on 2022-03-04
 documentclass: scrartcl
 ---  
 
@@ -275,27 +275,24 @@ Unemployment insurance claims data from the [Department of Labor](https://oui.do
 Small business openings and revenue data from [Womply](https://www.womply.com/).
 
 - `merchants_all`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.
-- `merchants_inchigh`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in high income (quartile 4 of median income) ZIP codes.
-- `merchants_incmiddle`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) ZIP codes.
-- `merchants_inclow`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in low income (quartile 1 of median income) ZIP codes.
-- `merchants_ss40`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in transportation (NAICS supersector 40).
-- `merchants_ss60`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).
-- `merchants_ss65`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).
-- `merchants_ss70`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).
-- `merchants_retail`: Percent change in number of small businesses open, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in retail businesses (NAICS 2-digit codes 44-45).
-- `merchants_food_accommodation`: Percent change in number of small businesses open, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in food and accommodation businesses (NAICS 2-digit code 72)
+  - `merchants_inchigh`: ... in high income (quartile 4 of median income) ZIP codes.
+  - `merchants_incmiddle`: ... in middle income (quartiles 2 & 3 of median income) ZIP codes.
+  - `merchants_inclow`: ... in low income (quartile 1 of median income) ZIP codes.
+  - `merchants_retail`: ... in retail businesses (NAICS 2-digit codes 44-45).
+  - `merchants_food_accommodation`: ... in food and accommodation businesses (NAICS 2-digit code 72)
+  - `merchants_professional`: ... in professional services businesses (NAICS 2-digit code 54)
+  - `merchants_other_services`: ... in other services businesses (NAICS 2-digit code 81)
+  - `merchants_health`: ... in health & social service businesses (NAICS 2-digit code 62)
+  
 - `revenue_all`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
-- `revenue_inchigh`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in high income (quartile 4 of median income) zipcodes.
-- `revenue_incmiddle`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in middle income (quartiles 2 & 3 of median income) zipcodes.
-- `revenue_inclow`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in low income (quartile 1 of median income) zipcodes.
-- `revenue_ss40`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in transportation (NAICS supersector 40).
-- `revenue_ss60`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in professional and business services (NAICS supersector 60).
-- `revenue_ss65`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in education and health services (NAICS supersector 65).
-- `revenue_ss70`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).
-- `revenue_retail`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in retail businesses (NAICS 2-digit codes 44-45).
-- `revenue_food_accommodation`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31, 2020 in food and accommodation businesses (NAICS 2-digit code 72).
-
-Note at the County level, these variables are calculated on a weekly basis as a 6-day average of days Monday through Saturday. Omitting Sunday reduces the influence of imputations in small geographic areas, as discussed in the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
+  - `revenue_inchigh`: ... in high income (quartile 4 of median income) zipcodes.
+  - `revenue_incmiddle`: ... in middle income (quartiles 2 & 3 of median income) zipcodes.
+  - `revenue_inclow`: ... in low income (quartile 1 of median income) zipcodes.
+  - `revenue_retail`: ... in retail businesses (NAICS 2-digit codes 44-45).
+  - `revenue_food_accommodation`: ... in food and accommodation businesses (NAICS 2-digit code 72).
+  - `revenue_professional`: ... in professional services businesses (NAICS 2-digit code 54).
+  - `revenue_other_services`: ... in other services businesses (NAICS 2-digit code 81)
+  - `revenue_health`: ... in health & social service businesses (NAICS 2-digit code 62)
 
 ### Zearn
 
