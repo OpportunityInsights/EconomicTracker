@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-03-04
+subtitle: last updated on 2022-03-15
 documentclass: scrartcl
 ---  
 
@@ -90,17 +90,17 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_sgh_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `spend_tws`: Spending in transportation and warehousing (TWS) MCCs.
   - `spend_tws_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_retail_w_grocery`: Spending in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.
+- `spend_retail_w_grocery`: Spending in retail (BLD, CLO, ELC, FBS, FUR, GEN, SPO) MCCs including grocery spending.
   - `spend_retail_w_grocery_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_retail_no_grocery`: Spending in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.
+- `spend_retail_no_grocery`: Spending in retail (BLD, CLO, ELC, FUR, GEN, SPO) MCCs excluding grocery spending.
   - `spend_retail_no_grocery_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_durables`: Spending in durable goods (CEC, CTE, HIC, MOV, SGH, ETC) MCCs.
+- `spend_durables`: Spending in durable goods (BLD, ELC, FUR, SPO, TEL, VEH) MCCs.
   - `spend_durables_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_nondurables`: Spending in non-durable goods (AAP, AFH, GEN, GRF, HPC, WHT) MCCs.
+- `spend_nondurables`: Spending in non-durable goods (CLO, FBS, GAS, GEN, HPC, MSC, WHO) MCCs.
   - `spend_nondurables_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_remoteservices`: Spending in remote services (AWS, CNS, EDS, FAI, INF, PST, PUA, UTL) MCCs.
+- `spend_remoteservices`: Spending in remote services (ADM, EDU, FIN, INF, NSR, PST, PUB, UCM) MCCs.
   - `spend_remoteservices_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
-- `spend_inpersonmisc`: Spending in other in-person services (MOS, RLL) MCCs.
+- `spend_inpersonmisc`: Spending in other in-person services (REN, REP, PLS) MCCs.
   - `spend_inpersonmisc_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `provisional`: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.
 - `freq`: Marks whether the data represents a daily ("d") or weekly ("w") value.
@@ -146,15 +146,15 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_19_retail_w_grocery`:
 -->
 
-All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2020) or `spend_19_` (relative to Jan 2019) instead of `spend_`.
+All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or `spend_19_` (relative to Jan 2019 for all data) instead of `spend_`.
 
 The merchant category codes (MCC) making up the grouped spending categories are:
 
-* **Retail spending:** AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.
-* **Durable goods:** CEC consumer electronics, CTE telecommunications equipment, HIC home improvement centers, MOV motor vehicles, SGH sporting goods and hobby, ETC miscellaneous.
-* **Non-durable goods:** AAP apparel and accessories, AFH agriculture forestry and hunting, GEN general merchandise stores, GRF groceries, HPC health and personal care stores, WHT wholesale trade.
-* **Remote services:** AWS administration and waste services, CNS construction, EDS education, FAI finance and insurance, INF information, PST professional/scientific services, PUA public administration, UTL utilities.
-* **Other in-person services:** MOS barber shops and spas, RLL real estate and leasing.
+* **Retail spending:** CLO clothing and clothing accessories; BLD building materials, garden equipment, and supplies; ELC electronics and appliances; FBS food and beverage stores; FUR furniture and home furnishings; GEN general merchandise stores; and SPO sporting goods, hobbies, musical instruments, and book stores.
+* **Durable goods:** BLD building materials, gardening equipment, and supplies; ELC electronics and appliances; FUR furniture and home furnishings; SPO sporting goods, hobbies, musical instruments, and bookstores; TEL telecommunications; and VEH motor vehicles and parts.
+* **Non-durable goods:** CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.
+* **Remote services:** ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.
+* **Other in-person services:** PLS personal and laundry services; REN rental and leasing; and REP repair and maintenance.
 
 ### Burning Glass
 

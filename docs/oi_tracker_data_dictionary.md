@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-03-04</p>
+<p class="subtitle">last updated on 2022-03-15</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -92,27 +92,27 @@ Data Dictionary</div></h1>
 <ul>
 <li><code>spend_tws_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_retail_w_grocery</code>: Spending in retail (AAP, CEC, GEN, GRF, HIC, SGH, ETC) MCCs including grocery spending.
+<li><code>spend_retail_w_grocery</code>: Spending in retail (BLD, CLO, ELC, FBS, FUR, GEN, SPO) MCCs including grocery spending.
 <ul>
 <li><code>spend_retail_w_grocery_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_retail_no_grocery</code>: Spending in retail (AAP, CEC, GEN, HIC, SGH, ETC) MCCs excluding grocery spending.
+<li><code>spend_retail_no_grocery</code>: Spending in retail (BLD, CLO, ELC, FUR, GEN, SPO) MCCs excluding grocery spending.
 <ul>
 <li><code>spend_retail_no_grocery_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_durables</code>: Spending in durable goods (CEC, CTE, HIC, MOV, SGH, ETC) MCCs.
+<li><code>spend_durables</code>: Spending in durable goods (BLD, ELC, FUR, SPO, TEL, VEH) MCCs.
 <ul>
 <li><code>spend_durables_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_nondurables</code>: Spending in non-durable goods (AAP, AFH, GEN, GRF, HPC, WHT) MCCs.
+<li><code>spend_nondurables</code>: Spending in non-durable goods (CLO, FBS, GAS, GEN, HPC, MSC, WHO) MCCs.
 <ul>
 <li><code>spend_nondurables_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_remoteservices</code>: Spending in remote services (AWS, CNS, EDS, FAI, INF, PST, PUA, UTL) MCCs.
+<li><code>spend_remoteservices</code>: Spending in remote services (ADM, EDU, FIN, INF, NSR, PST, PUB, UCM) MCCs.
 <ul>
 <li><code>spend_remoteservices_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
-<li><code>spend_inpersonmisc</code>: Spending in other in-person services (MOS, RLL) MCCs.
+<li><code>spend_inpersonmisc</code>: Spending in other in-person services (REN, REP, PLS) MCCs.
 <ul>
 <li><code>spend_inpersonmisc_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
@@ -159,14 +159,14 @@ Data Dictionary</div></h1>
   - `spend_19_retail_no_grocery`:
   - `spend_19_retail_w_grocery`:
 -->
-<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to Jan 2020) or <code>spend_19_</code> (relative to Jan 2019) instead of <code>spend_</code>.</p>
+<p>All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or <code>spend_19_</code> (relative to Jan 2019 for all data) instead of <code>spend_</code>.</p>
 <p>The merchant category codes (MCC) making up the grouped spending categories are:</p>
 <ul>
-<li><strong>Retail spending:</strong> AAP apparel and accessories, CEC consumer electronics, GEN general merchandise stores, GRF groceries, HIC home improvement centers, SGH sporting goods and hobby, ETC miscellaneous.</li>
-<li><strong>Durable goods:</strong> CEC consumer electronics, CTE telecommunications equipment, HIC home improvement centers, MOV motor vehicles, SGH sporting goods and hobby, ETC miscellaneous.</li>
-<li><strong>Non-durable goods:</strong> AAP apparel and accessories, AFH agriculture forestry and hunting, GEN general merchandise stores, GRF groceries, HPC health and personal care stores, WHT wholesale trade.</li>
-<li><strong>Remote services:</strong> AWS administration and waste services, CNS construction, EDS education, FAI finance and insurance, INF information, PST professional/scientific services, PUA public administration, UTL utilities.</li>
-<li><strong>Other in-person services:</strong> MOS barber shops and spas, RLL real estate and leasing.</li>
+<li><strong>Retail spending:</strong> CLO clothing and clothing accessories; BLD building materials, garden equipment, and supplies; ELC electronics and appliances; FBS food and beverage stores; FUR furniture and home furnishings; GEN general merchandise stores; and SPO sporting goods, hobbies, musical instruments, and book stores.</li>
+<li><strong>Durable goods:</strong> BLD building materials, gardening equipment, and supplies; ELC electronics and appliances; FUR furniture and home furnishings; SPO sporting goods, hobbies, musical instruments, and bookstores; TEL telecommunications; and VEH motor vehicles and parts.</li>
+<li><strong>Non-durable goods:</strong> CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.</li>
+<li><strong>Remote services:</strong> ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.</li>
+<li><strong>Other in-person services:</strong> PLS personal and laundry services; REN rental and leasing; and REP repair and maintenance.</li>
 </ul>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
