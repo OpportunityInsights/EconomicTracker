@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-03-18
+subtitle: last updated on 2022-05-18
 documentclass: scrartcl
 ---  
 
@@ -58,6 +58,10 @@ We detect cases where a payment processor disappears by detecting sharp drops in
 After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level.
 
 Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.
+
+**Revisions on May 17th 2022**
+
+We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.
 
 ## Job Postings
 

@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-03-15
+subtitle: last updated on 2022-05-18
 documentclass: scrartcl
 ---
 
@@ -68,7 +68,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 ## Small Business Revenue  
 
-**Summary:** Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the ZIP code where the business is located.
+**Summary:** Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the county or ZIP code where the business is located.
 
 **Data Source:** [Womply](https://www.womply.com)
 
@@ -78,7 +78,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st
+**Indexing Period:** January 4th - January 31st 2020
 
 **Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
@@ -101,19 +101,14 @@ Please note that both the data and this data documentation is updated regularly 
     - Low Income (median household income less than $46,000 per year)
 
 **Data Masking:**
-The sample is restricted to businesses that have an annual revenue that is less than the SBA thresholds by industry, and have an average revenue that is within 3 standard deviations of the state average. 
-For each breakdown of the data, there is a minimum number of businesses that have to be active in the cell. If the cell has less active businesses than that minimum, it is dropped from the sample in that week.
 
-We omit counties that don't have a minimum of 3 businesses operating in the first week of January of each calendar year.
-We exclude some state x industry breakdowns that present extreme variation from our state and national level calculations. 
+The data we receive from Womply is restricted to businesses that have an annual revenue that is less than the [SBA thresholds](https://www.sba.gov/document/support--table-size-standards) by industry, and have an average revenue that is within 3 standard deviations of the state average.
 
-For the zip level data, our raw dataset imputes the revenue of zip codes that have less than 3 active businesses with a value based on the state average. To reduce the effect of this imputation, we drop zip codes for which more than 25% of weeks are imputed. We also drop zip codes that have a total revenue of less than 100,000 dollars in January 2020.
+We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4-31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
 
-**Notes:**
+To reduce outliers, we manually exclude some state x industry breakdowns that present extreme variation from our state and national level calculations, as well as a small number of counties that demonstrate extreme variation.
 
-Small businesses are defined as those with annual revenue below the Small Business Administration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
-
-County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
+**Notes:** Subnational breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
 ## Small Businesses Open  
 
@@ -127,7 +122,7 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st  
+**Indexing Period:** January 4th - January 31st 2020
 
 **Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
@@ -149,15 +144,15 @@ County-level and metro-level data and breakdowns by High/Middle/Low income ZIP c
     - Middle Income (median household income between $46,000 per year and $78,000 per year)
     - Low Income (median household income less than $46,000 per year)
 
-**Data Masking:** The sample is restricted to firms with 30 or more transactions in a quarter and more than one transaction in 2 out of the 3 months. To reduce the influence of outliers, Womply excludes firms outside twice the interquartile range of annual firm revenue calculated within the sample. To preserve the privacy of firms, Womply imputes values for cells that contain fewer than 3 merchants.
+**Data Masking:**
 
-For the county series, which is measured with a weekly frequency, we reduce the influence of imputation by dropping all data from Sundays (which are disproportionately likely to contain imputations). We drop any County x Week cell that contains imputed data within Monday-Saturday and we drop counties entirely if over 25% of their weeks contain imputed data.
+The data we receive from Womply is restricted to businesses that have an annual revenue that is less than the [SBA thresholds](https://www.sba.gov/document/support--table-size-standards) by industry, and have an average revenue that is within 3 standard deviations of the state average.
 
-We also exclude counties with a total average revenue of less than $250,000 or an average revenue of less than $10,000 during the indexing period (January 4-31, 2020). Additionally we omit spending categories for a small number of geographies that are extreme positive outliers, and we cap a small number of extreme negative outliers at 0 revenue.
+We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4-31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
 
-**Notes:** Small businesses are defined as those with annual revenue below the Small Business Administration's [thresholds](https://www.sba.gov/document/support--table-size-standards). Thresholds vary by 6 digit NAICS code ranging from a maximum number of employees between 100 to 1500 to be considered a small business depending on the industry.
+To reduce outliers, we manually exclude some state x industry breakdowns that present extreme variation from our state and national level calculations, as well as a small number of counties that demonstrate extreme variation.
 
-County-level and metro-level data and breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
+**Notes:** Subnational breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
 ## Job Postings  
 

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-03-18</p>
+<p class="subtitle">last updated on 2022-05-18</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -34,6 +34,8 @@ Data Revisions</div></h1>
 </ul>
 <p>After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level.</p>
 <p>Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.</p>
+<p><strong>Revisions on May 17th 2022</strong></p>
+<p>We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Revisions on December 15th 2021</strong></p>
 <p>At the request of Burning Glass we’ve suppressed the historical data we publish for the following Job Postings series:</p>
