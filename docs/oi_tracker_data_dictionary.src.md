@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-03-15
+subtitle: last updated on 2022-06-03
 documentclass: scrartcl
 ---  
 
@@ -100,6 +100,8 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_nondurables_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `spend_remoteservices`: Spending in remote services (ADM, EDU, FIN, INF, NSR, PST, PUB, UCM) MCCs.
   - `spend_remoteservices_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
+- `spend_inperson`: Spending in in-person services (ACF, HCS, AER, TWS, REN, REP, PLS) MCCs.
+  - `spend_inperson_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `spend_inpersonmisc`: Spending in other in-person services (REN, REP, PLS) MCCs.
   - `spend_inpersonmisc_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `provisional`: Indicator to mark that the date is within the most recent three weeks of data and is subject to non-negligible changes as new data is posted.
@@ -116,6 +118,7 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_s_durables`:
   - `spend_s_nondurables`:
   - `spend_s_remoteservices`:
+  - `spend_s_inperson`:
   - `spend_s_inpersonmisc`:
   - `spend_s_gen`:
   - `spend_s_grf`:
@@ -138,6 +141,7 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_19_hic`:
   - `spend_19_sgh`:
   - `spend_19_tws`:
+  - `spend_19_inperson`:
   - `spend_19_inpersonmisc`:
   - `spend_19_durables`:
   - `spend_19_nondurables`:
@@ -154,7 +158,7 @@ The merchant category codes (MCC) making up the grouped spending categories are:
 * **Durable goods:** BLD building materials, gardening equipment, and supplies; ELC electronics and appliances; FUR furniture and home furnishings; SPO sporting goods, hobbies, musical instruments, and bookstores; TEL telecommunications; and VEH motor vehicles and parts.
 * **Non-durable goods:** CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.
 * **Remote services:** ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.
-* **Other in-person services:** PLS personal and laundry services; REN rental and leasing; and REP repair and maintenance.
+* **In-person services:** ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.
 
 ### Burning Glass
 
@@ -283,7 +287,7 @@ Small business openings and revenue data from [Womply](https://www.womply.com/).
   - `merchants_professional`: ... in professional services businesses (NAICS 2-digit code 54)
   - `merchants_other_services`: ... in other services businesses (NAICS 2-digit code 81)
   - `merchants_health`: ... in health & social service businesses (NAICS 2-digit code 62)
-  
+
 - `revenue_all`: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
   - `revenue_inchigh`: ... in high income (quartile 4 of median income) zipcodes.
   - `revenue_incmiddle`: ... in middle income (quartiles 2 & 3 of median income) zipcodes.

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-03-15</p>
+<p class="subtitle">last updated on 2022-06-03</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -112,6 +112,10 @@ Data Dictionary</div></h1>
 <ul>
 <li><code>spend_remoteservices_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
 </ul></li>
+<li><code>spend_inperson</code>: Spending in in-person services (ACF, HCS, AER, TWS, REN, REP, PLS) MCCs.
+<ul>
+<li><code>spend_inperson_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
+</ul></li>
 <li><code>spend_inpersonmisc</code>: Spending in other in-person services (REN, REP, PLS) MCCs.
 <ul>
 <li><code>spend_inpersonmisc_q#</code>: …by consumers living in ZIP codes with median income in quartile <code>#</code>.</li>
@@ -130,6 +134,7 @@ Data Dictionary</div></h1>
   - `spend_s_durables`:
   - `spend_s_nondurables`:
   - `spend_s_remoteservices`:
+  - `spend_s_inperson`:
   - `spend_s_inpersonmisc`:
   - `spend_s_gen`:
   - `spend_s_grf`:
@@ -152,6 +157,7 @@ Data Dictionary</div></h1>
   - `spend_19_hic`:
   - `spend_19_sgh`:
   - `spend_19_tws`:
+  - `spend_19_inperson`:
   - `spend_19_inpersonmisc`:
   - `spend_19_durables`:
   - `spend_19_nondurables`:
@@ -166,7 +172,7 @@ Data Dictionary</div></h1>
 <li><strong>Durable goods:</strong> BLD building materials, gardening equipment, and supplies; ELC electronics and appliances; FUR furniture and home furnishings; SPO sporting goods, hobbies, musical instruments, and bookstores; TEL telecommunications; and VEH motor vehicles and parts.</li>
 <li><strong>Non-durable goods:</strong> CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.</li>
 <li><strong>Remote services:</strong> ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.</li>
-<li><strong>Other in-person services:</strong> PLS personal and laundry services; REN rental and leasing; and REP repair and maintenance.</li>
+<li><strong>In-person services:</strong> ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.</li>
 </ul>
 <h3 id="burning-glass">Burning Glass</h3>
 <p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
