@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-05-18</p>
+<p class="subtitle">last updated on 2022-06-22</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -24,6 +24,13 @@ Data Revisions</div></h1>
 <li><p>We have improved the internal mapping between Merchant Category Codes (MCCs) to corresponding industry sectors to be more accurate. This causes a noticeable revision in the Transportation series.</p></li>
 <li><p>We have improved the amount of state-level data available by changing the aggregation of masked cells. Previously data in masked county-level cells were included in the national-level data but excluded from the state-level data. Now data in masked cells is included in the state-level data, which increases the set of state-level series available.</p></li>
 </ol>
+<p><strong>Revisions on June 15 2022</strong></p>
+<p>We have revised the method implemented on March 15th 2022 to control for steady growth or shrinkage in individual payment providers’ customer bases.</p>
+<ul>
+<li><p>Our seasonally adjusted estimates of spending for 2020 and beyond are obtained by dividing by 2019 estimates of spending. The method implemented on March 15th 2022 measures spending using spending per card in all periods except Feb-Aug 2020: during that period, we use total spending for the reasons discussed in the section above. This generated an upward bias in the seasonally adjusted data for summer 2020, since the 2019 reference period reflected only spending per card while the 2020 Feb-Aug period incorporated extensive margin increases in the number of cards in the sample.</p></li>
+<li><p>We have therefore constructed an estimate of spending that reflects total spending during Feb-Aug 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.</p></li>
+<li><p>This adjustment reduced the estimated spending level in summer 2020. The new estimates align better with public benchmarks (NIPA, MARTS).</p></li>
+</ul>
 <h2 id="small-business-revenue-small-businesses-open">Small Business Revenue &amp; Small Businesses Open</h2>
 <p><strong>Revisions on March 4th 2022</strong></p>
 <p>We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.</p>

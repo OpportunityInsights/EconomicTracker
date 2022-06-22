@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-05-18
+subtitle: last updated on 2022-06-22
 documentclass: scrartcl
 ---  
 
@@ -43,6 +43,16 @@ The consumer spending data was revised with three changes:
 2. We have improved the internal mapping between Merchant Category Codes (MCCs) to corresponding industry sectors to be more accurate. This causes a noticeable revision in the Transportation series.
 
 3. We have improved the amount of state-level data available by changing the aggregation of masked cells. Previously data in masked county-level cells were included in the national-level data but excluded from the state-level data. Now data in masked cells is included in the state-level data, which increases the set of state-level series available.
+
+**Revisions on June 15 2022**
+
+We have revised the method implemented on March 15th 2022 to control for steady growth or shrinkage in individual payment providers' customer bases.
+
+* Our seasonally adjusted estimates of spending for 2020 and beyond are obtained by dividing by 2019 estimates of spending. The method implemented on March 15th 2022 measures spending using spending per card in all periods except Feb-Aug 2020: during that period, we use total spending for the reasons discussed in the section above. This generated an upward bias in the seasonally adjusted data for summer 2020, since the 2019 reference period reflected only spending per card while the 2020 Feb-Aug period incorporated extensive margin increases in the number of cards in the sample.
+
+* We have therefore constructed an estimate of spending that reflects total spending during Feb-Aug 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.
+
+* This adjustment reduced the estimated spending level in summer 2020. The new estimates align better with public benchmarks (NIPA, MARTS).
 
 ## Small Business Revenue & Small Businesses Open
 
