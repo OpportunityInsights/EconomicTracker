@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-06-03</p>
+<p class="subtitle">last updated on 2022-06-29</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -285,11 +285,6 @@ Data Dictionary</div></h1>
 <li><code>emp_subset_reweighted_q1</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
 <li><code>emp_subset_reweighted_q2</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
 <li><code>emp_subset_reweighted_q3</code>: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry cells with nonzero employment for all four income quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.</li>
-<li><code>emp_advance</code>: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.</li>
-<li>‘emp_size_0’: Employment level for workers at firms with less than or equal to 100 employees</li>
-<li>‘emp_size_100’: Employment level for workers at firms with greater than 100 but less than or equal to 500 employees</li>
-<li>‘emp_size_500’: Employment level for workers at firms with greater than 500 but less than or equal to 800 employees</li>
-<li>‘emp_size_800’: Employment level for workers at firms with greater than 800 employees</li>
 </ul>
 <h3 id="ui-claims">UI Claims</h3>
 <p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>

@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-06-03
+subtitle: last updated on 2022-06-29
 documentclass: scrartcl
 ---  
 
@@ -249,11 +249,6 @@ Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.c
 - `emp_subset_reweighted_q1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
 - `emp_subset_reweighted_q2`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
 - `emp_subset_reweighted_q3`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry cells with nonzero employment for all four income quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
-- `emp_advance`: Indicator (0 or 1) for whether employment data is a forecasted employment level based on timecard data from Kronos and employees on weekly paycycles from Paychex.
-- 'emp_size_0': Employment level for workers at firms with less than or equal to 100 employees
-- 'emp_size_100': Employment level for workers at firms with greater than 100 but less than or equal to 500 employees
-- 'emp_size_500': Employment level for workers at firms with greater than 500 but less than or equal to 800 employees
-- 'emp_size_800': Employment level for workers at firms with greater than 800 employees
 
 ### UI Claims
 

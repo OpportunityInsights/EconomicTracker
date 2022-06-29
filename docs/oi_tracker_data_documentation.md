@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-05-18</p>
+<p class="subtitle">last updated on 2022-06-29</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -111,7 +111,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 17th until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Friday.</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st</p>
+<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, Metro.</p>
 <p><strong>Breakdowns:</strong></p>
@@ -138,21 +138,20 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.</p>
 <p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a>, <a href="https://www.kronos.com/">Kronos</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend of aggregate employment and employment by income quartile by using Kronos timecard data and Paychex data for workers paid on a weekly paycycle to forecast beyond the end of the Paychex, Intuit and Earnin data.</p>
-<p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st</p>
+<p><strong>Date Range:</strong> January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.</p>
+<p><strong>Data Frequency:</strong> Weekly</p>
+<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p>To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile’s total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a>.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Wage</em>.</p>
 <ul>
-<li>High Income (top wage quartile, annualized income greater than ~$60,000 per year)</li>
-<li>Middle Income (middle wage quartiles, annualized income between ~$27,000 per year and ~$60,000 per year)</li>
-<li>Low Income (bottom wage quartile, annualized income less than ~$27,000 per year)</li>
-<li>Above Median (annualized income greater than ~$37,000 per year)</li>
-<li>Below Median (annualized income less than ~$37,000 per year)</li>
+<li>High Income (annualized income greater than 2.5x the federal poverty line)</li>
+<li>Middle Income (annualized income between 1x and 2.5x the federal poverty line)</li>
+<li>Low Income (annualized income lower than the federal poverty line)</li>
+<li>Above Median (annualized income greater than 1.5x the federal poverty line)</li>
+<li>Below Median (annualized income less than 1.5x the federal poverty line)</li>
 </ul></li>
 <li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
 <ul>
@@ -166,19 +165,10 @@ Data Documentation</div></h1>
 <li>Retail</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. Additionally for states where the minimum wage was raised to $13 dollars per hour or higher, we suppress the breakdowns that split out the first quartile from the second quartile as the minimum wage increase pushes a number of workers from the first into the second quartile.</p>
-<p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells with over 50 employees at any point between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.</p>
-<p><em>In the Earnin series</em>, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).</p>
-<p><em>In the Kronos and Intuit series</em>, we do not make any sample restrictions.</p>
-<p><em>In the combined series</em>, we mask the series in two additional ways:</p>
+<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
 <ul>
-<li><p>We do not report changes in employment among low-income or middle-income workers around the date of minimum wage changes. We use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This results in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers’ wages in response to the minimum wage change. As these trends are driven by the legislative change in minimum wages, rather than by underlying economic conditions, we suppress the low-income and middle-income series in these states. Instead, the below-median-income and above-median-income series we have made available can be used to describe trends in employment by income in these states. (As the median wage in the Paychex data is $18.18, the assignment of workers to below-median or above-median income is substantially unaffected by wage changes caused by minimum wage laws.)</p></li>
-<li><p>We do not report employment trends in Washington, DC or South Dakota, where our analysis sample is small.</p></li>
-</ul>
-<p><strong>Notes:</strong></p>
-<ul>
-<li><p>For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.</p></li>
-<li><p>In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure. For more details, please refer to the appendix of the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p></li>
+<li><p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, for cells with a maximum employment of over 50 employees throughout the sample period, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 250 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020. For cells with a maximum employment less than 50 employees over the sample period, we instead reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p></li>
+<li><p><em>In the Intuit series</em>, we do not make any sample restrictions.</p></li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Summary:</strong> Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.</p>
@@ -241,7 +231,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly, except during summer and winter school breaks.</p>
 <p><strong>Date Range:</strong> January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Sunday.</p>
-<p><strong>Indexing Period:</strong> January 6th - February 7th</p>
+<p><strong>Indexing Period:</strong> January 6th - February 7th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, States, County, Metro</p>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
@@ -261,7 +251,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly, except during summer and winter school breaks.</p>
 <p><strong>Date Range:</strong> January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Sunday.</p>
-<p><strong>Indexing Period:</strong> January 6th - February 7th</p>
+<p><strong>Indexing Period:</strong> January 6th - February 7th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, States, County, Metro</p>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
@@ -317,7 +307,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> When released by Google, typically every 4-7 days.</p>
 <p><strong>Date Range:</strong> February 24th until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Daily</p>
-<p><strong>Indexing Period:</strong> January 3rd to February 5th</p>
+<p><strong>Indexing Period:</strong> January 3rd to February 5th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>

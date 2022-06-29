@@ -7,9 +7,13 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-06-22
+subtitle: last updated on 2022-06-29
 documentclass: scrartcl
----  
+---
+
+```{=latex}
+\setcounter{secnumdepth}{2}
+```
 
 <a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> `Click here to download a PDF version of this document`{=html}</a>
 
@@ -24,7 +28,7 @@ For further information or if you have any questions please feel free to reach o
 
 ## Consumer Spending
 
-**Revisions on March 15th 2022**
+### Revisions on March 15th 2022
 
 The consumer spending data was revised with three changes:
 
@@ -44,7 +48,7 @@ The consumer spending data was revised with three changes:
 
 3. We have improved the amount of state-level data available by changing the aggregation of masked cells. Previously data in masked county-level cells were included in the national-level data but excluded from the state-level data. Now data in masked cells is included in the state-level data, which increases the set of state-level series available.
 
-**Revisions on June 15 2022**
+### Revisions on June 15 2022
 
 We have revised the method implemented on March 15th 2022 to control for steady growth or shrinkage in individual payment providers' customer bases.
 
@@ -56,7 +60,7 @@ We have revised the method implemented on March 15th 2022 to control for steady 
 
 ## Small Business Revenue & Small Businesses Open
 
-**Revisions on March 4th 2022**
+### Revisions on March 4th 2022
 
 We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.
 
@@ -69,13 +73,13 @@ After performing these adjustments, we aggregate up to the State level, the Nati
 
 Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.
 
-**Revisions on May 17th 2022**
+### Revisions on May 17th 2022
 
 We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.
 
 ## Job Postings
 
-**Revisions on December 15th 2021**
+### Revisions on December 15th 2021
 
 At the request of Burning Glass we've suppressed the historical data we publish for the following Job Postings series:
 
@@ -84,7 +88,7 @@ At the request of Burning Glass we've suppressed the historical data we publish 
 
 ## Employment
 
-**Revisions on June 30th 2021**
+### Revisions on June 30th 2021
 
 The Employment data was revised on June 30th 2021 due to three independent changes in methodology.
 
@@ -116,15 +120,31 @@ The Employment data was revised on June 30th 2021 due to three independent chang
 
 After making these changes, the (population-weighted) RMSE (root mean square error) of the state-level employment series relative to the CPS is 4.55 percentage points as of April 2021, after removing public sector and furloughed workers and expressing employment in seasonally-unadjusted terms relative to January 2020. Though we will continue to assess our series relative to the CPS, users should note that some amount of noise remains in both our state-level series estimates and in the CPS estimates. Particularly in instances where these two measures of employment differ, users may consider both the Opportunity Insights series and the CPS as helpful inputs in identifying local patterns.
 
+### Revisions on May 18th 2022
+
+The Employment data was revised on May 18th 2021 due to four independent changes in methodology.
+
+- **Revisions to combination process:** We are currently constructing the combined Employment series using Paychex and Intuit data.
+
+- **Revisions to income quartile definitions:** The original income quartile thresholds were set using annualized wages of up to $13/hr (Q1), $18/hr (Q2), and $29/hr (Q3). These thresholds were derived from the wage distribution of employees in Paychex's client base in 2019. However, wage growth and inflation trends over time will mechanically move workers across these fixed thresholds into higher income quartiles. For example, if a Q1 worker's wages were to grow such that they were now over the Q2 threshold, then the series would mechanically show an decrease in Q1 employment and an increase in Q2 employment, despite aggregate employment remaining the same. Eventually, with fixed thresholds, every worker would be placed in the Q4 category.
+
+  To address this issue, we have implemented moving thresholds that are based on the federal poverty line. The income categories are now defined using multiples of the poverty threshold, normally a yearly measure that we extend monthly using the CPI. The upper thresholds for each income quartile are now 1x the poverty line (Q1), 1.5x the poverty line (Q2), and 2.5x the poverty line (Q3). A secondary issue that arises from using moving thresholds, however, are discontinuities in the series when a threshold crosses a whole number wages where there is bunching in the wage distribution, e.g. $15/hr. When the Q1 threshold crosses $15, for example, many workers who were previously a part of Q2 will now be defined as Q1, causing a discontinuity in the series. To address this issue, we "spread" workers out from the whole number wages as if we added a random number between -0.5 and 0.5 to their wages, creating a uniform distribution between (whole number wage - 0.5, whole number wage + 0.5).
+  
+  Implementing these moving thresholds results in upwards revisions in employment esttimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.
+
+- **Revisions to address changes in the minimum wage:** We have updated our previous methodology released on June 30th 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.
+
+- **Revisions arising from changes to adjustment for firm entry/exit in Paychex data**: We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births. For cells with fewer than 50 employees, we reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. We adopt this alternative weighting scheme to balance the fact that small firm births account for a sizable portion of the economic recovery in the second half of 2020 against the fact that growth of small cells can also be spuriously driven by entry into our sample. This new weightng scheme leads to better estimates of employment relative to public benchmarks (CES, QCEW, CPS, etc).
+
 ## Unemployment Claims
 
-**Revisions on July 29th 2021**
+### Revisions on July 29th 2021
 
 The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the [Department of Labor data](https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx). Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We've corrected this, and claims now align to the appropriate week.
 
 ## Online Math Participation and Student Progress in Math
 
-**Revisions on December 14th 2021**
+### Revisions on December 14th 2021
 
 As schools have attritioned from the sample we've revised our methodology to impute missing values for an otherwise active school. Previously school retention in the sample was very high and we imputed across the sample observations missing in a given week for a given school as zeros as the likelihood the omission of data was a sign of no usage but continuity in the sample was quite high. Overtime, and particularly during the 2021 fall semester, a subset of schools naturally attritioned from the sample of schools using Zearn prior to the onset of the COVID-19 pandemic and we paused our imputation procedure for the newest sample. As such we've now revised our methodology to impute missing values within semester based on semester activity. For this subset of schools that are missing observations for a given week within a semester and are active Zearn users at any point within a semester, we impute these values as zeros within the given semester. As such we avoid imputation of schools observations where a school has dropped from the sample in a given semester and identify weeks missing for schools that remain within the sample for a given semester and impute them as zeros appropriately. This change has resulted in a small downward revision to the estimates post summer 2020.
 
@@ -132,11 +152,11 @@ In addition, previously in the case when correcting for transitory anomalous spi
 
 ## COVID-19 Infections
 
-**Revisions on March 17th 2021**
+### Revisions on March 17th 2021
 
 Previously we pulled reported cases and deaths from the New York Times' [COVID-19 database](https://github.com/nytimes/covid-19-data) and reported tests from the [COVID Tracking Project](https://covidtracking.com/). At the conclusion of the COVID Tracking Project's efforts in order to collect testing data we instead began pulling reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention's [COVID Data Tracker](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) and aggregated to other geographies.
 
-**Revisions on August 4th 2021**
+### Revisions on August 4th 2021
 
 Previously we pulled reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention's COVID Data Tracker and aggregated to other geographies. On July 17th the Centers For Disease Control and Prevention began suppressing reported cases and deaths making aggregations across counties no longer feasible and we began to instead pull reported cases and deaths from the New York Times' [COVID-19 database](https://github.com/nytimes/covid-19-data), state level reported tests from the Johns Hopkins Coronavirus Resource Center's [U.S. testing database](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), and county level reported tests from [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).    
 

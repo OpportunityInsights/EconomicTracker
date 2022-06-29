@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-05-18
+subtitle: last updated on 2022-06-29
 documentclass: scrartcl
 ---
 
@@ -166,7 +166,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Data Frequency:** Weekly data points, with each week ending on Friday.
 
-**Indexing Period:** January 4th - January 31st
+**Indexing Period:** January 4th - January 31st 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -200,27 +200,25 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Update Frequency:** Weekly  
 
-**Date Range:** January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex, Intuit and Earnin data. We extend the national trend of aggregate employment and employment by income quartile by using Kronos timecard data and Paychex data for workers paid on a weekly paycycle to forecast beyond the end of the Paychex, Intuit and Earnin data.
+**Date Range:** January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.
 
-**Data Frequency:** Daily, presented as a 7-day moving average
+**Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st  
+**Indexing Period:** January 4th - January 31st 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
 **Geographies:** National, State, County, Metro
 
-To prevent the introduction of new Paychex clients from artificially creating noise in the employment series overtime, in the underlying raw data we suppress county x quartile x industry x firm size cells that both (i) experience a large anomalous change in employment and (ii) made up a large share of given wage quartile's total employment at any point in a county in the current year. For more details on the specifics of these thresholds see the appendix of the [accompanying paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
-
 **Breakdowns:**  
 
 * *Wage*.
 
-    - High Income (top wage quartile, annualized income greater than ~$60,000 per year)
-    - Middle Income (middle wage quartiles, annualized income between ~$27,000 per year and ~$60,000 per year)
-    - Low Income (bottom wage quartile, annualized income less than ~$27,000 per year)
-    - Above Median (annualized income greater than ~$37,000 per year)
-    - Below Median (annualized income less than ~$37,000 per year)
+    - High Income (annualized income greater than 2.5x the federal poverty line)
+    - Middle Income (annualized income between 1x and 2.5x the federal poverty line)
+    - Low Income (annualized income lower than the federal poverty line)
+    - Above Median (annualized income greater than 1.5x the federal poverty line)
+    - Below Median (annualized income less than 1.5x the federal poverty line)
 
 * *Industry*, by [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm).
 
@@ -233,25 +231,11 @@ To prevent the introduction of new Paychex clients from artificially creating no
 
     - Retail
 
-**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. Additionally for states where the minimum wage was raised to $13 dollars per hour or higher, we suppress the breakdowns that split out the first quartile from the second quartile as the minimum wage increase pushes a number of workers from the first into the second quartile.    
+**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. 
 
-*In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells with over 50 employees at any point between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.
+* *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, for cells with a maximum employment of over 50 employees throughout the sample period, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 250 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020. For cells with a maximum employment less than 50 employees over the sample period, we instead reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.
 
-*In the Earnin series*, we restrict the sample to workers who are active Earnin users with non-missing earnings and hours worked over the last 28 days and we exclude workers whose reported income over the prior 28 days is greater than $50,000/13 (corresponding to an income of greater than $50,000 annually).
-
-*In the Kronos and Intuit series*, we do not make any sample restrictions.
-
-*In the combined series*, we mask the series in two additional ways:
-
-* We do not report changes in employment among low-income or middle-income workers around the date of minimum wage changes. We use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This results in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers' wages in response to the minimum wage change. As these trends are driven by the legislative change in minimum wages, rather than by underlying economic conditions, we suppress the low-income and middle-income series in these states. Instead, the below-median-income and above-median-income series we have made available can be used to describe trends in employment by income in these states. (As the median wage in the Paychex data is $18.18, the assignment of workers to below-median or above-median income is substantially unaffected by wage changes caused by minimum wage laws.)
-
-* We do not report employment trends in Washington, DC or South Dakota, where our analysis sample is small.
-
-**Notes:**
-
-* For low income workers, the change in employment is calculated using Paychex and Earnin data. For medium and high income workers, the change in employment is calculated using Paychex and Intuit data.
-
-* In order to provide closer to real time data, we forecast the most recent employment measures beyond those available in the combined Earnin, Intuit, and Paychex dataset alone. To do so, we leverage two sources of higher frequency data: Kronos timestamp data and the Paychex weekly pay cycle sample. Using this higher frequency data we forecast more recent changes in employment using a distributed lag model, constructed by regressing a given week’s employment measure on the corresponding week’s Kronos measure, as well as its current and 3 previous lagged weeks’ Paychex weekly pay cycle measure.  For more details, please refer to the appendix of the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
+* *In the Intuit series*, we do not make any sample restrictions.
 
 ## Unemployment Claims
 
@@ -333,7 +317,7 @@ National totals for all programs' unemployment benefit claims are the sum of the
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th - February 7th
+**Indexing Period:** January 6th - February 7th 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
@@ -363,7 +347,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th - February 7th
+**Indexing Period:** January 6th - February 7th 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -450,7 +434,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Data Frequency:** Daily  
 
-**Indexing Period:** January 3rd to February 5th  
+**Indexing Period:** January 3rd to February 5th 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
