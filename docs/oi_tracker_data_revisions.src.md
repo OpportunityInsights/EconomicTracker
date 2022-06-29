@@ -120,16 +120,16 @@ The Employment data was revised on June 30th 2021 due to three independent chang
 
 After making these changes, the (population-weighted) RMSE (root mean square error) of the state-level employment series relative to the CPS is 4.55 percentage points as of April 2021, after removing public sector and furloughed workers and expressing employment in seasonally-unadjusted terms relative to January 2020. Though we will continue to assess our series relative to the CPS, users should note that some amount of noise remains in both our state-level series estimates and in the CPS estimates. Particularly in instances where these two measures of employment differ, users may consider both the Opportunity Insights series and the CPS as helpful inputs in identifying local patterns.
 
-### Revisions on May 18th 2022
+### Revisions on May 21st 2022
 
-The Employment data was revised on May 18th 2021 due to four independent changes in methodology.
+The Employment data was revised on May 21st 2022 due to four independent changes in methodology.
 
 - **Revisions to combination process:** We are currently constructing the combined Employment series using Paychex and Intuit data.
 
 - **Revisions to income quartile definitions:** The original income quartile thresholds were set using annualized wages of up to $13/hr (Q1), $18/hr (Q2), and $29/hr (Q3). These thresholds were derived from the wage distribution of employees in Paychex's client base in 2019. However, wage growth and inflation trends over time will mechanically move workers across these fixed thresholds into higher income quartiles. For example, if a Q1 worker's wages were to grow such that they were now over the Q2 threshold, then the series would mechanically show an decrease in Q1 employment and an increase in Q2 employment, despite aggregate employment remaining the same. Eventually, with fixed thresholds, every worker would be placed in the Q4 category.
 
   To address this issue, we have implemented moving thresholds that are based on the federal poverty line. The income categories are now defined using multiples of the poverty threshold, normally a yearly measure that we extend monthly using the CPI. The upper thresholds for each income quartile are now 1x the poverty line (Q1), 1.5x the poverty line (Q2), and 2.5x the poverty line (Q3). A secondary issue that arises from using moving thresholds, however, are discontinuities in the series when a threshold crosses a whole number wages where there is bunching in the wage distribution, e.g. $15/hr. When the Q1 threshold crosses $15, for example, many workers who were previously a part of Q2 will now be defined as Q1, causing a discontinuity in the series. To address this issue, we "spread" workers out from the whole number wages as if we added a random number between -0.5 and 0.5 to their wages, creating a uniform distribution between (whole number wage - 0.5, whole number wage + 0.5).
-  
+
   Implementing these moving thresholds results in upwards revisions in employment esttimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.
 
 - **Revisions to address changes in the minimum wage:** We have updated our previous methodology released on June 30th 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.
