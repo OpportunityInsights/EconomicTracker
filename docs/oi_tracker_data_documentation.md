@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-06-29</p>
+<p class="subtitle">last updated on 2022-07-02</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -20,7 +20,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 13th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Data is daily until the final two weeks of the series, and the daily data is presented as a 7 day lookback moving average. For the final two weeks of the series, the data is weekly and presented as weekly data points.</p>
-<p><strong>Index Period:</strong> January 4th - January 31st 2020</p>
+<p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
@@ -49,7 +49,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
+<p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
@@ -80,7 +80,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
+<p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
@@ -109,9 +109,9 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
 <p><strong>Data Source:</strong> <a href="https://www.burning-glass.com">Burning Glass Technologies</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 17th until the most recent date available.</p>
+<p><strong>Date Range:</strong> January 17th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Friday.</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
+<p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, Metro.</p>
 <p><strong>Breakdowns:</strong></p>
@@ -140,7 +140,7 @@ Data Documentation</div></h1>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.</p>
 <p><strong>Data Frequency:</strong> Weekly</p>
-<p><strong>Indexing Period:</strong> January 4th - January 31st 2020</p>
+<p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
@@ -199,7 +199,7 @@ Data Documentation</div></h1>
 <li>Wyoming: Wyoming Department of Workforce Services</li>
 </ul>
 <p><strong>Update Frequency:</strong> Weekly (where available, in the case of county-level data)</p>
-<p><strong>Date Range:</strong> January 18th until the most recent date available.</p>
+<p><strong>Date Range:</strong> January 18th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Saturday.</p>
 <p>Note that county-level claims in California, Georgia, Kentucky, and Illinois are reported at the monthly level and imputed to weekly data points for the county-level series. For more information about the imputation methodology, see the <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong></p>
 <p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
@@ -229,9 +229,9 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Number of students using Zearn Math, a curriculum from the non-profit Zearn, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
 <p><strong>Update Frequency:</strong> Weekly, except during summer and winter school breaks.</p>
-<p><strong>Date Range:</strong> January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.</p>
+<p><strong>Date Range:</strong> January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Sunday.</p>
-<p><strong>Indexing Period:</strong> January 6th - February 7th 2020</p>
+<p><strong>Indexing Period:</strong> January 6th to February 7th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, States, County, Metro</p>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
@@ -249,9 +249,9 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Number of lessons completed by students each week using Zearn Math, among schools that already used Zearn Math in course instruction before the pandemic.</p>
 <p><strong>Data Source:</strong> <a href="https://about.zearn.org">Zearn</a></p>
 <p><strong>Update Frequency:</strong> Weekly, except during summer and winter school breaks.</p>
-<p><strong>Date Range:</strong> January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.</p>
+<p><strong>Date Range:</strong> January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Sunday.</p>
-<p><strong>Indexing Period:</strong> January 6th - February 7th 2020</p>
+<p><strong>Indexing Period:</strong> January 6th to February 7th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
 <p><strong>Geographies:</strong> National, States, County, Metro</p>
 <p>To ensure privacy, the data we obtain are masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math is excluded. Where possible, masked county levels values are replaced by commuting zone means.</p>
@@ -269,7 +269,7 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths, hospitalizations, or tests performed.</p>
 <p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">The New York Times</a>, <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">The Johns Hopkins Coronavirus Resource Center</a>, <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a>, <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health &amp; Human Services</a></p>
 <p><strong>Update Frequency:</strong> Daily</p>
-<p><strong>Date Range:</strong> January 22th until the most recent date available.</p>
+<p><strong>Date Range:</strong> January 22nd 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Daily, presented as a 7-day moving average</p>
 <p><strong>Indexing Period:</strong> No indexing applied, the published numbers directly report quantities.</p>
 <p><strong>Indexing Type:</strong> No indexing applied, the published numbers directly report quantities.</p>
@@ -305,7 +305,7 @@ Data Documentation</div></h1>
 <p><strong>Summary:</strong> Time spent away from home, estimated using cellphone location data from Google users who have enabled the Location History setting.</p>
 <p><strong>Data Source:</strong> <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>, <a href="https://www.bls.gov/tus/">American Time Use Survey</a></p>
 <p><strong>Update Frequency:</strong> When released by Google, typically every 4-7 days.</p>
-<p><strong>Date Range:</strong> February 24th until the most recent date available.</p>
+<p><strong>Date Range:</strong> February 24th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Daily</p>
 <p><strong>Indexing Period:</strong> January 3rd to February 5th 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>

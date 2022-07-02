@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-06-29
+subtitle: last updated on 2022-07-02
 documentclass: scrartcl
 ---
 
@@ -39,7 +39,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Data Frequency:** Data is daily until the final two weeks of the series, and the daily data is presented as a 7 day lookback moving average. For the final two weeks of the series, the data is weekly and presented as weekly data points.
 
-**Index Period:** January 4th - January 31st 2020
+**Indexing Period:** January 4th to January 31st 2020
 
 **Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
 
@@ -78,7 +78,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st 2020
+**Indexing Period:** January 4th to January 31st 2020
 
 **Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
@@ -122,7 +122,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st 2020
+**Indexing Period:** January 4th to January 31st 2020
 
 **Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
 
@@ -162,11 +162,11 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 17th until the most recent date available.
+**Date Range:** January 17th 2020 until the most recent date available.
 
 **Data Frequency:** Weekly data points, with each week ending on Friday.
 
-**Indexing Period:** January 4th - January 31st 2020
+**Indexing Period:** January 4th to January 31st 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -204,7 +204,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th - January 31st 2020
+**Indexing Period:** January 4th to January 31st 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
@@ -231,7 +231,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
     - Retail
 
-**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series. 
+**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.
 
 * *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, for cells with a maximum employment of over 50 employees throughout the sample period, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 250 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020. For cells with a maximum employment less than 50 employees over the sample period, we instead reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.
 
@@ -270,7 +270,7 @@ The county-level series is only available for states whose respective state agen
 
 **Update Frequency:** Weekly (where available, in the case of county-level data)
 
-**Date Range:** January 18th until the most recent date available.
+**Date Range:** January 18th 2020 until the most recent date available.
 
 **Data Frequency:** Weekly data points, with each week ending on Saturday.
 
@@ -313,11 +313,11 @@ National totals for all programs' unemployment benefit claims are the sum of the
 
 **Update Frequency:** Weekly, except during summer and winter school breaks.
 
-**Date Range:** January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.
+**Date Range:** January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th - February 7th 2020
+**Indexing Period:** January 6th to February 7th 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
@@ -343,11 +343,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** Weekly, except during summer and winter school breaks.
 
-**Date Range:** January 6th to May 3rd 2020. The data series is not being updated during the summer. Updates will resume during the fall semester.
+**Date Range:** January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th - February 7th 2020
+**Indexing Period:** January 6th to February 7th 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -373,7 +373,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** Daily
 
-**Date Range:** January 22th until the most recent date available.
+**Date Range:** January 22nd 2020 until the most recent date available.
 
 **Data Frequency:** Daily, presented as a 7-day moving average
 
@@ -430,7 +430,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** When released by Google, typically every 4-7 days.
 
-**Date Range:** February 24th until the most recent date available.
+**Date Range:** February 24th 2020 until the most recent date available.
 
 **Data Frequency:** Daily  
 
