@@ -51,6 +51,7 @@ Data Documentation</div></h1>
 <p><strong>Data Frequency:</strong> Weekly</p>
 <p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
+<p>In all series we adjust for holidays while seasonally adjusting a given series to ensure that we are comparing weeks containing a significant holiday to a corresponding week containing that holiday. This adjustment has three components: (1) weeks with the same holiday are always compared to each other; (2) weeks before the same holiday are always compared to each other; and (3) weeks after holidays are always compared to each other. Thus, even if a holiday does not fall in the same week in the year being normed and the comparison year, weeks will be aligned when compared to each other.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
@@ -82,6 +83,7 @@ Data Documentation</div></h1>
 <p><strong>Data Frequency:</strong> Weekly</p>
 <p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.</p>
+<p>In all series we adjust for holidays while seasonally adjusting a given series to ensure that we are comparing weeks containing a significant holiday to a corresponding week containing that holiday. This adjustment has three components: (1) weeks with the same holiday are always compared to each other; (2) weeks before the same holiday are always compared to each other; and (3) weeks after holidays are always compared to each other. Thus, even if a holiday does not fall in the same week in the year being normed and the comparison year, weeks will be aligned when compared to each other.</p>
 <p><strong>Geographies:</strong> National, State, County, Metro</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
