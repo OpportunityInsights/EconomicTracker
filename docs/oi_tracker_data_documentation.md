@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-07-02</p>
+<p class="subtitle">last updated on 2022-07-23</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -113,7 +113,7 @@ Data Documentation</div></h1>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Friday.</p>
 <p><strong>Indexing Period:</strong> January 4th to January 31st 2020</p>
 <p><strong>Indexing Type:</strong> Change relative to the January 2020 index period, not seasonally adjusted.</p>
-<p><strong>Geographies:</strong> National, State, Metro.</p>
+<p><strong>Geographies:</strong> National, State, County, Metro.</p>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
@@ -133,7 +133,7 @@ Data Documentation</div></h1>
 <li>Extensive - Jobzone 5</li>
 </ul></li>
 </ul>
-<p><strong>Data Masking:</strong> In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold.</p>
+<p><strong>Data Masking:</strong> In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold. Additionally, at the county level, only subgroup data for the 200 largest counties is able to be disclosed for firm data privacy reasons. For the remaining counties’ subgroups, all values are imputed from the share of state postings that are made up of a given subgrouping multiplied by the number of county postings in total.</p>
 <h2 id="employment">Employment</h2>
 <p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.</p>
 <p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a>, <a href="https://www.kronos.com/">Kronos</a></p>

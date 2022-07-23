@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-07-02
+subtitle: last updated on 2022-07-23
 documentclass: scrartcl
 ---
 
@@ -170,7 +170,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
-**Geographies:** National, State, Metro.
+**Geographies:** National, State, County, Metro.
 
 **Breakdowns:**  
 
@@ -190,7 +190,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
     - Considerable - Jobzone 4
     - Extensive - Jobzone 5
 
-**Data Masking:** In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold.
+**Data Masking:** In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold. Additionally, at the county level, only subgroup data for the 200 largest counties is able to be disclosed for firm data privacy reasons. For the remaining counties' subgroups, all values are imputed from the share of state postings that are made up of a given subgrouping multiplied by the number of county postings in total.
 
 ## Employment  
 
