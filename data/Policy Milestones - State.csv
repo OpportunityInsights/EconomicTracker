@@ -1,52 +1,673 @@
-statename,statefips,schools_closed,nonessential_biz_closed,stayathome_start,regional_biz_opened,regional_stayathome_end,statewide_biz_opened,statewide_stayathome_end,regional_biz_reclosed,statewide_biz_reclosed,state_milestone1,description1,state_milestone2,description2,state_milestone3,description3,state_milestone4,description4,state_milestone5,description5
-Alabama,1,2020-03-19,2020-03-28,2020-04-04,,,2020-05-01,2020-04-30,,,,,,,,,,,,
-Alaska,2,2020-03-16,2020-03-28,2020-03-28,,,2020-04-24,2020-04-24,,,,,,,,,,,,
-Arizona,4,2020-03-16,,2020-03-31,,,2020-05-08,2020-05-15,,2020-06-29,2020-08-10,"Arizona released health benchmarks that, once met, allowed counties to reopen businesses closed on 6/29; also began allowing businesses to individually apply for reopening regardless of county",2020-10-01,"Arizona reopened all businesses statewide, with some restructions",2021-03-05,Arizona lifted capacity restrictions for all businesses,,,,
-Arkansas,5,2020-03-17,,,,,2020-05-04,,,,,,,,,,,,,
-California,6,2020-03-19,2020-03-19,2020-03-19,2020-05-08,,2020-05-22,,2020-06-28,2020-07-13,2020-08-31,California entered a new reopening system wherein each county was placed into a specified reopening tier with health metrics used to determine movement to more- or less-restrictive tiers,2020-11-17,California paused all reopenings and began moving counties back to the most restrictive tier,2020-12-05,California entered a new regional stay-at-home order plan wherein each multicounty region will be subject to nonessential business closures and a stay-at-home order depending on ICU capacity,2021-01-25,California ended regional stay at home orders and returned to previous county-based reopening plan,,
-Colorado,8,2020-03-23,2020-03-26,2020-03-26,2020-05-01,2020-04-26,2020-05-09,2020-05-09,,2020-07-02,2020-09-15,Colorado introduced a new system for business reopenings wherein counties could request new reopening designations beginning 9/29,,,,,,,,
-Connecticut,9,2020-03-17,2020-03-23,2020-03-23,,,2020-05-20,2020-05-20,,,2020-11-06,"Connecticut rolled back to Phase 2.1, tightening capacity restrictions on businesses",2020-03-19,Connecticut lifted capacity restrictions on resturants and select indoor recreation,,,,,,
-Delaware,10,2020-03-16,2020-03-24,2020-03-24,,,2020-06-01,2020-05-31,,,2020-12-14,Delaware issued a stay at home advisory and tightened capacity restrictions on businesses,2021-02-12,Delaware loosened capacity restrictions that had been instituted on 12/14/20,,,,,,
-District Of Columbia,11,2020-03-16,2020-03-25,2020-04-01,,,2020-05-29,2020-05-29,,2020-12-23,2021-01-22,DC reopened select businesses closed on 12/23,,,,,,,,
-Florida,12,2020-03-16,,2020-04-03,2020-05-04,2020-05-04,2020-05-18,2020-05-18,,2020-06-26,2020-09-14,Florida reopened select businesses statewide,,,,,,,,
-Georgia,13,2020-03-18,,2020-04-03,,,2020-04-24,2020-04-30,,,,,,,,,,,,
-Hawaii,15,2020-03-16,2020-03-25,2020-03-25,2020-05-07,,2020-05-15,2020-05-31,2020-08-08,,2020-10-22,Hawaii reopened select businesses closed regionally on 8/8,2021-02-25,"Hawaii loosened restrictions to stage 3 on Oahu, fully reopening select businesses",,,,,,
-Idaho,16,2020-03-23,2020-03-25,2020-03-25,,,2020-05-01,2020-04-30,2020-06-24,2020-10-26,,,,,,,,,,
-Illinois,17,2020-03-17,2020-03-21,2020-03-21,2020-05-29,,2020-06-03,2020-05-29,,2020-11-20,2020-07-15,Illinois divided into 11 regions which would be individually subject to stricter gathering limits and business closures based on local health metrics,2021-01-18,"Illinois returned to regional reopening plan after 11/20 closure, loosening health metrics needed to reopen businesses",,,,,,
-Indiana,18,2020-03-19,2020-03-24,2020-03-24,2020-05-04,2020-05-04,2020-05-18,2020-05-18,,,2021-04-06,Indiana ends all COVID-19 business restrictions,,,,,,,,
-Iowa,19,2020-03-15,2020-03-17,,2020-05-01,,2020-05-08,,2020-08-27,,2020-09-16,"Iowa reopened select businesses on a regional basis (Polk, Linn, Dallas, and Black Hawk counties)",2020-10-05,Iowa reopened select businesses on a regional basis (Johnson and Story counties),,,,,,
-Kansas,20,2020-03-18,,2020-03-30,2020-05-04,2020-05-03,2020-05-11,2020-05-22,,,2021-01-28,Kansas shuts unemployment system in response to large number of fraudulent claims,,,,,,,,
-Kentucky,21,2020-03-16,2020-03-26,2020-03-26,,,2020-05-11,2020-05-11,,2020-07-28,2020-08-11,Kentucky reopened select businesses at reduced capacity,2020-11-20,Kentucky closed select businesses,2020-12-13,Kentucky reopened select businesses,,,,
-Louisiana,22,2020-03-16,2020-03-22,2020-03-23,2020-05-15,2020-05-15,2020-05-16,2020-05-16,,2020-07-13,2020-09-11,Louisiana allowed reopening of select businesses,2020-11-25,"Louisiana rolled back to Phase 2, tightening capacity restrictions on businesses",2021-03-03,Louisiana reopened select businesses and lifted capacity restrictions on religious services,,,,
-Maine,23,2020-03-31,2020-03-25,2020-04-02,,,2020-05-01,2020-05-31,,,2020-11-04,Maine tightened capacity resitrictions on select businesses,2021-04-05,Maine reducted capacity restrictions on select businesses,,,,,,
-Maryland,24,2020-03-16,2020-03-23,2020-03-30,2020-05-15,2020-05-15,2020-06-01,2020-06-01,,,2020-07-24,Maryland reclosed select businesses on a regional basis (Baltimore City),2020-08-08,Maryland reopened select businesses on a regional basis (Baltimore City),2020-12-11,Maryland reclosed select businesses on a regional basis (Baltimore City),2021-01-22,Maryland reopened select businesses on a regional basis (Baltimore City),2021-03-12,Maryland lifted capacity restrictions on select businesses statewide
-Massachusetts,25,2020-03-17,2020-03-24,2020-03-24,,,2020-05-18,2020-05-18,,2020-12-13,2020-11-06,Massachusetts issued a stay at home advisory,2020-12-16,Massachusetts closed select businesses on a regional basis (Boston),2021-01-25,Massachusetts lifted stay at home advisory,2021-02-01,Massachusetts reopened select businesses on a regional basis (Boston),2021-03-01,Massachusetts reopened select businesses statewide
-Michigan,26,2020-03-16,2020-03-23,2020-03-24,,,2020-05-11,2020-06-01,2020-07-01,2020-07-31,2020-10-09,Michigan reopened select businesses statewide,2020-11-18,Michigan reclosed select businesses statewide,2020-12-21,Michigan reopened select businesses,2021-02-01,Michigan reopened additional select businesses that were closed on 11/18/20,,
-Minnesota,27,2020-03-16,,2020-03-27,,,2020-04-27,2020-05-17,,2020-11-20,2020-12-18,Minnesota reopened select businesses closed on 11/20,2021-01-11,Minnesota reopened additional select businesses closed on 11/20,,,,,,
-Mississippi,28,2020-03-16,2020-04-03,2020-04-03,,,2020-04-27,2020-04-27,,,2021-03-03,Mississippi lifted all public health restrictions on businesses,,,,,,,,
-Missouri,29,2020-03-20,,2020-04-06,2020-05-04,2020-05-03,2020-05-18,2020-05-18,,,,,,,,,,,,
-Montana,30,2020-03-16,2020-03-26,2020-03-28,2020-04-27,,2020-05-01,2020-04-26,,,,,,,,,,,,
-Nebraska,31,2020-03-23,,,2020-05-04,,2020-06-01,,,,,,,,,,,,,
-Nevada,32,2020-03-16,2020-03-21,2020-04-01,,,2020-05-09,2020-05-09,2020-07-10,,2020-07-27,"Nevada reopened select businesses on a regional basis (Humboldt, Lander, and Lyon counties)",2020-09-16,Nevada reopened select businesses on a regional basis (Washoe and Nye counties),2020-11-24,Nevada tightened capacity restrictions on select businesses,,,,
-New Hampshire,33,2020-03-16,2020-03-28,2020-03-27,,,2020-05-11,2020-06-15,,,2021-03-15,New Hampshire lifts capacity restrictions on select businesses,,,,,,,,
-New Jersey,34,2020-03-18,2020-03-21,2020-03-21,,,2020-06-15,2020-06-09,,,,,,,,,,,,
-New Mexico,35,2020-03-16,2020-03-24,2020-03-24,2020-05-16,,2020-06-01,2020-05-31,,2020-11-16,2020-11-16,New Mexico reclosed select businesses statewide and issued a new stay at home advisory,2020-12-02,New Mexico entered a new reopening system wherein each county was placed into a specified reopening tier with health metrics used to determine movement to more- or less-restrictive tiers,,,,,,
-New York,36,2020-03-18,2020-03-22,2020-03-22,2020-05-15,,2020-06-08,2020-05-28,,,2020-10-08,New York implemented a new strategy wherein new restrictions and/or business closures were instituted in county and sub-county areas in the state,2020-12-14,New York closed select businesses on a regional basis (New York City),2021-12-21,New York reopened select businesses closed on 12/14,,,,
-North Carolina,37,2020-03-16,2020-03-30,2020-03-30,,,2020-05-08,2020-05-22,,,2021-03-29,North Carolina relaxed capacity restrictions at select businesses,,,,,,,,
-North Dakota,38,2020-03-16,,,,,2020-05-01,,,,,,,,,,,,,
-Ohio,39,2020-03-17,2020-03-23,2020-03-23,,,2020-05-04,2020-05-29,,,,,,,,,,,,
-Oklahoma,40,2020-03-17,2020-04-01,,2020-04-24,,2020-05-01,,,,,,,,,,,,,
-Oregon,41,2020-03-16,,2020-03-23,,,2020-05-15,,2020-07-31,2020-11-18,2020-08-21,Oregon reopened select businesses on a regional basis (Umatilla County),2020-09-18,Oregon reopened select businesses on a regional basis (Morrow County),2020-12-03,Oregon entered a new reopening system wherein each county was placed into a specified reopening tier with health metrics used to determine movement to more- or less-restrictive tiers,2020-02-12,"9 OR counties (Clackamas, Clatsop, Columbia, Deschutes, Hood River, Klamath, Linn, Multnomah, Washington) move from extreme- to high-risk tier",,
-Pennsylvania,42,2020-03-16,2020-03-23,2020-04-01,2020-05-08,2020-05-08,2020-06-05,2020-06-05,2020-07-03,2020-12-12,2020-07-10,Pennsylvania reopened select businesses on a regional basis (included Allegheny county),2020-11-20,Pennsylvania reclosed select businesses on a regional basis (Philadelphia county),2021-01-04,Pennsylvania reopened select businesses closed on 12/12,,,,
-Rhode Island,44,2020-03-16,,2020-03-28,,,2020-05-09,2020-05-08,,2020-11-30,2020-11-08,Rhode Island issued a stay at home advisory,2020-12-21,Rhode Island reopened select businesses,,,,,,
-South Carolina,45,2020-03-16,,2020-04-07,,,2020-04-20,2020-05-04,,,,,,,,,,,,
-South Dakota,46,2020-03-16,,,,,,,,,,,,,,,,,,
-Tennessee,47,2020-03-20,2020-04-01,2020-03-31,2020-04-27,2020-04-30,2020-05-11,2020-05-11,2020-07-03,,2020-08-17,Tennessee reopened select businesses on a regional basis with capacity restrictions (Davidson county),,,,,,,,
-Texas,48,2020-03-21,,2020-04-02,,,2020-05-01,2020-04-30,,2020-06-26,2020-10-14,Texas reopened select businesses at reduced capacity,2021-03-02,Texas lifted all public health restrictions on businesses,,,,,,
-Utah,49,2020-03-16,,,,,2020-05-01,,,,,,,,,,,,,
-Vermont,50,2020-03-18,2020-03-25,2020-03-25,,,2020-05-11,2020-05-15,,2020-11-14,2021-03-24,Vermont reopened select businesses,,,,,,,,
-Virginia,51,2020-03-16,2020-03-24,2020-03-30,2020-05-15,,2020-05-29,2020-06-10,,,,,,,,,,,,
-Washington,53,2020-03-16,2020-03-25,2020-03-23,2020-05-11,,2020-07-03,2020-05-31,,2020-11-16,2021-01-11,Washington entered a new reopening system which divides the state into 8 regions for which health metrics determine further business reopenings,2021-02-14,5 Washington regions enter Phase 2 of reopening allowing indoor dining and expanding indoor recreation capacity,2021-03-22,"Washington will allow live attendance at sporting events and will boost indoor capacity at restaurants, retailers, fitness centers and other indoor spaces to 50%",,,,
-West Virginia,54,2020-03-16,2020-03-24,2020-03-24,,,2020-05-04,2020-05-03,,2020-07-14,2020-10-13,West Virginia reopened select businesses on a regional basis (Monongalia County),2021-02-19,West Virginia Loosened restrictions of business capacity and social gatherings,2021-03-06,West Virginia lifted public health restrictions on select businesses,,,,
-Wisconsin,55,2020-03-16,2020-03-25,2020-03-25,2020-05-13,2020-05-13,2020-05-26,2020-05-26,,,2020-11-10,Wisconsin issued a stay at home advisory,,,,,,,,
-Wyoming,56,2020-03-20,,,2020-05-01,,2020-05-11,,,,,,,,,,,,,
+statefips,statename,date,policy_description,schools_first_closed,nonessential_biz_first_closed,stayathome_first_start
+1,Alabama,2020-03-19,Alabama public schools closed,1,0,0
+1,Alabama,2020-03-28,Alabama ordered closed all non-essential businesses,0,1,0
+1,Alabama,2020-04-03,Alabama issued stay at home order,0,0,1
+1,Alabama,2020-04-30,Alabama ended stay at home order statewide,0,0,0
+1,Alabama,2020-05-01,Alabama reopened select businesses statewide,0,0,0
+1,Alabama,2020-07-01,Alabama issued Emergency Order to suspend certain gatherings,0,0,0
+1,Alabama,2020-07-16,Alabama issued Emergency Order to suspend certain gatherings,0,0,0
+1,Alabama,2021-05-31,Alabama ended all COVID-19 business restrictions,0,0,0
+1,Alabama,2021-06-19,"Alabama ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+1,Alabama,2021-07-06,Alabama lifted state of emergency,0,0,0
+2,Alaska,2020-03-11,Alaska declared Public Health Disaster Emergency,0,0,0
+2,Alaska,2020-03-16,Alaska public schools closed,1,0,0
+2,Alaska,2020-03-18,Alaska ordered closed public dine-in service,0,0,0
+2,Alaska,2020-03-28,Alaska issued stay at home order and closed all non-essential businesses,0,1,1
+2,Alaska,2020-04-15,"Alaska issues ""non-congregate"" sheltering order",0,0,0
+2,Alaska,2020-04-24,Alaska ended stay at home order and reopened select businesses statewide,0,0,0
+2,Alaska,2020-05-12,Alaska prohibits travel off the road system,0,0,0
+2,Alaska,2020-05-22,Alaska reopens all businesses and majority of other locations,0,0,0
+2,Alaska,2020-07-24,"Anchorage, AK limits gatherings in high-risk locations",0,0,0
+2,Alaska,2020-08-03,"Anchorage, AK issued a ""Four Week Reset""",0,0,0
+2,Alaska,2020-11-16,Alaska declared second Public Health Disaster Emergency,0,0,0
+2,Alaska,2020-11-16,"Alaska issued 8 ""Outbreak Health Orders""",0,0,0
+2,Alaska,2021-02-14,Alaska ended Public Health Disaster Emergency declaration,0,0,0
+2,Alaska,2021-06-12,Alaska ended emergency employment benefits: The FPUC supplement ended,0,0,0
+4,Arizona,2020-03-11,Arizona declared a state of emergency,0,0,0
+4,Arizona,2020-03-16,Arizona public schools closed,1,0,0
+4,Arizona,2020-03-31,Arizona issued stay at home order,0,0,1
+4,Arizona,2020-04-17,Navajo Nation implemented a 57-hour weekend curfew,0,0,0
+4,Arizona,2020-05-08,Arizona reopened select businesses statewide,0,0,0
+4,Arizona,2020-05-15,Arizona ended stay at home order statewide,0,0,0
+4,Arizona,2020-06-08,Arizona issued a statewide curfew,0,0,0
+4,Arizona,2020-06-29,Arizona ordered reclosed select businesses statewide,0,0,0
+4,Arizona,2020-08-10,"Arizona released health benchmarks that, once met, allowed counties to reopen businesses closed on 6/29; also began allowing businesses to individually apply for reopening regardless of county",0,0,0
+4,Arizona,2020-10-01,"Arizona reopened all businesses statewide, with some restrictions ",0,0,0
+4,Arizona,2021-03-03,Arizona required schools to offer in-person learning,0,0,0
+4,Arizona,2021-03-05,Arizona lifted capacity restrictions for all businesses,0,0,0
+4,Arizona,2021-03-25,Arizona lifted restrictions on social gatherings,0,0,0
+4,Arizona,2021-07-10,Arizona ended emergency employment benefits: The FPUC supplement ended,0,0,0
+4,Arizona,2021-09-29,Arizona lifted occupancy limits and shifts mitigation requirements to recommendations,0,0,0
+4,Arizona,2022-03-30,Arizona ended Covid state of emergency,0,0,0
+5,Arkansas,2020-03-11,Arkansas declared COVID-19 state of emergency,0,0,0
+5,Arkansas,2020-03-17,Arkansas closed schools,1,0,0
+5,Arkansas,2020-03-19,Arkansas ordered closed indoor dining and select businesses,0,0,0
+5,Arkansas,2020-03-30,"Little Rock, AR ordered a nightly curfew",0,0,0
+5,Arkansas,2020-04-06,Arkansas required social distancing in select businesses and locations,0,0,0
+5,Arkansas,2020-04-17,"Little Rock, AR ended nightly curfew",0,0,0
+5,Arkansas,2020-05-04,Arkansas reopened select businesses statewide,0,0,0
+5,Arkansas,2020-05-11,Arkansas resumed indoor dining,0,0,0
+5,Arkansas,2020-06-18,Arkansas terminated first state of emergency,0,0,0
+5,Arkansas,2020-06-29,Arkansas paused further reopening of businesses,0,0,0
+5,Arkansas,2020-08-17,Arkansas renewed state of emergency and mandates social distancing,0,0,0
+5,Arkansas,2020-09-09,Arkansas limited indoor dining,0,0,0
+5,Arkansas,2021-05-21,Arkansas ended state of emergency and lifted all business restrictions,0,0,0
+5,Arkansas,2021-06-26,"Arkansas ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+6,California,2020-03-04,California issued a state of emergency,0,0,0
+6,California,2020-03-19,California issued stay at home order and closed all non-essential businesses,0,1,1
+6,California,2020-03-19,California public schools closed,1,0,0
+6,California,2020-05-08,"California reopened select businesses on a regional basis (excluded Marin, San Francisco, San Mateo, Alameda, Contra Costa, and Santa Clara counties) ",0,0,0
+6,California,2020-05-22,California reopened select businesses statewide,0,0,0
+6,California,2020-06-28,"California ordered reclosed select businesses on a regional basis (Fresno, Kern, Kings, Los Angeles, San Joaquin, and Tulare counties)",0,0,0
+6,California,2020-07-13,California prohibited all indoor operations,0,0,0
+6,California,2020-08-31,California entered a new reopening system wherein each county was placed into a specified reopening tier with health metrics used to determine movement to more- or less-restrictive tiers,0,0,0
+6,California,2020-11-17,California paused all reopenings and began moving counties back to the most restrictive tier,0,0,0
+6,California,2020-12-05,California issued a regional plan wherein multi-county regions are subject to nonessential business closures and stay at home orders,0,0,0
+6,California,2021-01-25,California ended regional stay at home orders and returned to previous county-based reopening plan,0,0,0
+6,California,2021-06-15,California ended all restrictions on businesses and gatherings,0,0,0
+6,California,2021-10-01,California announced Covid vaccine requirements for schools,0,0,0
+6,California,2022-03-31,California extended eviction ban for some renters,0,0,0
+8,Colorado,2020-03-12,Colorado restricted visitation of non-essential individuals to care and living facilities ,0,0,0
+8,Colorado,2020-03-22,Colorado directed non-critical employers to reduce in-person workforce by 50%,0,0,0
+8,Colorado,2020-03-23,Colorado public schools closed,1,0,0
+8,Colorado,2020-03-24,"Denver, CO began stay at home order",0,0,0
+8,Colorado,2020-03-26,Colorado issued stay at home order and ordered closed all non-essential businesses,0,1,1
+8,Colorado,2020-04-26,"Colorado ended stay at home order on a regional basis (excluded Adams, Arapahoe, Boulder, Broomfield, Denver, Jefferson, Pitkin, and San Miguel counties)",0,0,0
+8,Colorado,2020-05-01,"Colorado reopened select businesses on a regional basis (excluded Adams, Arapahoe, Boulder, Broomfield, Denver, Jefferson, Pitkin, and San Miguel counties)",0,0,0
+8,Colorado,2020-05-09,Colorado ended stay at home order and reopened select businesses statewide,0,0,0
+8,Colorado,2020-07-02,Colorado ordered reclosed select businesses statewide,0,0,0
+8,Colorado,2020-09-15,Colorado introduced a new system for business reopenings wherein counties could request new reopening designations beginning 9/29 ,0,0,0
+8,Colorado,2021-04-16,Colorado reverted decisions on COVID-19 restrictions to county public health agencies,0,0,0
+8,Colorado,2021-06-01,Colorado removed capacity restrictions on all indoor events,0,0,0
+8,Colorado,2021-07-08,Colorado lifted state of emergency,0,0,0
+9,Connecticut,2020-03-17,Connecticut public schools closed,1,0,0
+9,Connecticut,2020-03-23,Connecticut issued stay at home advisory and closed all non-essential businesses,0,1,1
+9,Connecticut,2020-05-20,"Connecticut entered Phase 1 of Reopening Plan, ending stay at home order and reopening select businesses statewide",0,0,0
+9,Connecticut,2020-06-17,Connecticut entered Phase 2 of Reopening Plan,0,0,0
+9,Connecticut,2020-09-01,Connecticut delegated quarantine decisions to municipalities and districts,0,0,0
+9,Connecticut,2020-10-08,connecticut entered Phase 3 of Reopening Plan,0,0,0
+9,Connecticut,2020-11-06,"Connecticut rolled back to Phase 2, tightening capacity restrictions on businesses",0,0,0
+9,Connecticut,2021-03-19,Connecticut lifted capacity restrictions on restaurants and select indoor recreation,0,0,0
+10,Delaware,2020-03-12,Delaware declared state of emergency,0,0,0
+10,Delaware,2020-03-16,Delaware public schools closed,1,0,0
+10,Delaware,2020-03-24,Delaware issued stay at home order and ordered closed all non-essential businesses,0,1,1
+10,Delaware,2020-04-01,Delaware loosened limits on outdoor gatherings,0,0,0
+10,Delaware,2020-04-03,Delaware limited public gatherings to 10 people,0,0,0
+10,Delaware,2020-05-31,Delaware ended stay at home order statewide,0,0,0
+10,Delaware,2020-06-01,"Delaware entered Phase 1 of reopening plan, reopening select businesses statewide",0,0,0
+10,Delaware,2020-06-15,Delaware entered Phase 2 of reopening plan,0,0,0
+10,Delaware,2020-11-17,Delaware mandated additional restrictions on social gatherings,0,0,0
+10,Delaware,2020-12-14,Delaware issued a stay at home advisory and tightened capacity restrictions on businesses,0,0,0
+10,Delaware,2021-02-12,Delaware loosened capacity restrictions that had been instituted on 12/14/20,0,0,0
+10,Delaware,2021-05-21,"Delaware removed all capacity restrictions for restaurants, retail, other business establishments and houses of worship",0,0,0
+10,Delaware,2021-07-12,Delaware lifted state of emergency,0,0,0
+11,District of Columbia,2020-03-11,DC declared a state of emergency,0,0,0
+11,District of Columbia,2020-03-13,"DC banned ""mass gatherings"" of 250+ people",0,0,0
+11,District of Columbia,2020-03-16,DC prohibited social gatherings of more than 50 people,0,0,0
+11,District of Columbia,2020-03-16,DC public schools closed,1,0,0
+11,District of Columbia,2020-03-25,DC closed all non-essential businesses,0,1,0
+11,District of Columbia,2020-04-01,DC issued stay at home order,0,0,1
+11,District of Columbia,2020-04-09,DC issued social distancing requirements at retail food stores,0,0,0
+11,District of Columbia,2020-05-29,"DC entered Phase One of reopening, ended stay at home order, and reopened select businesses statewide",0,0,0
+11,District of Columbia,2020-06-22,DC entered Phase Two of reopening,0,0,0
+11,District of Columbia,2020-11-23,DC issued greater restrictions to Phase Two reopening plans,0,0,0
+11,District of Columbia,2021-01-22,DC reopened select businesses,0,0,0
+11,District of Columbia,2021-03-22,DC eased capacity restrictions for restaurants and outdoor gatherings,0,0,0
+11,District of Columbia,2021-05-01,"DC eased capacity restrictions for theaters, retail, pools",0,0,0
+11,District of Columbia,2021-05-21,"DC eased capacity restrictions on most indoor activities including restaurants, schools and offices",0,0,0
+11,District of Columbia,2021-06-11,"DC removed capacity restrictions on bars, nightclubs and entertainment venues",0,0,0
+12,Florida,2020-03-01,Florida declared a public health emergency,0,0,0
+12,Florida,2020-03-15,"Florida closed bars and nightclubs, and restricted restaurant capacity",0,0,0
+12,Florida,2020-03-16,Florida public schools closed,1,0,0
+12,Florida,2020-03-19,"Miami-Dade County declared local state emergency, closing all non-essential businesses",0,0,0
+12,Florida,2020-03-30,Florida closes non-essential businesses in select counties,0,0,0
+12,Florida,2020-04-03,Florida issued stay at home order,0,0,1
+12,Florida,2020-05-04,"Florida entered Phase One of reopening plan, and ended stay at home order on a regional basis (excluded Miami-Dade, Broward, and Palm Beach counties) and reopened select businesses",0,0,0
+12,Florida,2020-05-18,Florida ended stay at home order statewide,0,0,0
+12,Florida,2020-06-05,"Florida began Phase Two of reopening plan (excluded Miami-Dade, Broward, and Palm Beach counties)",0,0,0
+12,Florida,2020-06-26,Florida ordered reclosed select businesses statewide,0,0,0
+12,Florida,2020-07-03,Miami-Dade County ordered closed all beaches and canceled parades and fireworks for July 4th weekend,0,0,0
+12,Florida,2020-07-07,Miami-Dade County ordered reclosed select businesses,0,0,0
+12,Florida,2020-09-14,Florida Phase Two of reopening plan in effect statewide,0,0,0
+12,Florida,2020-09-14,Florida reopened select businesses statewide,0,0,0
+12,Florida,2021-05-03,Florida suspended all local emergency orders,0,0,0
+12,Florida,2021-06-26,"Florida ended emergency employment benefits: The FPUC supplement ended, lifted state of emergency",0,0,0
+13,Georgia,2020-03-18,Georgia public schools closed,1,0,0
+13,Georgia,2020-03-25,Atlanta issued stay at home order,0,0,0
+13,Georgia,2020-04-03,Georgia issued stay at home order,0,0,1
+13,Georgia,2020-04-27,Georgia reopened select businesses statewide,0,0,0
+13,Georgia,2020-04-30,Georgia ended stay at home order statewide,0,0,0
+13,Georgia,2020-05-01,Georgia ordered social distancing and prohibited certain gatherings,0,0,0
+13,Georgia,2020-05-11,Georgia permitted select businesses to reopen,0,0,0
+13,Georgia,2021-01-14,Atlanta declared emergency within City of Atlanta,0,0,0
+13,Georgia,2021-05-31,Georgia lifted restrictions on most businesses,0,0,0
+13,Georgia,2021-06-26,"Georgia ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+13,Georgia,2021-07-01,Georgia lifted State of emergency,0,0,0
+13,Georgia,2021-08-20,Georgia allowed business to ignore local regulations,0,0,0
+13,Georgia,2022-05-02,Georgia allowed enhanced P-SNAP benefits to expire,0,0,0
+15,Hawaii,2020-03-16,Hawaii public schools closed,1,0,0
+15,Hawaii,2020-03-22,Honolulu issued stay at home order for city and county of Honolulu,0,0,0
+15,Hawaii,2020-03-25,Hawaii issued stay at home order and ordered closed all non-essential businesses,0,1,1
+15,Hawaii,2020-04-16,Hawaii increases social distancing requirements and closes select locations,0,0,0
+15,Hawaii,2020-04-30,Oahu reopens a handful of businesses,0,0,0
+15,Hawaii,2020-05-07,Hawaii reopened select businesses on a regional basis (excluded Oahu and Maui counties),0,0,0
+15,Hawaii,2020-05-15,Hawaii reopened select businesses statewide,0,0,0
+15,Hawaii,2020-05-31,Hawaii ended stay at home order statewide,0,0,0
+15,Hawaii,2020-06-08,Honolulu city and county prohibited outdoor events with 100+ people and indoor events with 50+ people,0,0,0
+15,Hawaii,2020-08-08,Hawaii reclosed select businesses in Honolulu and Oahu counties,0,0,0
+15,Hawaii,2020-10-22,Hawaii reopened select businesses that had been closed on Aug. 8 (Honolulu and Oahu counties),0,0,0
+15,Hawaii,2021-02-25,"Hawaii loosened restrictions to Stage 3 on Oahu, fully reopening select businesses",0,0,0
+15,Hawaii,2021-08-10,Hawaii reduced gathering sizes and indoor capacity for businesses,0,0,0
+16,Idaho,2020-03-23,Idaho public schools closed,1,0,0
+16,Idaho,2020-03-26,Idaho issued stay at home order and closed all non-essential businesses,0,1,1
+16,Idaho,2020-04-30,Idaho entered Stage 1 of reopening plan and ended stay at home order statewide,0,0,0
+16,Idaho,2020-05-01,Idaho reopened select businesses statewide,0,0,0
+16,Idaho,2020-05-20,Idaho entered Stage 2 of reopening plan,0,0,0
+16,Idaho,2020-05-30,Idaho entered Stage 3 of reopening plan,0,0,0
+16,Idaho,2020-06-13,Idaho entered Stage 4 of reopening plan,0,0,0
+16,Idaho,2020-06-25,Idaho reclosed select businesses on a regional basis in Ada county,0,0,0
+16,Idaho,2020-10-26,Idaho ordered reclosed select businesses statewide,0,0,0
+16,Idaho,2021-02-02,Idaho re-entered Stage 3 with loosened capacity restrictions,0,0,0
+16,Idaho,2021-05-11,Idaho re-entered Stage 4 with few business restrictions,0,0,0
+16,Idaho,2021-06-19,"Idaho ended emergency employment benefits: The FPUC supplement, PEUC program, and PUA program ended",0,0,0
+16,Idaho,2022-04-15,Idaho ended health disaster emergency,0,0,0
+17,Illinois,2020-03-09,Illinois declared a state of emergency,0,0,0
+17,Illinois,2020-03-16,Illinois ordered closed all in-person dining,0,0,0
+17,Illinois,2020-03-17,Illinois public schools closed,1,0,0
+17,Illinois,2020-03-21,Illinois issued stay at home order and closed all non-essential businesses,0,1,1
+17,Illinois,2020-05-29,Illinois reopened select businesses on a regional basis (excluded Chicago),0,0,0
+17,Illinois,2020-05-29,Illinois ended stay at home order statewide,0,0,0
+17,Illinois,2020-06-03,Illinois reopened select businesses statewide,0,0,0
+17,Illinois,2020-07-15,Illinois divided into 11 regions which would be individually subject to stricter gathering limits and business closures based on local health metrics,0,0,0
+17,Illinois,2020-11-16,Chicago implemented a stay at home advisory,0,0,0
+17,Illinois,2021-01-18,"Illinois returned to regional reopening plan after 11/20 closure, loosening health metrics needed to reopen businesses",0,0,0
+17,Illinois,2021-05-14,Illinois entered the bridge phase of the Restore Illinois reopening plan and loosened business restrictions,0,0,0
+17,Illinois,2021-06-11,Illinois removed all remaining capacity limits and business restrictions,0,0,0
+18,Indiana,2020-03-06,Indiana declared a public health emergency,0,0,0
+18,Indiana,2020-03-16,Indiana ordered closed all indoor dining locations,0,0,0
+18,Indiana,2020-03-19,Indiana public schools closed,1,0,0
+18,Indiana,2020-03-24,Indiana issued stay at home order and closed all non-essential businesses,0,1,1
+18,Indiana,2020-05-04,"Indiana ended stay at home order on a regional basis (excluded Cass, Lake, and Marion counties) and reopened select businesses",0,0,0
+18,Indiana,2020-05-18,Indiana ended stay at home order statewide,0,0,0
+18,Indiana,2020-10-20,Indiana provided county-based measured and restrictions,0,0,0
+18,Indiana,2021-04-06,Indiana ended all COVID-19 business restrictions,0,0,0
+18,Indiana,2021-06-19,"Indiana originally ended emergency employment benefits prior to court order to resume payments: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+18,Indiana,2022-03-03,Indiana ended public health emergency,0,0,0
+19,Iowa,2020-03-15,Iowa public schools closed,1,0,0
+19,Iowa,2020-03-17,Iowa declared state of public health disaster and closed all non-essential businesses,0,1,0
+19,Iowa,2020-04-27,Iowa loosen social distancing measures in majority of counties,0,0,0
+19,Iowa,2020-05-01,"Iowa reopened select businesses on a regional basis (excluded Woodbury, Allamakee, Fayett, Bremer, Black Hawk, Dubuque, Marshall, Tama, Benton, Linn, Dallas, Polk, Jasper, Poweshiek, Iowa, Johnson, Muscatine, Scott, Washington, Louisa, Henry, and Des Moines counties)",0,0,0
+19,Iowa,2020-05-08,Iowa reopened select businesses statewide,0,0,0
+19,Iowa,2020-08-27,"Iowa ordered reclosed select businesses on a regional basis (Polk, Linn, Johnson, Story, Dallas, and Black Hawk counties)",0,0,0
+19,Iowa,2020-09-16,"Iowa reopened select businesses on a regional basis (Polk, Linn, Dallas, and Black Hawk counties)",0,0,0
+19,Iowa,2020-10-05,Iowa reopened select businesses on a regional basis (Johnson and Story counties),0,0,0
+19,Iowa,2020-11-17,Iowa added further restrictions in specific situations,0,0,0
+19,Iowa,2021-02-08,Iowa lifted social distancing,0,0,0
+19,Iowa,2021-06-12,"Iowa ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+19,Iowa,2022-02-15,Iowa ended public health emergency,0,0,0
+19,Iowa,2022-04-01,Iowa reduced SNAP benefits to pre-pandemic levels,0,0,0
+20,Kansas,2020-03-16,Kansas banned all gatherings of 50+ people,0,0,0
+20,Kansas,2020-03-18,Kansas public schools closed,1,0,0
+20,Kansas,2020-03-30,Kansas issued state-wide stay at home order,0,0,1
+20,Kansas,2020-04-07,Kansas prohibited all gatherings of more than 10 people,0,0,0
+20,Kansas,2020-05-03,Kansas ended stay at home order on a regional basis (excluded Kansas City and Johnson and Wyandotte counties),0,0,0
+20,Kansas,2020-05-04,Kansas entered Phase One of reopening plan and reopened select businesses on a regional basis (excluded Johnson and Wyandotte counties),0,0,0
+20,Kansas,2020-05-10,Johnson County and Wyandotte County ended stay at home orders,0,0,0
+20,Kansas,2020-05-11,Kansas reopened select businesses statewide,0,0,0
+20,Kansas,2020-05-22,Kansas ended stay at home order statewide and entered Phase 2 of reopening plan,0,0,0
+20,Kansas,2020-08-18,Kansas began eviction moratorium,0,0,0
+20,Kansas,2021-04-12,Kansas provided in-person learning option for all students K-12,0,0,0
+20,Kansas,2021-06-15,Kansas lifted state of emergency,0,0,0
+20,Kansas,2022-01-06,Kansas issued new state of emergency,0,0,0
+20,Kansas,2022-04-01,Kansas transitioned to covid-19 enedimic response,0,0,0
+21,Kentucky,2020-03-16,Kentucky public schools closed,1,0,0
+21,Kentucky,2020-03-26,Kentucky issued stay at home advisory and closed all non-essential businesses,0,1,1
+21,Kentucky,2020-04-09,Kentucky limited one adult per household in any given life-sustaining business,0,0,0
+21,Kentucky,2020-05-11,Kentucky ended stay at home order and reopened select businesses on a regional basis,0,0,0
+21,Kentucky,2020-06-29,Kentucky expanded social gathering capacity limits to 50 people,0,0,0
+21,Kentucky,2020-07-28,Kentucky ordered reclosed select businesses statewide,0,0,0
+21,Kentucky,2020-08-11,Kentucky reopened select businesses at reduced capacity,0,0,0
+21,Kentucky,2020-11-20,Kentucky ordered closed select businesses for 3 weeks,0,0,0
+21,Kentucky,2020-12-13,Kentucky reopened select businesses,0,0,0
+21,Kentucky,2021-05-28,Kentucky loosened capacity restrictions on most businesses,0,0,0
+21,Kentucky,2021-06-11,Kentucky ended all capacity restrictions,0,0,0
+22,Louisiana,2020-03-11,Louisiana declared a public health emergency,0,0,0
+22,Louisiana,2020-03-13,Louisiana banned gatherings of more than 250 people with select exemptions,0,0,0
+22,Louisiana,2020-03-16,Louisiana public schools closed,1,0,0
+22,Louisiana,2020-03-20,New Orleans issued a stay at home mandate,0,0,0
+22,Louisiana,2020-03-22,Louisiana ordered closed all non-essential businesses,0,1,0
+22,Louisiana,2020-03-23,Louisiana issued stay at home order,0,0,1
+22,Louisiana,2020-05-16,Louisiana ended stay at home order and reopened select businesses statewide,0,0,0
+22,Louisiana,2020-07-13,Louisiana ordered reclosed select businesses statewide,0,0,0
+22,Louisiana,2020-09-11,Louisiana allowed reopening of select businesses at increased capacity,0,0,0
+22,Louisiana,2020-11-25,Louisiana reverted to Phase 2 capacity restrictions,0,0,0
+22,Louisiana,2021-03-03,Louisiana progressed to Phase 3 and reopened select businesses and lifted capacity restrictions on religious services,0,0,0
+22,Louisiana,2021-05-25,Louisiana ended nearly all business restrictions,0,0,0
+22,Louisiana,2021-07-31,Louisiana ended emergency employment benefits: The FPUC supplement ended,0,0,0
+22,Louisiana,2022-03-16,Louisiana allowed COVID-19 state of emergency to expire,0,0,0
+23,Maine,2020-03-15,Maine proclaimed a state of emergency,0,0,0
+23,Maine,2020-03-18,Maine ordered closed indoor dining and banned gatherings of more than 10 people,0,0,0
+23,Maine,2020-03-25,Maine ordered closed all non-essential businesses,0,1,0
+23,Maine,2020-03-31,Maine public schools closed,1,0,0
+23,Maine,2020-04-02,Maine issued stay at home order,0,0,1
+23,Maine,2020-05-01,Maine reopened select businesses statewide,0,0,0
+23,Maine,2020-06-01,Maine entered Phase 2 of reopening plan and ended stay at home order statewide,0,0,0
+23,Maine,2020-07-01,Maine entered Phase 3 of reopening plan and reopened select businesses,0,0,0
+23,Maine,2020-10-13,Maine entered Phase 4 of reopening plan and increased maximum capacity limit for businesses,0,0,0
+23,Maine,2020-11-04,Maine tightened capacity restrictions on select businesses,0,0,0
+23,Maine,2021-04-05,Maine reduced capacity restrictions on select businesses,0,0,0
+23,Maine,2021-05-24,Maine ended all capacity restrictions,0,0,0
+23,Maine,2021-06-30,Maine lifted state of emergency,0,0,0
+24,Maryland,2020-03-05,Maryland declared a state of emergency,0,0,0
+24,Maryland,2020-03-16,Maryland ordered closed many non-essential businesses and limited social gathering size to 50 people,0,0,0
+24,Maryland,2020-03-16,Maryland public schools closed,1,0,0
+24,Maryland,2020-03-19,Maryland ordered closed select non-essential businesses and limited social gatherings to 10 people,0,0,0
+24,Maryland,2020-03-23,Maryland ordered closed all non-essential businesses,0,1,0
+24,Maryland,2020-03-30,Maryland issued stay at home order,0,0,1
+24,Maryland,2020-05-15,"Maryland entered Stage One of reopen plan and ended stay at home order on a regional basis (excluded Anne Arundel, Baltimore City, Baltimore, Charles, Montgomery, Prince George's and Frederick counties) and reopened select businesses",0,0,0
+24,Maryland,2020-06-01,Maryland ended stay at home order statewide,0,0,0
+24,Maryland,2020-06-05,"Maryland entered Stage Two of reopen plan and reopened many nonessential businesses on a regional basis (excluded Montgomery, Prince George's Counties)",0,0,0
+24,Maryland,2020-06-12,Maryland reopened indoor restaurants at limited capacity,0,0,0
+24,Maryland,2020-06-19,Maryland reopened select businesses at 50% capacity,0,0,0
+24,Maryland,2020-06-19,Maryland was in Stage Two of reopen plan statewide,0,0,0
+24,Maryland,2020-07-24,Maryland ordered reclosed select businesses on a regional basis (Baltimore City),0,0,0
+24,Maryland,2020-08-07,Maryland reopened select businesses on a regional basis (Baltimore City),0,0,0
+24,Maryland,2020-09-04,Maryland entered Stage Three of reopen plan,0,0,0
+24,Maryland,2020-09-21,Maryland further loosened restrictions on gatherings and businesses,0,0,0
+24,Maryland,2020-11-11,Maryland mandated return to remote working for nonessential workers statewide and tightened indoor dining restrictions,0,0,0
+24,Maryland,2020-12-11,Maryland ordered reclosed select businesses on a regional basis (Baltimore City),0,0,0
+24,Maryland,2021-01-22,Maryland reopened select businesses on a regional basis (Baltimore City),0,0,0
+24,Maryland,2021-03-12,Maryland lifted capacity restrictions on select businesses statewide,0,0,0
+24,Maryland,2021-06-01,Maryland lifted state of emergency,0,0,0
+24,Maryland,2021-07-03,"Maryland originally ended emergency employment benefits prior to court order to resume payments: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+24,Maryland,2022-01-04,Maryland instituted a 30- day state of emergency,0,0,0
+24,Maryland,2022-02-03,Maryland ended state of emergency,0,0,0
+25,Massachusetts,2020-03-10,Massachusetts declared a state of emergency,0,0,0
+25,Massachusetts,2020-03-16,Massachusetts limited gatherings to 25 people and closed indoor dining,0,0,0
+25,Massachusetts,2020-03-17,Massachusetts public schools closed,1,0,0
+25,Massachusetts,2020-03-18,Massachusetts ordered closed child care programs,0,0,0
+25,Massachusetts,2020-03-24,Massachusetts issued stay at home advisory and closed all non-essential businesses,0,1,1
+25,Massachusetts,2020-05-18,Massachusetts entered Phase I of reopen plan and ended stay at home order and reopened select businesses statewide,0,0,0
+25,Massachusetts,2020-06-01,Massachusetts entered Phase II of reopen plan and reopened select businesses,0,0,0
+25,Massachusetts,2020-06-22,Massachusetts reopened indoor dining,0,0,0
+25,Massachusetts,2020-07-10,Massachusetts reapplied capacity limitations for grocery stores and pharmacies ,0,0,0
+25,Massachusetts,2020-07-13,Massachusetts entered Phase III of reopen plan,0,0,0
+25,Massachusetts,2020-11-06,Massachusetts issued a stay at home advisory,0,0,0
+25,Massachusetts,2020-12-13,Massachusetts ordered reclosed select businesses statewide,0,0,0
+25,Massachusetts,2020-12-16,Massachusetts ordered reclosed select businesses on a regional basis (Boston),0,0,0
+25,Massachusetts,2020-12-26,Massachusetts limited gathering size and business capacity,0,0,0
+25,Massachusetts,2021-01-25,Massachusetts lifted stay at home advisory,0,0,0
+25,Massachusetts,2021-02-01,Massachusetts reopened select businesses on a regional basis (Boston),0,0,0
+25,Massachusetts,2021-03-01,Massachusetts reopened select businesses statewide,0,0,0
+25,Massachusetts,2021-03-22,Massachusetts entered Phase IV of reopen plan,0,0,0
+25,Massachusetts,2021-05-29,Massachusetts ended all capacity restrictions,0,0,0
+25,Massachusetts,2021-06-15,Massachusetts lifted state of emergency,0,0,0
+25,Massachusetts,2021-10-01,Massachusetts increased SNAP benefits,0,0,0
+26,Michigan,2020-03-16,Michigan ordered closed all in-person dining and other select businesses,0,0,0
+26,Michigan,2020-03-16,Michigan public schools closed,1,0,0
+26,Michigan,2020-03-23,Michigan ordered closed all non-essential businesses,0,1,0
+26,Michigan,2020-03-24,Michigan issued stay at home order,0,0,1
+26,Michigan,2020-05-11,Michigan reopened select businesses statewide,0,0,0
+26,Michigan,2020-06-01,Michigan ended stay at home order statewide,0,0,0
+26,Michigan,2020-06-04,Michigan reopened retail stores,0,0,0
+26,Michigan,2020-06-08,Michigan reopened restaurants,0,0,0
+26,Michigan,2020-07-01,"Michigan ordered reclosed select businesses on a regional basis (excluded Alger, Baraga, Chippewa, Delta, Dickinson, Gogebic, Houghton, Iron, Keweenaw, Luce, Mackinac, Marquette, Menominee, Ontonagon, Schoolcraft, Antrim, Alpena, Benzie, Charlevoix, Cheboygan, Crawford, Emmet, Grand Traverse, Kalkaska, Leelanau, Manistee, Missaukee, Montmorency, Otsego, Presque Isle, Roscommon, and Wexford counties) ",0,0,0
+26,Michigan,2020-07-31,Michigan ordered reclosed select businesses statewide,0,0,0
+26,Michigan,2020-08-03,Michigan required employees to work remotely if possible,0,0,0
+26,Michigan,2020-10-09,Michigan reopened select businesses statewide,0,0,0
+26,Michigan,2020-10-12,Michigan ended state of emergency,0,0,0
+26,Michigan,2020-11-18,Michigan ordered reclosed select businesses statewide,0,0,0
+26,Michigan,2020-12-21,Michigan reopened select businesses statewide,0,0,0
+26,Michigan,2021-01-25,Michigan reinstated restrictions on gatherings,0,0,0
+26,Michigan,2021-02-01,Michigan reopened additional select businesses that were closed on 11/18/20,0,0,0
+26,Michigan,2021-04-01,Michigan allocated payments for grocery assistance,0,0,0
+26,Michigan,2021-06-01,Michigan lifted business capacity restrictions statewide,0,0,0
+27,Minnesota,2020-03-16,Minnesota ordered closed select businesses,0,0,0
+27,Minnesota,2020-03-16,Minnesota public schools closed,1,0,0
+27,Minnesota,2020-03-27,Minnesota issued stay at home order,0,0,1
+27,Minnesota,2020-04-27,Minnesota reopened select businesses statewide,0,0,0
+27,Minnesota,2020-05-17,Minnesota ended stay at home order statewide,0,0,0
+27,Minnesota,2020-08-27,Minnesota allowed higher education to offer in-person classes,0,0,0
+27,Minnesota,2020-11-20,Minnesota ordered reclosed select businesses statewide,0,0,0
+27,Minnesota,2020-12-18,Minnesota reopened select businesses closed on 11/20,0,0,0
+27,Minnesota,2021-01-11,Minnesota reopened additional select businesses closed on 11/20 ,0,0,0
+27,Minnesota,2021-03-08,Minnesota schools offered in-person education in 90% of districts,0,0,0
+27,Minnesota,2021-05-07,Minnesota ended outdoor capacity restrictions,0,0,0
+27,Minnesota,2021-05-28,Minnesota ended most business restrictions,0,0,0
+27,Minnesota,2021-07-01,Minnesota lifted state of emergency ,0,0,0
+28,Mississippi,2020-03-16,Mississippi public schools closed,1,0,0
+28,Mississippi,2020-04-03,Mississippi issued stay at home order and closed all non-essential businesses,0,1,1
+28,Mississippi,2020-04-27,Mississippi downgraded stay at home order to advisory and reopened select businesses statewide,0,0,0
+28,Mississippi,2021-03-03,Mississippi lifted all public health restrictions on businesses,0,0,0
+28,Mississippi,2021-06-12,"Mississippi ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+28,Mississippi,2021-11-20,Mississippi allowed state of emergency to end,0,0,0
+29,Missouri,2020-03-20,Missouri public schools closed,1,0,0
+29,Missouri,2020-03-21,Missouri prohibited gatherings >10 people and closed indoor dining,0,0,0
+29,Missouri,2020-03-23,St. Louis county issued shelter at home orders,0,0,0
+29,Missouri,2020-04-06,Missouri issued stay at home order,0,0,1
+29,Missouri,2020-05-03,Missouri ended stay at home order on a regional basis (excluded St. Louis city and county),0,0,0
+29,Missouri,2020-05-04,Missouri reopened select businesses statewide,0,0,0
+29,Missouri,2020-05-18,Missouri ended stay at home order statewide,0,0,0
+29,Missouri,2020-06-17,Missouri entered Phase 2 of reopen plan,0,0,0
+29,Missouri,2020-10-05,Missouri limited gathering size and business occupancy,0,0,0
+29,Missouri,2021-06-12,"Missouri ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+29,Missouri,2021-12-31,Missouri allowed state of emergency to expire,0,0,0
+29,Missouri,2022-03-30,Missouri announced covid will be treated as endemic,0,0,0
+30,Montana,2020-03-16,Montana public schools closed,1,0,0
+30,Montana,2020-03-26,Montana ordered closed all non-essential businesses,0,1,0
+30,Montana,2020-03-28,Montana issued stay at home order,0,0,1
+30,Montana,2020-04-26,Montana ended stay at home order statewide,0,0,0
+30,Montana,2020-04-27,Montana reopened select businesses on a regional basis (excluded Missoula county) in Phase One,0,0,0
+30,Montana,2020-05-15,Montana reopened select businesses statewide in expanded Phase One,0,0,0
+30,Montana,2020-06-01,"Montana lifted travel quarantine, allows 50+ person gatherings, and increases capacity limits of select businesses in Phase Two",0,0,0
+30,Montana,2021-01-13,Montana declared a new state of emergency,0,0,0
+30,Montana,2021-01-15,Montana ended business curfews and capacity restrictions,0,0,0
+30,Montana,2021-06-27,"Montana ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+30,Montana,2021-06-30,Montana ended state of emergency,0,0,0
+31,Nebraska,2020-03-13,Nebraska declared a state of emergency,0,0,0
+31,Nebraska,2020-03-26,Nebraska mandated at-home quarantining for any person testing positive for COVID-19 or exhibiting symptoms,0,0,0
+31,Nebraska,2020-04-05,Nebraska ceased all in-person instruction for elementary and secondary schools,0,0,0
+31,Nebraska,2020-04-10,"Nebraska closed select businesses in the sports, beauty, end entertainment industries",0,0,0
+31,Nebraska,2020-04-26,Nebraska relaxed restrictions on select businesses,0,0,0
+31,Nebraska,2020-05-04,Nebraska reopened select businesses on a regional basis (included 59 of 93 counties) ,0,0,0
+31,Nebraska,2020-06-01,Nebraska reopened select businesses statewide,0,0,0
+31,Nebraska,2020-06-16,Nebraska further lifted restrictions on businesses,0,0,0
+31,Nebraska,2020-09-14,Nebraska opened outdoor restrictions to 100% capacity and indoor restrictions to 75% capacity,0,0,0
+31,Nebraska,2021-01-30,Nebraska lifted all business restrictions,0,0,0
+31,Nebraska,2021-06-19,"Nebraska ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+31,Nebraska,2021-06-30,Nebraska lifted state of emergency,0,0,0
+32,Nevada,2020-03-16,Nevada public schools closed,1,0,0
+32,Nevada,2020-03-21,Nevada ordered closed all non-essential businesses,0,1,0
+32,Nevada,2020-04-01,Nevada issued stay at home order,0,0,1
+32,Nevada,2020-05-09,Nevada ended stay at home order and reopened select businesses statewide,0,0,0
+32,Nevada,2020-07-10,"Nevada ordered reclosed select businesses on a regional basis (Washoe, Clark, Elko, Humboldt, Lander, Lyon, and Nye counties) ",0,0,0
+32,Nevada,2020-07-27,"Nevada reopened select businesses on a regional basis (Humboldt, Lander, and Lyon counties) ",0,0,0
+32,Nevada,2020-09-16,Nevada reopened select businesses on a regional basis (Washoe and Nye counties) ,0,0,0
+32,Nevada,2020-11-24,Nevada tightened capacity restrictions on select businesses statewide,0,0,0
+32,Nevada,2021-02-15,Nevada loosened business restrictions,0,0,0
+32,Nevada,2021-06-01,Nevada ended business capacity restrictions,0,0,0
+32,Nevada,2021-11-30,Nevada lessened gathering restrictions for children under age 12,0,0,0
+32,Nevada,2022-05-19,Nevada ended state of emergency,0,0,0
+33,New Hampshire,2020-03-16,New Hampshire public schools closed,1,0,0
+33,New Hampshire,2020-03-27,New Hampshire issued stay at home order,0,0,1
+33,New Hampshire,2020-03-28,New Hampshire ordered closed all non-essential businesses,0,1,0
+33,New Hampshire,2020-05-11,New Hampshire reopened select businesses statewide,0,0,0
+33,New Hampshire,2020-06-15,New Hampshire ended stay at home order statewide,0,0,0
+33,New Hampshire,2020-07-01,New Hampshire ended moratorium on evictions,0,0,0
+33,New Hampshire,2021-03-15,New Hampshire lifted capacity restrictions on select businesses,0,0,0
+33,New Hampshire,2021-04-01,New Hampshire required in-person education 5 days a week,0,0,0
+33,New Hampshire,2021-05-07,New Hampshire lifted all business restrictions from mandates to recommendations,0,0,0
+33,New Hampshire,2021-06-11,New Hampshire ended state of emergency,0,0,0
+33,New Hampshire,2021-06-19,"New Hampshire ended emergency unemployment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+33,New Hampshire,2022-03-15,New Hampshire closed all state-run testing sites,0,0,0
+34,New Jersey,2020-03-18,New Jersey public schools closed,1,0,0
+34,New Jersey,2020-03-21,New Jersey issued stay at home order and closed all non-essential businesses,0,1,1
+34,New Jersey,2020-06-09,New Jersey ended stay at home order statewide,0,0,0
+34,New Jersey,2020-06-15,New Jersey reopened select businesses statewide,0,0,0
+34,New Jersey,2021-05-19,New Jersey lifted most business capacity restrictions,0,0,0
+34,New Jersey,2021-06-04,New Jersey lifted statewide Public Health Emergency,0,0,0
+34,New Jersey,2021-06-04,New Jersey lifted all indoor capacity restrictions and ended public health emergency,0,0,0
+34,New Jersey,2021-07-01,New Jersey ended moratorium on utility shutoffs,0,0,0
+34,New Jersey,2022-01-01,New Jersey reinstated Public Health Emergency,0,0,0
+34,New Jersey,2022-03-07,New Jersey lifted Public Health Emergency,0,0,0
+35,New Mexico,2020-03-11,New Mexico declared public health emergency,0,0,0
+35,New Mexico,2020-03-13,New Mexico public schools closed,1,0,0
+35,New Mexico,2020-03-16,"New Mexico prohibited mass gatherings, reduced food service capacity to 50%, and closed casinos and horse racing facilities",0,0,0
+35,New Mexico,2020-03-19,"New Mexico reduced food service to take-out only, lodging to 50% capacity, and closed recreational businesses",0,0,0
+35,New Mexico,2020-03-24,New Mexico issued stay at home advisory and ordered closed all non-essential businesses,0,1,1
+35,New Mexico,2020-03-27,New Mexico ordered quarantining for incoming travelers ,0,0,0
+35,New Mexico,2020-05-16,New Mexico reopened select nonessential businesses,0,0,0
+35,New Mexico,2020-05-31,New Mexico ended stay at home order statewide,0,0,0
+35,New Mexico,2020-06-01,New Mexico reopened select businesses statewide,0,0,0
+35,New Mexico,2020-08-28,New Mexico lessened business restrictions ,0,0,0
+35,New Mexico,2020-11-13,New Mexico reclosed select businesses statewide and issued a stay at home advisory,0,0,0
+35,New Mexico,2020-12-02,New Mexico began a new reopening system with counties placed into a specified reopening tier based on health metrics,0,0,0
+35,New Mexico,2020-12-11,New Mexico announced temporary school closure after winter break,0,0,0
+35,New Mexico,2022-01-06,New Mexico reduced recommended quarantine and isolation guidelines,0,0,0
+36,New York,2020-03-18,New York public schools closed,1,0,0
+36,New York,2020-03-22,New York issued stay at home order and closed all non-essential businesses,0,1,1
+36,New York,2020-05-15,New York reopened select businesses on a regional basis (included 35 of 62 counties)  ,0,0,0
+36,New York,2020-05-28,New York ended stay at home order statewide,0,0,0
+36,New York,2020-06-08,New York reopened select businesses statewide,0,0,0
+36,New York,2020-10-08,New York implemented a new strategy wherein new restrictions and/or business closures were instituted in county and sub-county areas in the state,0,0,0
+36,New York,2020-12-14,New York ordered reclosed select businesses on a regional basis (New York City),0,0,0
+36,New York,2020-12-21,New York reopened select businesses closed on 12/14/20,0,0,0
+36,New York,2021-04-02,"New York reopened select businesses (events, arts, and entertainment venues) with limited capacity",0,0,0
+36,New York,2021-05-19,New York ended most business capacity restrictions,0,0,0
+36,New York,2021-06-15,New York lifted restrictions as 70% vaccination rate is achieved,0,0,0
+36,New York,2021-06-25,New York lifted state of emergency,0,0,0
+36,New York,2021-10-05,New York distributed $149 million in aid to older individuals and their families,0,0,0
+37,North Carolina,2020-03-10,North Carolina declared state of emergency,0,0,0
+37,North Carolina,2020-03-16,North Carolina public schools closed,1,0,0
+37,North Carolina,2020-03-23,"North Carolina limited gatherings to 50 people, closes entertainment and personal care facilities",0,0,0
+37,North Carolina,2020-03-30,North Carolina issued stay at home order and closed all non-essential businesses,0,1,1
+37,North Carolina,2020-04-10,North Carolina strengthened social distancing requirements,0,0,0
+37,North Carolina,2020-05-08,North Carolina reopened select businesses statewide,0,0,0
+37,North Carolina,2020-05-22,North Carolina ended stay at home order statewide,0,0,0
+37,North Carolina,2020-10-02,"North Carolina eased restrictions on outdoor gatherings entertainment, and bars",0,0,0
+37,North Carolina,2020-11-13,North Carolina limited indoor gatherings to 10 people,0,0,0
+37,North Carolina,2021-01-08,North Carolina issued curfew from 10PM to 5AM,0,0,0
+37,North Carolina,2021-02-02,North Carolina allowed in-person instruction for all K-12 schools,0,0,0
+37,North Carolina,2021-02-26,North Carolina eased restrictions including indoor gatherings and nighttime curfew,0,0,0
+37,North Carolina,2021-03-26,North Carolina relaxed capacity restrictions for select businesses,0,0,0
+37,North Carolina,2021-04-30,North Carolina increased capacity for gatherings,0,0,0
+37,North Carolina,2021-05-14,"North Carolina lifted social distance requirements, gathering limits",0,0,0
+38,North Dakota,2020-03-16,North Dakota public schools closed,1,0,0
+38,North Dakota,2020-03-28,North Dakota closed select businesses,0,0,0
+38,North Dakota,2020-03-31,North Dakota suspended payment of unemployment taxes ,0,0,0
+38,North Dakota,2020-04-08,North Dakota instituted a 14-day quarantine order for those returning from international travel,0,0,0
+38,North Dakota,2020-05-01,North Dakota reopened select businesses statewide,0,0,0
+38,North Dakota,2020-05-17,North Dakota eased gathering and event recommendations as part of its reopening plan,0,0,0
+38,North Dakota,2020-06-01,North Dakota entered the next phase of its reopening plan featuring less strict recommendations,0,0,0
+38,North Dakota,2020-09-21,North Dakota lifted the 14-day quarantine order for those returning from international travel,0,0,0
+38,North Dakota,2020-11-14,North Dakota mandated decreased capacity in select businesses,0,0,0
+38,North Dakota,2021-01-29,"North Dakota adjusted the statewide risk level downward, permitting increased capacity at select businesses",0,0,0
+38,North Dakota,2021-06-19,"North Dakota ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+39,Ohio,2020-03-17,Ohio public schools closed,1,0,0
+39,Ohio,2020-03-23,Ohio issued stay at home order and closed all non-essential businesses,0,1,1
+39,Ohio,2020-05-04,Ohio reopened select businesses statewide,0,0,0
+39,Ohio,2020-05-29,Ohio ended stay at home order statewide,0,0,0
+39,Ohio,2020-06-08,Ohio reopened amusement venues,0,0,0
+39,Ohio,2020-11-17,Ohio increased restrictions on mass gatherings,0,0,0
+39,Ohio,2020-12-07,Ohio expanded curfew from 10pm to 5am,0,0,0
+39,Ohio,2021-01-28,Ohio rolled back curfew from 10pm to 11pm,0,0,0
+39,Ohio,2021-02-11,Ohio lifted restrictions on restaurants,0,0,0
+39,Ohio,2021-03-02,Ohio expanded capacity restrictions on events,0,0,0
+39,Ohio,2021-04-05,Ohio reduced capacity restrictions to only indoor events,0,0,0
+39,Ohio,2021-06-18,Ohio lifted state of emergency,0,0,0
+39,Ohio,2021-06-26,Ohio ends emergency employment benefits: The FPUC supplement and MEUC program ended,0,0,0
+40,Oklahoma,2020-03-17,Oklahoma public schools closed,1,0,0
+40,Oklahoma,2020-03-24,Oklahoma requested at-risk populations remain at home and prohibited gatherings of 10 or more people,0,0,0
+40,Oklahoma,2020-04-01,Oklahoma closed all non-essential businesses,0,1,0
+40,Oklahoma,2020-04-24,"Oklahoma reopened select businesses on a regional basis (excluded Oklahoma City, Norman, Tulsa, El Reno, Edmond, Moore, Weatherford, and Guthrie)",0,0,0
+40,Oklahoma,2020-05-01,Oklahoma reopened select businesses statewide,0,0,0
+40,Oklahoma,2020-05-14,Oklahoma further loosened restrictions and recommendations on business and travel,0,0,0
+40,Oklahoma,2020-11-16,"Oklahoma instituted curfew for bars and restaurants, social distancing measures in restaurants",0,0,0
+40,Oklahoma,2020-12-14,Oklahoma instituted further restrictions on public gatherings and restaurant health safety,0,0,0
+40,Oklahoma,2021-01-14,Oklahoma removed nighttime curfew for bars and restaurants,0,0,0
+40,Oklahoma,2021-05-04,Oklahoma ends state of emergency,0,0,0
+40,Oklahoma,2021-06-26,"Oklahoma ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+41,Oregon,2020-03-16,Oregon public schools closed,1,0,0
+41,Oregon,2020-03-23,Oregon issued stay at home order,0,0,1
+41,Oregon,2020-05-15,"Oregon ended stay at home order on a regional basis (excluded Marion, Polk, Washington, Multnomah, and Clackamas counties) and reopened select businesses",0,0,0
+41,Oregon,2020-07-24,"Oregon issued mask mandate, reduced capacity for venues, and added curfew for some businesses",0,0,0
+41,Oregon,2020-07-31,Oregon ordered reclosed select businesses on a regional basis (Umatilla and Morrow counties),0,0,0
+41,Oregon,2020-08-20,Oregon reopened select businesses on a regional basis (Umatilla county),0,0,0
+41,Oregon,2020-09-18,Oregon reopened select businesses on a regional basis (Morrow county),0,0,0
+41,Oregon,2020-11-18,"Oregon ordered reclosed select businesses statewide, implemented two week freeze",0,0,0
+41,Oregon,2020-12-03,Oregon entered a new reopening system wherein each county was placed into a specified reopening tier with health metrics used to determine movement to more- or less-restrictive tiers,0,0,0
+41,Oregon,2021-02-12,"9 OR counties (Clackamas, Clatsop, Columbia, Deschutes, Hood River, Klamath, Linn, Multnomah, Washington) move from extreme- to high-risk tier",0,0,0
+41,Oregon,2022-04-01,Oregon lifted state of emergency ,0,0,0
+42,Pennsylvania,2020-03-16,Pennsylvania public schools closed,1,0,0
+42,Pennsylvania,2020-03-23,Pennsylvania closed all non-essential businesses,0,1,0
+42,Pennsylvania,2020-03-23,Pennsylvania issued stay at home order for select counties,0,0,0
+42,Pennsylvania,2020-04-01,Pennsylvania extended stay at home order to the entire commonwealth,0,0,1
+42,Pennsylvania,2020-05-07,Pennsylvania prohibits foreclosures and evictions through July 10,0,0,0
+42,Pennsylvania,2020-05-08,Pennsylvania begins reopening select businesses on a regional basis ,0,0,0
+42,Pennsylvania,2020-06-04,Pennsylvania ended stay at home order and reopened select businesses statewide,0,0,0
+42,Pennsylvania,2020-09-21,Pennsylvania eased capacity restrictions on businesses,0,0,0
+42,Pennsylvania,2020-12-12,Pennsylvania ordered reclosed select businesses statewide,0,0,0
+42,Pennsylvania,2021-01-04,Pennsylvania reopened select businesses closed on 12/12,0,0,0
+42,Pennsylvania,2021-04-04,"Pennsylvania eased restrictions on capacity, events, gatherings, and alcohol consumption",0,0,0
+42,Pennsylvania,2021-05-17,Pennsylvania loosened all business capacity restrictions,0,0,0
+42,Pennsylvania,2021-05-31,Pennsylvania ended all business capacity restrictions,0,0,0
+42,Pennsylvania,2021-06-10,Pennsylvania lifted state of emergency,0,0,0
+44,Rhode Island,2020-03-16,Rhode Island public schools closed,1,0,0
+44,Rhode Island,2020-03-16,"Rhode Island prohibited on-site food and drink consumption, gatherings of more than 25 people",0,0,0
+44,Rhode Island,2020-03-23,"Rhode Island closes select businesses, prohibits gatherings of more than 10 people, and institutes remote work and learning",0,0,0
+44,Rhode Island,2020-03-24,Rhode Island instituted 14-day quarantine for domestic air travel,0,0,0
+44,Rhode Island,2020-03-28,Rhode Island issued stay at home order,0,0,1
+44,Rhode Island,2020-04-27,Rhode Island unveiled reopening framework using three phases.,0,0,0
+44,Rhode Island,2020-05-09,"Rhode Island ended stay at home order statewide, but remote work is still strongly encouraged",0,0,0
+44,Rhode Island,2020-05-09,Rhode Island reopened select businesses statewide,0,0,0
+44,Rhode Island,2020-06-01,"Rhode Island further relaxed capacity constraints on businesses, gatherings, and travel in Phase II of its reopening",0,0,0
+44,Rhode Island,2020-06-29,"Rhode Island further relaxed capacity constraints on businesses, gatherings, and travel in Phase III of its reopening",0,0,0
+44,Rhode Island,2020-11-05,"Rhode Island advised staying at home but further relaxed capacity constraints on businesses, gatherings, and travel ",0,0,0
+44,Rhode Island,2020-11-30,"Rhode Island ordered reclosed select businesses statewide, pausing gatherings and other social interactions",0,0,0
+44,Rhode Island,2021-02-02,"Rhode Island reopened select businesses statewide, allowing for small gatherings consistent with rules before the 11/30 pause",0,0,0
+44,Rhode Island,2021-02-08,Rhode Island permitted 33% of workers on site and the opening of sports facilities,0,0,0
+44,Rhode Island,2021-05-21,Rhode Island ended most business capacity restrictions,0,0,0
+45,South Carolina,2020-03-16,South Carolina public schools closed,1,0,0
+45,South Carolina,2020-04-07,South Carolina issued stay at home order,0,0,1
+45,South Carolina,2020-04-21,South Carolina reopened select businesses statewide,0,0,0
+45,South Carolina,2020-05-04,South Carolina ended stay at home order statewide,0,0,0
+45,South Carolina,2020-05-22,South Carolina reopened 'non-essential' businesses ,0,0,0
+45,South Carolina,2020-08-02,South Carolina eased gathering and restaurant restrictions,0,0,0
+45,South Carolina,2021-03-01,South Carolina lifted limits on mass gatherings,0,0,0
+45,South Carolina,2021-06-07,South Carolina lifted state of emergency,0,0,0
+46,South Dakota,2020-03-16,South Dakota public schools closed,1,0,0
+46,South Dakota,2020-03-25,South Dakota restricted business capacities to 10 people or less,0,0,0
+46,South Dakota,2020-04-29,"South Dakota issued ""back to normal"" plan, process of reducing restrictions",0,0,0
+46,South Dakota,2021-06-26,"South Dakota ends emergency employment benefits: The FPUC supplement, PEUC program, and PUA program ended",0,0,0
+47,Tennessee,2020-03-20,Tennessee public schools closed,1,0,0
+47,Tennessee,2020-03-22,Tennessee prohibited gatherings of 10 or more people,0,0,0
+47,Tennessee,2020-03-31,Tennessee issued stay at home order,0,0,1
+47,Tennessee,2020-04-01,Tennessee ordered closed all non-essential businesses,0,1,0
+47,Tennessee,2020-04-27,Tennessee reopened select businesses on a regional basis (excluded Davidson and Shelby counties),0,0,0
+47,Tennessee,2020-04-30,Tennessee ended stay at home order on a regional basis (excluded Davidson and Shelby counties),0,0,0
+47,Tennessee,2020-05-08,Tennessee ended stay at home order and reopened select businesses statewide,0,0,0
+47,Tennessee,2020-07-03,Tennessee ordered reclosed select businesses on a regional basis (Davidson county) ,0,0,0
+47,Tennessee,2020-08-17,Tennessee reopened select businesses on a regional basis with capacity restrictions (Davidson county) ,0,0,0
+47,Tennessee,2021-03-25,Nashville eased capacity restrictions on businesses,0,0,0
+47,Tennessee,2021-07-03,"Tennessee ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+47,Tennessee,2021-11-19,Tennessee allowed state of emergency to expire,0,0,0
+47,Tennessee,2022-12-20,Tennessee further limited capacity of indoor public gatherings,0,0,0
+48,Texas,2020-03-21,Texas public schools closed,1,0,0
+48,Texas,2020-04-02,Texas issued stay at home order,0,0,1
+48,Texas,2020-04-30,Texas ended stay at home order statewide,0,0,0
+48,Texas,2020-05-01,Texas reopened select businesses statewide,0,0,0
+48,Texas,2020-05-03,Harris County issued new stay at home order,0,0,0
+48,Texas,2020-05-18,Texas reopened more select businesses statewide,0,0,0
+48,Texas,2020-06-03,Texas expanded capacity at all businesses,0,0,0
+48,Texas,2020-06-26,Texas ordered reclosed select businesses statewide,0,0,0
+48,Texas,2020-09-21,Texas expanded occupancy levels for selected businesses,0,0,0
+48,Texas,2020-10-14,Texas reopened select businesses at reduced capacity,0,0,0
+48,Texas,2021-03-10,"Texas lifted all public health restrictions on businesses, ended mask mandate",0,0,0
+48,Texas,2021-06-26,"Texas ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+49,Utah,2020-03-06,Utah declared a state of emergency,0,0,0
+49,Utah,2020-03-16,Utah public schools closed,1,0,0
+49,Utah,2020-03-17,Utah closed indoor dining and limited gatherings to 10 or fewer individuals,0,0,0
+49,Utah,2020-05-01,Utah reopened select businesses statewide,0,0,0
+49,Utah,2020-05-16,Utah moved much of the state into the low health risk status category,0,0,0
+49,Utah,2021-03-21,Utah mandated in-person schooling options for all K-12 schools,0,0,0
+49,Utah,2021-05-04,Utah lifted all business capacity restrictions,0,0,0
+49,Utah,2021-06-26,"Utah ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+49,Utah,2022-03-31,"Utah transitioned to a ""Steady State"" response ",0,0,0
+50,Vermont,2020-03-18,Vermont public schools closed,1,0,0
+50,Vermont,2020-03-25,Vermont issued stay at home order and closed all non-essential businesses,0,1,1
+50,Vermont,2020-04-20,Vermont entered Phase I of reopening and reopened select businesses statewide,0,0,0
+50,Vermont,2020-04-24,Vermont entered Phase II of reopening,0,0,0
+50,Vermont,2020-05-04,Vermont entered Phase III of reopening,0,0,0
+50,Vermont,2020-05-07,Vermont entered Phase V of reopening,0,0,0
+50,Vermont,2020-05-18,Vermont entered Phase VI of reopening,0,0,0
+50,Vermont,2020-06-01,Vermont allowed gatherings up to 25 people,0,0,0
+50,Vermont,2020-06-17,Vermont residents aged 65+ are no longer required to stay at home,0,0,0
+50,Vermont,2020-06-25,Vermont raised occupancy limits,0,0,0
+50,Vermont,2020-11-14,Vermont ordered reclosed select businesses statewide,0,0,0
+50,Vermont,2021-03-24,Vermont reopened select businesses,0,0,0
+50,Vermont,2021-05-14,"Vermont entered Step 3 of ""Vermont Forward"" plan, relaxing business capacity restrictions",0,0,0
+50,Vermont,2021-05-30,Vermont lifted all business curfews,0,0,0
+50,Vermont,2021-06-16,Vermont lifted state of emergency,0,0,0
+50,Vermont,2021-11-21,Vermont loosened testing requirements for Canadians crossing the border,0,0,0
+50,Vermont,2022-04-01,Vermont-Canada border removed testing requirements to cross,0,0,0
+51,Virginia,2020-03-12,Virginia declared state of emergency,0,0,0
+51,Virginia,2020-03-15,Virginia banned public gatherings of 100+ people,0,0,0
+51,Virginia,2020-03-16,Virginia public schools closed,1,0,0
+51,Virginia,2020-03-24,Virginia ordered closed all non-essential businesses,0,1,0
+51,Virginia,2020-03-30,Virginia issued stay at home order,0,0,1
+51,Virginia,2020-04-03,Virginia declared as a major disaster area,0,0,0
+51,Virginia,2020-05-15,"Virginia entered Phase One of reopening and reopened select businesses on a regional basis (excluding northern Virginia, Accomack County, and City of Richmond)",0,0,0
+51,Virginia,2020-05-29,"Virginia in Phase One of reopening statewide (including northern Virginia, Accomack County, and City of Richmond)",0,0,0
+51,Virginia,2020-06-10,Virginia entered Phase Two of reopening,0,0,0
+51,Virginia,2020-07-01,Virginia entered Phase Three of reopening,0,0,0
+51,Virginia,2020-07-15,Virginia created standard to address COVID in the workplace,0,0,0
+51,Virginia,2020-08-10,Virginia approved eviction moratorium,0,0,0
+51,Virginia,2021-03-05,Virginia loosened public health restrictions,0,0,0
+51,Virginia,2021-05-28,Virginia ended all capacity and social distancing restrictions,0,0,0
+51,Virginia,2021-07-01,Virginia lifted state of emergency ,0,0,0
+51,Virginia,2022-03-22,Virginia repealed its standard to address COVID in the workplace,0,0,0
+53,Washington,2020-02-29,Washington declared a state of emergency,0,0,0
+53,Washington,2020-03-11,Washington limited large events in select counties,0,0,0
+53,Washington,2020-03-12,"Washington closed all public and private K-12 schools in King, Snohomish, and Pierce counties",0,0,0
+53,Washington,2020-03-13,Washington banned in-person education at all public and private higher education ,0,0,0
+53,Washington,2020-03-16,"Washington ordered closed all indoor dining and entertainment/recreational facilities, and limited gathering size",1,0,0
+53,Washington,2020-03-18,Washington issued a statewide eviction moratorium,0,0,0
+53,Washington,2020-03-22,Washington declared a state major disaster,0,0,0
+53,Washington,2020-03-23,Washington issued stay at home order,0,0,1
+53,Washington,2020-03-25,Washington ordered closed all non-essential businesses,0,1,0
+53,Washington,2020-05-11,Washington reopened select businesses on a regional basis,0,0,0
+53,Washington,2020-06-01,Washington ended stay at home order statewide to enter a phased reopening on a county-by-county basis,0,0,0
+53,Washington,2020-07-03,Washington reopened select businesses statewide,0,0,0
+53,Washington,2020-11-16,Washington ordered reclosed select businesses,0,0,0
+53,Washington,2021-01-11,Washington entered a new reopening system which divides the state into 8 regions (all of which were still in Phase I) for which health metrics determine further business reopenings,0,0,0
+53,Washington,2021-01-28,Puget Sound Region and West Region (7 counties total) advanced to Phase 2 of reopening allowing indoor dining and expanding indoor recreation capacity,0,0,0
+53,Washington,2021-02-15,Washington admitted 5 more regions to Phase 2 of reopening allowing indoor dining and expanding indoor recreation capacity,0,0,0
+53,Washington,2021-02-16,Washington admitted the last of the 8 regions to Phase 2 of reopening allowing indoor dining and expanding indoor recreation capacity,0,0,0
+53,Washington,2021-03-11,Washington loosened restrictions for vaccinated individuals ,0,0,0
+53,Washington,2021-03-22,Washington entered Phase 3 of reopening and allowed live attendance at sporting events and increased capacity at select indoor spaces to 50%,0,0,0
+53,Washington,2021-04-12,"Washington moved Cowlitz, Pierce, and Whitman counties back to Phase 2 of reopening",0,0,0
+53,Washington,2021-05-18,Washington moved all counties to Phase 3 of reopening,0,0,0
+53,Washington,2021-06-30,"Washington fully reopened with the exception of indoor events involving 10,000+ people",0,0,0
+54,West Virginia,2020-03-06,West Virginia further loosened restrictions of business capacity and social gatherings statewide,0,0,0
+54,West Virginia,2020-03-16,West Virginia declared state of emergency,0,0,0
+54,West Virginia,2020-03-16,West Virginia public schools closed,1,0,0
+54,West Virginia,2020-03-17,West Virginia ordered closed all restaurants and bars,0,0,0
+54,West Virginia,2020-03-18,West Virginia ordered closed all gyms and recreation facilities,0,0,0
+54,West Virginia,2020-03-19,West Virginia ordered closed select personal care businesses,0,0,0
+54,West Virginia,2020-03-24,West Virginia issued stay at home order and closed all non-essential businesses,0,1,1
+54,West Virginia,2020-04-30,"West Virginia entered ""Week 1"" phase of reopening and reopened select businesses",0,0,0
+54,West Virginia,2020-05-03,West Virginia ended stay at home order statewide,0,0,0
+54,West Virginia,2020-05-04,"West Virginia entered ""Week 2"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-05-11,"West Virginia entered ""Week 3"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-05-21,"West Virginia entered ""Week 4"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-05-26,"West Virginia entered ""Week 5"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-06-05,"West Virginia entered ""Week 6"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-06-08,"West Virginia entered ""Week 7"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-06-22,"West Virginia entered ""Week 9"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-07-01,"West Virginia entered ""Week 10"" phase of reopening and reopened select businesses statewide",0,0,0
+54,West Virginia,2020-07-14,"West Virginia reclosed ""Week 10"" phase businesses",0,0,0
+54,West Virginia,2020-10-13,West Virginia reopened select businesses on a regional basis (Monongalia county),0,0,0
+54,West Virginia,2021-02-19,West Virginia loosened restrictions of business capacity and social gatherings statewide,0,0,0
+54,West Virginia,2021-06-19,"West Virginia ends emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+55,Wisconsin,2020-03-12,Wisconsin declare public health emergency,0,0,0
+55,Wisconsin,2020-03-16,Wisconsin public schools closed,1,0,0
+55,Wisconsin,2020-03-17,Wisconsin prohibited gatherings of 10+ people,0,0,0
+55,Wisconsin,2020-03-25,Wisconsin issued stay at home order and closed all non-essential businesses,0,1,1
+55,Wisconsin,2020-04-27,Wisconsin reduced restrictions on specific businesses,0,0,0
+55,Wisconsin,2020-05-13,"Wisconsin ended stay at home order on a regional basis (excluded cities of Milwaukee and Racine and Brown, Dane, and Milwaukee counties) and reopened select businesses",0,0,0
+55,Wisconsin,2020-05-26,Wisconsin ended stay at home order statewide,0,0,0
+55,Wisconsin,2020-10-08,Wisconsin returned to gathering limits of 25 people,0,0,0
+55,Wisconsin,2020-11-10,Wisconsin issued a stay at home advisory,0,0,0
+55,Wisconsin,2021-03-31,Wisconsin ended state of emergency,0,0,0
+56,Wyoming,2020-03-20,Wyoming ordered closed public spaces and prohibited gatherings of more than 10 people,0,0,0
+56,Wyoming,2020-03-20,Wyoming public schools closed,1,0,0
+56,Wyoming,2020-03-25,Wyoming ordered closed nonessential personal services,0,0,0
+56,Wyoming,2020-05-01,Wyoming stopped shelter in place,0,0,0
+56,Wyoming,2020-05-01,Wyoming reopened select businesses on a regional basis (excluded Teton county),0,0,0
+56,Wyoming,2020-05-15,Wyoming reopened indoor dining and select businesses,0,0,0
+56,Wyoming,2020-06-01,Wyoming allowed outdoor gatherings up to 250 people and loosened restaurant restrictions,0,0,0
+56,Wyoming,2020-07-01,"Wyoming permitted in-person child care, K-12, and higher education",0,0,0
+56,Wyoming,2021-02-25,Wyoming loosened restrictions on gatherings and businesses,0,0,0
+56,Wyoming,2021-03-15,"Wyoming eliminated restrictions on restaurants and other locations, and gathering capacity",0,0,0
+56,Wyoming,2021-06-19,"Wyoming ended emergency employment benefits: The FPUC supplement, PEUC program, PUA program, and MEUC program ended",0,0,0
+56,Wyoming,2022-03-14,Wyoming rescinded declaration of COVID-19 public health emergency,0,0,0
