@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-07-23</p>
+<p class="subtitle">last updated on 2022-07-26</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -327,6 +327,6 @@ Data Documentation</div></h1>
 <h2 id="policy-milestones">Policy Milestones</h2>
 <p><strong>Summary:</strong> Key state-level policy dates relevant for changes in other series trends and values. Includes start and end of stay at home order dates, public school closure dates, and non-essential business closure and re-opening dates.</p>
 <p><strong>Data Source(s):</strong> New York Times, MCH Strategic Data, the Institute for Health Metrics and Evaluation, and local news and government sources.</p>
-<p><strong>Update Frequency:</strong> Monthly</p>
+<p><strong>Update Frequency:</strong> This file is not being updated with data beyond June 30th 2022.</p>
 <p><strong>Geographies:</strong> State</p>
 </body>

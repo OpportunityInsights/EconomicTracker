@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-06-29</p>
+<p class="subtitle">last updated on 2022-07-26</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -371,18 +371,11 @@ Data Dictionary</div></h1>
 <h2 id="policy-milestones">Policy Milestones</h2>
 <p>Key state-level policy dates relevant for changes in other series trends and values.</p>
 <ul>
-<li><code>statename</code>: The name of the U.S. state</li>
-<li><code>statefips</code>: 2-digit FIPS code of the U.S. state</li>
-<li><code>schools_closed</code>: The date at which the state ordered all public K-12 schools statewide to physically close</li>
-<li><code>nonessential_biz_closed</code>: The date on which the state government ordered all nonessential businesses to close</li>
-<li><code>stayathome_start</code>: The date on which the state government told residents to stay home, save for excepted activities</li>
-<li><code>regional_stayathome_end</code>: The date on which the state’s order telling residents to stay home expired, was lifted, or relaxed for one or more regions in the state</li>
-<li><code>statewide_stayathome_end</code>: The date on which the state’s order telling residents to stay home expired, was lifted, or changed from mandatory to recommended. Either for the entire state all at once, or for the very last locality with a remaining stay at home order.</li>
-<li><code>regional_biz_opened</code>: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing) for one or more regions in the state</li>
-<li><code>statewide_biz_opened</code>: The date on which the state began reopening significant businesses (typically in-store retail or non-essential manufacturing). Either for the entire state all at once, or for the very last locality which hadn’t yet reopened any businesses.</li>
-<li><code>regional_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously for one or more regions in the state</li>
-<li><code>statewide_biz_reclosed</code>: The date on which the state began reclosing businesses (of any sector) that had been reopened previously. Either for the entire state all at once, or for the very last locality which hadn’t yet reclosed any businesses.</li>
-<li><code>state_milestone#</code>: The dates on which the state enacted significant new policy milestones that go beyond the existing policy dates tracked. Examples include, ending a reclosure, enacting a new regional reopening system, or issuing a stay-at-home advisory, or enacting an additional reclosure after a state’s first. The column name suffix indicates both the chronological order of the milestones within the particular state and corresponds to the particular milestone type as indicated in the description# column.</li>
-<li><code>description#</code>: A description of the policy action represented by the state_milestone# column with the same suffix number. For instance state_milestone1 is described in description1.</li>
+<li><code>statefips</code>: 2-digit FIPS code of the U.S. state a milestone was recorded in</li>
+<li><code>date</code>: Date the policy milestone occurred</li>
+<li><code>policy_description</code>: Description of policy milestone</li>
+<li><code>schools_first_closed</code>: Whether a milestone is the date at which the state first ordered all public K-12 schools statewide to physically close</li>
+<li><code>nonessential_biz_first_closed</code>: Whether a milestone is the date on which the state government first ordered all nonessential businesses to close statewide</li>
+<li><code>stayathome_first_start</code>: Whether a milestone is the date on which the state government first told residents to stay home, save for excepted activities statewide</li>
 </ul>
 </body>
