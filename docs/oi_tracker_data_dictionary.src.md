@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-07-26
+subtitle: last updated on 2022-07-27
 documentclass: scrartcl
 ---  
 
@@ -180,7 +180,7 @@ Job postings data from [Burning Glass Technologies](https://www.burning-glass.co
 
 ### COVID
 
-COVID cases, deaths, tests, and vaccination numbers are from the [CDC](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).
+COVID cases and deaths numbers are from the [New York Times](https://github.com/nytimes/covid-19-data), hospitalizations numbers are from the [U.S. Department of Health and Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh), tests numbers are from [Johns Hopkins University](https://github.com/govex/COVID-19), and vaccination numbers are from the [Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).
 
 - `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
     - `case_count`: Confirmed COVID-19 cases, seven day moving average.
