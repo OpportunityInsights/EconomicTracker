@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-07-27
+subtitle: last updated on 2022-08-13
 documentclass: scrartcl
 ---
 
@@ -37,7 +37,7 @@ Please note that both the data and this data documentation is updated regularly 
 
 **Date Range:** January 13th 2020 until the most recent date available.
 
-**Data Frequency:** Data is daily until the final two weeks of the series, and the daily data is presented as a 7 day lookback moving average. For the final two weeks of the series, the data is weekly and presented as weekly data points.
+**Data Frequency:** Data is daily until June 5th 2022, presented as a 7-day lookback moving average. Since June 5th 2022 we only receive weekly data on consumer spending, and the data is presented as weekly data points.
 
 **Indexing Period:** January 4th to January 31st 2020
 

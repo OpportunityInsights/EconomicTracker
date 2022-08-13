@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-06-29
+subtitle: last updated on 2022-08-13
 documentclass: scrartcl
 ---
 
@@ -57,6 +57,10 @@ We have revised the method implemented on March 15th 2022 to control for steady 
 * We have therefore constructed an estimate of spending that reflects total spending during Feb-Aug 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.
 
 * This adjustment reduced the estimated spending level in summer 2020. The new estimates align better with public benchmarks (NIPA, MARTS).
+
+### Revisions on August 12th 2022
+
+As of June 5th 2022 we only receive consumer spending data at a weekly level of aggregation. We will continue to publish weekly data on consumer spending, but we will not publish daily variation past June 5th 2022.
 
 ## Small Business Revenue & Small Businesses Open
 

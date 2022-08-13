@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-06-29</p>
+<p class="subtitle">last updated on 2022-08-13</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -32,6 +32,8 @@ Data Revisions</div></h1>
 <li><p>We have therefore constructed an estimate of spending that reflects total spending during Feb-Aug 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.</p></li>
 <li><p>This adjustment reduced the estimated spending level in summer 2020. The new estimates align better with public benchmarks (NIPA, MARTS).</p></li>
 </ul>
+<h3 id="revisions-on-august-12th-2022">Revisions on August 12th 2022</h3>
+<p>As of June 5th 2022 we only receive consumer spending data at a weekly level of aggregation. We will continue to publish weekly data on consumer spending, but we will not publish daily variation past June 5th 2022.</p>
 <h2 id="small-business-revenue-small-businesses-open">Small Business Revenue &amp; Small Businesses Open</h2>
 <h3 id="revisions-on-march-4th-2022">Revisions on March 4th 2022</h3>
 <p>We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.</p>
