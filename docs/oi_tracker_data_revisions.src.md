@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-08-13
+subtitle: last updated on 2022-08-31
 documentclass: scrartcl
 ---
 
@@ -89,6 +89,18 @@ At the request of Burning Glass we've suppressed the historical data we publish 
 
 * The state aggregate series, state by education level series, and county aggregate series are now only published for the present and previous 12 months
 * The state by supersector series, county by education level series, and county by supersector series are only published for the present and previous 6 months
+
+### Revisions on August 30th 2022
+
+Lightcast (formerly Burning Glass) detected and corrected for a data anomaly related to a major national job board. This correction retroactively revises the data from May 2022 onward: a downward revision in May, an upward revision in June, and a downward revision in July. Lightcast issued the following statement outlining the data anomaly observed and corrective actions taken:
+
+> As you may know, Lightcast has over a billion job postings, career profiles, and other data points. As the labor market shifts through changes in the economy, our team actively reviews and manages our data set, working daily to refine our taxonomy and review data sources.
+> 
+> That’s why we set the global standard on commitment to data excellence - ensuring our data is consistent with other sources and benchmarked to the BLS Job Openings and Labor Turnover Survey (JOLTS) report.
+> 
+> One example of why this is important is a recent anomaly that our data team monitored in job posting data. The team found an uptick in posting numbers for May from one of the major national job boards. This trend then dropped in June and increased again in July.
+> 
+> The Lightcast team determined that this anomaly was the result of a change in job posting methodology at this particular source, and to compensate, the Lightcast data team changed how that data is reflected in our overall job posting numbers. In this case, users will see adjustments in the reported numbers and trendlines for May, June, and July, and in limited cases, may want to re-run analyses for these months.
 
 ## Employment
 

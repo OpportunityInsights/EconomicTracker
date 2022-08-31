@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-08-13</p>
+<p class="subtitle">last updated on 2022-08-31</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -53,6 +53,14 @@ Data Revisions</div></h1>
 <li>The state aggregate series, state by education level series, and county aggregate series are now only published for the present and previous 12 months</li>
 <li>The state by supersector series, county by education level series, and county by supersector series are only published for the present and previous 6 months</li>
 </ul>
+<h3 id="revisions-on-august-30th-2022">Revisions on August 30th 2022</h3>
+<p>Lightcast (formerly Burning Glass) detected and corrected for a data anomaly related to a major national job board. This correction retroactively revises the data from May 2022 onward: a downward revision in May, an upward revision in June, and a downward revision in July. Lightcast issued the following statement outlining the data anomaly observed and corrective actions taken:</p>
+<blockquote>
+<p>As you may know, Lightcast has over a billion job postings, career profiles, and other data points. As the labor market shifts through changes in the economy, our team actively reviews and manages our data set, working daily to refine our taxonomy and review data sources.</p>
+<p>That’s why we set the global standard on commitment to data excellence - ensuring our data is consistent with other sources and benchmarked to the BLS Job Openings and Labor Turnover Survey (JOLTS) report.</p>
+<p>One example of why this is important is a recent anomaly that our data team monitored in job posting data. The team found an uptick in posting numbers for May from one of the major national job boards. This trend then dropped in June and increased again in July.</p>
+<p>The Lightcast team determined that this anomaly was the result of a change in job posting methodology at this particular source, and to compensate, the Lightcast data team changed how that data is reflected in our overall job posting numbers. In this case, users will see adjustments in the reported numbers and trendlines for May, June, and July, and in limited cases, may want to re-run analyses for these months.</p>
+</blockquote>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30th 2021 due to three independent changes in methodology.</p>
