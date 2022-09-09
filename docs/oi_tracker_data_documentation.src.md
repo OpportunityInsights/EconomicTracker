@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-08-13
+subtitle: last updated on 2022-09-09
 documentclass: scrartcl
 ---
 
@@ -465,6 +465,6 @@ Time Away From Home is calculated by multiplying the mean time spent inside home
 
 **Data Source(s):** New York Times, MCH Strategic Data, the Institute for Health Metrics and Evaluation, and local news and government sources.
 
-**Update Frequency:** This file is not being updated with data beyond June 30th 2022.  
+**Update Frequency:** This file is not being updated with data beyond June 30th 2022.
 
 **Geographies:** State
