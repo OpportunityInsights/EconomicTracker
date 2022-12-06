@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-09-09
+subtitle: last updated on 2022-12-06
 documentclass: scrartcl
 ---
 
@@ -162,7 +162,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Summary:** Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.
 
-**Data Source:** [Burning Glass Technologies](https://www.burning-glass.com)
+**Data Source:** [Lightcast](https://lightcast.io/) (formerly known as Burning Glass Technologies)
 
 **Update Frequency:** Weekly
 

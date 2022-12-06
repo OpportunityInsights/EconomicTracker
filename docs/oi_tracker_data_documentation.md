@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-09-09</p>
+<p class="subtitle">last updated on 2022-12-06</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -109,7 +109,7 @@ Data Documentation</div></h1>
 <p><strong>Notes:</strong> Subnational breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
 <h2 id="job-postings">Job Postings</h2>
 <p><strong>Summary:</strong> Weekly count of new job postings, sourced from over 40,000 online job boards. New job postings are defined as those that have not had a duplicate posting for at least 60 days prior.</p>
-<p><strong>Data Source:</strong> <a href="https://www.burning-glass.com">Burning Glass Technologies</a></p>
+<p><strong>Data Source:</strong> <a href="https://lightcast.io/">Lightcast</a> (formerly known as Burning Glass Technologies)</p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 17th 2020 until the most recent date available.</p>
 <p><strong>Data Frequency:</strong> Weekly data points, with each week ending on Friday.</p>

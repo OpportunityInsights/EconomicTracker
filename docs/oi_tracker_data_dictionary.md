@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2022-07-27</p>
+<p class="subtitle">last updated on 2022-12-06</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -174,8 +174,8 @@ Data Dictionary</div></h1>
 <li><strong>Remote services:</strong> ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.</li>
 <li><strong>In-person services:</strong> ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.</li>
 </ul>
-<h3 id="burning-glass">Burning Glass</h3>
-<p>Job postings data from <a href="https://www.burning-glass.com/">Burning Glass Technologies</a>.</p>
+<h3 id="job-postings">Job Postings</h3>
+<p>Job postings data from <a href="https://lightcast.io/">Lightcast</a> (formerly known as Burning Glass Technologies).</p>
 <ul>
 <li><code>bg_posts</code>: Average level of job postings relative to January 4-31 2020.</li>
 <li><code>bg_posts_ss30</code>: Average level of job postings relative to January 4-31 2020 in manufacturing (NAICS supersector 30).</li>

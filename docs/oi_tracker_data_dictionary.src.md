@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-07-27
+subtitle: last updated on 2022-12-06
 documentclass: scrartcl
 ---  
 
@@ -160,9 +160,9 @@ The merchant category codes (MCC) making up the grouped spending categories are:
 * **Remote services:** ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.
 * **In-person services:** ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.
 
-### Burning Glass
+### Job Postings
 
-Job postings data from [Burning Glass Technologies](https://www.burning-glass.com/).
+Job postings data from [Lightcast](https://lightcast.io/) (formerly known as Burning Glass Technologies).
 
 - `bg_posts`: Average level of job postings relative to January 4-31 2020.
 - `bg_posts_ss30`: Average level of job postings relative to January 4-31 2020 in manufacturing (NAICS supersector 30).
