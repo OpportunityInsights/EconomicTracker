@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-12-06</p>
+<p class="subtitle">last updated on 2022-12-16</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -96,9 +96,42 @@ Data Revisions</div></h1>
 <li><p><strong>Revisions to combination process:</strong> We are currently constructing the combined Employment series using Paychex and Intuit data.</p></li>
 <li><p><strong>Revisions to income quartile definitions:</strong> The original income quartile thresholds were set using annualized wages of up to $13/hr (Q1), $18/hr (Q2), and $29/hr (Q3). These thresholds were derived from the wage distribution of employees in Paychex’s client base in 2019. However, wage growth and inflation trends over time will mechanically move workers across these fixed thresholds into higher income quartiles. For example, if a Q1 worker’s wages were to grow such that they were now over the Q2 threshold, then the series would mechanically show an decrease in Q1 employment and an increase in Q2 employment, despite aggregate employment remaining the same. Eventually, with fixed thresholds, every worker would be placed in the Q4 category.</p>
 <p>To address this issue, we have implemented moving thresholds that are based on the federal poverty line. The income categories are now defined using multiples of the poverty threshold, normally a yearly measure that we extend monthly using the CPI. The upper thresholds for each income quartile are now 1x the poverty line (Q1), 1.5x the poverty line (Q2), and 2.5x the poverty line (Q3). A secondary issue that arises from using moving thresholds, however, are discontinuities in the series when a threshold crosses a whole number wages where there is bunching in the wage distribution, e.g. $15/hr. When the Q1 threshold crosses $15, for example, many workers who were previously a part of Q2 will now be defined as Q1, causing a discontinuity in the series. To address this issue, we “spread” workers out from the whole number wages as if we added a random number between -0.5 and 0.5 to their wages, creating a uniform distribution between (whole number wage - 0.5, whole number wage + 0.5).</p>
-<p>Implementing these moving thresholds results in upwards revisions in employment esttimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.</p></li>
+<p>Implementing these moving thresholds results in upwards revisions in employment estimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.</p></li>
 <li><p><strong>Revisions to address changes in the minimum wage:</strong> We have updated our previous methodology released on June 30th 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.</p></li>
-<li><p><strong>Revisions arising from changes to adjustment for firm entry/exit in Paychex data:</strong> We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births. For cells with fewer than 50 employees, we reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. We adopt this alternative weighting scheme to balance the fact that small firm births account for a sizable portion of the economic recovery in the second half of 2020 against the fact that growth of small cells can also be spuriously driven by entry into our sample. This new weightng scheme leads to better estimates of employment relative to public benchmarks (CES, QCEW, CPS, etc).</p></li>
+<li><p><strong>Revisions arising from changes to adjustment for firm entry/exit in Paychex data:</strong> We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births.</p>
+<ul>
+<li>For cells with over 50 employees:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.</li>
+<li>We reduce the weight by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020.</li>
+</ul></li>
+<li>For cells with 50 employees or less:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020</li>
+<li>We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>We adopt this alternative weighting scheme for cells with 50 or fewer employees to balance the fact that small firm births account for a sizable portion of the economic recovery in the second half of 2020 against the fact that growth of small cells can also be spuriously driven by entry into our sample. This new weightng scheme leads to better estimates of employment relative to public benchmarks (CES, QCEW, CPS, etc).</p>
+<h3 id="revisions-on-october-17th-2022">Revisions on October 17th 2022</h3>
+<p>The Employment data was revised in several ways.</p>
+<ul>
+<li><p><strong>Revisions to income quartile definitions</strong>: The methodology behind the moving income thresholds, implemented on May 21st 2022, has been slightly updated. Previously, the income thresholds were defined using the yearly poverty guidelines and extended monthly using the CPI. In periods with high inflation, this methodology resulted in a discontuinity in the threshold before and after the release of the annual poverty guidelines (historically in January). This has been updated so that when the annual poverty guidelines are released, the previous year’s monthly thresholds are linearly revised such that the CPI adjusted poverty threshold is equal to the official poverty guideline.</p>
+<p>Revising these moving thresholds results in slight differences in employment estimates for each quartile across the entire sample, since revising the thresholds redistributes some workers between quartiles. For some years, the thresholds have been revised slightly downward, while for others they have increased. These changes are particularly notable from the start of 2021 to present, when the revisions have led to lower thresholds.</p></li>
+<li><p><strong>Revisions to the methodology that adjusts for firm entry/exit in Paychex data</strong>: We have updated our previous methodology released on May 21st 2022. We have revised the weighting scheme for cells over 50 employees, in order to better align with public benchmarks:</p>
+<ul>
+<li>For cells with over 50 employees:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.</li>
+<li><em>We reduce the weight by 0.5 percentage points for each percentage point of growth we observe above 600 percentage points relative to January 2020.</em></li>
+</ul></li>
+<li>For cells with 50 employees or less:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020</li>
+<li>We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Revisions to the adjustment for minimum wage changes</strong>: We revised how we adjust the series in states that increased their minimum wage at the end of 2020 (CA, NY, MA). We begin by calculating the percentage change in the number of employees in each state x industry (2-digit NAICS) cell from December 4 2020 onwards for the first two wage quartiles combined. From December 4 2020 onwards, for the first two wage quartiles in minimum wage change states, we impute the trend in each county x industry x wage quartile cell using the below-median income employment trend in their own state x industry cell. Since employment in the first wage quartile recovered less than employment in the second wage quartile in 2021, an imputation that aggregates the trends in the first and second wage quartiles tends to overstate the recovery in the first quartile and understate the recovery in the second quartile. As such, we further rescale the state x industry below-median income trend separately for each wage quartile, using the coefficient from the regression of that quartile’s employment change on the below-median income employment change in non-minimum wage-change states without a constant between December 4 2020 and December 3 2021. We then aggregate the adjusted employment counts to the relevant geographies (e.g. state; national) before calculating the change in employment since January 2020.</p></li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <h3 id="revisions-on-july-29th-2021">Revisions on July 29th 2021</h3>

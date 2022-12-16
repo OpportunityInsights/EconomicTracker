@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-12-06</p>
+<p class="subtitle">last updated on 2022-12-16</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -12,7 +12,7 @@ Data Documentation</div></h1>
 <li>The Economic Tracker’s <strong><a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md">Data Dictionary</a></strong> lists each data file and variable available for public use, with short descriptions of the contents of each variable.</li>
 <li>The <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong> provides detailed information about the methodology used to construct the series.</li>
 </ul>
-<p>Please note that both the data and this data documentation is updated regularly and that the following information is subject to change.</p>
+<p>Please note that both the data and this data documentation are updated regularly and that the following information is subject to change.</p>
 <h1 id="data-series">Data Series</h1>
 <h2 id="consumer-spending">Consumer Spending</h2>
 <p><strong>Summary:</strong> Aggregated and anonymized purchase data from consumer credit and debit card spending. Spending is reported based on the ZIP code where the cardholder lives, not the ZIP code where transactions occurred.</p>
@@ -36,9 +36,9 @@ Data Documentation</div></h1>
 </ul></li>
 <li><p><em>By Consumer Zip Code Income</em>. Transactions are linked to zip codes where the consumer lives and zip codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>
-<li>High Income (median household income greater than $78,000 per year)</li>
-<li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
-<li>Low Income (median household income less than $46,000 per year)</li>
+<li>High Income (top quartile of median household income; approximately greater than $78,000 per year)</li>
+<li>Middle Income (middle two quartiles of median household income; approximately between $46,000 per year and $78,000 per year)</li>
+<li>Low Income (bottom quartile of median household income; approximately less than $46,000 per year)</li>
 </ul></li>
 </ul>
 <p><strong>Data masking:</strong> For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending &lt; $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
@@ -65,9 +65,9 @@ Data Documentation</div></h1>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>
-<li>High Income (median household income greater than $78,000 per year)</li>
-<li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
-<li>Low Income (median household income less than $46,000 per year)</li>
+<li>High Income (top quartile of median household income; approximately greater than $78,000 per year)</li>
+<li>Middle Income (middle two quartiles of median household income; approximately between $46,000 per year and $78,000 per year)</li>
+<li>Low Income (bottom quartile of median household income; approximately less than $46,000 per year)</li>
 </ul></li>
 </ul>
 <p><strong>Data Masking:</strong></p>
@@ -97,9 +97,9 @@ Data Documentation</div></h1>
 </ul></li>
 <li><p><em>Business Zip Code Income</em>. Transactions are linked to ZIP codes where the business is located and ZIP codes are classified into income categories based on measurements of median household income and population provided by the American Community Survey (2014 - 2018).</p>
 <ul>
-<li>High Income (median household income greater than $78,000 per year)</li>
-<li>Middle Income (median household income between $46,000 per year and $78,000 per year)</li>
-<li>Low Income (median household income less than $46,000 per year)</li>
+<li>High Income (top quartile of median household income; approximately greater than $78,000 per year)</li>
+<li>Middle Income (middle two quartiles of median household income; approximately between $46,000 per year and $78,000 per year)</li>
+<li>Low Income (bottom quartile of median household income; approximately less than $46,000 per year)</li>
 </ul></li>
 </ul>
 <p><strong>Data Masking:</strong></p>
@@ -137,8 +137,8 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data Masking:</strong> In order to avoid extreme outliers, we calculate a cutoff of one standard deviation above the 97th percentile of the state-level data for each variable and mask values that exceed this threshold. Additionally, at the county level, only subgroup data for the 200 largest counties is able to be disclosed for firm data privacy reasons. For the remaining counties’ subgroups, all values are imputed from the share of state postings that are made up of a given subgrouping multiplied by the number of county postings in total.</p>
 <h2 id="employment">Employment</h2>
-<p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit, worker-level data on employment and earnings from Earnin, and firm-level timesheet data from Kronos.</p>
-<p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a>, <a href="https://www.earnin.com/">Earnin</a>, <a href="https://www.kronos.com/">Kronos</a></p>
+<p><strong>Summary:</strong> Number of active employees, aggregating information from multiple data providers. This series is based on firm-level payroll data from Paychex and Intuit.</p>
+<p><strong>Data Source:</strong> <a href="https://www.paychex.com/">Paychex</a>, <a href="https://www.intuit.com/">Intuit</a></p>
 <p><strong>Update Frequency:</strong> Weekly</p>
 <p><strong>Date Range:</strong> January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.</p>
 <p><strong>Data Frequency:</strong> Weekly</p>
@@ -149,11 +149,11 @@ Data Documentation</div></h1>
 <ul>
 <li><p><em>Wage</em>.</p>
 <ul>
-<li>High Income (annualized income greater than 2.5x the federal poverty line)</li>
-<li>Middle Income (annualized income between 1x and 2.5x the federal poverty line)</li>
-<li>Low Income (annualized income lower than the federal poverty line)</li>
-<li>Above Median (annualized income greater than 1.5x the federal poverty line)</li>
-<li>Below Median (annualized income less than 1.5x the federal poverty line)</li>
+<li>High Wage (annualized wage greater than 2.5x the federal poverty line, adjusted for CPI inflation within each calendar year)</li>
+<li>Middle Wage (annualized wage between 1x and 2.5x the federal poverty line, adjusted for CPI inflation within each calendar year)</li>
+<li>Low Wage (annualized wage lower than the federal poverty line, adjusted for CPI inflation within each calendar year)</li>
+<li>Above Median (annualized wage greater than 1.5x the federal poverty line, adjusted for CPI inflation within each calendar year)</li>
+<li>Below Median (annualized wage less than 1.5x the federal poverty line, adjusted for CPI inflation within each calendar year)</li>
 </ul></li>
 <li><p><em>Industry</em>, by <a href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS supersector</a>.</p>
 <ul>
@@ -169,8 +169,23 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
 <ul>
-<li><p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x income quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x income quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit. In particular, for cells with a maximum employment of over 50 employees throughout the sample period, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 250 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020. For cells with a maximum employment less than 50 employees over the sample period, we instead reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p></li>
-<li><p><em>In the Intuit series</em>, we do not make any sample restrictions.</p></li>
+<li><p><em>In the Paychex series</em>, for county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.</p>
+<ul>
+<li>For cells with over 50 employees:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.</li>
+<li>We reduce the weight by 0.5 percentage points for each percentage point of growth we observe above 600 percentage points relative to January 2020.</li>
+</ul></li>
+<li>For cells with 50 employees or less:
+<ul>
+<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020</li>
+<li>We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p>
+<ul>
+<li><em>In the Intuit series</em>, we do not make any sample restrictions.</li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Summary:</strong> Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.</p>

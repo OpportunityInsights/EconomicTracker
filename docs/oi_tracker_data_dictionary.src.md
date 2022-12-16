@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-12-06
+subtitle: last updated on 2022-12-16
 documentclass: scrartcl
 ---  
 
@@ -69,7 +69,7 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
 
 - `spend_all`: Spending in all merchant category codes (MCCs).
   - `spend_all_q#`:  ...by consumers living in ZIP codes with median income in quartile `#`.
-  - `spend_all_incmiddle`: ...by consumers living in ZIP codes with middle (middle two quartiles) median income.
+  - `spend_all_incmiddle`: ...by consumers living in ZIP codes with median income in the middle two quartiles.
 - `spend_aap`: Spending in apparel and accessories (AAP) MCCs.
   - `spend_aap_q#`: ...by consumers living in ZIP codes with median income in quartile `#`.
 - `spend_acf`: Spending in accomodation and food service (ACF) MCCs.
@@ -223,32 +223,33 @@ GPS mobility data indexed to Jan 3-Feb 6 2020 from [Google COVID-19 Community Mo
 
 ### Employment
 
-Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.com/), [Intuit](https://www.intuit.com/), [Earnin](https://www.earnin.com/) and [Kronos](https://www.kronos.com/).
+Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.com/) and [Intuit](https://www.intuit.com/).
 
 - `emp`: Employment level for all workers.
-- `emp_incq1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000).
-- `emp_incq2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000).
-- `emp_incmiddle`: Employment level for workers in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
-- `emp_incq3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000).
-- `emp_incq4`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000).
-- `emp_incbelowmed`: Employment level for workers in the bottom half of the income distribution (incomes approximately under $37,000).
-- `emp_incabovemed`: Employment level for workers in the top half of the income distribution (incomes approximately over $37,000).
+- `emp_incq1`: Employment level for workers in the bottom quartile of the wage distribution (annualized wage lower than the federal poverty line).
+- `emp_incq2`: Employment level for workers in the second quartile of the wage distribution (annualized wage between 1x and 1.5x the federal poverty line).
+- `emp_incmiddle`: Employment level for workers in the middle two quartiles of the wage distribution (annualized wage between 1x and 2.5x the federal poverty line).
+- `emp_incq3`: Employment level for workers in the third quartile of the wage distribution (annualized wage between 1.5x and 2.5x the federal poverty line).
+- `emp_incq4`: Employment level for workers in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line).
+- `emp_incbelowmed`: Employment level for workers in the bottom half of the wage distribution (annualized wage less than 1.5x the federal poverty line).
+- `emp_incabovemed`: Employment level for workers in the top half of the wage distribution (annualized wage greater than 1.5x the federal poverty line).
 - `emp_ss40`: Employment level for workers in trade, transportation and utilities (NAICS supersector 40).
 - `emp_ss60`: Employment level for workers in professional and business services (NAICS supersector 60).
 - `emp_ss65`: Employment level for workers in education and health services (NAICS supersector 65).
 - `emp_ss70`: Employment level for workers in leisure and hospitality (NAICS supersector 70).
 - `emp_retail`: Employment level for workers in retail (NAICS sector 44-45).
-- `emp_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the income distribution (incomes approximately under $27,000).
-- `emp_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the income distribution (incomes approximately $27,000 to $60,000).
-- `emp_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the income distribution (incomes approximately over $60,000).
+- `emp_retail_inclow`: Employment level for workers in retail (NAICS sector 44-45) and in the bottom quartile of the wage distribution (annualized wage lower than the federal poverty line).
+- `emp_retail_incmiddle`: Employment level for workers in retail (NAICS sector 44-45) and in the middle two quartiles of the wage distribution (annualized wage between 1x and 2.5x the federal poverty line).
+- `emp_retail_inchigh`: Employment level for workers in retail (NAICS sector 44-45) and in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line).
 - `emp_s72`: Employment level for workers in accommodation and food services (NAICS sector 72).
-- `emp_subset_unweighted_q1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
-- `emp_subset_unweighted_q2`: Employment level for workers in the second quartile of the income distribution (incomes approximately $27,000 to $37,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
-- `emp_subset_unweighted_q3`: Employment level for workers in the third quartile of the income distribution (incomes approximately $37,000 to $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
-- `emp_subset_unweighted_q4`: Employment level for workers in the top quartile of the income distribution (incomes approximately over $60,000) in county x industry (2-digit NAICS code) cells with nonzero employment for all four income quartiles.
-- `emp_subset_reweighted_q1`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
-- `emp_subset_reweighted_q2`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000), reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
-- `emp_subset_reweighted_q3`: Employment level for workers in the bottom quartile of the income distribution (incomes approximately under $27,000) in county x industry cells with nonzero employment for all four income quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the income distribution.
+- `emp_subset_unweighted_q1`: Employment level for workers in the bottom quartile of the wage distribution (annualized wage lower than the federal poverty line) in county x industry (2-digit NAICS code) cells with nonzero employment for all four wage quartiles.
+- `emp_subset_unweighted_q2`: Employment level for workers in the second quartile of the wage distribution (annualized wage between 1x and 1.5x the federal poverty line) in county x industry (2-digit NAICS code) cells with nonzero employment for all four wage quartiles.
+- `emp_subset_unweighted_q3`: Employment level for workers in the third quartile of the wage distribution (annualized wage between 1.5x and 2.5x the federal poverty line) in county x industry (2-digit NAICS code) cells with nonzero employment for all four wage quartiles.
+- `emp_subset_unweighted_q4`: Employment level for workers in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line) in county x industry (2-digit NAICS code) cells with nonzero employment for all four wage quartiles.
+- `emp_subset_reweighted_q1`: Employment level for workers in the bottom quartile of the wage distribution (annualized wage lower than the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
+- `emp_subset_reweighted_q2`: Employment level for workers in the second quartile of the wage distribution (annualized wage between 1x and 1.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
+- `emp_subset_reweighted_q3`: Employment level for workers in the third quartile of the wage distribution (annualized wage between 1.5x and 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
+- `emp_subset_reweighted_q4`: Employment level for workers in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
 
 ### UI Claims
 
@@ -273,7 +274,7 @@ Unemployment insurance claims data from the [Department of Labor](https://oui.do
 
 Small business openings and revenue data from [Womply](https://www.womply.com/).
 
-- `merchants_all`: Percent change in number of small businesses open calculated as a seven-day moving average seasonally adjusted and indexed to January 4-31 2020.
+- `merchants_all`: Percent change in number of small businesses open, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
   - `merchants_inchigh`: ... in high income (quartile 4 of median income) ZIP codes.
   - `merchants_incmiddle`: ... in middle income (quartiles 2 & 3 of median income) ZIP codes.
   - `merchants_inclow`: ... in low income (quartile 1 of median income) ZIP codes.
@@ -301,10 +302,10 @@ Online math learning data from [Zearn](https://www.zearn.org/).
 - `engagement_inclow`: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.
 - `engagement_incmiddle`: Average level of students using platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.
 - `engagement_inchigh`: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
-- `badges`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020.
-- `badges_inclow`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.
-- `badges_incmiddle`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.
-- `badges_inchigh`: Average level of students achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
+- `badges`: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020.
+- `badges_inclow`: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.
+- `badges_incmiddle`: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.
+- `badges_inchigh`: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.
 <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
 - `break_engagement`:
 - `break_badges`:

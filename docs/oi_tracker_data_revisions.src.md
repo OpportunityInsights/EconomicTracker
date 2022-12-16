@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-12-06
+subtitle: last updated on 2022-12-16
 documentclass: scrartcl
 ---
 
@@ -173,11 +173,42 @@ The Employment data was revised on May 21st 2022 due to four independent changes
 
   To address this issue, we have implemented moving thresholds that are based on the federal poverty line. The income categories are now defined using multiples of the poverty threshold, normally a yearly measure that we extend monthly using the CPI. The upper thresholds for each income quartile are now 1x the poverty line (Q1), 1.5x the poverty line (Q2), and 2.5x the poverty line (Q3). A secondary issue that arises from using moving thresholds, however, are discontinuities in the series when a threshold crosses a whole number wages where there is bunching in the wage distribution, e.g. $15/hr. When the Q1 threshold crosses $15, for example, many workers who were previously a part of Q2 will now be defined as Q1, causing a discontinuity in the series. To address this issue, we "spread" workers out from the whole number wages as if we added a random number between -0.5 and 0.5 to their wages, creating a uniform distribution between (whole number wage - 0.5, whole number wage + 0.5).
 
-  Implementing these moving thresholds results in upwards revisions in employment esttimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.
+  Implementing these moving thresholds results in upwards revisions in employment estimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.
 
 - **Revisions to address changes in the minimum wage:** We have updated our previous methodology released on June 30th 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.
 
-- **Revisions arising from changes to adjustment for firm entry/exit in Paychex data:** We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births. For cells with fewer than 50 employees, we reduce the weight we place on the cell by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020. We adopt this alternative weighting scheme to balance the fact that small firm births account for a sizable portion of the economic recovery in the second half of 2020 against the fact that growth of small cells can also be spuriously driven by entry into our sample. This new weightng scheme leads to better estimates of employment relative to public benchmarks (CES, QCEW, CPS, etc).
+- **Revisions arising from changes to adjustment for firm entry/exit in Paychex data:** We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births.
+
+  - For cells with over 50 employees:
+    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
+    - We reduce the weight by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020.
+	
+  - For cells with 50 employees or less:
+    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020
+    - We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.
+		
+We adopt this alternative weighting scheme for cells with 50 or fewer employees to balance the fact that small firm births account for a sizable portion of the economic recovery in the second half of 2020 against the fact that growth of small cells can also be spuriously driven by entry into our sample. This new weightng scheme leads to better estimates of employment relative to public benchmarks (CES, QCEW, CPS, etc).
+
+### Revisions on October 17th 2022
+
+The Employment data was revised in several ways.
+
+- **Revisions to income quartile definitions**: The methodology behind the moving income thresholds, implemented on May 21st 2022, has been slightly updated. Previously, the income thresholds were defined using the yearly poverty guidelines and extended monthly using the CPI. In periods with high inflation, this methodology resulted in a discontuinity in the threshold before and after the release of the annual poverty guidelines (historically in January). This has been updated so that when the annual poverty guidelines are released, the previous year's monthly thresholds are linearly revised such that the CPI adjusted poverty threshold is equal to the official poverty guideline. 
+
+   Revising these moving thresholds results in slight differences in employment estimates for each quartile across the entire sample, since revising the thresholds redistributes some workers between quartiles. For some years, the thresholds have been revised slightly downward, while for others they have increased. These changes are particularly notable from the start of 2021 to present, when the revisions have led to lower thresholds. 
+
+
+- **Revisions to the methodology that adjusts for firm entry/exit in Paychex data**: We have updated our previous methodology released on May 21st 2022. We have revised the weighting scheme for cells over 50 employees, in order to better align with public benchmarks:
+
+  - For cells with over 50 employees:
+    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
+    - *We reduce the weight by 0.5 percentage points for each percentage point of growth we observe above 600 percentage points relative to January 2020.*
+
+  - For cells with 50 employees or less:
+    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020
+    - We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.
+
+- **Revisions to the adjustment for minimum wage changes**: We revised how we adjust the series in states that increased their minimum wage at the end of 2020 (CA, NY, MA). We begin by calculating the percentage change in the number of employees in each state x industry (2-digit NAICS) cell from December 4 2020 onwards for the first two wage quartiles combined. From December 4 2020 onwards, for the first two wage quartiles in minimum wage change states, we impute the trend in each county x industry x wage quartile cell using the below-median income employment trend in their own state x industry cell. Since employment in the first wage quartile recovered less than employment in the second wage quartile in 2021, an imputation that aggregates the trends in the first and second wage quartiles tends to overstate the recovery in the first quartile and understate the recovery in the second quartile. As such, we further rescale the state x industry below-median income trend separately for each wage quartile, using the coefficient from the regression of that quartile’s employment change on the below-median income employment change in non-minimum wage-change states without a constant between December 4 2020 and December 3 2021. We then aggregate the adjusted employment counts to the relevant geographies (e.g. state; national) before calculating the change in employment since January 2020.
 
 ## Unemployment Claims
 
