@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-12-16
+subtitle: last updated on 2022-12-17
 documentclass: scrartcl
 ---
 
@@ -237,17 +237,17 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.
 
-* *In the Paychex series*, for county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.
+* *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.
 
   - For cells with over 50 employees:
-    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
+    - We reduce the weight by 2 percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
     - We reduce the weight by 0.5 percentage points for each percentage point of growth we observe above 600 percentage points relative to January 2020.
 
   - For cells with 50 employees or less:
-    - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020
+    - We reduce the weight by 2 percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020
     - We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.
 
-The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.
+  The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.
 
 * *In the Intuit series*, we do not make any sample restrictions.
 

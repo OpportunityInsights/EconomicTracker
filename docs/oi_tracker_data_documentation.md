@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2022-12-16</p>
+<p class="subtitle">last updated on 2022-12-17</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -169,23 +169,21 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
 <ul>
-<li><p><em>In the Paychex series</em>, for county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.</p>
+<li><p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.</p>
 <ul>
 <li>For cells with over 50 employees:
 <ul>
-<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.</li>
+<li>We reduce the weight by 2 percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.</li>
 <li>We reduce the weight by 0.5 percentage points for each percentage point of growth we observe above 600 percentage points relative to January 2020.</li>
 </ul></li>
 <li>For cells with 50 employees or less:
 <ul>
-<li>We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020</li>
+<li>We reduce the weight by 2 percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020</li>
 <li>We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.</li>
 </ul></li>
-</ul></li>
 </ul>
-<p>The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p>
-<ul>
-<li><em>In the Intuit series</em>, we do not make any sample restrictions.</li>
+<p>The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p></li>
+<li><p><em>In the Intuit series</em>, we do not make any sample restrictions.</p></li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Summary:</strong> Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.</p>
