@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2022-12-17
+subtitle: last updated on 2023-02-27
 documentclass: scrartcl
 ---
 
@@ -41,7 +41,7 @@ Please note that both the data and this data documentation are updated regularly
 
 **Indexing Period:** January 4th to January 31st 2020
 
-**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019 (January 7th, 2019 to February 3rd, 2019), data in 2020 onward is indexed relative to January 2020 (January 6th, 2020 to February 2nd, 2020). We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
 
 **Geographies:** National, State, County, Metro
 

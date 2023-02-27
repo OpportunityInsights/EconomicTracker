@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2022-12-16
+subtitle: last updated on 2023-02-27
 documentclass: scrartcl
 ---  
 
@@ -150,7 +150,7 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_19_retail_w_grocery`:
 -->
 
-All spending variables are measured relative to January 4-31 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or `spend_19_` (relative to Jan 2019 for all data) instead of `spend_`.
+All spending variables are measured relative to January 6th to February 2nd 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or `spend_19_` (relative to Janurary 7th to February 3rd 2019 for all data) instead of `spend_`.
 
 The merchant category codes (MCC) making up the grouped spending categories are:
 
