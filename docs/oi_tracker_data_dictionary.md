@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2023-02-27</p>
+<p class="subtitle">last updated on 2023-04-14</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -192,23 +192,23 @@ Data Dictionary</div></h1>
 <li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
 </ul>
 <h3 id="covid">COVID</h3>
-<p>COVID cases and deaths numbers are from the <a href="https://github.com/nytimes/covid-19-data">New York Times</a>, hospitalizations numbers are from the <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health and Human Services</a>, tests numbers are from <a href="https://github.com/govex/COVID-19">Johns Hopkins University</a>, and vaccination numbers are from the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a>.</p>
+<p>COVID cases and deaths numbers are from the <a href="https://github.com/nytimes/covid-19-data">New York Times</a> and the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a>, hospitalizations numbers are from the <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health and Human Services</a>, tests numbers are from <a href="https://github.com/govex/COVID-19">Johns Hopkins University</a>, and vaccination numbers are from the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a>.</p>
 <ul>
-<li><code>case_rate</code>: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
+<li><code>case_rate</code>: Confirmed COVID-19 cases per 100,000 people, seven day rolling sum.
 <ul>
-<li><code>case_count</code>: Confirmed COVID-19 cases, seven day moving average.</li>
+<li><code>case_count</code>: Confirmed COVID-19 cases, seven day rolling sum.</li>
 </ul></li>
-<li><code>new_case_rate</code>: New confirmed COVID-19 cases per 100,000 people, seven day moving average.
+<li><code>new_case_rate</code>: New confirmed COVID-19 cases per 100,000 people, seven day rolling sum.
 <ul>
-<li><code>new_case_count</code>: New confirmed COVID-19 cases, seven day moving average.</li>
+<li><code>new_case_count</code>: New confirmed COVID-19 cases, seven day rolling sum.</li>
 </ul></li>
-<li><code>death_rate</code>: Confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+<li><code>death_rate</code>: Confirmed COVID-19 deaths per 100,000 people, seven day rolling sum.
 <ul>
-<li><code>death_count</code>: Confirmed COVID-19 deaths, seven day moving average.</li>
+<li><code>death_count</code>: Confirmed COVID-19 deaths, seven day rolling sum.</li>
 </ul></li>
-<li><code>new_death_rate</code>: New confirmed COVID-19 deaths per 100,000 people, seven day moving average.
+<li><code>new_death_rate</code>: New confirmed COVID-19 deaths per 100,000 people, seven day rolling sum.
 <ul>
-<li><code>new_death_count</code>: New confirmed COVID-19 deaths, seven day moving average.</li>
+<li><code>new_death_count</code>: New confirmed COVID-19 deaths, seven day rolling sum.</li>
 </ul></li>
 <li><code>test_rate</code>: Confirmed COVID-19 tests per 100,000 people, seven day moving average.
 <ul>

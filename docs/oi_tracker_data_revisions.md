@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2022-12-16</p>
+<p class="subtitle">last updated on 2023-04-14</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -145,6 +145,8 @@ Data Revisions</div></h1>
 <p>Previously we pulled reported cases and deaths from the New York Times’ <a href="https://github.com/nytimes/covid-19-data">COVID-19 database</a> and reported tests from the <a href="https://covidtracking.com/">COVID Tracking Project</a>. At the conclusion of the COVID Tracking Project’s efforts in order to collect testing data we instead began pulling reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention’s <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">COVID Data Tracker</a> and aggregated to other geographies.</p>
 <h3 id="revisions-on-august-4th-2021">Revisions on August 4th 2021</h3>
 <p>Previously we pulled reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention’s COVID Data Tracker and aggregated to other geographies. On July 17th the Centers For Disease Control and Prevention began suppressing reported cases and deaths making aggregations across counties no longer feasible and we began to instead pull reported cases and deaths from the New York Times’ <a href="https://github.com/nytimes/covid-19-data">COVID-19 database</a>, state level reported tests from the Johns Hopkins Coronavirus Resource Center’s <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">U.S. testing database</a>, and county level reported tests from <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a>.</p>
+<h3 id="revisions-on-april-11th-2023">Revisions on April 11th 2023</h3>
+<p>On 2023-03-23 the New York Times discontinued its COVID tracking efforts and published the last updates to its database tracking COVID cases and deaths in light of increased tracking and reporting by government agencies like The Centers for Disease Control and Prevention. For COVID-19 cases and deaths data published after 2023-03-23 we now make use of weekly data published by <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a>. In order to integrate the new weekly sums published by <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a> with the previous daily values published by <a href="https://github.com/nytimes/covid-19-data">New York Times</a> we scale all cases and deaths values to a 7 day rolling sum rather than a 7 day rolling average as previously reported.</p>
 <h2 id="covid-19-vaccinations">COVID-19 Vaccinations</h2>
 <p>No substantive data revisions reported.</p>
 <h2 id="time-outside-home">Time Outside Home</h2>

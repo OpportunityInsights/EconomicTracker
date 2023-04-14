@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2023-02-27
+subtitle: last updated on 2023-04-14
 documentclass: scrartcl
 ---
 
@@ -383,13 +383,13 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Summary:** The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths, hospitalizations, or tests performed.
 
-**Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [U.S. Department of Health & Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh)
+**Data Source:** [The New York Times](https://github.com/nytimes/covid-19-data), [The Johns Hopkins Coronavirus Resource Center](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), [U.S. Department of Health & Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh), [Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) 
 
 **Update Frequency:** Daily
 
 **Date Range:** January 22nd 2020 until the most recent date available.
 
-**Data Frequency:** Daily, presented as a 7-day moving average
+**Data Frequency:** Daily, presented as a 7-day moving average or 7-day rolling sum
 
 **Indexing Period:** No indexing applied, the published numbers directly report quantities.
 
@@ -399,7 +399,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Breakdowns:**  
 
-* *New* Cases, Deaths, or Tests (presented as a 7-day moving average)
+* *New* Cases, Deaths, or Tests (presented as a 7-day moving average for Tests and a 7-day rolling sum for Cases and Deaths)
 * *Total* Cases, Deaths, or Tests
 * *Other* Hospitalized
 

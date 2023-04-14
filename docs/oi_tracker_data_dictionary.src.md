@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-02-27
+subtitle: last updated on 2023-04-14
 documentclass: scrartcl
 ---  
 
@@ -180,16 +180,16 @@ Job postings data from [Lightcast](https://lightcast.io/) (formerly known as Bur
 
 ### COVID
 
-COVID cases and deaths numbers are from the [New York Times](https://github.com/nytimes/covid-19-data), hospitalizations numbers are from the [U.S. Department of Health and Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh), tests numbers are from [Johns Hopkins University](https://github.com/govex/COVID-19), and vaccination numbers are from the [Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).
+COVID cases and deaths numbers are from the [New York Times](https://github.com/nytimes/covid-19-data) and the [Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home), hospitalizations numbers are from the [U.S. Department of Health and Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh), tests numbers are from [Johns Hopkins University](https://github.com/govex/COVID-19), and vaccination numbers are from the [Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).
 
-- `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day moving average.
-    - `case_count`: Confirmed COVID-19 cases, seven day moving average.
-- `new_case_rate`: New confirmed COVID-19 cases per 100,000 people, seven day moving average.
-    - `new_case_count`: New confirmed COVID-19 cases, seven day moving average.
-- `death_rate`: Confirmed COVID-19 deaths per 100,000 people, seven day moving average.
-    - `death_count`: Confirmed COVID-19 deaths, seven day moving average.
-- `new_death_rate`: New confirmed COVID-19 deaths per 100,000 people, seven day moving average.
-    - `new_death_count`: New confirmed COVID-19 deaths, seven day moving average.
+- `case_rate`: Confirmed COVID-19 cases per 100,000 people, seven day rolling sum.
+    - `case_count`: Confirmed COVID-19 cases, seven day rolling sum.
+- `new_case_rate`: New confirmed COVID-19 cases per 100,000 people, seven day rolling sum.
+    - `new_case_count`: New confirmed COVID-19 cases, seven day rolling sum.
+- `death_rate`: Confirmed COVID-19 deaths per 100,000 people, seven day rolling sum.
+    - `death_count`: Confirmed COVID-19 deaths, seven day rolling sum.
+- `new_death_rate`: New confirmed COVID-19 deaths per 100,000 people, seven day rolling sum.
+    - `new_death_count`: New confirmed COVID-19 deaths, seven day rolling sum.
 - `test_rate`: Confirmed COVID-19 tests per 100,000 people, seven day moving average.
     - `test_count`: Confirmed COVID-19 tests, seven day moving average.
 - `new_test_rate`: New confirmed COVID-19 tests per 100,000 people, seven day moving average.

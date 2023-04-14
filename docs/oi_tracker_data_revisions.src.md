@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2022-12-16
+subtitle: last updated on 2023-04-14
 documentclass: scrartcl
 ---
 
@@ -233,6 +233,10 @@ Previously we pulled reported cases and deaths from the New York Times' [COVID-1
 ### Revisions on August 4th 2021
 
 Previously we pulled reported cases, deaths, and tests at the county level from the Centers For Disease Control and Prevention's COVID Data Tracker and aggregated to other geographies. On July 17th the Centers For Disease Control and Prevention began suppressing reported cases and deaths making aggregations across counties no longer feasible and we began to instead pull reported cases and deaths from the New York Times' [COVID-19 database](https://github.com/nytimes/covid-19-data), state level reported tests from the Johns Hopkins Coronavirus Resource Center's [U.S. testing database](https://github.com/govex/COVID-19/tree/master/data_tables/testing_data), and county level reported tests from [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home).    
+
+### Revisions on April 11th 2023
+
+On 2023-03-23 the New York Times discontinued its COVID tracking efforts and published the last updates to its database tracking COVID cases and deaths in light of increased tracking and reporting by government agencies like The Centers for Disease Control and Prevention. For COVID-19 cases and deaths data published after 2023-03-23 we now make use of weekly data published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). In order to integrate the new weekly sums published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) with the previous daily values published by [New York Times](https://github.com/nytimes/covid-19-data) we scale all cases and deaths values to a 7 day rolling sum rather than a 7 day rolling average as previously reported.
 
 ## COVID-19 Vaccinations
 
