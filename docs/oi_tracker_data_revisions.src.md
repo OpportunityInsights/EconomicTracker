@@ -210,6 +210,15 @@ The Employment data was revised in several ways.
 
 - **Revisions to the adjustment for minimum wage changes**: We revised how we adjust the series in states that increased their minimum wage at the end of 2020 (CA, NY, MA). We begin by calculating the percentage change in the number of employees in each state x industry (2-digit NAICS) cell from December 4 2020 onwards for the first two wage quartiles combined. From December 4 2020 onwards, for the first two wage quartiles in minimum wage change states, we impute the trend in each county x industry x wage quartile cell using the below-median income employment trend in their own state x industry cell. Since employment in the first wage quartile recovered less than employment in the second wage quartile in 2021, an imputation that aggregates the trends in the first and second wage quartiles tends to overstate the recovery in the first quartile and understate the recovery in the second quartile. As such, we further rescale the state x industry below-median income trend separately for each wage quartile, using the coefficient from the regression of that quartile’s employment change on the below-median income employment change in non-minimum wage-change states without a constant between December 4 2020 and December 3 2021. We then aggregate the adjusted employment counts to the relevant geographies (e.g. state; national) before calculating the change in employment since January 2020.
 
+### Revisions on April 14th 2023
+
+The Employment data was revised on April 14th 2023 to correct a data processing error. 
+
+From December 16th 2022 to April 14th 2023, there was a bug in the code adjusting for discontinuities in the Paychex data when quartile thresholds cross integer wages. For more details on this adjustment see Online Appendix E.2 of Chetty, Friedman, Hendren and Stepner (April 2023). During this period, the adjustment for the mass of employees at wage $X was incorrectly being made using the mass of employees at the lower wage $X-1. These discontinuities were therefore incompletely smoothed.
+
+After correcting the code, the employment trends are smoother around these discontinuities. The overall trends in employment changes over time are unchanged.
+
+
 ## Unemployment Claims
 
 ### Revisions on July 29th 2021
