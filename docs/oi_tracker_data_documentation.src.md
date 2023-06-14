@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2023-04-14
+subtitle: last updated on 2023-06-14
 documentclass: scrartcl
 ---
 
@@ -65,6 +65,22 @@ Please note that both the data and this data documentation are updated regularly
 **Data masking:** For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending < $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 **Notes:** We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked 'provisional' and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf). We typically only allow series to have one significant break, however, in the case of areas with large populations we relax this rule.
+
+**Supplemental files:**
+
+* *Affinity Income Shares - National - 2019.csv*
+  - `share_jan2019`: the share of weekly total spending from January 7, 2019 to February 3, 2019 by income quartile.
+
+* *Affinity Income Shares - National - 2020.csv*
+    - `share_jan2020`: the share of weekly total spending from January 6, 2020 to February 2, 2020 by income quartile.
+
+* *Affinity Industry Composition - National - 2020.csv*
+    - `share_jan2020`: the share of weekly total spending from January 6, 2020 to February 2, 2020 by MCC group.
+    - `share_decline_covidfirstwave`: the share of the decline in weekly total spending in the first wave of the pandemic by MCC group. To measure the decline, we first take the sum of total spending in four periods: from January 7, 2019 to February 3, 2019, from March 25, 2019 to April 14, 2019, from January 6, 2020 to February 2, 2020, and from March 30, 2020 to April 20, 2020. Then, the decline is calculated as the change in spending between April 2019 and April 2020, minus the change in spending between January 2019 and January 2020. This measures the decline in total spending during the first wave of the Covid-19 pandemic, accounting for the normal decline in spending across the same months in 2019.
+
+* *Affinity Daily Total Spending - National - Daily.csv*
+    - `daily_spend_19_all` and `daily_spend_19_q#`: daily total spending indexed to total spending from January 7, 2019 to February 3, 2019 by income quartile, not seasonally adjusted.
+    - The data in this file is not smoothed using a 7-day moving average, and it does not apply the intensive/extensive margin switching adjustment described in Appendix B.2 of the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Small Business Revenue  
 

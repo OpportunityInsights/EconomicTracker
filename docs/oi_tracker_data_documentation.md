@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2023-04-14</p>
+<p class="subtitle">last updated on 2023-06-14</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -43,6 +43,27 @@ Data Documentation</div></h1>
 </ul>
 <p><strong>Data masking:</strong> For the state-level breakdowns by income quartile and the county-level data, we mask locations with average daily spending &lt; $70,000 in January 2019. The raw data contains discontinuous breaks caused by entry or exit of credit card providers from the sample: counties with multiple structural breaks are dropped from the sample. Additionally, Affinity Solutions suppresses any cut of the data with fewer than five transactions. For more details refer to the accompanying <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</p>
 <p><strong>Notes:</strong> We require at least 3 weeks of data in order to reliably identify and correct discontinuous breaks caused by entry or exit of credit card providers from the sample. The most recent 3 weeks of data are therefore marked ‘provisional’ and are subject to non-negligible changes as new data is posted. For breaks found prior to the last 3 weeks, we correct for it using a method outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. Otherwise we substitute the national mean for more recent breaks while we gather enough data to implement the corrections outlined in the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>. We typically only allow series to have one significant break, however, in the case of areas with large populations we relax this rule.</p>
+<p><strong>Supplemental files:</strong></p>
+<ul>
+<li><em>Affinity Income Shares - National - 2019.csv</em>
+<ul>
+<li><code>share_jan2019</code>: the share of weekly total spending from January 7, 2019 to February 3, 2019 by income quartile.</li>
+</ul></li>
+<li><em>Affinity Income Shares - National - 2020.csv</em>
+<ul>
+<li><code>share_jan2020</code>: the share of weekly total spending from January 6, 2020 to February 2, 2020 by income quartile.</li>
+</ul></li>
+<li><em>Affinity Industry Composition - National - 2020.csv</em>
+<ul>
+<li><code>share_jan2020</code>: the share of weekly total spending from January 6, 2020 to February 2, 2020 by MCC group.</li>
+<li><code>share_decline_covidfirstwave</code>: the share of the decline in weekly total spending in the first wave of the pandemic by MCC group. To measure the decline, we first take the sum of total spending in four periods: from January 7, 2019 to February 3, 2019, from March 25, 2019 to April 14, 2019, from January 6, 2020 to February 2, 2020, and from March 30, 2020 to April 20, 2020. Then, the decline is calculated as the change in spending between April 2019 and April 2020, minus the change in spending between January 2019 and January 2020. This measures the decline in total spending during the first wave of the Covid-19 pandemic, accounting for the normal decline in spending across the same months in 2019.</li>
+</ul></li>
+<li><em>Affinity Daily Total Spending - National - Daily.csv</em>
+<ul>
+<li><code>daily_spend_19_all</code> and <code>daily_spend_19_q#</code>: daily total spending indexed to total spending from January 7, 2019 to February 3, 2019 by income quartile, not seasonally adjusted.</li>
+<li>The data in this file is not smoothed using a 7-day moving average, and it does not apply the intensive/extensive margin switching adjustment described in Appendix B.2 of the <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</li>
+</ul></li>
+</ul>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue data aggregated from several credit card processors. Transactions and revenue are reported based on the county or ZIP code where the business is located.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>

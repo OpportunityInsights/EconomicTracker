@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-04-14</p>
+<p class="subtitle">last updated on 2023-06-14</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -43,6 +43,15 @@ Data Revisions</div></h1>
 <p>we correct our estimates as follows. We first compute the state-level week-to-week percent change in spending excluding all counties with a structural break (using the national series for DC and states for which all counties have a structural break). If we identify a structural break in week t, we impute spending levels in weeks <span class="math inline"><em>t</em> − 1</span>, <span class="math inline"><em>t</em></span>, and <span class="math inline"><em>t</em> + 1</span>, as we cannot ascertain the precise date when the structural break occurred (e.g., it may have occurred on the 2nd day of week <span class="math inline"><em>t</em> − 1</span> or the 6th day of week <span class="math inline"><em>t</em></span>). When there is a change in coverage we adjust the series to be in line with the lower level of coverage.</p>
 </blockquote>
 <p>From March 15th, 2022 to December 2nd, 2022, the series was always chain-weighted forwards, so that it was always in line with the level of coverage prior to the discontinuity — rather than the lower level of coverage. This has been corrected so that the series is now chain-weighted forwards or backwards to be in line with the lower level of coverage. This has resulted in a noticeable revision to a few counties, which now have lower levels after a discontinuous break. At the state level, this adjustment has resulted in only minor revisions.</p>
+<h3 id="revisions-on-june-14th-2023">Revisions on June 14th 2023</h3>
+<p>We added four supplemental files:</p>
+<ul>
+<li><p><em>Affinity Income Shares - National - 2019.csv</em>: share of total spending in January 2019 by income quartile.</p></li>
+<li><p><em>Affinity Income Shares - National - 2020.csv</em>: share of total spending in January 2020 by income quartile.</p></li>
+<li><p><em>Affinity Industry Composition - National - 2020.csv</em>: share of total spending in January 2020, and the share of the decline in total spending during the first wave of the Covid-19 pandemic, by industry.</p></li>
+<li><p><em>Affinity Daily Total Spending - National - Daily.csv</em>: daily total spending indexed to January 2019 by income quartile, without smoothing using a 7-day moving average.</p></li>
+</ul>
+<p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
 <h2 id="small-business-revenue-small-businesses-open">Small Business Revenue &amp; Small Businesses Open</h2>
 <h3 id="revisions-on-march-4th-2022">Revisions on March 4th 2022</h3>
 <p>We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.</p>

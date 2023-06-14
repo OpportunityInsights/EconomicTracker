@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-04-14
+subtitle: last updated on 2023-06-14
 documentclass: scrartcl
 ---  
 
@@ -148,9 +148,17 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_19_remoteservices`:
   - `spend_19_retail_no_grocery`:
   - `spend_19_retail_w_grocery`:
+  - `daily_spend_19_all`:
+  - `daily_spend_19_q1`:
+  - `daily_spend_19_q2`:
+  - `daily_spend_19_q3`:
+  - `daily_spend_19_q4`:
+  - `share_jan2019`:
+  - `share_jan2020`:
+  - `share_decline_covidfirstwave`:
 -->
 
-All spending variables are measured relative to January 6th to February 2nd 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or `spend_19_` (relative to Janurary 7th to February 3rd 2019 for all data) instead of `spend_`.
+All spending variables are measured relative to January 6th to February 2nd 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or `spend_19_` (relative to Janurary 7th to February 3rd 2019 for all data) instead of `spend_`. 
 
 The merchant category codes (MCC) making up the grouped spending categories are:
 
@@ -159,6 +167,13 @@ The merchant category codes (MCC) making up the grouped spending categories are:
 * **Non-durable goods:** CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.
 * **Remote services:** ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.
 * **In-person services:** ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.
+
+In addition, four supplemental files are included (see the [documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md) for more details on these files):
+
+- *Affinity Income Shares - National - 2019.csv*
+- *Affinity Income Shares - National - 2020.csv*
+- *Affinity Industry Composition - National - 2020.csv*
+- *Affinity Daily Total Spending - National - Daily.csv*
 
 ### Job Postings
 

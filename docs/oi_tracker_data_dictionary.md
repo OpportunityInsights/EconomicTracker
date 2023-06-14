@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2023-04-14</p>
+<p class="subtitle">last updated on 2023-06-14</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -164,6 +164,14 @@ Data Dictionary</div></h1>
   - `spend_19_remoteservices`:
   - `spend_19_retail_no_grocery`:
   - `spend_19_retail_w_grocery`:
+  - `daily_spend_19_all`:
+  - `daily_spend_19_q1`:
+  - `daily_spend_19_q2`:
+  - `daily_spend_19_q3`:
+  - `daily_spend_19_q4`:
+  - `share_jan2019`:
+  - `share_jan2020`:
+  - `share_decline_covidfirstwave`:
 -->
 <p>All spending variables are measured relative to January 6th to February 2nd 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or <code>spend_19_</code> (relative to Janurary 7th to February 3rd 2019 for all data) instead of <code>spend_</code>.</p>
 <p>The merchant category codes (MCC) making up the grouped spending categories are:</p>
@@ -173,6 +181,13 @@ Data Dictionary</div></h1>
 <li><strong>Non-durable goods:</strong> CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.</li>
 <li><strong>Remote services:</strong> ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.</li>
 <li><strong>In-person services:</strong> ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.</li>
+</ul>
+<p>In addition, four supplemental files are included (see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a> for more details on these files):</p>
+<ul>
+<li><em>Affinity Income Shares - National - 2019.csv</em></li>
+<li><em>Affinity Income Shares - National - 2020.csv</em></li>
+<li><em>Affinity Industry Composition - National - 2020.csv</em></li>
+<li><em>Affinity Daily Total Spending - National - Daily.csv</em></li>
 </ul>
 <h3 id="job-postings">Job Postings</h3>
 <p>Job postings data from <a href="https://lightcast.io/">Lightcast</a> (formerly known as Burning Glass Technologies).</p>

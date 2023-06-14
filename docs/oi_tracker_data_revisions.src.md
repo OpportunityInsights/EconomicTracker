@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-04-14
+subtitle: last updated on 2023-06-14
 documentclass: scrartcl
 ---
 
@@ -82,6 +82,19 @@ We corrected a bug in the implementation of our chain-weighting methodology. Thi
 
 From March 15th, 2022 to December 2nd, 2022, the series was always chain-weighted forwards, so that it was always in line with the level of coverage prior to the discontinuity — rather than the lower level of coverage. This has been corrected so that the series is now chain-weighted forwards or backwards to be in line with the lower level of coverage. This has resulted in a noticeable revision to a few counties, which now have lower levels after a discontinuous break. At the state level, this adjustment has resulted in only minor revisions.  
 
+### Revisions on June 14th 2023
+
+We added four supplemental files: 
+
+- *Affinity Income Shares - National - 2019.csv*: share of total spending in January 2019 by income quartile.
+
+- *Affinity Income Shares - National - 2020.csv*: share of total spending in January 2020 by income quartile.
+
+- *Affinity Industry Composition - National - 2020.csv*: share of total spending in January 2020, and the share of the decline in total spending during the first wave of the Covid-19 pandemic, by industry.
+
+- *Affinity Daily Total Spending - National - Daily.csv*: daily total spending indexed to January 2019 by income quartile, without smoothing using a 7-day moving average.
+
+For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ## Small Business Revenue & Small Businesses Open
 
