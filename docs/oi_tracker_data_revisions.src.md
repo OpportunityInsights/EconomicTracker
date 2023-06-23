@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-06-14
+subtitle: last updated on 2023-06-23
 documentclass: scrartcl
 ---
 
@@ -246,7 +246,7 @@ As schools have attritioned from the sample we've revised our methodology to imp
 
 In addition, previously in the case when correcting for transitory anomalous spikes, week to week changes in the underlying levels of greater than 50 percentage points that immediately revert by an equally sized change in the subsequent week, for a given week for a given school we have changed how both the procedure overall operates and how one sided spikes bounded by a missing value are handled. Overall previously the procedure for spike correction detected and applied the correction sequentially for positive and the negative value spikes. This has been revised to apply these changes simultaneously to a series. Given the size of anomalous change needed for a spike to be identified this has a small impact on the overall series. In the case where a one sided spike was bounded by a missing observation we previously in the 2021 fall semester imputed the transitory anomalous spike as a missing observations as well. As we now impute within semester active schools' missing observations as zeros, we now no longer impute these one sided spikes as missing and instead impute them with the 3 week moving average identically to all other transitory spike corrections in the series. This applies to a small number of cases within certain states and has minimal impact.       
 
-## COVID-19 Infections
+## COVID-19 Infections and Vaccinations
 
 ### Revisions on March 17th 2021
 
@@ -260,10 +260,18 @@ Previously we pulled reported cases, deaths, and tests at the county level from 
 
 On 2023-03-23 the New York Times discontinued its COVID tracking efforts and published the last updates to its database tracking COVID cases and deaths in light of increased tracking and reporting by government agencies like The Centers for Disease Control and Prevention. For COVID-19 cases and deaths data published after 2023-03-23 we now make use of weekly data published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). In order to integrate the new weekly sums published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) with the previous daily values published by [New York Times](https://github.com/nytimes/covid-19-data) we scale all cases and deaths values to a 7 day rolling sum rather than a 7 day rolling average as previously reported.
 
-## COVID-19 Vaccinations
+### Revisions on June 23rd 2023
 
-No substantive data revisions reported.
+1. On 2023-05-11, the Centers for Disease Control and Prevention (CDC) ceased to update their COVID-19 vaccination tracking data series and existing COVID-19 cases and deaths tracking data series. On 2023-06-01, the CDC published the final update to their weekly data series tracking COVID-19 cases and deaths.
+
+   The Economic Tracker data on weekly COVID-19 cases, deaths and vaccinations up to 2023-05-10 reflects these final updates from the CDC, which will not receive further updates.
+ 
+   We continue to pull and collate the state-level death counts from the data available on the updated [COVID Data Tracker](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) and state level counts of hospitalizations available from the [Department of Health and Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh).
+
+ 2. We no longer compute a rolling 7 day sum of the *cumulative* COVID-19 cases and deaths. Starting on April 11th 2023 we switched from a 7-day rolling average to a 7-day rolling sum in order to ensure the units remain consistent across historical daily and weekly data. But the 7-day rolling sum was erroneously applied to *cumulative* COVID-19 cases and deaths, which multiplies the cumulative counts by 7. We have corrected the error and restored a 7-day rolling average for *cumulative* cases and deaths.
 
 ## Time Outside Home
 
-No substantive data revisions reported.
+### Revisions on October 20th 2022
+
+On 2022-10-15 Google discontinued its updates to the [COVID-19 Community Mobility Reports](https://www.google.com/covid19/mobility/), posting the last revision on 2022-10-17. The Economic Tracker data on Time Outside Home reflects this final update from Google, and will not receive further updates.
