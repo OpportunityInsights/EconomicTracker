@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-06-23</p>
+<p class="subtitle">last updated on 2023-06-26</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -82,6 +82,12 @@ Data Revisions</div></h1>
 <h3 id="revisions-on-december-6th-2022">Revisions on December 6th 2022</h3>
 <p>We have changed the file names of the data files corresponding to our job postings series: they are now prefixed <code>Job Postings - *</code> instead of <code>Burning Glass - *</code>. The data provider, the data received, and the data processing steps we perform remain otherwise unchanged.</p>
 <p>We have renamed the files in light of the recent name change by our data provider, which <a href="https://lightcast.io/launching-lightcast">now operates as Lightcast and was formerly known as Burning Glass Technologies</a>.</p>
+<h3 id="revisions-on-june-26th-2023">Revisions on June 26th 2023</h3>
+<p>We added a supplemental file:</p>
+<ul>
+<li><em>Job Postings Industry Shares - National - 2020.csv</em>: share of job postings by industry in January 2020.</li>
+</ul>
+<p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30th 2021 due to three independent changes in methodology.</p>

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2023-06-14</p>
+<p class="subtitle">last updated on 2023-06-26</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -205,6 +205,14 @@ Data Dictionary</div></h1>
 <li><code>bg_posts_jz5</code>: Average level of job postings relative to January 4-31 2020 requiring extensive preparation (ONET jobzone level 5).</li>
 <li><code>bg_posts_jzgrp12</code>: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).</li>
 <li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
+</ul>
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `share_jan2020`: 
+  - `industry`:
+-->
+<p>In addition, the following supplemental file is included (see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a> for more details on this file):</p>
+<ul>
+<li><em>Job Postings Industry Shares - National - 2020.csv</em></li>
 </ul>
 <h3 id="covid">COVID</h3>
 <p>COVID cases and deaths numbers are from the <a href="https://github.com/nytimes/covid-19-data">New York Times</a> and the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a>, hospitalizations numbers are from the <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health and Human Services</a>, tests numbers are from <a href="https://github.com/govex/COVID-19">Johns Hopkins University</a>, and vaccination numbers are from the <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a>.</p>

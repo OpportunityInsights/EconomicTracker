@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-06-14
+subtitle: last updated on 2023-06-26
 documentclass: scrartcl
 ---  
 
@@ -192,6 +192,15 @@ Job postings data from [Lightcast](https://lightcast.io/) (formerly known as Bur
 - `bg_posts_jz5`: Average level of job postings relative to January 4-31 2020 requiring extensive preparation (ONET jobzone level 5).
 - `bg_posts_jzgrp12`: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).
 - `bg_posts_jzgrp345`: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).
+
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `share_jan2020`: 
+  - `industry`:
+-->
+
+In addition, the following supplemental file is included (see the [documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md) for more details on this file):
+
+- *Job Postings Industry Shares - National - 2020.csv*
 
 ### COVID
 

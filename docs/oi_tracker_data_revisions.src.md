@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-06-23
+subtitle: last updated on 2023-06-26
 documentclass: scrartcl
 ---
 
@@ -141,6 +141,14 @@ Lightcast detected and corrected for a data anomaly related to a major national 
 We have changed the file names of the data files corresponding to our job postings series: they are now prefixed `Job Postings - *` instead of `Burning Glass - *`. The data provider, the data received, and the data processing steps we perform remain otherwise unchanged.
 
 We have renamed the files in light of the recent name change by our data provider, which [now operates as Lightcast and was formerly known as Burning Glass Technologies](https://lightcast.io/launching-lightcast).
+
+### Revisions on June 26th 2023
+
+We added a supplemental file: 
+
+- *Job Postings Industry Shares - National - 2020.csv*: share of job postings by industry in January 2020.
+
+For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ## Employment
 
