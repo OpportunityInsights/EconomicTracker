@@ -310,6 +310,14 @@ Data Dictionary</div></h1>
 <li><code>emp_subset_reweighted_q3</code>: Employment level for workers in the third quartile of the wage distribution (annualized wage between 1.5x and 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.</li>
 <li><code>emp_subset_reweighted_q4</code>: Employment level for workers in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.</li>
 </ul>
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `emp_incq1_apr2020`:
+  - `emp_incq1_jul2020`:
+-->
+<p>In addition, the following supplemental file is included (see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a> for more details on this file):</p>
+<ul>
+<li><em>Earnin - ZCTA - 2020.csv</em></li>
+</ul>
 <h3 id="ui-claims">UI Claims</h3>
 <p>Unemployment insurance claims data from the <a href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of Labor</a> (national and state-level) and numerous individual state agencies (county-level).</p>
 <ul>
@@ -367,6 +375,14 @@ Data Dictionary</div></h1>
 <li><code>revenue_other_services</code>: … in other services businesses (NAICS 2-digit code 81)</li>
 <li><code>revenue_health</code>: … in health &amp; social service businesses (NAICS 2-digit code 62)</li>
 </ul></li>
+</ul>
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `revenue_all_apr2020`:
+  - `revenue_all_jul2020`:
+-->
+<p>In addition, the following supplemental file is included (see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a> for more details on this file):</p>
+<ul>
+<li><em>Womply - ZCTA - 2020.csv</em></li>
 </ul>
 <h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>

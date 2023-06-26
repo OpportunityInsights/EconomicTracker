@@ -115,6 +115,14 @@ Since the no-entry panel does not cover the ZIP code level, we impute the ZIP co
 
 We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.
 
+### Revisions on June 26th 2023
+
+We added a supplemental file: 
+
+- *Womply - ZCTA - 2020.csv*: Small business revenue levels in April and July 2020 at the ZIP-code level.
+
+For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
+
 ## Job Postings
 
 ### Revisions on December 15th 2021
@@ -239,6 +247,13 @@ From December 16th 2022 to April 14th 2023, there was a bug in the code adjustin
 
 After correcting the code, the employment trends are smoother around these discontinuities. The overall trends in employment changes over time are unchanged.
 
+### Revisions on June 26th 2023
+
+We added a supplemental file: 
+
+- *Earnin - ZCTA - 2020.csv*: Employment levels in April and July 2020 at the ZIP-code level.
+
+For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ## Unemployment Claims
 

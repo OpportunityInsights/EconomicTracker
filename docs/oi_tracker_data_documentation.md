@@ -96,6 +96,14 @@ Data Documentation</div></h1>
 <p>We omit counties that don’t have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4-31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.</p>
 <p>To reduce outliers, we manually exclude some state x industry breakdowns that present extreme variation from our state and national level calculations, as well as a small number of counties that demonstrate extreme variation.</p>
 <p><strong>Notes:</strong> Subnational breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.</p>
+<p><strong>Supplemental files:</strong></p>
+<ul>
+<li><em>Womply - ZCTA - 2020.csv</em>
+<ul>
+<li><code>revenue_all_apr2020</code>: Percent change in net revenue for small businesses from January 4-31 2020 to March 23 - April 12 2020, seasonally adjusted.</li>
+<li><code>revenue_all_jul2020</code>: Percent change in net revenue for small businesses from January 4-31 2020 to June 29 - July 26 2020, seasonally adjusted.</li>
+</ul></li>
+</ul>
 <h2 id="small-businesses-open">Small Businesses Open</h2>
 <p><strong>Summary:</strong> Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.</p>
 <p><strong>Data Source:</strong> <a href="https://www.womply.com">Womply</a></p>
@@ -212,6 +220,14 @@ Data Documentation</div></h1>
 </ul>
 <p>The difference in weighting between small and large cells is to account for large amounts of small firm births, particularly in the second half of 2020, which played a strong role in the economic recovery from the pandemic.</p></li>
 <li><p><em>In the Intuit series</em>, we do not make any sample restrictions.</p></li>
+</ul>
+<p><strong>Supplemental files:</strong></p>
+<ul>
+<li><em>Earnin - ZCTA - 2020.csv</em>
+<ul>
+<li><code>emp_incq1_apr2020</code>: Change in employment level for all workers in the Earnin sample (low-wage) from January 2020 to April 2020.</li>
+<li><code>emp_incq1_jul2020</code>: Change in employment level for all workers in the Earnin sample (low-wage), from January 2020 to July 2020.</li>
+</ul></li>
 </ul>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <p><strong>Summary:</strong> Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.</p>

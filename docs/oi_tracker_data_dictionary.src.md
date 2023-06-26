@@ -275,6 +275,15 @@ Employment levels relative to Jan 4-31 2020 from [Paychex](https://www.paychex.c
 - `emp_subset_reweighted_q3`: Employment level for workers in the third quartile of the wage distribution (annualized wage between 1.5x and 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
 - `emp_subset_reweighted_q4`: Employment level for workers in the top quartile of the wage distribution (annualized wage greater than 2.5x the federal poverty line) in county x industry cells with nonzero employment for all four wage quartiles, reweighting to match the county x industry (2-digit NAICS code) distribution of workers in the top quartile of the wage distribution.
 
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `emp_incq1_apr2020`:
+  - `emp_incq1_jul2020`:
+-->
+
+In addition, the following supplemental file is included (see the [documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md) for more details on this file):
+
+- *Earnin - ZCTA - 2020.csv*
+
 ### UI Claims
 
 Unemployment insurance claims data from the [Department of Labor](https://oui.doleta.gov/unemploy/DataDashboard.asp) (national and state-level) and numerous individual state agencies (county-level).
@@ -317,6 +326,15 @@ Small business openings and revenue data from [Womply](https://www.womply.com/).
   - `revenue_professional`: ... in professional services businesses (NAICS 2-digit code 54).
   - `revenue_other_services`: ... in other services businesses (NAICS 2-digit code 81)
   - `revenue_health`: ... in health & social service businesses (NAICS 2-digit code 62)
+
+<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `revenue_all_apr2020`:
+  - `revenue_all_jul2020`:
+-->
+
+In addition, the following supplemental file is included (see the [documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md) for more details on this file):
+
+- *Womply - ZCTA - 2020.csv*
 
 ### Zearn
 

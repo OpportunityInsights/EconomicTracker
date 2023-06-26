@@ -64,6 +64,12 @@ Data Revisions</div></h1>
 <p>Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.</p>
 <h3 id="revisions-on-may-17th-2022">Revisions on May 17th 2022</h3>
 <p>We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.</p>
+<h3 id="revisions-on-june-26th-2023">Revisions on June 26th 2023</h3>
+<p>We added a supplemental file:</p>
+<ul>
+<li><em>Womply - ZCTA - 2020.csv</em>: Small business revenue levels in April and July 2020 at the ZIP-code level.</li>
+</ul>
+<p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
 <h2 id="job-postings">Job Postings</h2>
 <h3 id="revisions-on-december-15th-2021">Revisions on December 15th 2021</h3>
 <p>At the request of Lightcast (formerly known as Burning Glass Technologies) we’ve suppressed the historical data we publish for the following Job Postings series:</p>
@@ -82,7 +88,7 @@ Data Revisions</div></h1>
 <h3 id="revisions-on-december-6th-2022">Revisions on December 6th 2022</h3>
 <p>We have changed the file names of the data files corresponding to our job postings series: they are now prefixed <code>Job Postings - *</code> instead of <code>Burning Glass - *</code>. The data provider, the data received, and the data processing steps we perform remain otherwise unchanged.</p>
 <p>We have renamed the files in light of the recent name change by our data provider, which <a href="https://lightcast.io/launching-lightcast">now operates as Lightcast and was formerly known as Burning Glass Technologies</a>.</p>
-<h3 id="revisions-on-june-26th-2023">Revisions on June 26th 2023</h3>
+<h3 id="revisions-on-june-26th-2023-1">Revisions on June 26th 2023</h3>
 <p>We added a supplemental file:</p>
 <ul>
 <li><em>Job Postings Industry Shares - National - 2020.csv</em>: share of job postings by industry in January 2020.</li>
@@ -152,6 +158,12 @@ Data Revisions</div></h1>
 <p>The Employment data was revised on April 14th 2023 to correct a data processing error.</p>
 <p>From December 16th 2022 to April 14th 2023, there was a bug in the code adjusting for discontinuities in the Paychex data when quartile thresholds cross integer wages. For more details on this adjustment see Online Appendix E.2 of Chetty, Friedman, Hendren and Stepner (April 2023). During this period, the adjustment for the mass of employees at wage $X was incorrectly being made using the mass of employees at the lower wage $X-1. These discontinuities were therefore incompletely smoothed.</p>
 <p>After correcting the code, the employment trends are smoother around these discontinuities. The overall trends in employment changes over time are unchanged.</p>
+<h3 id="revisions-on-june-26th-2023-2">Revisions on June 26th 2023</h3>
+<p>We added a supplemental file:</p>
+<ul>
+<li><em>Earnin - ZCTA - 2020.csv</em>: Employment levels in April and July 2020 at the ZIP-code level.</li>
+</ul>
+<p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <h3 id="revisions-on-july-29th-2021">Revisions on July 29th 2021</h3>
 <p>The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the <a href="https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx">Department of Labor data</a>. Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We’ve corrected this, and claims now align to the appropriate week.</p>

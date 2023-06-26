@@ -128,6 +128,13 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Notes:** Subnational breakdowns by High/Middle/Low income ZIP codes have been temporarily removed since the August 21st 2020 update due to revisions in the structure of the raw data we receive. We hope to add them back to the OI Economic Tracker soon.
 
+**Supplemental files:**
+
+* *Womply - ZCTA - 2020.csv*
+  - `revenue_all_apr2020`: Percent change in net revenue for small businesses from January 4-31 2020 to March 23 - April 12 2020, seasonally adjusted.
+  - `revenue_all_jul2020`: Percent change in net revenue for small businesses from January 4-31 2020 to June 29 - July 26 2020, seasonally adjusted. 
+
+
 ## Small Businesses Open  
 
 **Summary:** Number of small businesses open, as defined by having had at least one transaction in the previous 3 days.
@@ -272,6 +279,12 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 * *In the Intuit series*, we do not make any sample restrictions.
 
+**Supplemental files:**
+
+* *Earnin - ZCTA - 2020.csv*
+  - `emp_incq1_apr2020`: Change in employment level for all workers in the Earnin sample (low-wage) from January 2020 to April 2020.
+  - `emp_incq1_jul2020`: Change in employment level for all workers in the Earnin sample (low-wage), from January 2020 to July 2020. 
+  
 ## Unemployment Claims
 
 **Summary:** Weekly unemployment insurance claims counts and rates (as a share of the 2019 labor force) for all states, as well as initial unemployment insurance claims for select counties where the data is publicly available.
