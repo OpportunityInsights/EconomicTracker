@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2023-06-26
+subtitle: last updated on 2023-06-27
 documentclass: scrartcl
 ---
 
@@ -263,7 +263,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
     - Retail
 
-**Data masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.
+**Data Masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.
 
 * *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.
 
@@ -345,7 +345,7 @@ Note that county-level claims in California, Georgia, Kentucky, and Illinois are
     - PEUC Claims
     - Combined Claims
 
-**Data masking:** No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state's particular masking rules.
+**Data Masking:** No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state's particular masking rules.
 
 **Notes:** Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.
 
@@ -411,7 +411,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
     - Middle Income (56.9% students are free and reduced lunch eligible)
     - Low Income (80.4% students are free and reduced lunch eligible)
 
-**Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
+**Data Masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
 
 ## COVID-19 Infections
 
@@ -434,10 +434,10 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 **Breakdowns:**  
 
 * *New* Cases, Deaths, or Tests (presented as a 7-day moving average for Tests and a 7-day rolling sum for Cases and Deaths)
-* *Total* Cases, Deaths, or Tests
-* *Other* Hospitalized
+* *Total* Cases, Deaths, or Tests (presented as a 7-day moving average)
+* *Other* Hospitalized (presented as a 7-day moving average)
 
-**Data masking:** No masking is performed by Opportunity Insights.
+**Data Masking:** No masking is performed by Opportunity Insights.
 
 ## COVID-19 Vaccinations
 
@@ -497,7 +497,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 * Grocery
 * Workplace
 
-**Data masking:** Google does not release data for geographies where their [internal quality and privacy thresholds](https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data) are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.
+**Data Masking:** Google does not release data for geographies where their [internal quality and privacy thresholds](https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data) are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.
 
 **Notes:**  When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.
 

@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2023-06-26</p>
+<p class="subtitle">last updated on 2023-06-27</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 <h1 id="overview">Overview</h1>
@@ -203,7 +203,7 @@ Data Documentation</div></h1>
 <li>Retail</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
+<p><strong>Data Masking:</strong> As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.</p>
 <ul>
 <li><p><em>In the Paychex series</em>, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.</p>
 <ul>
@@ -280,7 +280,7 @@ Data Documentation</div></h1>
 <li>Combined Claims</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state’s particular masking rules.</p>
+<p><strong>Data Masking:</strong> No masking is performed by Opportunity Insights, but county-level data is subject to varying masking rules implemented by the state agencies that release the data. For more details, check with the relevant state agency for that state’s particular masking rules.</p>
 <p><strong>Notes:</strong> Unemployment claims rates are calculated by dividing unemployment claims counts by the Bureau of Labor Statistics labor force estimates from 2019.</p>
 <p>Under the CARES Act, all states provide 13 additional weeks of federally funded Pandemic Emergency Unemployment Assistance (PEUC) benefits to people who exhaust their regular state benefits. Under the Act, through the end of 2020, some people who exhaust all these benefits, and others who have lost their jobs for reasons arising from the pandemic but who are not normally eligible for UI in their state, are eligible for Pandemic Unemployment Assistance (PUA). “Combined Claims” are defined as the sum of regular, PUA and PEUC unemployment benefit claims.</p>
 <p>National totals for all programs’ unemployment benefit claims are the sum of the claims counts for all states and DC and exclude other territories such as Puerto Rico and the U.S. Virgin Islands.</p>
@@ -323,7 +323,7 @@ Data Documentation</div></h1>
 <li>Low Income (80.4% students are free and reduced lunch eligible)</li>
 </ul></li>
 </ul>
-<p><strong>Data masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
+<p><strong>Data Masking:</strong> Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.</p>
 <h2 id="covid-19-infections">COVID-19 Infections</h2>
 <p><strong>Summary:</strong> The daily count and rate per 100,000 people of confirmed COVID-19 cases, deaths, hospitalizations, or tests performed.</p>
 <p><strong>Data Source:</strong> <a href="https://github.com/nytimes/covid-19-data">The New York Times</a>, <a href="https://github.com/govex/COVID-19/tree/master/data_tables/testing_data">The Johns Hopkins Coronavirus Resource Center</a>, <a href="https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">U.S. Department of Health &amp; Human Services</a>, <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">Centers for Disease Control and Prevention</a></p>
@@ -336,10 +336,10 @@ Data Documentation</div></h1>
 <p><strong>Breakdowns:</strong></p>
 <ul>
 <li><em>New</em> Cases, Deaths, or Tests (presented as a 7-day moving average for Tests and a 7-day rolling sum for Cases and Deaths)</li>
-<li><em>Total</em> Cases, Deaths, or Tests</li>
-<li><em>Other</em> Hospitalized</li>
+<li><em>Total</em> Cases, Deaths, or Tests (presented as a 7-day moving average)</li>
+<li><em>Other</em> Hospitalized (presented as a 7-day moving average)</li>
 </ul>
-<p><strong>Data masking:</strong> No masking is performed by Opportunity Insights.</p>
+<p><strong>Data Masking:</strong> No masking is performed by Opportunity Insights.</p>
 <h2 id="covid-19-vaccinations">COVID-19 Vaccinations</h2>
 <p><strong>Summary:</strong> Percentage of the population who have received one or more doses of any COVID-19 vaccine, completed a COVID-19 vaccination series, or received a COVID-19 booster or additional dose.</p>
 <p><strong>Data Source:</strong> <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home">The Centers for Disease Control and Prevention</a></p>
@@ -378,7 +378,7 @@ Data Documentation</div></h1>
 <li>Grocery</li>
 <li>Workplace</li>
 </ul>
-<p><strong>Data masking:</strong> Google does not release data for geographies where their <a href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data">internal quality and privacy thresholds</a> are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.</p>
+<p><strong>Data Masking:</strong> Google does not release data for geographies where their <a href="https://www.google.com/covid19/mobility/data_documentation.html?hl=en#about-this-data">internal quality and privacy thresholds</a> are not met. Therefore some geographic areas are omitted from the series for certain breakdowns and certain dates.</p>
 <p><strong>Notes:</strong> When data is missing for 1 or 2 consecutive days we linearly interpolate the missing values and construct the 7 day moving average including these interpolated values. If data is missing for 3 or more consecutive days, the corresponding 7 day moving average is also recorded as missing whenever it overlaps with the missing data.</p>
 <p>Time Away From Home is calculated by multiplying the mean time spent inside home from the American Time Use Survey by the percent change in time spent at residential locations reported by Google. For more information about this imputation, see the <strong><a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying paper</a></strong>.</p>
 <h2 id="policy-milestones">Policy Milestones</h2>
