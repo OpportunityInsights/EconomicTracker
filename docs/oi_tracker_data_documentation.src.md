@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Documentation
-subtitle: last updated on 2023-06-27
+subtitle: last updated on 2023-07-18
 documentclass: scrartcl
 ---
 
@@ -35,13 +35,13 @@ Please note that both the data and this data documentation are updated regularly
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 13th 2020 until the most recent date available.
+**Date Range:** January 13, 2020 until the most recent date available.
 
-**Data Frequency:** Data is daily until June 5th 2022, presented as a 7-day lookback moving average. Since June 5th 2022 we only receive weekly data on consumer spending, and the data is presented as weekly data points.
+**Data Frequency:** Data is daily until June 5, 2022, presented as a 7-day lookback moving average. Since June 5, 2022 we only receive weekly data on consumer spending, and the data is presented as weekly data points.
 
-**Indexing Period:** January 4th to January 31st 2020
+**Indexing Period:** January 6 to February 2, 2020
 
-**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019 (January 7th, 2019 to February 3rd, 2019), data in 2020 onward is indexed relative to January 2020 (January 6th, 2020 to February 2nd, 2020). We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019 (January 7, 2019 to February 3, 2019), data in 2020 onward is indexed relative to January 2020 (January 6, 2020 to February 2, 2020). We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. We account for differences in the dates of federal holidays between 2019 and 2020 by shifting the 2019 reference data to align the holidays before performing the year-over-year division.
 
 **Geographies:** National, State, County, Metro
 
@@ -69,17 +69,17 @@ Please note that both the data and this data documentation are updated regularly
 **Supplemental files:**
 
 * *Affinity Income Shares - National - 2019.csv*
-  - `share_jan2019`: the share of weekly total spending from January 7, 2019 to February 3, 2019 by income quartile.
+  - `share_jan2019`: the share of weekly total spending from January 7 to February 3, 2019 by income quartile.
 
 * *Affinity Income Shares - National - 2020.csv*
-    - `share_jan2020`: the share of weekly total spending from January 6, 2020 to February 2, 2020 by income quartile.
+    - `share_jan2020`: the share of weekly total spending from January 6 to February 2, 2020 by income quartile.
 
 * *Affinity Industry Composition - National - 2020.csv*
-    - `share_jan2020`: the share of weekly total spending from January 6, 2020 to February 2, 2020 by MCC group.
-    - `share_decline_covidfirstwave`: the share of the decline in weekly total spending in the first wave of the pandemic by MCC group. To measure the decline, we first take the sum of total spending in four periods: from January 7, 2019 to February 3, 2019, from March 25, 2019 to April 14, 2019, from January 6, 2020 to February 2, 2020, and from March 30, 2020 to April 20, 2020. Then, the decline is calculated as the change in spending between April 2019 and April 2020, minus the change in spending between January 2019 and January 2020. This measures the decline in total spending during the first wave of the Covid-19 pandemic, accounting for the normal decline in spending across the same months in 2019.
+    - `share_jan2020`: the share of weekly total spending from January 6 to February 2, 2020 by MCC group.
+    - `share_decline_covidfirstwave`: the share of the decline in weekly total spending in the first wave of the pandemic by MCC group. To measure the decline, we first take the sum of total spending in four periods: from January 7 to February 3, 2019, from March 25 to April 14, 2019, from January 6 to February 2, 2020, and from March 30 to April 20, 2020. Then, the decline is calculated as the change in spending between April 2019 and April 2020, minus the change in spending between January 2019 and January 2020. This measures the decline in total spending during the first wave of the COVID-19 pandemic, accounting for the normal decline in spending across the same months in 2019.
 
 * *Affinity Daily Total Spending - National - Daily.csv*
-    - `daily_spend_19_all` and `daily_spend_19_q#`: daily total spending indexed to total spending from January 7, 2019 to February 3, 2019 by income quartile, not seasonally adjusted.
+    - `daily_spend_19_all` and `daily_spend_19_q#`: daily total spending indexed to total spending from January 7 to February 3, 2019 by income quartile, not seasonally adjusted.
     - The data in this file is not smoothed using a 7-day moving average, and it does not apply the intensive/extensive margin switching adjustment described in Appendix B.2 of the [paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf).
 
 ## Small Business Revenue  
@@ -90,13 +90,13 @@ Please note that both the data and this data documentation are updated regularly
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 15th 2020 until the most recent date available.
+**Date Range:** January 15, 2020 until the most recent date available.
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th to January 31st 2020
+**Indexing Period:** January 4 to January 31, 2020
 
-**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019.
 
 In all series we adjust for holidays while seasonally adjusting a given series to ensure that we are comparing weeks containing a significant holiday to a corresponding week containing that holiday. This adjustment has three components: (1) weeks with the same holiday are always compared to each other; (2) weeks before the same holiday are always compared to each other; and (3) weeks after holidays are always compared to each other. Thus, even if a holiday does not fall in the same week in the year being normed and the comparison year, weeks will be aligned when compared to each other.
 
@@ -122,7 +122,7 @@ In all series we adjust for holidays while seasonally adjusting a given series t
 
 The data we receive from Womply is restricted to businesses that have an annual revenue that is less than the [SBA thresholds](https://www.sba.gov/document/support--table-size-standards) by industry, and have an average revenue that is within 3 standard deviations of the state average.
 
-We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4-31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
+We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021, and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4 to 31, 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
 
 To reduce outliers, we manually exclude some state x industry breakdowns that present extreme variation from our state and national level calculations, as well as a small number of counties that demonstrate extreme variation.
 
@@ -131,8 +131,8 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 **Supplemental files:**
 
 * *Womply - ZCTA - 2020.csv*
-  - `revenue_all_apr2020`: Percent change in net revenue for small businesses from January 4-31 2020 to March 23 - April 12 2020, seasonally adjusted.
-  - `revenue_all_jul2020`: Percent change in net revenue for small businesses from January 4-31 2020 to June 29 - July 26 2020, seasonally adjusted. 
+  - `revenue_all_apr2020`: Percent change in net revenue for small businesses from January 4 to 31, 2020 to March 23 to April 12, 2020, seasonally adjusted.
+  - `revenue_all_jul2020`: Percent change in net revenue for small businesses from January 4 to 31, 2020 to June 29 to July 26, 2020, seasonally adjusted. 
 
 
 ## Small Businesses Open  
@@ -143,13 +143,13 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 15th 2020 until the most recent date available.
+**Date Range:** January 15, 2020 until the most recent date available.
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th to January 31st 2020
+**Indexing Period:** January 4 to 31, 2020
 
-**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019. Weeks that span the end of the year are treated as the first week of the later year.
+**Indexing Type:** Seasonally adjusted change since January 2020. We calculate the change relative to the January index period: 2019 data is indexed relative to January 2019, data in 2020 onward is indexed relative to January 2020. We then seasonally adjust by dividing by the indexed 2019 value, which represents the difference between the change since January 2020 compared to the change since January observed since 2019.
 
 In all series we adjust for holidays while seasonally adjusting a given series to ensure that we are comparing weeks containing a significant holiday to a corresponding week containing that holiday. This adjustment has three components: (1) weeks with the same holiday are always compared to each other; (2) weeks before the same holiday are always compared to each other; and (3) weeks after holidays are always compared to each other. Thus, even if a holiday does not fall in the same week in the year being normed and the comparison year, weeks will be aligned when compared to each other.
 
@@ -175,7 +175,7 @@ In all series we adjust for holidays while seasonally adjusting a given series t
 
 The data we receive from Womply is restricted to businesses that have an annual revenue that is less than the [SBA thresholds](https://www.sba.gov/document/support--table-size-standards) by industry, and have an average revenue that is within 3 standard deviations of the state average.
 
-We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4-31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
+We omit counties that don't have a minimum of 3 businesses operating in the first week of January 2020, January 2021 and January 2022. For the county-level series, we mask any counties for which revenue is less than $250,000 during the indexing period (January 4 to 31 2020): such counties are incorporated into state-level or national-level aggregates but are not reported isolated in the county-level data.
 
 To reduce outliers, we manually exclude some state x industry breakdowns that present extreme variation from our state and national level calculations, as well as a small number of counties that demonstrate extreme variation.
 
@@ -189,11 +189,11 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Update Frequency:** Weekly
 
-**Date Range:** January 17th 2020 until the most recent date available.
+**Date Range:** January 17, 2020 until the most recent date available.
 
 **Data Frequency:** Weekly data points, with each week ending on Friday.
 
-**Indexing Period:** January 4th to January 31st 2020
+**Indexing Period:** January 4 to 31, 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -222,7 +222,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 **Supplemental files:**
 
 * *Job Postings Industry Shares - National - 2020.csv*
-  - `share_jan2020`: the share of job postings by industry (2-digit NAICS) in January 2020.
+  - `share_jan2020`: the share of job postings by industry (2-digit NAICS) in the period from January 4 to 31, 2020.
 
 ## Employment  
 
@@ -232,11 +232,11 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Update Frequency:** Weekly  
 
-**Date Range:** January 15th 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.
+**Date Range:** January 15, 2020 until the most recent date available. The most recent date available for the full series depends on the combination of Paychex and Intuit data.
 
 **Data Frequency:** Weekly
 
-**Indexing Period:** January 4th to January 31st 2020
+**Indexing Period:** January 4 to 31, 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
@@ -265,7 +265,7 @@ To reduce outliers, we manually exclude some state x industry breakdowns that pr
 
 **Data Masking:** As the employment series is a composite series, each of its component series have their own masking standards that in aggregate determine masking for the series.
 
-* *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4-31 2020, and the change in employment relative to July 1-31 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.
+* *In the Paychex series*, we reduce the weight of cells in which we detect firm entry/exit over time. In each county x industry (two-digit NAICS code) x firm size x wage quartile cell, we compute the change in employment relative to January 4 to 31, 2020, and the change in employment relative to July 1 to 31, 2020. For county x industry x firm size x wage quartile cells between January 2020 and the end of the series, we reduce the weight we place on the series if we observe changes in employment that indicate firm entry or exit.
 
   - For cells with over 50 employees:
     - We reduce the weight by 2 percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
@@ -318,7 +318,7 @@ The county-level series is only available for states whose respective state agen
 
 **Update Frequency:** Weekly (where available, in the case of county-level data)
 
-**Date Range:** January 18th 2020 until the most recent date available.
+**Date Range:** January 18, 2020 until the most recent date available.
 
 **Data Frequency:** Weekly data points, with each week ending on Saturday.
 
@@ -361,11 +361,11 @@ National totals for all programs' unemployment benefit claims are the sum of the
 
 **Update Frequency:** Weekly, except during summer and winter school breaks.
 
-**Date Range:** January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
+**Date Range:** January 6, 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th to February 7th 2020
+**Indexing Period:** January 6 to February 7, 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.  
 
@@ -381,7 +381,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
     - Middle Income (56.9% students are free and reduced lunch eligible)
     - Low Income (80.4% students are free and reduced lunch eligible)
 
-**Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
+**Data masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period from January 6 to February 7, 2020 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7, 2020.
 
 ## Student Progress in Math
 
@@ -391,11 +391,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** Weekly, except during summer and winter school breaks.
 
-**Date Range:** January 6th 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
+**Date Range:** January 6, 2020 until the most recent date available. The data series is not updated during summer or winter school holidays.
 
 **Data Frequency:** Weekly data points, with each week ending on Sunday.
 
-**Indexing Period:** January 6th to February 7th 2020
+**Indexing Period:** January 6 to February 7, 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -411,7 +411,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
     - Middle Income (56.9% students are free and reduced lunch eligible)
     - Low Income (80.4% students are free and reduced lunch eligible)
 
-**Data Masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 and February 7 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7.
+**Data Masking:** Data is masked such that any county with fewer than two districts, fewer than three schools, or fewer than 50 students on average using Zearn Math during the period between January 6 to February 7, 2020 is excluded. Masked county level data is replaced with the commuting zone average so long as there are more than two school districts in the commuting zone or at least three schools in the commuting zone. If these condition are not met the county-level data remains masked. Additionally we exclude schools who did not have at least 5 students using Zearn Math for at least one week from January 6 to February 7, 2020.
 
 ## COVID-19 Infections
 
@@ -421,7 +421,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** Daily
 
-**Date Range:** January 22nd 2020 until the most recent date available.
+**Date Range:** January 22, 2020 until the most recent date available.
 
 **Data Frequency:** Daily, presented as a 7-day moving average or 7-day rolling sum
 
@@ -447,7 +447,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** Daily
 
-**Date Range:** February 24th 2021 until the most recent date available.
+**Date Range:** February 24, 2021 until the most recent date available.
 
 **Data Frequency:** Daily, presented as a 7-day moving average for new vaccinations
 
@@ -468,7 +468,7 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Data masking:** No masking is performed by Opportunity Insights.
 
-**Notes:** CDC data published prior to the 24th of February 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24th.
+**Notes:** CDC data published prior to February 24, 2021 used a different methodology to assign vaccinations to the state where they were administered, producing numbers that are not directly comparable to those published after February 24.
 
 ## Time Outside Home
 
@@ -478,11 +478,11 @@ To ensure privacy, the data we obtain are masked such that any county with fewer
 
 **Update Frequency:** When released by Google, typically every 4-7 days.
 
-**Date Range:** February 24th 2020 until the most recent date available.
+**Date Range:** February 24, 2020 until the most recent date available.
 
 **Data Frequency:** Daily  
 
-**Indexing Period:** January 3rd to February 5th 2020
+**Indexing Period:** January 3 to February 5, 2020
 
 **Indexing Type:** Change relative to the January 2020 index period, not seasonally adjusted.
 
@@ -509,6 +509,6 @@ Time Away From Home is calculated by multiplying the mean time spent inside home
 
 **Data Source(s):** New York Times, MCH Strategic Data, the Institute for Health Metrics and Evaluation, and local news and government sources.
 
-**Update Frequency:** This file is not being updated with data beyond June 30th 2022.
+**Update Frequency:** This file is not being updated with data beyond June 30, 2022.
 
 **Geographies:** State

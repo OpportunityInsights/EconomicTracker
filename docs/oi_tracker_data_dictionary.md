@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2023-06-27</p>
+<p class="subtitle">last updated on 2023-07-18</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
 
@@ -173,7 +173,7 @@ Data Dictionary</div></h1>
   - `share_jan2020`:
   - `share_decline_covidfirstwave`:
 -->
-<p>All spending variables are measured relative to January 6th to February 2nd 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to Jan 2019 for 2019 data, relative to Jan 2020 for 2020 data onward) or <code>spend_19_</code> (relative to Janurary 7th to February 3rd 2019 for all data) instead of <code>spend_</code>.</p>
+<p>All spending variables are measured relative to January 6 to February 2, 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, <code>q1</code> is the quartile with the lowest median income and <code>q4</code> is the quartile with the highest median income. At the national level, we release a variety of breakdowns <em>without seasonal adjustment</em> in variables that begin with <code>spend_s_</code> (relative to January 2019 for 2019 data, relative to January 2020 for 2020 data onward) or <code>spend_19_</code> (relative to Janurary 7 to February 3, 2019 for all data) instead of <code>spend_</code>.</p>
 <p>The merchant category codes (MCC) making up the grouped spending categories are:</p>
 <ul>
 <li><strong>Retail spending:</strong> CLO clothing and clothing accessories; BLD building materials, garden equipment, and supplies; ELC electronics and appliances; FBS food and beverage stores; FUR furniture and home furnishings; GEN general merchandise stores; and SPO sporting goods, hobbies, musical instruments, and book stores.</li>
@@ -192,19 +192,19 @@ Data Dictionary</div></h1>
 <h3 id="job-postings">Job Postings</h3>
 <p>Job postings data from <a href="https://lightcast.io/">Lightcast</a> (formerly known as Burning Glass Technologies).</p>
 <ul>
-<li><code>bg_posts</code>: Average level of job postings relative to January 4-31 2020.</li>
-<li><code>bg_posts_ss30</code>: Average level of job postings relative to January 4-31 2020 in manufacturing (NAICS supersector 30).</li>
-<li><code>bg_posts_ss55</code>: Average level of job postings relative to January 4-31 2020 in financial activities (NAICS supersector 55).</li>
-<li><code>bg_posts_ss60</code>: Average level of job postings relative to January 4-31 2020 in professional and business services (NAICS supersector 60).</li>
-<li><code>bg_posts_ss65</code>: Average level of job postings relative to January 4-31 2020 in education and health services (NAICS supersector 65).</li>
-<li><code>bg_posts_ss70</code>: Average level of job postings relative to January 4-31 2020 in leisure and hospitality (NAICS supersector 70).</li>
-<li><code>bg_posts_jz1</code>: Average level of job postings relative to January 4-31 2020 requiring little/no preparation (ONET jobzone level 1).</li>
-<li><code>bg_posts_jz2</code>: Average level of job postings relative to January 4-31 2020 requiring some preparation (ONET jobzone level 2).</li>
-<li><code>bg_posts_jz3</code>: Average level of job postings relative to January 4-31 2020 requiring medium preparation (ONET jobzone level 3).</li>
-<li><code>bg_posts_jz4</code>: Average level of job postings relative to January 4-31 2020 requiring considerable preparation (ONET jobzone level 4).</li>
-<li><code>bg_posts_jz5</code>: Average level of job postings relative to January 4-31 2020 requiring extensive preparation (ONET jobzone level 5).</li>
-<li><code>bg_posts_jzgrp12</code>: Average level of job postings relative to January 4-31 2020 requiring low preparation (ONET jobzone levels 1 and 2).</li>
-<li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4-31 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
+<li><code>bg_posts</code>: Average level of job postings relative to January 4 to 31, 2020.</li>
+<li><code>bg_posts_ss30</code>: Average level of job postings relative to January 4 to 31, 2020 in manufacturing (NAICS supersector 30).</li>
+<li><code>bg_posts_ss55</code>: Average level of job postings relative to January 4 to 31, 2020 in financial activities (NAICS supersector 55).</li>
+<li><code>bg_posts_ss60</code>: Average level of job postings relative to January 4 to 31, 2020 in professional and business services (NAICS supersector 60).</li>
+<li><code>bg_posts_ss65</code>: Average level of job postings relative to January 4 to 31, 2020 in education and health services (NAICS supersector 65).</li>
+<li><code>bg_posts_ss70</code>: Average level of job postings relative to January 4 to 31, 2020 in leisure and hospitality (NAICS supersector 70).</li>
+<li><code>bg_posts_jz1</code>: Average level of job postings relative to January 4 to 31, 2020 requiring little/no preparation (ONET jobzone level 1).</li>
+<li><code>bg_posts_jz2</code>: Average level of job postings relative to January 4 to 31, 2020 requiring some preparation (ONET jobzone level 2).</li>
+<li><code>bg_posts_jz3</code>: Average level of job postings relative to January 4 to 31, 2020 requiring medium preparation (ONET jobzone level 3).</li>
+<li><code>bg_posts_jz4</code>: Average level of job postings relative to January 4 to 31, 2020 requiring considerable preparation (ONET jobzone level 4).</li>
+<li><code>bg_posts_jz5</code>: Average level of job postings relative to January 4 to 31, 2020 requiring extensive preparation (ONET jobzone level 5).</li>
+<li><code>bg_posts_jzgrp12</code>: Average level of job postings relative to January 4 to 31, 2020 requiring low preparation (ONET jobzone levels 1 and 2).</li>
+<li><code>bg_posts_jzgrp345</code>: Average level of job postings relative to January 4 to 31, 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).</li>
 </ul>
 <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
   - `share_jan2020`: 
@@ -271,7 +271,7 @@ Data Dictionary</div></h1>
 </ul></li>
 </ul>
 <h3 id="google-mobility">Google Mobility</h3>
-<p>GPS mobility data indexed to Jan 3-Feb 6 2020 from <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>.</p>
+<p>GPS mobility data indexed to January 3 to February 6, 2020 from <a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a>.</p>
 <ul>
 <li><code>gps_away_from_home</code>: Time spent outside of residential locations.</li>
 <li><code>gps_retail_and_recreation</code>: Time spent at retail and recreation locations.</li>
@@ -282,7 +282,7 @@ Data Dictionary</div></h1>
 <li><code>gps_residential</code>: Time spent at residential locations.</li>
 </ul>
 <h3 id="employment">Employment</h3>
-<p>Employment levels relative to Jan 4-31 2020 from <a href="https://www.paychex.com/">Paychex</a> and <a href="https://www.intuit.com/">Intuit</a>.</p>
+<p>Employment levels relative to January 4 to 31, 2020 from <a href="https://www.paychex.com/">Paychex</a> and <a href="https://www.intuit.com/">Intuit</a>.</p>
 <ul>
 <li><code>emp</code>: Employment level for all workers.</li>
 <li><code>emp_incq1</code>: Employment level for workers in the bottom quartile of the wage distribution (annualized wage lower than the federal poverty line).</li>
@@ -353,7 +353,7 @@ Data Dictionary</div></h1>
 <h3 id="womply">Womply</h3>
 <p>Small business openings and revenue data from <a href="https://www.womply.com/">Womply</a>.</p>
 <ul>
-<li><code>merchants_all</code>: Percent change in number of small businesses open, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
+<li><code>merchants_all</code>: Percent change in number of small businesses open, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4 to 31, 2020.
 <ul>
 <li><code>merchants_inchigh</code>: … in high income (quartile 4 of median income) ZIP codes.</li>
 <li><code>merchants_incmiddle</code>: … in middle income (quartiles 2 &amp; 3 of median income) ZIP codes.</li>
@@ -364,7 +364,7 @@ Data Dictionary</div></h1>
 <li><code>merchants_other_services</code>: … in other services businesses (NAICS 2-digit code 81)</li>
 <li><code>merchants_health</code>: … in health &amp; social service businesses (NAICS 2-digit code 62)</li>
 </ul></li>
-<li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4-31 2020.
+<li><code>revenue_all</code>: Percent change in net revenue for small businesses, calculated as a seven-day moving average, seasonally adjusted, and indexed to January 4 to 31, 2020.
 <ul>
 <li><code>revenue_inchigh</code>: … in high income (quartile 4 of median income) zipcodes.</li>
 <li><code>revenue_incmiddle</code>: … in middle income (quartiles 2 &amp; 3 of median income) zipcodes.</li>
@@ -387,14 +387,14 @@ Data Dictionary</div></h1>
 <h3 id="zearn">Zearn</h3>
 <p>Online math learning data from <a href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>
-<li><code>engagement</code>: Average level of students using platform relative to January 6-February 21 2020.</li>
-<li><code>engagement_inclow</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
-<li><code>engagement_incmiddle</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
-<li><code>engagement_inchigh</code>: Average level of students using platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income.</li>
-<li><code>badges</code>: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020.</li>
-<li><code>badges_inclow</code>: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
-<li><code>badges_incmiddle</code>: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
-<li><code>badges_inchigh</code>: Average level of student achievements earned (badges) on platform relative to January 6-February 21 2020 for schools in the 25% of ZIP codes with the highest median income. <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+<li><code>engagement</code>: Average level of students using platform relative to January 6 to February 21, 2020.</li>
+<li><code>engagement_inclow</code>: Average level of students using platform relative to January 6 to February 21, 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
+<li><code>engagement_incmiddle</code>: Average level of students using platform relative to January 6 to February 21, 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
+<li><code>engagement_inchigh</code>: Average level of students using platform relative to January 6 to February 21, 2020 for schools in the 25% of ZIP codes with the highest median income.</li>
+<li><code>badges</code>: Average level of student achievements earned (badges) on platform relative to January 6 to February 21, 2020.</li>
+<li><code>badges_inclow</code>: Average level of student achievements earned (badges) on platform relative to January 6 to February 21, 2020 for schools in the 25% of ZIP codes with the lowest median income.</li>
+<li><code>badges_incmiddle</code>: Average level of student achievements earned (badges) on platform relative to January 6 to February 21, 2020 for schools in ZIP codes with median income between the 25th and 75th percentiles.</li>
+<li><code>badges_inchigh</code>: Average level of student achievements earned (badges) on platform relative to January 6 to February 21, 2020 for schools in the 25% of ZIP codes with the highest median income. <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
 - `break_engagement`:
 - `break_badges`:
 - `break_engagement_inchigh`:

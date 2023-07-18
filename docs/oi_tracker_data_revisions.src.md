@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-06-26
+subtitle: last updated on 2023-07-18
 documentclass: scrartcl
 ---
 
@@ -18,7 +18,7 @@ documentclass: scrartcl
 <a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> `Click here to download a PDF version of this document`{=html}</a>
 
 # Overview
-This document provides a description of major revisions to the data posted by the Opportunity Insights Economic Tracker. The document is organized sequentially by series in the tracker, among series that have had substantive data revisions since June 30th 2021 due to changes in data processing or data sources over time.
+This document provides a description of major revisions to the data posted by the Opportunity Insights Economic Tracker. The document is organized sequentially by series in the tracker, among series that have had substantive data revisions since June 30, 2021 due to changes in data processing or data sources over time.
 
 This document is updated regularly and the following information is subject to change.
 
@@ -36,7 +36,7 @@ The consumer spending data was revised with three changes:
 
     Our objective is to simultaneously (1) isolate and remove variation in spending driven by the number of debit/credit cards in our sample changing due to growth or shrinkage in a payment provider's customer base, and (2) incorporate variation in spending driven by the number of debit/credit cards in our sample changing due to changes in the utilization of cards, which can reflect underlying economic conditions. To account for both, we first estimate a two-state switching model of the relationship between [Personal Consumption Expenditure](https://fred.stlouisfed.org/series/PCE) as measured by the U.S. Bureau of Economic Analysis and the level of credit and debit spending and number of cards in usage we received from Affinity Solutions. Our estimates imply a state change between February 2020 and August 2020: the number of cards in use is predictive of Personal Consumption Expenditures during this period, but statistically insignificant outside this period. This is consistent with a pattern where people exhibited extensive margin changes in card spending during the initial waves of COVID-19, but outside of that period changes in the number of cards being used reflect changes in the number of people in-sample as opposed to changes in the propensity to consume of a given set of people.
 
-    We therefore construct an estimate of spending that reflects total spending during Feb-Aug 2020 and spending per card outside this period. For each location (*l*), industry (*i*) and time (*t*) we compute:
+    We therefore construct an estimate of spending that reflects total spending during February to August 2020 and spending per card outside this period. For each location (*l*), industry (*i*) and time (*t*) we compute:
 
 <img src="https://render.githubusercontent.com/render/math?math=\text{adjusted_spending}_{l,i,t}=%20\begin{cases}\frac{spending_{l,i,t}}{cards_{l,\cdot,t}}\times\overline{cards_{l,\cdot,t'\in\text{Jan%202020}}}\text{%20if%20}%20t\leq%20\text{January%202020}\\\\\frac{spending_{l,i,t}}{cards_{l,\cdot,t}}\times\overline{cards_{l,\cdot,t'\in\text{Jan%202020}}}\times\frac{\overline{cards_{l,\cdot,%20t'%20\geq%20t%20\mid%20t'\in\text{Feb%202020}}}}{\overline{cards_{l,\cdot,%20t'\in\text{Feb%202020}}}}\text{%20if%20}%20t\in%20\text{February%202020}\\\\\frac{spending_{l,i,t}}{cards_{l,\cdot,t}}\times\overline{cards_{l,\cdot,t'\in\text{Jan,2020}}}\times\frac{cards_{l,\cdot,%20t}}{\overline{cards_{l,\cdot,%20t'\in\text{Feb%202020}}}}\text{%20if%20}%20t\in%20\text{[March%202020,%20July%202020]}\\\\\frac{spending_{l,i,t}}{cards_{l,\cdot,t}}\times\overline{cards_{l,\cdot,t'\in\text{Jan%202020}}}\times\frac{\overline{cards_{l,\cdot,%20t'%20\leq%20t%20\mid%20t'\in\text{Aug%202020}}}}{\overline{cards_{l,\cdot,%20t'\in\text{Feb%202020}}}}\text{%20if%20}%20t\in%20\text{August%202020}\\\\\frac{spending_{l,i,t}}{cards_{l,\cdot,t}}\times\overline{cards_{l,\cdot,t'\in\text{Jan%202020}}}\times\frac{\overline{cards_{l,t'\in\text{Aug%202020}}}}{\overline{cards_{l,\cdot,%20t'\in\text{Feb%202020}}}}\text{%20if%20}%20t\geq%20\text{September%202020}\end{cases}">
 
@@ -50,21 +50,21 @@ The consumer spending data was revised with three changes:
 
 ### Revisions on June 15 2022
 
-We have revised the method implemented on March 15th 2022 to control for steady growth or shrinkage in individual payment providers' customer bases.
+We have revised the method implemented on March 15, 2022 to control for steady growth or shrinkage in individual payment providers' customer bases.
 
-* Our seasonally adjusted estimates of spending for 2020 and beyond are obtained by dividing by 2019 estimates of spending. The method implemented on March 15th 2022 measures spending using spending per card in all periods except Feb-Aug 2020: during that period, we use total spending for the reasons discussed in the section above. This generated an upward bias in the seasonally adjusted data for summer 2020, since the 2019 reference period reflected only spending per card while the 2020 Feb-Aug period incorporated extensive margin increases in the number of cards in the sample.
+* Our seasonally adjusted estimates of spending for 2020 and beyond are obtained by dividing by 2019 estimates of spending. The method implemented on March 15, 2022 measures spending using spending per card in all periods except February to August, 2020: during that period, we use total spending for the reasons discussed in the section above. This generated an upward bias in the seasonally adjusted data for summer 2020, since the 2019 reference period reflected only spending per card while the 2020 Feb-Aug period incorporated extensive margin increases in the number of cards in the sample.
 
-* We have therefore constructed an estimate of spending that reflects total spending during Feb-Aug 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.
+* We have therefore constructed an estimate of spending that reflects total spending during February to August, 2019 and spending per card outside this period in 2019, mimicking the transition between total spending and spending per card previously implemented for 2020. To create seasonally adjusted estimates of spending in 2020, we use this newly constructed analogous data for 2019. To create seasonally adjusted estimates for 2021 and later, we use spending per card in 2019.
 
 * This adjustment reduced the estimated spending level in summer 2020. The new estimates align better with public benchmarks (NIPA, MARTS).
 
 ### Revisions on August 12th 2022
 
-As of June 5th 2022 we only receive consumer spending data at a weekly level of aggregation. We will continue to publish weekly data on consumer spending, but we will not publish daily variation past June 5th 2022.
+As of June 5, 2022 we only receive consumer spending data at a weekly level of aggregation. We will continue to publish weekly data on consumer spending, but we will not publish daily variation past June 5, 2022.
 
 ### Revisions on September 9th 2022
 
-From August 12th 2022 to September 9th 2022, an error in the processing code resulted in small but significant biases due to incorrect chain-weighting around the sharp discontinuities generated by entries and exits of payment providers. For more information about the procedure for correcting those discontinuities, see the "Revisions on March 15th 2022" above.
+From August 12 to September 9, 2022, an error in the processing code resulted in small but significant biases due to incorrect chain-weighting around the sharp discontinuities generated by entries and exits of payment providers. For more information about the procedure for correcting those discontinuities, see the "Revisions on March 15th 2022" above.
 
 During this period, the number of cards was correctly chain-weighted at break dates, but the spending per card was not being chain-weighted. This has been corrected in the latest data release so that both are chain weighted at break dates. Before and after this revision, the trends are similar. However, there are noticeable level changes in a handful of states: FL, ID, KY, ME, MO, OK and SD.
 
@@ -80,7 +80,7 @@ We corrected a bug in the implementation of our chain-weighting methodology. Thi
 > have occurred on the 2nd day of week $t-1$ or the 6th day of week $t$). When there is a change in
 > coverage we adjust the series to be in line with the lower level of coverage.
 
-From March 15th, 2022 to December 2nd, 2022, the series was always chain-weighted forwards, so that it was always in line with the level of coverage prior to the discontinuity — rather than the lower level of coverage. This has been corrected so that the series is now chain-weighted forwards or backwards to be in line with the lower level of coverage. This has resulted in a noticeable revision to a few counties, which now have lower levels after a discontinuous break. At the state level, this adjustment has resulted in only minor revisions.  
+From March 15 to December 2, 2022, the series was always chain-weighted forwards, so that it was always in line with the level of coverage prior to the discontinuity — rather than the lower level of coverage. This has been corrected so that the series is now chain-weighted forwards or backwards to be in line with the lower level of coverage. This has resulted in a noticeable revision to a few counties, which now have lower levels after a discontinuous break. At the state level, this adjustment has resulted in only minor revisions.  
 
 ### Revisions on June 14th 2023
 
@@ -90,7 +90,7 @@ We added four supplemental files:
 
 - *Affinity Income Shares - National - 2020.csv*: share of total spending in January 2020 by income quartile.
 
-- *Affinity Industry Composition - National - 2020.csv*: share of total spending in January 2020, and the share of the decline in total spending during the first wave of the Covid-19 pandemic, by industry.
+- *Affinity Industry Composition - National - 2020.csv*: share of total spending in January 2020, and the share of the decline in total spending during the first wave of the COVID-19 pandemic, by industry.
 
 - *Affinity Daily Total Spending - National - Daily.csv*: daily total spending indexed to January 2019 by income quartile, without smoothing using a 7-day moving average.
 
@@ -104,7 +104,7 @@ We now derive our published datasets using a county-level panel of small busines
 
 We detect cases where a payment processor disappears by detecting sharp drops in businesses operating, at the national and the state level. We then adjust the series to remove these drops at the State x Industry level, using the following assumptions:
 
-- In the initial Covid period (March - July 2020) we assume momentum, and impute the value of merchants/sales for the week to continue the rate of change we observe in the 4 weeks prior.
+- In the initial Covid period (March to July, 2020) we assume momentum, and impute the value of merchants/sales for the week to continue the rate of change we observe in the 4 weeks prior.
 - In the rest of the series (before March 2020 and after July 2020) we assume the series stays constant for the adjusted week.
 
 After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level.
@@ -113,7 +113,7 @@ Since the no-entry panel does not cover the ZIP code level, we impute the ZIP co
 
 ### Revisions on May 17th 2022
 
-We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4th 2022 data revision.
+We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4, 2022 data revision.
 
 ### Revisions on June 26th 2023
 
@@ -162,11 +162,11 @@ For more details, please see the [data documentation](https://github.com/Opportu
 
 ### Revisions on June 30th 2021
 
-The Employment data was revised on June 30th 2021 due to three independent changes in methodology.
+The Employment data was revised on June 30, 2021 due to three independent changes in methodology.
 
 - **Revisions to address end-of-year "churn" in Paychex client base:** over time, some firms enter and exit Paychex's client base. This is especially concentrated at the end of each calendar year, where there is significant churn as firms renew their payroll processing contracts. This creates two sources of error in the tracker series. First, due to this seasonal pattern, the raw Paychex data displays a downwards trend in employment at the end of each calendar year as some clients leave Paychex, followed by an upward trend in employment at the very beginning of each calendar year as new clients join. Second, we take steps to avoid firm entry and exit that are more responsive to firm entry and exit at finer levels of geography, so that we can minimize the number of discontinuous changes in employment. The firm entry and exit occurring due to end-of-year "churn" in Paychex's client base resulted in a discrepancy between the national employment series and the corresponding series at the state level.
 
-  To avoid these sources of error, we have changed the way in which we process employment data around the end of each calendar year. We now adjust for the end-of-year pattern in the Paychex data using data from the end of 2019. For each date between December 10 2020 and January 10 2021, using Paychex data on employment at the national level, we compute the change in employment relative to December 10 2020 at the two-digit NAICS code x income quartile level. We also compute the change in employment between the corresponding day in the previous year and December 10 2019. We divide the change in employment relative to December 10 2020 by the corresponding change in employment the previous year relative to December 10 2019. At the national level, as of June 2021, this change results in an upwards revision of the employment series by between 1 and 3 percentage points from December 2020 through May 2021. We then apply the same adjustment to each two-digit NAICS code x income quartile cell at the state, county and city levels. For this reason, the state, county and city-level series have also been adjusted upwards by between 1 and 3 percentage points from December 2020 through May 2021.
+  To avoid these sources of error, we have changed the way in which we process employment data around the end of each calendar year. We now adjust for the end-of-year pattern in the Paychex data using data from the end of 2019. For each date between December 10, 2020 and January 10, 2021, using Paychex data on employment at the national level, we compute the change in employment relative to December 10, 2020 at the two-digit NAICS code x income quartile level. We also compute the change in employment between the corresponding day in the previous year and December 10, 2019. We divide the change in employment relative to December 10 2020 by the corresponding change in employment the previous year relative to December 10, 2019. At the national level, as of June 2021, this change results in an upwards revision of the employment series by between 1 and 3 percentage points from December 2020 through May 2021. We then apply the same adjustment to each two-digit NAICS code x income quartile cell at the state, county and city levels. For this reason, the state, county and city-level series have also been adjusted upwards by between 1 and 3 percentage points from December 2020 through May 2021.
 
 - **Revisions arising from changes to adjustment for firm entry/exit in Paychex data**: over time, the Paychex sample changes as clients begin to use or stop using Paychex’s payroll processing services. We previously adjusted for firm entry and exit separately at the national and state levels; for details on this adjustment, see Appendix D of Chetty, Friedman, Hendren and Stepner (November 2020). This introduced the possibility of discrepancies between the national-level and the (employment-weighted) mean of the state-level employment series. Empirically, these discrepancies were small throughout most of 2020, but began to grow in December 2020 due to increased churn in Paychex’s client base at the end of 2020, as described above. Since the firm entry/exit adjustment was applied retrospectively, this led to discrepancies throughout the series.
 
@@ -180,21 +180,21 @@ The Employment data was revised on June 30th 2021 due to three independent chang
   &0 \Big\}
   \end{align*}
 
-  where Min Normed July<sub>_c, i, s, q_</sub> is the smallest value of indexed employment we observe at each date relative to its mean level over the period July 1-31 2020, and Max Normed January<sub>_c, i, s, q_</sub> is the largest value of indexed employment we observe at each date relative to its mean level over the period January 4-31 2020.
+  where Min Normed July<sub>_c, i, s, q_</sub> is the smallest value of indexed employment we observe at each date relative to its mean level over the period July 1 to 31, 2020, and Max Normed January<sub>_c, i, s, q_</sub> is the largest value of indexed employment we observe at each date relative to its mean level over the period January 4 to 31, 2020.
 
   That is, we reduce the weight we place on the cell by two percentage points for each percentage point of growth we observe above 150 percentage points relative to January 2020. We then further reduce the weight we place on each cell by two percentage points of its January 2020 level for each percentage point of decline we observe below 50 percentage points relative to July 2020.
 
   At the national level, this change revises the aggregate employment series between -2 (in October 2020) and +2 (in January 2021) percentage points, as of June 2021. This change also substantially revises the state-level employment series. The mean revision (in absolute value) for aggregate employment at the state level is 5.6 percentage points as of June 2021. This revision is largest in March 2021, when the mean revision (in absolute value) is 9.1 percentage points.
 
-- **Revisions to address changes in minimum wages**: we use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This resulted in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers' wages in response to the minimum wage change. This was reflected in a decrease in low-income employment and an increase in middle-income employment in the tracker data for states in which the minimum wage had increased above $13.
+- **Revisions to address changes in minimum wages**: we use hourly wage thresholds when constructing employment by income quartile in the Paychex data. The threshold for the bottom quartile of employment is $13; that is, workers who earn below $13 are assigned to the bottom quartile, whereas workers earning above (or exactly) $13 are allocated to other wage quartiles. On January 1, 2021, minimum wage changes came into force in CA, MA, AZ and NY, which caused the minimum wage for some workers to move from below $13 to above $13. This resulted in a decline in employment for workers earning below $13, and a corresponding increase in employment for workers earning above $13, as firms increased workers' wages in response to the minimum wage change. This was reflected in a decrease in low-income employment and an increase in middle-income employment in the tracker data for states in which the minimum wage had increased above $13.
 
-  Though the tracker data for these states accurately represented trends in employment among workers earning below $13, the movement of workers around the minimum wage threshold created difficulties when comparing trends in low-wage employment across states. We have taken four steps to address this problem. First, we have created additional series for below-median-income and above-median-income employment, which can be downloaded from this repository. As the national median wage threshold in the Paychex data is $18.18, the below-median-income series is not affected by the shifting of workers induced by the minimum wage change. Second, we have added annotations to the tracker data indicating minimum wage changes in the relevant states. Third, we have suppressed series cut by income quartile in these states after December 1 2020, to avoid displaying series that are substantially affected by minimum wage changes. Finally, the impacts of the minimum wage on low-income employment in these states also affected trends at the national level: as workers' wages increased above the $13 threshold, national employment fell. When computing the national-level trend in employment, we now exclude trends in CA, MA, AZ and NY between December 10 2020 and February 10 2021. We continue to use trends in these states when computing national-level employment from February 11 2021 forward.
+  Though the tracker data for these states accurately represented trends in employment among workers earning below $13, the movement of workers around the minimum wage threshold created difficulties when comparing trends in low-wage employment across states. We have taken four steps to address this problem. First, we have created additional series for below-median-income and above-median-income employment, which can be downloaded from this repository. As the national median wage threshold in the Paychex data is $18.18, the below-median-income series is not affected by the shifting of workers induced by the minimum wage change. Second, we have added annotations to the tracker data indicating minimum wage changes in the relevant states. Third, we have suppressed series cut by income quartile in these states after December 1, 2020, to avoid displaying series that are substantially affected by minimum wage changes. Finally, the impacts of the minimum wage on low-income employment in these states also affected trends at the national level: as workers' wages increased above the $13 threshold, national employment fell. When computing the national-level trend in employment, we now exclude trends in CA, MA, AZ and NY between December 10, 2020 and February 10, 2021. We continue to use trends in these states when computing national-level employment from February 11, 2021 forward.
 
 After making these changes, the (population-weighted) RMSE (root mean square error) of the state-level employment series relative to the CPS is 4.55 percentage points as of April 2021, after removing public sector and furloughed workers and expressing employment in seasonally-unadjusted terms relative to January 2020. Though we will continue to assess our series relative to the CPS, users should note that some amount of noise remains in both our state-level series estimates and in the CPS estimates. Particularly in instances where these two measures of employment differ, users may consider both the Opportunity Insights series and the CPS as helpful inputs in identifying local patterns.
 
 ### Revisions on May 21st 2022
 
-The Employment data was revised on May 21st 2022 due to four independent changes in methodology.
+The Employment data was revised on May 21, 2022 due to four independent changes in methodology.
 
 - **Revisions to combination process:** We are currently constructing the combined Employment series using Paychex and Intuit data.
 
@@ -204,9 +204,9 @@ The Employment data was revised on May 21st 2022 due to four independent changes
 
   Implementing these moving thresholds results in upwards revisions in employment estimates for quartiles that experienced wage growth, such as Q1. These revisions are particularly notable in the second half of 2021.
 
-- **Revisions to address changes in the minimum wage:** We have updated our previous methodology released on June 30th 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.
+- **Revisions to address changes in the minimum wage:** We have updated our previous methodology released on June 30, 2021. Instead of supressing states in which the minimum wage is increased past one of our wage thresholds and removing these states from the national trends, we replace the county, industry, firm size, and quartile cells in the affected states with the national trend in the same industry, firm size, and quartile. This does not change the national series, but allows us to present an estimate for employment in states where the minimum wage has increased.
 
-- **Revisions arising from changes to adjustment for firm entry/exit in Paychex data:** We have updated our previous methodology released on June 30th 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births.
+- **Revisions arising from changes to adjustment for firm entry/exit in Paychex data:** We have updated our previous methodology released on June 30, 2021. Previously we applied weights solely to cells with over 50 employees; we now apply weights to all cells. However, we apply a different weighting scheme to cells below 50 employees to account for small firm births.
 
   - For cells with over 50 employees:
     - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
@@ -222,12 +222,12 @@ We adopt this alternative weighting scheme for cells with 50 or fewer employees 
 
 The Employment data was revised in several ways.
 
-- **Revisions to income quartile definitions**: The methodology behind the moving income thresholds, implemented on May 21st 2022, has been slightly updated. Previously, the income thresholds were defined using the yearly poverty guidelines and extended monthly using the CPI. In periods with high inflation, this methodology resulted in a discontuinity in the threshold before and after the release of the annual poverty guidelines (historically in January). This has been updated so that when the annual poverty guidelines are released, the previous year's monthly thresholds are linearly revised such that the CPI adjusted poverty threshold is equal to the official poverty guideline. 
+- **Revisions to income quartile definitions**: The methodology behind the moving income thresholds, implemented on May 21, 2022, has been slightly updated. Previously, the income thresholds were defined using the yearly poverty guidelines and extended monthly using the CPI. In periods with high inflation, this methodology resulted in a discontuinity in the threshold before and after the release of the annual poverty guidelines (historically in January). This has been updated so that when the annual poverty guidelines are released, the previous year's monthly thresholds are linearly revised such that the CPI adjusted poverty threshold is equal to the official poverty guideline. 
 
    Revising these moving thresholds results in slight differences in employment estimates for each quartile across the entire sample, since revising the thresholds redistributes some workers between quartiles. For some years, the thresholds have been revised slightly downward, while for others they have increased. These changes are particularly notable from the start of 2021 to present, when the revisions have led to lower thresholds. 
 
 
-- **Revisions to the methodology that adjusts for firm entry/exit in Paychex data**: We have updated our previous methodology released on May 21st 2022. We have revised the weighting scheme for cells over 50 employees, in order to better align with public benchmarks:
+- **Revisions to the methodology that adjusts for firm entry/exit in Paychex data**: We have updated our previous methodology released on May 21, 2022. We have revised the weighting scheme for cells over 50 employees, in order to better align with public benchmarks:
 
   - For cells with over 50 employees:
     - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020.
@@ -237,13 +237,13 @@ The Employment data was revised in several ways.
     - We reduce the weight by two percentage points for each percentage point of decline we observe below 50 percentage points relative to July 2020
     - We reduce the weight by 0.1 percentage points for each percentage point of growth we observe above 4000 percentage points relative to January 2020.
 
-- **Revisions to the adjustment for minimum wage changes**: We revised how we adjust the series in states that increased their minimum wage at the end of 2020 (CA, NY, MA). We begin by calculating the percentage change in the number of employees in each state x industry (2-digit NAICS) cell from December 4 2020 onwards for the first two wage quartiles combined. From December 4 2020 onwards, for the first two wage quartiles in minimum wage change states, we impute the trend in each county x industry x wage quartile cell using the below-median income employment trend in their own state x industry cell. Since employment in the first wage quartile recovered less than employment in the second wage quartile in 2021, an imputation that aggregates the trends in the first and second wage quartiles tends to overstate the recovery in the first quartile and understate the recovery in the second quartile. As such, we further rescale the state x industry below-median income trend separately for each wage quartile, using the coefficient from the regression of that quartile’s employment change on the below-median income employment change in non-minimum wage-change states without a constant between December 4 2020 and December 3 2021. We then aggregate the adjusted employment counts to the relevant geographies (e.g. state; national) before calculating the change in employment since January 2020.
+- **Revisions to the adjustment for minimum wage changes**: We revised how we adjust the series in states that increased their minimum wage at the end of 2020 (CA, NY, MA). We begin by calculating the percentage change in the number of employees in each state x industry (2-digit NAICS) cell from December 4 2020 onwards for the first two wage quartiles combined. From December 4, 2020 onwards, for the first two wage quartiles in minimum wage change states, we impute the trend in each county x industry x wage quartile cell using the below-median income employment trend in their own state x industry cell. Since employment in the first wage quartile recovered less than employment in the second wage quartile in 2021, an imputation that aggregates the trends in the first and second wage quartiles tends to overstate the recovery in the first quartile and understate the recovery in the second quartile. As such, we further rescale the state x industry below-median income trend separately for each wage quartile, using the coefficient from the regression of that quartile’s employment change on the below-median income employment change in non-minimum wage-change states without a constant between December 4, 2020 and December 3, 2021. We then aggregate the adjusted employment counts to the relevant geographies (e.g. state; national) before calculating the change in employment since January 2020.
 
 ### Revisions on April 14th 2023
 
-The Employment data was revised on April 14th 2023 to correct a data processing error. 
+The Employment data was revised on April 14, 2023 to correct a data processing error. 
 
-From December 16th 2022 to April 14th 2023, there was a bug in the code adjusting for discontinuities in the Paychex data when quartile thresholds cross integer wages. For more details on this adjustment see Online Appendix E.2 of Chetty, Friedman, Hendren and Stepner (April 2023). During this period, the adjustment for the mass of employees at wage $X was incorrectly being made using the mass of employees at the lower wage $X-1. These discontinuities were therefore incompletely smoothed.
+From December 16, 2022 to April 14, 2023, there was a bug in the code adjusting for discontinuities in the Paychex data when quartile thresholds cross integer wages. For more details on this adjustment see Online Appendix E.2 of Chetty, Friedman, Hendren and Stepner (April 2023). During this period, the adjustment for the mass of employees at wage $X was incorrectly being made using the mass of employees at the lower wage $X-1. These discontinuities were therefore incompletely smoothed.
 
 After correcting the code, the employment trends are smoother around these discontinuities. The overall trends in employment changes over time are unchanged.
 
@@ -259,7 +259,7 @@ For more details, please see the [data documentation](https://github.com/Opportu
 
 ### Revisions on July 29th 2021
 
-The unemployment data was revised on July 29th 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the [Department of Labor data](https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx). Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We've corrected this, and claims now align to the appropriate week.
+The unemployment data was revised on July 29, 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the [Department of Labor data](https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx). Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We've corrected this, and claims now align to the appropriate week.
 
 ## Online Math Participation and Student Progress in Math
 
@@ -281,20 +281,20 @@ Previously we pulled reported cases, deaths, and tests at the county level from 
 
 ### Revisions on April 11th 2023
 
-On 2023-03-23 the New York Times discontinued its COVID tracking efforts and published the last updates to its database tracking COVID cases and deaths in light of increased tracking and reporting by government agencies like The Centers for Disease Control and Prevention. For COVID-19 cases and deaths data published after 2023-03-23 we now make use of weekly data published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). In order to integrate the new weekly sums published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) with the previous daily values published by [New York Times](https://github.com/nytimes/covid-19-data) we scale all cases and deaths values to a 7 day rolling sum rather than a 7 day rolling average as previously reported.
+On March 23, 2023 the New York Times discontinued its COVID tracking efforts and published the last updates to its database tracking COVID cases and deaths in light of increased tracking and reporting by government agencies like The Centers for Disease Control and Prevention. For COVID-19 cases and deaths data published after March 23, 2023, we now make use of weekly data published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home). In order to integrate the new weekly sums published by [The Centers for Disease Control and Prevention](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) with the previous daily values published by [New York Times](https://github.com/nytimes/covid-19-data) we scale all cases and deaths values to a 7 day rolling sum rather than a 7 day rolling average as previously reported.
 
 ### Revisions on June 23rd 2023
 
-1. On 2023-05-11, the Centers for Disease Control and Prevention (CDC) ceased to update their COVID-19 vaccination tracking data series and existing COVID-19 cases and deaths tracking data series. On 2023-06-01, the CDC published the final update to their weekly data series tracking COVID-19 cases and deaths.
+1. On May 11, 2023, the Centers for Disease Control and Prevention (CDC) ceased to update their COVID-19 vaccination tracking data series and existing COVID-19 cases and deaths tracking data series. On June 1, 2023, the CDC published the final update to their weekly data series tracking COVID-19 cases and deaths.
 
-   The Economic Tracker data on weekly COVID-19 cases, deaths and vaccinations up to 2023-05-10 reflects these final updates from the CDC, which will not receive further updates.
+   The Economic Tracker data on weekly COVID-19 cases, deaths and vaccinations up to May 10, 2023 reflects these final updates from the CDC, which will not receive further updates.
  
    We continue to pull and collate the state-level death counts from the data available on the updated [COVID Data Tracker](https://covid.cdc.gov/covid-data-tracker/#datatracker-home) and state level counts of hospitalizations available from the [Department of Health and Human Services](https://beta.healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh).
 
- 2. We no longer compute a rolling 7 day sum of the *cumulative* COVID-19 cases and deaths. Starting on April 11th 2023 we switched from a 7-day rolling average to a 7-day rolling sum in order to ensure the units remain consistent across historical daily and weekly data. But the 7-day rolling sum was erroneously applied to *cumulative* COVID-19 cases and deaths, which multiplies the cumulative counts by 7. We have corrected the error and restored a 7-day rolling average for *cumulative* cases and deaths.
+ 2. We no longer compute a rolling 7 day sum of the *cumulative* COVID-19 cases and deaths. Starting on April 11, 2023 we switched from a 7-day rolling average to a 7-day rolling sum in order to ensure the units remain consistent across historical daily and weekly data. But the 7-day rolling sum was erroneously applied to *cumulative* COVID-19 cases and deaths, which multiplies the cumulative counts by 7. We have corrected the error and restored a 7-day rolling average for *cumulative* cases and deaths.
 
 ## Time Outside Home
 
 ### Revisions on October 20th 2022
 
-On 2022-10-15 Google discontinued its updates to the [COVID-19 Community Mobility Reports](https://www.google.com/covid19/mobility/), posting the last revision on 2022-10-17. The Economic Tracker data on Time Outside Home reflects this final update from Google, and will not receive further updates.
+On October 15, 2022, Google discontinued its updates to the [COVID-19 Community Mobility Reports](https://www.google.com/covid19/mobility/), posting the last revision on October 17, 2022. The Economic Tracker data on Time Outside Home reflects this final update from Google, and will not receive further updates.
