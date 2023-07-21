@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-07-18
+subtitle: last updated on 2023-07-21
 documentclass: scrartcl
 ---
 
@@ -261,6 +261,10 @@ For more details, please see the [data documentation](https://github.com/Opportu
 ### Revisions on July 29th 2021
 
 The unemployment data was revised on July 29, 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the [Department of Labor data](https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx). Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We've corrected this, and claims now align to the appropriate week.
+
+### Revisions on July 20th 2023
+
+The unemployment data was revised on July 20, 2023 to change the frequency of the county level Iowa initial claims data from the weekly frequency to the monthly frequency in light of changes in the underlying data's publication at the Iowa Workforce Development - Labor Market Information Division. 
 
 ## Online Math Participation and Student Progress in Math
 

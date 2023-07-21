@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-07-18</p>
+<p class="subtitle">last updated on 2023-07-21</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -167,6 +167,8 @@ Data Revisions</div></h1>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <h3 id="revisions-on-july-29th-2021">Revisions on July 29th 2021</h3>
 <p>The unemployment data was revised on July 29, 2021 to correct a data processing error. Previously we assigned continued PEUC and PUA claims to the end of week date indicated by the Report Date rather than the Reflect Date in the <a href="https://oui.doleta.gov/unemploy/docs/weekly_pandemic_claims.xlsx">Department of Labor data</a>. Effectively, this meant continued PEUC and PUA claims were offset by one week into the future in our data. We’ve corrected this, and claims now align to the appropriate week.</p>
+<h3 id="revisions-on-july-20th-2023">Revisions on July 20th 2023</h3>
+<p>The unemployment data was revised on July 20, 2023 to change the frequency of the county level Iowa initial claims data from the weekly frequency to the monthly frequency in light of changes in the underlying data’s publication at the Iowa Workforce Development - Labor Market Information Division.</p>
 <h2 id="online-math-participation-and-student-progress-in-math">Online Math Participation and Student Progress in Math</h2>
 <h3 id="revisions-on-december-14th-2021">Revisions on December 14th 2021</h3>
 <p>As schools have attritioned from the sample we’ve revised our methodology to impute missing values for an otherwise active school. Previously school retention in the sample was very high and we imputed across the sample observations missing in a given week for a given school as zeros as the likelihood the omission of data was a sign of no usage but continuity in the sample was quite high. Overtime, and particularly during the 2021 fall semester, a subset of schools naturally attritioned from the sample of schools using Zearn prior to the onset of the COVID-19 pandemic and we paused our imputation procedure for the newest sample. As such we’ve now revised our methodology to impute missing values within semester based on semester activity. For this subset of schools that are missing observations for a given week within a semester and are active Zearn users at any point within a semester, we impute these values as zeros within the given semester. As such we avoid imputation of schools observations where a school has dropped from the sample in a given semester and identify weeks missing for schools that remain within the sample for a given semester and impute them as zeros appropriately. This change has resulted in a small downward revision to the estimates post summer 2020.</p>
