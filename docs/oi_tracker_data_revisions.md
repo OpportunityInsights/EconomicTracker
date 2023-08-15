@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-07-21</p>
+<p class="subtitle">last updated on 2023-08-15</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -52,6 +52,10 @@ Data Revisions</div></h1>
 <li><p><em>Affinity Daily Total Spending - National - Daily.csv</em>: daily total spending indexed to January 2019 by income quartile, without smoothing using a 7-day moving average.</p></li>
 </ul>
 <p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
+<h3 id="revisions-on-july-21st-2023">Revisions on July 21st 2023</h3>
+<p>We refined the date handling in our holiday adjustment methodology at the weekly level and corrected a processing error at the daily level. As described in Appendix B.2 of <a href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">the companion paper</a>, we intend to seasonally adjust the data by calculating, for each week and day, the year-on-year change relative to the 2019 value. To account for holidays, the year-on-year change for dates with holidays after 2019 is calculated relative to the day or week of the same holiday in 2019. In the latest release we have made two changes. First, we have updated how we define and align weeks across years during our adjustments of the weekly level data, and as a result, there are small revisions around some holidays. Second, due to an error in our processing scripts our holiday adjustments were being incorrectly applied to the daily level data. We have now fixed this error and the adjustments are being applied appropriately resulting in smoothing of the series around holidays.</p>
+<h3 id="revisions-on-august-15th-2023">Revisions on August 15th 2023</h3>
+<p>As of August 15, 2023 we receive a larger sample of consumer spending data from 2022 to present, resulting in small revisions to the series.</p>
 <h2 id="small-business-revenue-small-businesses-open">Small Business Revenue &amp; Small Businesses Open</h2>
 <h3 id="revisions-on-march-4th-2022">Revisions on March 4th 2022</h3>
 <p>We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.</p>

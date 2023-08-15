@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-07-21
+subtitle: last updated on 2023-08-15
 documentclass: scrartcl
 ---
 
@@ -95,6 +95,14 @@ We added four supplemental files:
 - *Affinity Daily Total Spending - National - Daily.csv*: daily total spending indexed to January 2019 by income quartile, without smoothing using a 7-day moving average.
 
 For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
+
+### Revisions on July 21st 2023
+
+We refined the date handling in our holiday adjustment methodology at the weekly level and corrected a processing error at the daily level. As described in Appendix B.2 of [the companion paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf), we intend to seasonally adjust the data by calculating, for each week and day, the year-on-year change relative to the 2019 value. To account for holidays, the year-on-year change for dates with holidays after 2019 is calculated relative to the day or week of the same holiday in 2019. In the latest release we have made two changes. First, we have updated how we define and align weeks across years during our adjustments of the weekly level data, and as a result, there are small revisions around some holidays. Second, due to an error in our processing scripts our holiday adjustments were being incorrectly applied to the daily level data. We have now fixed this error and the adjustments are being applied appropriately resulting in smoothing of the series around holidays.
+
+### Revisions on August 15th 2023
+
+As of August 15, 2023 we receive a larger sample of consumer spending data from 2022 to present, resulting in small revisions to the series.
 
 ## Small Business Revenue & Small Businesses Open
 
