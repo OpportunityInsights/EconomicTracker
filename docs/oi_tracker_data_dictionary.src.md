@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-07-18
+subtitle: last updated on 2023-08-29
 documentclass: scrartcl
 ---  
 
@@ -108,6 +108,8 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
 - `freq`: Marks whether the data represents a daily ("d") or weekly ("w") value.
 
 <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
+  - `industry`:
+  - `income_quartile`:
   - `spend_s_all`:
   - `spend_s_all_q#`:
   - `spend_s_all_incmiddle`:
