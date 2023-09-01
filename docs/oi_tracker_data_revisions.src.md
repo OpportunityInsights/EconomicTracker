@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-08-15
+subtitle: last updated on 2023-09-01
 documentclass: scrartcl
 ---
 
@@ -166,6 +166,10 @@ We added a supplemental file:
 - *Job Postings Industry Shares - National - 2020.csv*: share of job postings by industry in January 2020.
 
 For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
+
+### Revisions on September 1st 2023
+
+We have updated the Lightcast datastream and API used to pull the job postings data in response to the deprecation of the existing datastream and its corresponding API we have used up to this point. As part of the change to the new datastream, the existing scraped raw job postings data has undergone revamped and improved classification and coding by Lightcast resulting in both some small retroactive changes in the aggregate counts of postings and noticeable retroactive changes in the counts of postings by super sector and required education level as posts in the raw data were reclassified. As such, small retroactive changes in the total postings series have been made as well as moderate retroactive changes have been made to the industry and education level subgroup series.
 
 ## Employment
 

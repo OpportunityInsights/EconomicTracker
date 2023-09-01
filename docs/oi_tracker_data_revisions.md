@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-08-15</p>
+<p class="subtitle">last updated on 2023-09-01</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -98,6 +98,8 @@ Data Revisions</div></h1>
 <li><em>Job Postings Industry Shares - National - 2020.csv</em>: share of job postings by industry in January 2020.</li>
 </ul>
 <p>For more details, please see the <a href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">data documentation</a>.</p>
+<h3 id="revisions-on-september-1st-2023">Revisions on September 1st 2023</h3>
+<p>We have updated the Lightcast datastream and API used to pull the job postings data in response to the deprecation of the existing datastream and its corresponding API we have used up to this point. As part of the change to the new datastream, the existing scraped raw job postings data has undergone revamped and improved classification and coding by Lightcast resulting in both some small retroactive changes in the aggregate counts of postings and noticeable retroactive changes in the counts of postings by super sector and required education level as posts in the raw data were reclassified. As such, small retroactive changes in the total postings series have been made as well as moderate retroactive changes have been made to the industry and education level subgroup series.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30, 2021 due to three independent changes in methodology.</p>
