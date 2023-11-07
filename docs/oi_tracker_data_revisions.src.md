@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-09-01
+subtitle: last updated on 2023-11-07
 documentclass: scrartcl
 ---
 
@@ -170,6 +170,10 @@ For more details, please see the [data documentation](https://github.com/Opportu
 ### Revisions on September 1st 2023
 
 We have updated the Lightcast datastream and API used to pull the job postings data in response to the deprecation of the existing datastream and its corresponding API we have used up to this point. As part of the change to the new datastream, the existing scraped raw job postings data has undergone revamped and improved classification and coding by Lightcast resulting in both some small retroactive changes in the aggregate counts of postings and noticeable retroactive changes in the counts of postings by super sector and required education level as posts in the raw data were reclassified. As such, small retroactive changes in the total postings series have been made as well as moderate retroactive changes have been made to the industry and education level subgroup series.
+
+### Revisions on November 7th 2023
+
+On 2023-11-03 Lightcast rolled out improvements to their deduplication processing of raw job postings where advances made to their job posting classification methodology were applied to produce more accurate posting counts. As a result, postings levels have been retroactively adjusted by a relatively small amount with the years 2022-2023 most impacted. This has resulted in small retroactive changes to the job postings series. For more details on the impact of the changes on the underyling posting counts please see Lightcast's summary document [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology) and for more details on Lightcast's processing methodology please see [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology). 
 
 ## Employment
 
