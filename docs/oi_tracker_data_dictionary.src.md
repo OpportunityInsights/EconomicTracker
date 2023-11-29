@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-08-29
+subtitle: last updated on 2023-11-29
 documentclass: scrartcl
 ---  
 
@@ -166,7 +166,7 @@ The merchant category codes (MCC) making up the grouped spending categories are:
 
 * **Retail spending:** CLO clothing and clothing accessories; BLD building materials, garden equipment, and supplies; ELC electronics and appliances; FBS food and beverage stores; FUR furniture and home furnishings; GEN general merchandise stores; and SPO sporting goods, hobbies, musical instruments, and book stores.
 * **Durable goods:** BLD building materials, gardening equipment, and supplies; ELC electronics and appliances; FUR furniture and home furnishings; SPO sporting goods, hobbies, musical instruments, and bookstores; TEL telecommunications; and VEH motor vehicles and parts.
-* **Non-durable goods:** CLO clothing and clothing accessories; FBS food and beverage stores; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.
+* **Non-durable goods:** CLO clothing and clothing accessories; FBS food and beverage stores; GAS gasoline stations; GEN general merchandise; HPC health and personal care stores; and WHO wholesale trade.
 * **Remote services:** ADM administrative and support and waste management and remediation services; EDU education; FIN finance and insurance; INF information; PST professional, scientific, and technical; PUB public administration; and UCM utilities, construction, and manufacturing.
 * **In-person services:** ACF accomodation and food services; HCS healthcare and social assistance; AER arts, entertainment, and recreation; TWS transportation and warehousing; REN rental and leasing; REP repair and maintenance; and PLS personal and laundry services.
 
