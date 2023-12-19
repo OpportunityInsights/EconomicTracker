@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2023-11-07</p>
+<p class="subtitle">last updated on 2023-12-18</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -102,6 +102,8 @@ Data Revisions</div></h1>
 <p>We have updated the Lightcast datastream and API used to pull the job postings data in response to the deprecation of the existing datastream and its corresponding API we have used up to this point. As part of the change to the new datastream, the existing scraped raw job postings data has undergone revamped and improved classification and coding by Lightcast resulting in both some small retroactive changes in the aggregate counts of postings and noticeable retroactive changes in the counts of postings by super sector and required education level as posts in the raw data were reclassified. As such, small retroactive changes in the total postings series have been made as well as moderate retroactive changes have been made to the industry and education level subgroup series.</p>
 <h3 id="revisions-on-november-7th-2023">Revisions on November 7th 2023</h3>
 <p>On 2023-11-03 Lightcast rolled out improvements to their deduplication processing of raw job postings where advances made to their job posting classification methodology were applied to produce more accurate posting counts. As a result, postings levels have been retroactively adjusted by a relatively small amount with the years 2022-2023 most impacted. This has resulted in small retroactive changes to the job postings series. For more details on the impact of the changes on the underyling posting counts please see Lightcast’s summary document <a href="https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology">here</a> and for more details on Lightcast’s processing methodology please see <a href="https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology">here</a>.</p>
+<h3 id="revisions-on-december-18th-2023">Revisions on December 18th 2023</h3>
+<p>On 2023-12-15 Lightcast deprecated the use of 2017 NAICS codes as part of their postings data API in favor of 2022 NAICS codes noting the option to use 2017 codes would be removed in 60 days. In response we have switched to using raw data where job postings industries are classified by 2022 NAICS codes. This has led to small retroactive revisions for the job postings by industry subgroup series as postings were reclassified into different categories prior to aggregation.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30, 2021 due to three independent changes in methodology.</p>
