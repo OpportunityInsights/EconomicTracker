@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2023-12-18
+subtitle: last updated on 2024-03-14
 documentclass: scrartcl
 ---
 
@@ -103,6 +103,12 @@ We refined the date handling in our holiday adjustment methodology at the weekly
 ### Revisions on August 15th 2023
 
 As of August 15, 2023 we receive a larger sample of consumer spending data from 2022 to present, resulting in small revisions to the series.
+
+### Revisions on March 14th 2024
+
+We further refined our holiday adjustment methodology at the weekly level. As described in Appendix B.2 of [the companion paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf) and the revisions statement on July 21st 2023, we seasonally adjust the data by calculating, for each week and day, the year-on-year change relative to the 2019 value. To account for holidays, the year-on-year change for dates with holidays after 2019 is calculated relative to the day or week of the same holiday in 2019. 
+
+From July 21st, 2023 to March 14th, 2024, our processing steps sometimes aligned the weekly data with the corresponding 2019 values by aligning both values with the week of the holiday in 2020. This resulted in a few cases where the values of the published indexed series were shifted a week forwards or backwards to match the weeks relative to the holiday in 2020. In the latest release, this has been corrected: the holiday adjustments are only applied to the 2019 values in our calculations, so the final indexed value is never shifted. This correction caused small revisions around some federal holidays.
 
 ## Small Business Revenue & Small Businesses Open
 
