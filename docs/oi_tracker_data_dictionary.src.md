@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2023-11-29
+subtitle: last updated on 2024-08-06
 documentclass: scrartcl
 ---  
 
@@ -181,19 +181,19 @@ In addition, four supplemental files are included (see the [documentation](https
 
 Job postings data from [Lightcast](https://lightcast.io/) (formerly known as Burning Glass Technologies).
 
-- `bg_posts`: Average level of job postings relative to January 4 to 31, 2020.
-- `bg_posts_ss30`: Average level of job postings relative to January 4 to 31, 2020 in manufacturing (NAICS supersector 30).
-- `bg_posts_ss55`: Average level of job postings relative to January 4 to 31, 2020 in financial activities (NAICS supersector 55).
-- `bg_posts_ss60`: Average level of job postings relative to January 4 to 31, 2020 in professional and business services (NAICS supersector 60).
-- `bg_posts_ss65`: Average level of job postings relative to January 4 to 31, 2020 in education and health services (NAICS supersector 65).
-- `bg_posts_ss70`: Average level of job postings relative to January 4 to 31, 2020 in leisure and hospitality (NAICS supersector 70).
-- `bg_posts_jz1`: Average level of job postings relative to January 4 to 31, 2020 requiring little/no preparation (ONET jobzone level 1).
-- `bg_posts_jz2`: Average level of job postings relative to January 4 to 31, 2020 requiring some preparation (ONET jobzone level 2).
-- `bg_posts_jz3`: Average level of job postings relative to January 4 to 31, 2020 requiring medium preparation (ONET jobzone level 3).
-- `bg_posts_jz4`: Average level of job postings relative to January 4 to 31, 2020 requiring considerable preparation (ONET jobzone level 4).
-- `bg_posts_jz5`: Average level of job postings relative to January 4 to 31, 2020 requiring extensive preparation (ONET jobzone level 5).
-- `bg_posts_jzgrp12`: Average level of job postings relative to January 4 to 31, 2020 requiring low preparation (ONET jobzone levels 1 and 2).
-- `bg_posts_jzgrp345`: Average level of job postings relative to January 4 to 31, 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).
+- `bg_posts`: Level of new job postings relative to January 4 to 31, 2020.
+- `bg_posts_ss30`: Level of new job postings relative to January 4 to 31, 2020 in manufacturing (NAICS supersector 30).
+- `bg_posts_ss55`: Level of new job postings relative to January 4 to 31, 2020 in financial activities (NAICS supersector 55).
+- `bg_posts_ss60`: Level of new job postings relative to January 4 to 31, 2020 in professional and business services (NAICS supersector 60).
+- `bg_posts_ss65`: Level of new job postings relative to January 4 to 31, 2020 in education and health services (NAICS supersector 65).
+- `bg_posts_ss70`: Level of new job postings relative to January 4 to 31, 2020 in leisure and hospitality (NAICS supersector 70).
+- `bg_posts_jz1`: Level of new job postings relative to January 4 to 31, 2020 requiring little/no preparation (ONET jobzone level 1).
+- `bg_posts_jz2`: Level of new job postings relative to January 4 to 31, 2020 requiring some preparation (ONET jobzone level 2).
+- `bg_posts_jz3`: Level of new job postings relative to January 4 to 31, 2020 requiring medium preparation (ONET jobzone level 3).
+- `bg_posts_jz4`: Level of new job postings relative to January 4 to 31, 2020 requiring considerable preparation (ONET jobzone level 4).
+- `bg_posts_jz5`: Level of new job postings relative to January 4 to 31, 2020 requiring extensive preparation (ONET jobzone level 5).
+- `bg_posts_jzgrp12`: Level of new job postings relative to January 4 to 31, 2020 requiring low preparation (ONET jobzone levels 1 and 2).
+- `bg_posts_jzgrp345`: Level of new job postings relative to January 4 to 31, 2020 requiring high preparation (ONET jobzone levels 3, 4 and 5).
 
 <!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
   - `share_jan2020`: 
