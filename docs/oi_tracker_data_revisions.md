@@ -2,7 +2,7 @@
 <header id="title-block-header">
 <h1 class="title"><div class="line-block">Opportunity Insights Economic Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2024-03-14</p>
+<p class="subtitle">last updated on 2025-01-14</p>
 </header>
 
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/> Click here to download a PDF version of this document</a></p>
@@ -107,6 +107,8 @@ Data Revisions</div></h1>
 <p>On 2023-11-03 Lightcast rolled out improvements to their deduplication processing of raw job postings where advances made to their job posting classification methodology were applied to produce more accurate posting counts. As a result, postings levels have been retroactively adjusted by a relatively small amount with the years 2022-2023 most impacted. This has resulted in small retroactive changes to the job postings series. For more details on the impact of the changes on the underyling posting counts please see Lightcast’s summary document <a href="https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology">here</a> and for more details on Lightcast’s processing methodology please see <a href="https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology">here</a>.</p>
 <h3 id="revisions-on-december-18th-2023">Revisions on December 18th 2023</h3>
 <p>On 2023-12-15 Lightcast deprecated the use of 2017 NAICS codes as part of their postings data API in favor of 2022 NAICS codes noting the option to use 2017 codes would be removed in 60 days. In response we have switched to using raw data where job postings industries are classified by 2022 NAICS codes. This has led to small retroactive revisions for the job postings by industry subgroup series as postings were reclassified into different categories prior to aggregation.</p>
+<h3 id="revisions-on-january-14th-2025">Revisions on January 14th 2025</h3>
+<p>On 2025-01-14 we updated the Job Posting series going forward to be published up to the Friday of two weeks ago rather than the Friday of the previous week. This is in response to an increased lag in the complete publication of the underlying raw data to the API we pull from that we’ve observed results in often incomplete and frequently revisied postings counts week to week when previous data pulls were performed.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30, 2021 due to three independent changes in methodology.</p>

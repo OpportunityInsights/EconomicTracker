@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2024-03-14
+subtitle: last updated on 2025-01-14
 documentclass: scrartcl
 ---
 
@@ -179,12 +179,15 @@ We have updated the Lightcast datastream and API used to pull the job postings d
 
 ### Revisions on November 7th 2023
 
-On 2023-11-03 Lightcast rolled out improvements to their deduplication processing of raw job postings where advances made to their job posting classification methodology were applied to produce more accurate posting counts. As a result, postings levels have been retroactively adjusted by a relatively small amount with the years 2022-2023 most impacted. This has resulted in small retroactive changes to the job postings series. For more details on the impact of the changes on the underyling posting counts please see Lightcast's summary document [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology) and for more details on Lightcast's processing methodology please see [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology). 
-
+On 2023-11-03 Lightcast rolled out improvements to their deduplication processing of raw job postings where advances made to their job posting classification methodology were applied to produce more accurate posting counts. As a result, postings levels have been retroactively adjusted by a relatively small amount with the years 2022-2023 most impacted. This has resulted in small retroactive changes to the job postings series. For more details on the impact of the changes on the underyling posting counts please see Lightcast's summary document [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology) and for more details on Lightcast's processing methodology please see [here](https://kb.lightcast.io/en/articles/6957446-job-posting-analytics-jpa-methodology).
 
 ### Revisions on December 18th 2023
 
 On 2023-12-15 Lightcast deprecated the use of 2017 NAICS codes as part of their postings data API in favor of 2022 NAICS codes noting the option to use 2017 codes would be removed in 60 days. In response we have switched to using raw data where job postings industries are classified by 2022 NAICS codes. This has led to small retroactive revisions for the job postings by industry subgroup series as postings were reclassified into different categories prior to aggregation.   
+
+### Revisions on January 14th 2025
+
+On 2025-01-14 we updated the Job Posting series going forward to be published up to the Friday of two weeks ago rather than the Friday of the previous week. This is in response to an increased lag in the complete publication of the underlying raw data to the API we pull from that we've observed results in often incomplete and frequently revisied postings counts week to week when previous data pulls were performed.
 
 ## Employment
 
