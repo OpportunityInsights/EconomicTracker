@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2024-08-06
+subtitle: last updated on 2025-06-03
 documentclass: scrartcl
 ---  
 
@@ -151,13 +151,27 @@ Credit/debit card spending data from [Affinity Solutions](https://www.affinity.s
   - `spend_19_retail_no_grocery`:
   - `spend_19_retail_w_grocery`:
   - `daily_spend_19_all`:
-  - `daily_spend_19_q1`:
-  - `daily_spend_19_q2`:
-  - `daily_spend_19_q3`:
-  - `daily_spend_19_q4`:
+  - `daily_spend_19_q#`:
   - `share_jan2019`:
   - `share_jan2020`:
   - `share_decline_covidfirstwave`:
+  - `spend_s_aap_q#`:
+  - `spend_s_acf_q#`:
+  - `spend_s_aer_q#`:
+  - `spend_s_apg_q#`:
+  - `spend_s_durables_q#`:
+  - `spend_s_gen_q#`:
+  - `spend_s_grf_q#`:
+  - `spend_s_hcs_q#`:
+  - `spend_s_hic_q#`:
+  - `spend_s_inpersonmisc_q#`:
+  - `spend_s_nondurables_q#`:
+  - `spend_s_remoteservices_q#`:
+  - `spend_s_sgh_q#`:
+  - `spend_s_tws_q#`:
+  - `spend_s_inperson_q#`:
+  - `spend_s_retail_no_grocery_q#`:
+  - `spend_s_retail_w_grocery_q#`:
 -->
 
 All spending variables are measured relative to January 6 to February 2, 2020, seasonally adjusted, and calculated as a 7 day moving average. When we subdivide by income using the median income of the ZIP codes, `q1` is the quartile with the lowest median income and `q4` is the quartile with the highest median income. At the national level, we release a variety of breakdowns *without seasonal adjustment* in variables that begin with `spend_s_` (relative to January 2019 for 2019 data, relative to January 2020 for 2020 data onward) or `spend_19_` (relative to Janurary 7 to February 3, 2019 for all data) instead of `spend_`. 
