@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2025-01-14
+subtitle: last updated on 2025-06-23
 documentclass: scrartcl
 ---
 
@@ -188,6 +188,10 @@ On 2023-12-15 Lightcast deprecated the use of 2017 NAICS codes as part of their 
 ### Revisions on January 14th 2025
 
 On 2025-01-14 we updated the Job Posting series going forward to be published up to the Friday of two weeks ago rather than the Friday of the previous week. This is in response to an increased lag in the complete publication of the underlying raw data to the API we pull from that we've observed results in often incomplete and frequently revisied postings counts week to week when previous data pulls were performed.
+
+### Revisions on June 23rd 2025
+
+We detected an error in our county by industry sector and jobzone processing that was suppressing a subset of counties that should have been included in the publicly available series. That error has been resolved and data on postings by industry sector and jobzone for those counties has been restored. 
 
 ## Employment
 
