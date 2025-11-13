@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Dictionary
-subtitle: last updated on 2025-06-03
+subtitle: last updated on 2025-11-13
 documentclass: scrartcl
 ---  
 
@@ -262,6 +262,8 @@ GPS mobility data indexed to January 3 to February 6, 2020 from [Google COVID-19
 - `gps_residential`: Time spent at residential locations.
 
 ### Employment
+
+Please note we are planning the release of a new, updated, and overhauled employment series in the coming weeks. This series will much better handle entry and exit from the underlying sample as well as improve on other biases in the current series. As such we advise that users wait for the release of the new and updated data in order before using the Employment series so that users have the most accurate information available.
 
 Employment levels relative to January 4 to 31, 2020 from [Paychex](https://www.paychex.com/) and [Intuit](https://www.intuit.com/).
 

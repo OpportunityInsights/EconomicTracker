@@ -3,7 +3,7 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2025-06-03</p>
+<p class="subtitle">last updated on 2025-11-13</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
@@ -469,6 +469,13 @@ stations.</li>
 locations.</li>
 </ul>
 <h3 id="employment">Employment</h3>
+<p>Please note we are planning the release of a new, updated, and
+overhauled employment series in the coming weeks. This series will much
+better handle entry and exit from the underlying sample as well as
+improve on other biases in the current series. As such we advise that
+users wait for the release of the new and updated data in order before
+using the Employment series so that users have the most accurate
+information available.</p>
 <p>Employment levels relative to January 4 to 31, 2020 from <a
 href="https://www.paychex.com/">Paychex</a> and <a
 href="https://www.intuit.com/">Intuit</a>.</p>
