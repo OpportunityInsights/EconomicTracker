@@ -3,7 +3,7 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2025-06-23</p>
+<p class="subtitle">last updated on 2026-01-28</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
@@ -366,6 +366,21 @@ processing that was suppressing a subset of counties that should have
 been included in the publicly available series. That error has been
 resolved and data on postings by industry sector and jobzone for those
 counties has been restored.</p>
+<h3 id="revisions-on-january-28th-2026">Revisions on January 28th
+2026</h3>
+<p>On January 16th, 2026 Lightcast updated their job postings database
+to include improved geocoding of postings and a new category of postings
+not tied to subnational geography cells. Previously, as postings were
+always tied to at least the state level we built the national series
+from the sum of state level postings. In light of the changes we have
+updated the national series data to be pulled directly from the
+lightcast database so that it includes the new postings not tied to
+subnational geography cells. These changes to the underlying data have
+resulted in a overall retroactive upwards revision to the national
+series beginning in 2023 with the largest changes occurring over the
+course of 2023. For more details from Lightcast on the changes please
+see <a
+href="https://status.lightcast.io/notices/e8zdlxfyvypbdiay-upcoming-improvements-to-the-lightcast-us-postings-dataset">here</a>.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30, 2021 due to three
