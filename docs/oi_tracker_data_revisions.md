@@ -3,7 +3,7 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2026-01-28</p>
+<p class="subtitle">last updated on 2026-02-24</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
@@ -381,6 +381,13 @@ series beginning in 2023 with the largest changes occurring over the
 course of 2023. For more details from Lightcast on the changes please
 see <a
 href="https://status.lightcast.io/notices/e8zdlxfyvypbdiay-upcoming-improvements-to-the-lightcast-us-postings-dataset">here</a>.</p>
+<h3 id="revisions-on-february-24th-2026">Revisions on February 24th
+2026</h3>
+<p>On February 16th, 2026 Lightcast revised their job postings database
+retroactively lowering the level of postings throughout 2023 and into
+mid 2024. This revision undoes a large part of the upwards revision made
+in the previous January 16th update. More information from Lightcast on
+the changes will be included when and if it becomes available.</p>
 <h2 id="employment">Employment</h2>
 <h3 id="revisions-on-june-30th-2021">Revisions on June 30th 2021</h3>
 <p>The Employment data was revised on June 30, 2021 due to three
