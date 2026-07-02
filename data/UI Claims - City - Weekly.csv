@@ -12877,6 +12877,7 @@ year,month,day_endofweek,cityid,initclaims_count_regular,initclaims_rate_regular
 2026,6,20,15,440,.0631
 2026,6,20,18,369,.0749
 2026,6,20,23,509,.175
+2026,6,20,24,1527,.335
 2026,6,20,25,1000,.217
 2026,6,20,29,687,.166
 2026,6,20,36,456,.0819
@@ -12886,3 +12887,5 @@ year,month,day_endofweek,cityid,initclaims_count_regular,initclaims_rate_regular
 2026,6,20,46,527,.0858
 2026,6,20,48,723,.16
 2026,6,20,49,122,.048
+2026,6,27,40,199,.0664
+2026,6,27,45,215,.0856
