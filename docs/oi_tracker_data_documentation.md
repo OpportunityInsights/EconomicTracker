@@ -3,7 +3,7 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Documentation</div></h1>
-<p class="subtitle">last updated on 2025-11-13</p>
+<p class="subtitle">last updated on 2026-09-17</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_documentation.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
@@ -30,7 +30,7 @@ used to construct the series.</li>
 <p>Please note that both the data and this data documentation are
 updated regularly and that the following information is subject to
 change.</p>
-<h1 id="data-series">Data Series</h1>
+<h1 id="active-data-series">Active Data Series</h1>
 <h2 id="consumer-spending">Consumer Spending</h2>
 <p><strong>Summary:</strong> Aggregated and anonymized purchase data
 from consumer credit and debit card spending. Spending is reported based
@@ -144,6 +144,210 @@ adjustment described in Appendix B.2 of the <a
 href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">paper</a>.</li>
 </ul></li>
 </ul>
+<h2 id="job-postings">Job Postings</h2>
+<p><strong>Summary:</strong> Weekly count of new job postings, sourced
+from over 40,000 online job boards. New job postings are defined as
+those that have not had a duplicate posting for at least 60 days
+prior.</p>
+<p><strong>Data Source:</strong> <a
+href="https://lightcast.io/">Lightcast</a> (formerly known as Burning
+Glass Technologies)</p>
+<p><strong>Update Frequency:</strong> Weekly</p>
+<p><strong>Date Range:</strong> January 17, 2020 until the most recent
+date available.</p>
+<p><strong>Data Frequency:</strong> Weekly data points, with each week
+ending on Friday.</p>
+<p><strong>Indexing Period:</strong> January 4 to 31, 2020</p>
+<p><strong>Indexing Type:</strong> Change relative to the January 2020
+index period, not seasonally adjusted.</p>
+<p><strong>Geographies:</strong> National, State, County, Metro.</p>
+<p><strong>Breakdowns:</strong></p>
+<ul>
+<li><p><em>Industry</em>, by <a
+href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS
+supersector</a>.</p>
+<ul>
+<li>Educational and Health Services</li>
+<li>Financial Activities and Services</li>
+<li>Leisure and Hospitality</li>
+<li>Manufactoring</li>
+<li>Professional and Business Services</li>
+</ul></li>
+<li><p><em>Education Requirement</em>, by <a
+href="https://www.onetonline.org/help/online/zones">ONET Jobzone’s
+Education Requirement Classification</a>.</p>
+<ul>
+<li>Minimal - Jobzone 1</li>
+<li>Some - Jobzone 2</li>
+<li>Moderate - Jobzone 3</li>
+<li>Considerable - Jobzone 4</li>
+<li>Extensive - Jobzone 5</li>
+</ul></li>
+</ul>
+<p><strong>Data Masking:</strong> In order to avoid extreme outliers, we
+calculate a cutoff of one standard deviation above the 97th percentile
+of the state-level data for each variable and mask values that exceed
+this threshold. Additionally, at the county level, only subgroup data
+for the 200 largest counties is able to be disclosed for firm data
+privacy reasons. For the remaining counties’ subgroups, all values are
+imputed from the share of state postings that are made up of a given
+subgrouping multiplied by the number of county postings in total.</p>
+<p><strong>Supplemental files:</strong></p>
+<ul>
+<li><em>Job Postings Industry Shares - National - 2020.csv</em>
+<ul>
+<li><code>share_jan2020</code>: the share of job postings by industry
+(2-digit NAICS) in the period from January 4 to 31, 2020.</li>
+</ul></li>
+</ul>
+<h2 id="employment">Employment</h2>
+<p><strong>Summary:</strong> Number of employees who are compensated in
+a given period. This series is based on aggregated payroll data from
+Paychex constructed from firm level microdata. Both seasonally adjusted
+and non-seasonally adjusted versions of this series are available.</p>
+<p><strong>Data Source:</strong> <a
+href="https://www.paychex.com/">Paychex</a></p>
+<p><strong>Update Frequency:</strong> Weekly</p>
+<p><strong>Date Range:</strong> January 2, 2016 until the most recent
+date available.</p>
+<p><strong>Data Frequency:</strong> Weekly, with each week ending on
+Saturday</p>
+<p><strong>Indexing Period:</strong> Week ending January 7, 2023</p>
+<p><strong>Indexing Type:</strong> Change relative to the January 2023
+index week, seasonally adjusted.</p>
+<p><strong>Geographies:</strong> National, State, County, Metro</p>
+<p><strong>Breakdowns:</strong></p>
+<ul>
+<li><p><em>Wage</em>.</p>
+<ul>
+<li>Lowest (annualized wage lower than the federal poverty line,
+adjusted for CPI inflation within each calendar year)</li>
+<li>Second (annualized wage between 1x and 1.5x the federal poverty
+line, adjusted for CPI inflation within each calendar year)</li>
+<li>Third (annualized wage between 1.5x and 2.5x the federal poverty
+line, adjusted for CPI inflation within each calendar year)</li>
+<li>Highest (annualized wage greater than 2.5x the federal poverty line,
+adjusted for CPI inflation within each calendar year)</li>
+</ul></li>
+<li><p><em>Industry</em>, by <a
+href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS
+supersector</a>.</p>
+<ul>
+<li>Professional and Business Services</li>
+<li>Education and Health Services</li>
+<li>Retail and Transportation</li>
+<li>Leisure and Hospitality</li>
+</ul></li>
+</ul>
+<p><strong>Data Masking:</strong> To limit the influence of extreme
+outliers, county and metro series are winsorized at the 99th percentile
+of their own values. At the state, county and metro levels a series is
+suppressed if it ever exceeds a growth ceiling (+200% for states and
+metros, +300% for counties) or if its maximum over the most recent 52
+weeks falls below a collapse floor (-70% for states, -80% for metros,
+-90% for counties). Series flagged by manual review are also
+suppressed.</p>
+<p><strong>Supplemental files:</strong></p>
+<ul>
+<li><em>Earnin - ZCTA - 2020.csv</em>
+<ul>
+<li><code>emp_incq1_apr2020</code>: Change in employment level for all
+workers in the Earnin sample (low-wage) from January 2020 to April
+2020.</li>
+<li><code>emp_incq1_jul2020</code>: Change in employment level for all
+workers in the Earnin sample (low-wage), from January 2020 to July
+2020.</li>
+</ul></li>
+</ul>
+<h2 id="unemployment-claims">Unemployment Claims</h2>
+<p><strong>Summary:</strong> Weekly unemployment insurance claims counts
+and rates (as a share of the 2019 labor force) for all states, as well
+as initial unemployment insurance claims for select counties where the
+data is publicly available.</p>
+<p><strong>Data Source:</strong> State-level and national statistics are
+reported by the U.S. Department of Labor.</p>
+<p>The county-level series is only available for states whose respective
+state agencies publish county level data:</p>
+<ul>
+<li>Alabama: Alabama Department of Labor</li>
+<li>Arizona: Arizona Commerce Authority</li>
+<li>California: Employment Development Department of California</li>
+<li>Colorado: Colorado Department of Labor and Employment</li>
+<li>Georgia: Georgia Department of Labor</li>
+<li>Hawaii: Hawaii Department of Labor</li>
+<li>Idaho: Idaho Department of Labor</li>
+<li>Illinois: Illinois Department of Employment Security</li>
+<li>Indiana: Indiana Department of Workforce Development</li>
+<li>Iowa: State of Iowa</li>
+<li>Kentucky: Kentucky Center for Statistics</li>
+<li>Maryland: Maryland Department of Labor</li>
+<li>Massachusetts: Massachusetts Department of Unemployment
+Assistance</li>
+<li>Missouri: State of Missouri</li>
+<li>Nebraska: NEworks (Government of Nebraska)</li>
+<li>Nevada: Nevada Department of Employment; Training and
+Rehabilitation</li>
+<li>New York: New York State Department of Labor</li>
+<li>Ohio: Ohio Department of Job and Family Services</li>
+<li>Pennsylvania: Government of Pennsylvania</li>
+<li>Washington: Washington State Employment Security Department</li>
+<li>Wisconsin: Wisconsin Department of Workforce Development</li>
+<li>Wyoming: Wyoming Department of Workforce Services</li>
+</ul>
+<p><strong>Update Frequency:</strong> Weekly (where available, in the
+case of county-level data)</p>
+<p><strong>Date Range:</strong> January 18, 2020 until the most recent
+date available.</p>
+<p><strong>Data Frequency:</strong> Weekly data points, with each week
+ending on Saturday.</p>
+<p>Note that county-level claims in California, Georgia, Kentucky, and
+Illinois are reported at the monthly level and imputed to weekly data
+points for the county-level series. For more information about the
+imputation methodology, see the <strong><a
+href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying
+paper</a></strong></p>
+<p><strong>Indexing Period:</strong> No indexing applied, the published
+numbers directly report quantities.</p>
+<p><strong>Indexing Type:</strong> No indexing applied, the published
+numbers directly report quantities.</p>
+<p><strong>Geographies:</strong> National, State, County, Metro.</p>
+<p><strong>Breakdowns:</strong></p>
+<ul>
+<li><p><em>Initial Claims</em></p>
+<ul>
+<li>Regular Claims</li>
+<li>PUA Claims</li>
+<li>Combined Claims</li>
+</ul></li>
+<li><p><em>Continued Claims</em></p>
+<ul>
+<li>Regular Claims</li>
+<li>PUA Claims</li>
+<li>PEUC Claims</li>
+<li>Combined Claims</li>
+</ul></li>
+</ul>
+<p><strong>Data Masking:</strong> No masking is performed by Opportunity
+Insights, but county-level data is subject to varying masking rules
+implemented by the state agencies that release the data. For more
+details, check with the relevant state agency for that state’s
+particular masking rules.</p>
+<p><strong>Notes:</strong> Unemployment claims rates are calculated by
+dividing unemployment claims counts by the Bureau of Labor Statistics
+labor force estimates from 2019.</p>
+<p>Under the CARES Act, all states provide 13 additional weeks of
+federally funded Pandemic Emergency Unemployment Assistance (PEUC)
+benefits to people who exhaust their regular state benefits. Under the
+Act, through the end of 2020, some people who exhaust all these
+benefits, and others who have lost their jobs for reasons arising from
+the pandemic but who are not normally eligible for UI in their state,
+are eligible for Pandemic Unemployment Assistance (PUA). “Combined
+Claims” are defined as the sum of regular, PUA and PEUC unemployment
+benefit claims.</p>
+<p>National totals for all programs’ unemployment benefit claims are the
+sum of the claims counts for all states and DC and exclude other
+territories such as Puerto Rico and the U.S. Virgin Islands.</p>
+<h1 id="archived-data-series">Archived Data Series</h1>
 <h2 id="small-business-revenue">Small Business Revenue</h2>
 <p><strong>Summary:</strong> Small business transactions and revenue
 data aggregated from several credit card processors. Transactions and
@@ -302,254 +506,6 @@ demonstrate extreme variation.</p>
 income ZIP codes have been temporarily removed since the August 21st
 2020 update due to revisions in the structure of the raw data we
 receive. We hope to add them back to the OI Economic Tracker soon.</p>
-<h2 id="job-postings">Job Postings</h2>
-<p><strong>Summary:</strong> Weekly count of new job postings, sourced
-from over 40,000 online job boards. New job postings are defined as
-those that have not had a duplicate posting for at least 60 days
-prior.</p>
-<p><strong>Data Source:</strong> <a
-href="https://lightcast.io/">Lightcast</a> (formerly known as Burning
-Glass Technologies)</p>
-<p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 17, 2020 until the most recent
-date available.</p>
-<p><strong>Data Frequency:</strong> Weekly data points, with each week
-ending on Friday.</p>
-<p><strong>Indexing Period:</strong> January 4 to 31, 2020</p>
-<p><strong>Indexing Type:</strong> Change relative to the January 2020
-index period, not seasonally adjusted.</p>
-<p><strong>Geographies:</strong> National, State, County, Metro.</p>
-<p><strong>Breakdowns:</strong></p>
-<ul>
-<li><p><em>Industry</em>, by <a
-href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS
-supersector</a>.</p>
-<ul>
-<li>Educational and Health Services</li>
-<li>Financial Activities and Services</li>
-<li>Leisure and Hospitality</li>
-<li>Manufactoring</li>
-<li>Professional and Business Services</li>
-</ul></li>
-<li><p><em>Education Requirement</em>, by <a
-href="https://www.onetonline.org/help/online/zones">ONET Jobzone’s
-Education Requirement Classification</a>.</p>
-<ul>
-<li>Minimal - Jobzone 1</li>
-<li>Some - Jobzone 2</li>
-<li>Moderate - Jobzone 3</li>
-<li>Considerable - Jobzone 4</li>
-<li>Extensive - Jobzone 5</li>
-</ul></li>
-</ul>
-<p><strong>Data Masking:</strong> In order to avoid extreme outliers, we
-calculate a cutoff of one standard deviation above the 97th percentile
-of the state-level data for each variable and mask values that exceed
-this threshold. Additionally, at the county level, only subgroup data
-for the 200 largest counties is able to be disclosed for firm data
-privacy reasons. For the remaining counties’ subgroups, all values are
-imputed from the share of state postings that are made up of a given
-subgrouping multiplied by the number of county postings in total.</p>
-<p><strong>Supplemental files:</strong></p>
-<ul>
-<li><em>Job Postings Industry Shares - National - 2020.csv</em>
-<ul>
-<li><code>share_jan2020</code>: the share of job postings by industry
-(2-digit NAICS) in the period from January 4 to 31, 2020.</li>
-</ul></li>
-</ul>
-<h2 id="employment">Employment</h2>
-<p><strong>Summary:</strong> Please note we are planning the release of
-a new, updated, and overhauled employment series in the coming weeks.
-This series will much better handle entry and exit from the underlying
-sample as well as improve on other biases in the current series. As such
-we advise that users wait for the release of the new and updated data in
-order before using the Employment series so that users have the most
-accurate information available. Number of active employees, aggregating
-information from multiple data providers. This series is based on
-firm-level payroll data from Paychex and Intuit.</p>
-<p><strong>Data Source:</strong> <a
-href="https://www.paychex.com/">Paychex</a>, <a
-href="https://www.intuit.com/">Intuit</a></p>
-<p><strong>Update Frequency:</strong> Weekly</p>
-<p><strong>Date Range:</strong> January 15, 2020 until the most recent
-date available. The most recent date available for the full series
-depends on the combination of Paychex and Intuit data.</p>
-<p><strong>Data Frequency:</strong> Weekly</p>
-<p><strong>Indexing Period:</strong> January 4 to 31, 2020</p>
-<p><strong>Indexing Type:</strong> Change relative to the January 2020
-index period, not seasonally adjusted.</p>
-<p><strong>Geographies:</strong> National, State, County, Metro</p>
-<p><strong>Breakdowns:</strong></p>
-<ul>
-<li><p><em>Wage</em>.</p>
-<ul>
-<li>High Wage (annualized wage greater than 2.5x the federal poverty
-line, adjusted for CPI inflation within each calendar year)</li>
-<li>Middle Wage (annualized wage between 1x and 2.5x the federal poverty
-line, adjusted for CPI inflation within each calendar year)</li>
-<li>Low Wage (annualized wage lower than the federal poverty line,
-adjusted for CPI inflation within each calendar year)</li>
-<li>Above Median (annualized wage greater than 1.5x the federal poverty
-line, adjusted for CPI inflation within each calendar year)</li>
-<li>Below Median (annualized wage less than 1.5x the federal poverty
-line, adjusted for CPI inflation within each calendar year)</li>
-</ul></li>
-<li><p><em>Industry</em>, by <a
-href="https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm">NAICS
-supersector</a>.</p>
-<ul>
-<li>Professional and Business Services</li>
-<li>Education and Health Services</li>
-<li>Retail and Transportation</li>
-<li>Leisure and Hospitality</li>
-</ul></li>
-<li><p><em>Industry</em>, by <a
-href="https://www.census.gov/programs-surveys/economic-census/guidance/understanding-naics.html">NAICS
-sector</a>.</p>
-<ul>
-<li>Retail</li>
-</ul></li>
-</ul>
-<p><strong>Data Masking:</strong> As the employment series is a
-composite series, each of its component series have their own masking
-standards that in aggregate determine masking for the series.</p>
-<ul>
-<li><p><em>In the Paychex series</em>, we reduce the weight of cells in
-which we detect firm entry/exit over time. In each county x industry
-(two-digit NAICS code) x firm size x wage quartile cell, we compute the
-change in employment relative to January 4 to 31, 2020, and the change
-in employment relative to July 1 to 31, 2020. For county x industry x
-firm size x wage quartile cells between January 2020 and the end of the
-series, we reduce the weight we place on the series if we observe
-changes in employment that indicate firm entry or exit.</p>
-<ul>
-<li>For cells with over 50 employees:
-<ul>
-<li>We reduce the weight by 2 percentage points for each percentage
-point of decline we observe below 50 percentage points relative to July
-2020.</li>
-<li>We reduce the weight by 0.5 percentage points for each percentage
-point of growth we observe above 600 percentage points relative to
-January 2020.</li>
-</ul></li>
-<li>For cells with 50 employees or less:
-<ul>
-<li>We reduce the weight by 2 percentage points for each percentage
-point of decline we observe below 50 percentage points relative to July
-2020</li>
-<li>We reduce the weight by 0.1 percentage points for each percentage
-point of growth we observe above 4000 percentage points relative to
-January 2020.</li>
-</ul></li>
-</ul>
-<p>The difference in weighting between small and large cells is to
-account for large amounts of small firm births, particularly in the
-second half of 2020, which played a strong role in the economic recovery
-from the pandemic.</p></li>
-<li><p><em>In the Intuit series</em>, we do not make any sample
-restrictions.</p></li>
-</ul>
-<p><strong>Supplemental files:</strong></p>
-<ul>
-<li><em>Earnin - ZCTA - 2020.csv</em>
-<ul>
-<li><code>emp_incq1_apr2020</code>: Change in employment level for all
-workers in the Earnin sample (low-wage) from January 2020 to April
-2020.</li>
-<li><code>emp_incq1_jul2020</code>: Change in employment level for all
-workers in the Earnin sample (low-wage), from January 2020 to July
-2020.</li>
-</ul></li>
-</ul>
-<h2 id="unemployment-claims">Unemployment Claims</h2>
-<p><strong>Summary:</strong> Weekly unemployment insurance claims counts
-and rates (as a share of the 2019 labor force) for all states, as well
-as initial unemployment insurance claims for select counties where the
-data is publicly available.</p>
-<p><strong>Data Source:</strong> State-level and national statistics are
-reported by the U.S. Department of Labor.</p>
-<p>The county-level series is only available for states whose respective
-state agencies publish county level data:</p>
-<ul>
-<li>Alabama: Alabama Department of Labor</li>
-<li>Arizona: Arizona Commerce Authority</li>
-<li>California: Employment Development Department of California</li>
-<li>Colorado: Colorado Department of Labor and Employment</li>
-<li>Georgia: Georgia Department of Labor</li>
-<li>Hawaii: Hawaii Department of Labor</li>
-<li>Idaho: Idaho Department of Labor</li>
-<li>Illinois: Illinois Department of Employment Security</li>
-<li>Indiana: Indiana Department of Workforce Development</li>
-<li>Iowa: State of Iowa</li>
-<li>Kentucky: Kentucky Center for Statistics</li>
-<li>Maryland: Maryland Department of Labor</li>
-<li>Massachusetts: Massachusetts Department of Unemployment
-Assistance</li>
-<li>Missouri: State of Missouri</li>
-<li>Nebraska: NEworks (Government of Nebraska)</li>
-<li>Nevada: Nevada Department of Employment; Training and
-Rehabilitation</li>
-<li>New York: New York State Department of Labor</li>
-<li>Ohio: Ohio Department of Job and Family Services</li>
-<li>Pennsylvania: Government of Pennsylvania</li>
-<li>Washington: Washington State Employment Security Department</li>
-<li>Wisconsin: Wisconsin Department of Workforce Development</li>
-<li>Wyoming: Wyoming Department of Workforce Services</li>
-</ul>
-<p><strong>Update Frequency:</strong> Weekly (where available, in the
-case of county-level data)</p>
-<p><strong>Date Range:</strong> January 18, 2020 until the most recent
-date available.</p>
-<p><strong>Data Frequency:</strong> Weekly data points, with each week
-ending on Saturday.</p>
-<p>Note that county-level claims in California, Georgia, Kentucky, and
-Illinois are reported at the monthly level and imputed to weekly data
-points for the county-level series. For more information about the
-imputation methodology, see the <strong><a
-href="https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf">accompanying
-paper</a></strong></p>
-<p><strong>Indexing Period:</strong> No indexing applied, the published
-numbers directly report quantities.</p>
-<p><strong>Indexing Type:</strong> No indexing applied, the published
-numbers directly report quantities.</p>
-<p><strong>Geographies:</strong> National, State, County, Metro.</p>
-<p><strong>Breakdowns:</strong></p>
-<ul>
-<li><p><em>Initial Claims</em></p>
-<ul>
-<li>Regular Claims</li>
-<li>PUA Claims</li>
-<li>Combined Claims</li>
-</ul></li>
-<li><p><em>Continued Claims</em></p>
-<ul>
-<li>Regular Claims</li>
-<li>PUA Claims</li>
-<li>PEUC Claims</li>
-<li>Combined Claims</li>
-</ul></li>
-</ul>
-<p><strong>Data Masking:</strong> No masking is performed by Opportunity
-Insights, but county-level data is subject to varying masking rules
-implemented by the state agencies that release the data. For more
-details, check with the relevant state agency for that state’s
-particular masking rules.</p>
-<p><strong>Notes:</strong> Unemployment claims rates are calculated by
-dividing unemployment claims counts by the Bureau of Labor Statistics
-labor force estimates from 2019.</p>
-<p>Under the CARES Act, all states provide 13 additional weeks of
-federally funded Pandemic Emergency Unemployment Assistance (PEUC)
-benefits to people who exhaust their regular state benefits. Under the
-Act, through the end of 2020, some people who exhaust all these
-benefits, and others who have lost their jobs for reasons arising from
-the pandemic but who are not normally eligible for UI in their state,
-are eligible for Pandemic Unemployment Assistance (PUA). “Combined
-Claims” are defined as the sum of regular, PUA and PEUC unemployment
-benefit claims.</p>
-<p>National totals for all programs’ unemployment benefit claims are the
-sum of the claims counts for all states and DC and exclude other
-territories such as Puerto Rico and the U.S. Virgin Islands.</p>
 <h2 id="online-math-participation">Online Math Participation</h2>
 <p><strong>Summary:</strong> Number of students using Zearn Math, a
 curriculum from the non-profit Zearn, among schools that already used

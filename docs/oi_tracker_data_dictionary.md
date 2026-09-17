@@ -3,11 +3,11 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Dictionary</div></h1>
-<p class="subtitle">last updated on 2025-11-13</p>
+<p class="subtitle">last updated on 2026-09-17</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_dictionary.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
-<h2 id="overview">Overview</h2>
+<h1 id="overview">Overview</h1>
 <p>Each data source and level of aggregation has a separate CSV, named
 using the following convention: <em>Data source</em> – <em>Geographic
 Level of Aggregation</em> – <em>Temporal Level of Aggregation</em></p>
@@ -25,8 +25,8 @@ New York City which includes the 5 boroughs).</p>
 dates relevant for changes in other series trends and values. These are
 contained in the <strong>Policy Milestones – State</strong> file.</p>
 <p>A description of the columns in each file follows.</p>
-<h2 id="geoid-file-descriptions">GeoID File Descriptions</h2>
-<h3 id="geoids---state.csv">GeoIDs - State.csv</h3>
+<h1 id="geoid-file-descriptions">GeoID File Descriptions</h1>
+<h2 id="geoids---state.csv">GeoIDs - State.csv</h2>
 <p>Geographic identifier: <code>statefips</code></p>
 <ul>
 <li><code>statename</code>: The name of the state.</li>
@@ -34,7 +34,7 @@ contained in the <strong>Policy Milestones – State</strong> file.</p>
 <li><code>state_pop2019</code>: The population of the state in 2019,
 from Census Bureau estimates.</li>
 </ul>
-<h3 id="geoids---county.csv">GeoIDs - County.csv</h3>
+<h2 id="geoids---county.csv">GeoIDs - County.csv</h2>
 <p>Geographic identifier: <code>countyfips</code></p>
 <ul>
 <li><code>countyname</code>: The name of the county.</li>
@@ -55,7 +55,7 @@ which the county is contained.</li>
 <li><code>county_pop2019</code>: The population of the county in 2019
 according to Census Bureau estimates.</li>
 </ul>
-<h3 id="geoids---city.csv">GeoIDs - City.csv</h3>
+<h2 id="geoids---city.csv">GeoIDs - City.csv</h2>
 <p>Geographic identifier: <code>cityid</code></p>
 <ul>
 <li><code>cityname</code>: The name of the city.</li>
@@ -71,8 +71,8 @@ the city is contained.</li>
 according to Census Bureau estimates, calculated as population of the
 county or counties assigned to the city.</li>
 </ul>
-<h2 id="data-file-descriptions">Data File Descriptions</h2>
-<h3 id="affinity">Affinity</h3>
+<h1 id="active-data-series">Active Data Series</h1>
+<h2 id="affinity">Affinity</h2>
 <p>Credit/debit card spending data from <a
 href="https://www.affinity.solutions">Affinity Solutions</a>.</p>
 <ul>
@@ -305,7 +305,7 @@ for more details on these files):</p>
 <li><em>Affinity Industry Composition - National - 2020.csv</em></li>
 <li><em>Affinity Daily Total Spending - National - Daily.csv</em></li>
 </ul>
-<h3 id="job-postings">Job Postings</h3>
+<h2 id="job-postings">Job Postings</h2>
 <p>Job postings data from <a href="https://lightcast.io/">Lightcast</a>
 (formerly known as Burning Glass Technologies).</p>
 <ul>
@@ -357,7 +357,121 @@ for more details on this file):</p>
 <ul>
 <li><em>Job Postings Industry Shares - National - 2020.csv</em></li>
 </ul>
-<h3 id="covid">COVID</h3>
+<h2 id="employment">Employment</h2>
+<p>Employment levels relative to the week ending January 7, 2023 from <a
+href="https://www.paychex.com/">Paychex</a>.</p>
+<p>Seasonally adjusted series:</p>
+<ul>
+<li><code>emp_s</code>: Seasonally adjusted employment level for all
+workers.</li>
+<li><code>emp_wage_q1_s</code>: Seasonally adjusted employment level for
+workers in the bottom quartile of the wage distribution (annualized wage
+lower than the federal poverty line).</li>
+<li><code>emp_wage_q2_s</code>: Seasonally adjusted employment level for
+workers in the second quartile of the wage distribution (annualized wage
+between 1x and 1.5x the federal poverty line).</li>
+<li><code>emp_wage_q3_s</code>: Seasonally adjusted employment level for
+workers in the third quartile of the wage distribution (annualized wage
+between 1.5x and 2.5x the federal poverty line).</li>
+<li><code>emp_wage_q4_s</code>: Seasonally adjusted employment level for
+workers in the top quartile of the wage distribution (annualized wage
+greater than 2.5x the federal poverty line).</li>
+<li><code>emp_ss40_s</code>: Seasonally adjusted employment level for
+workers in trade, transportation and utilities (NAICS supersector
+40).</li>
+<li><code>emp_ss60_s</code>: Seasonally adjusted employment level for
+workers in professional and business services (NAICS supersector
+60).</li>
+<li><code>emp_ss65_s</code>: Seasonally adjusted employment level for
+workers in education and health services (NAICS supersector 65).</li>
+<li><code>emp_ss70_s</code>: Seasonally adjusted employment level for
+workers in leisure and hospitality (NAICS supersector 70).</li>
+</ul>
+<p>Non-seasonally adjusted series:</p>
+<ul>
+<li><code>emp</code>: Employment level for all workers.</li>
+<li><code>emp_wage_q1</code>: Employment level for workers in the bottom
+quartile of the wage distribution (annualized wage lower than the
+federal poverty line).</li>
+<li><code>emp_wage_q2</code>: Employment level for workers in the second
+quartile of the wage distribution (annualized wage between 1x and 1.5x
+the federal poverty line).</li>
+<li><code>emp_wage_q3</code>: Employment level for workers in the third
+quartile of the wage distribution (annualized wage between 1.5x and 2.5x
+the federal poverty line).</li>
+<li><code>emp_wage_q4</code>: Employment level for workers in the top
+quartile of the wage distribution (annualized wage greater than 2.5x the
+federal poverty line).</li>
+<li><code>emp_ss40</code>: Employment level for workers in trade,
+transportation and utilities (NAICS supersector 40).</li>
+<li><code>emp_ss60</code>: Employment level for workers in professional
+and business services (NAICS supersector 60).</li>
+<li><code>emp_ss65</code>: Employment level for workers in education and
+health services (NAICS supersector 65).</li>
+<li><code>emp_ss70</code>: Employment level for workers in leisure and
+hospitality (NAICS supersector 70).</li>
+</ul>
+<p>In addition, the following supplemental file is included (see the <a
+href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a>
+for more details on this file):</p>
+<ul>
+<li><em>Earnin - ZCTA - 2020.csv</em></li>
+</ul>
+<h2 id="ui-claims">UI Claims</h2>
+<p>Unemployment insurance claims data from the <a
+href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of
+Labor</a> (national and state-level) and numerous individual state
+agencies (county-level).</p>
+<ul>
+<li><code>initclaims_rate_regular</code>: Number of initial claims per
+100 people in the 2019 labor force, Regular UI only
+<ul>
+<li><code>initclaims_count_regular</code>: Count of initial claims,
+Regular UI only</li>
+</ul></li>
+<li><code>initclaims_rate_pua</code>: Number of initial claims per 100
+people in the 2019 labor force, PUA (Pandemic Unemployment Assistance)
+only
+<ul>
+<li><code>initclaims_count_pua</code>: Count of initial claims, PUA
+(Pandemic Unemployment Assistance) only</li>
+</ul></li>
+<li><code>initclaims_rate_combined</code>: Number of initial claims per
+100 people in the 2019 labor force, combining Regular and PUA claims
+<ul>
+<li><code>initclaims_count_combined</code>: Count of initial claims,
+combining Regular and PUA claims</li>
+</ul></li>
+<li><code>contclaims_rate_regular</code>: Number of continued claims per
+100 people in the 2019 labor force, Regular UI only
+<ul>
+<li><code>contclaims_count_regular</code>: Count of continued claims,
+Regular UI only</li>
+</ul></li>
+<li><code>contclaims_rate_pua</code>: Number of continued claims per 100
+people in the 2019 labor force, PUA (Pandemic Unemployment Assistance)
+only
+<ul>
+<li><code>contclaims_count_pua</code>: Count of continued claims, PUA
+(Pandemic Unemployment Assistance) only</li>
+</ul></li>
+<li><code>contclaims_rate_peuc</code>: Number of continued claims per
+100 people in the 2019 labor force, PEUC (Pandemic Emergency
+Unemployment Compensation) only
+<ul>
+<li><code>contclaims_count_peuc</code>: Count of continued claims, PEUC
+(Pandemic Emergency Unemployment Compensation) only</li>
+</ul></li>
+<li><code>contclaims_rate_combined</code>: Number of continued claims
+per 100 people in the 2019 labor force, combining Regular, PUA and PEUC
+claims
+<ul>
+<li><code>contclaims_count_combined</code>: Count of continued claims,
+combining Regular, PUA and PEUC claims</li>
+</ul></li>
+</ul>
+<h1 id="archived-data-series">Archived Data Series</h1>
+<h2 id="covid">COVID</h2>
 <p>COVID cases and deaths numbers are from the <a
 href="https://github.com/nytimes/covid-19-data">New York Times</a> and
 the <a
@@ -450,7 +564,7 @@ hospitalized in an inpatient bed who have suspected or confirmed
 COVID-19, seven day moving average.</li>
 </ul></li>
 </ul>
-<h3 id="google-mobility">Google Mobility</h3>
+<h2 id="google-mobility">Google Mobility</h2>
 <p>GPS mobility data indexed to January 3 to February 6, 2020 from <a
 href="https://www.google.com/covid19/mobility/">Google COVID-19
 Community Mobility Reports</a>.</p>
@@ -467,169 +581,6 @@ stations.</li>
 <li><code>gps_workplaces</code>: Time spent at work places.</li>
 <li><code>gps_residential</code>: Time spent at residential
 locations.</li>
-</ul>
-<h3 id="employment">Employment</h3>
-<p>Please note we are planning the release of a new, updated, and
-overhauled employment series in the coming weeks. This series will much
-better handle entry and exit from the underlying sample as well as
-improve on other biases in the current series. As such we advise that
-users wait for the release of the new and updated data in order before
-using the Employment series so that users have the most accurate
-information available.</p>
-<p>Employment levels relative to January 4 to 31, 2020 from <a
-href="https://www.paychex.com/">Paychex</a> and <a
-href="https://www.intuit.com/">Intuit</a>.</p>
-<ul>
-<li><code>emp</code>: Employment level for all workers.</li>
-<li><code>emp_incq1</code>: Employment level for workers in the bottom
-quartile of the wage distribution (annualized wage lower than the
-federal poverty line).</li>
-<li><code>emp_incq2</code>: Employment level for workers in the second
-quartile of the wage distribution (annualized wage between 1x and 1.5x
-the federal poverty line).</li>
-<li><code>emp_incmiddle</code>: Employment level for workers in the
-middle two quartiles of the wage distribution (annualized wage between
-1x and 2.5x the federal poverty line).</li>
-<li><code>emp_incq3</code>: Employment level for workers in the third
-quartile of the wage distribution (annualized wage between 1.5x and 2.5x
-the federal poverty line).</li>
-<li><code>emp_incq4</code>: Employment level for workers in the top
-quartile of the wage distribution (annualized wage greater than 2.5x the
-federal poverty line).</li>
-<li><code>emp_incbelowmed</code>: Employment level for workers in the
-bottom half of the wage distribution (annualized wage less than 1.5x the
-federal poverty line).</li>
-<li><code>emp_incabovemed</code>: Employment level for workers in the
-top half of the wage distribution (annualized wage greater than 1.5x the
-federal poverty line).</li>
-<li><code>emp_ss40</code>: Employment level for workers in trade,
-transportation and utilities (NAICS supersector 40).</li>
-<li><code>emp_ss60</code>: Employment level for workers in professional
-and business services (NAICS supersector 60).</li>
-<li><code>emp_ss65</code>: Employment level for workers in education and
-health services (NAICS supersector 65).</li>
-<li><code>emp_ss70</code>: Employment level for workers in leisure and
-hospitality (NAICS supersector 70).</li>
-<li><code>emp_retail</code>: Employment level for workers in retail
-(NAICS sector 44-45).</li>
-<li><code>emp_retail_inclow</code>: Employment level for workers in
-retail (NAICS sector 44-45) and in the bottom quartile of the wage
-distribution (annualized wage lower than the federal poverty line).</li>
-<li><code>emp_retail_incmiddle</code>: Employment level for workers in
-retail (NAICS sector 44-45) and in the middle two quartiles of the wage
-distribution (annualized wage between 1x and 2.5x the federal poverty
-line).</li>
-<li><code>emp_retail_inchigh</code>: Employment level for workers in
-retail (NAICS sector 44-45) and in the top quartile of the wage
-distribution (annualized wage greater than 2.5x the federal poverty
-line).</li>
-<li><code>emp_s72</code>: Employment level for workers in accommodation
-and food services (NAICS sector 72).</li>
-<li><code>emp_subset_unweighted_q1</code>: Employment level for workers
-in the bottom quartile of the wage distribution (annualized wage lower
-than the federal poverty line) in county x industry (2-digit NAICS code)
-cells with nonzero employment for all four wage quartiles.</li>
-<li><code>emp_subset_unweighted_q2</code>: Employment level for workers
-in the second quartile of the wage distribution (annualized wage between
-1x and 1.5x the federal poverty line) in county x industry (2-digit
-NAICS code) cells with nonzero employment for all four wage
-quartiles.</li>
-<li><code>emp_subset_unweighted_q3</code>: Employment level for workers
-in the third quartile of the wage distribution (annualized wage between
-1.5x and 2.5x the federal poverty line) in county x industry (2-digit
-NAICS code) cells with nonzero employment for all four wage
-quartiles.</li>
-<li><code>emp_subset_unweighted_q4</code>: Employment level for workers
-in the top quartile of the wage distribution (annualized wage greater
-than 2.5x the federal poverty line) in county x industry (2-digit NAICS
-code) cells with nonzero employment for all four wage quartiles.</li>
-<li><code>emp_subset_reweighted_q1</code>: Employment level for workers
-in the bottom quartile of the wage distribution (annualized wage lower
-than the federal poverty line) in county x industry cells with nonzero
-employment for all four wage quartiles, reweighting to match the county
-x industry (2-digit NAICS code) distribution of workers in the top
-quartile of the wage distribution.</li>
-<li><code>emp_subset_reweighted_q2</code>: Employment level for workers
-in the second quartile of the wage distribution (annualized wage between
-1x and 1.5x the federal poverty line) in county x industry cells with
-nonzero employment for all four wage quartiles, reweighting to match the
-county x industry (2-digit NAICS code) distribution of workers in the
-top quartile of the wage distribution.</li>
-<li><code>emp_subset_reweighted_q3</code>: Employment level for workers
-in the third quartile of the wage distribution (annualized wage between
-1.5x and 2.5x the federal poverty line) in county x industry cells with
-nonzero employment for all four wage quartiles, reweighting to match the
-county x industry (2-digit NAICS code) distribution of workers in the
-top quartile of the wage distribution.</li>
-<li><code>emp_subset_reweighted_q4</code>: Employment level for workers
-in the top quartile of the wage distribution (annualized wage greater
-than 2.5x the federal poverty line) in county x industry cells with
-nonzero employment for all four wage quartiles, reweighting to match the
-county x industry (2-digit NAICS code) distribution of workers in the
-top quartile of the wage distribution.</li>
-</ul>
-<!-- List additional variables in comments so they are detected by `verify-csv-columns.py`
-  - `emp_incq1_apr2020`:
-  - `emp_incq1_jul2020`:
--->
-<p>In addition, the following supplemental file is included (see the <a
-href="https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md">documentation</a>
-for more details on this file):</p>
-<ul>
-<li><em>Earnin - ZCTA - 2020.csv</em></li>
-</ul>
-<h3 id="ui-claims">UI Claims</h3>
-<p>Unemployment insurance claims data from the <a
-href="https://oui.doleta.gov/unemploy/DataDashboard.asp">Department of
-Labor</a> (national and state-level) and numerous individual state
-agencies (county-level).</p>
-<ul>
-<li><code>initclaims_rate_regular</code>: Number of initial claims per
-100 people in the 2019 labor force, Regular UI only
-<ul>
-<li><code>initclaims_count_regular</code>: Count of initial claims,
-Regular UI only</li>
-</ul></li>
-<li><code>initclaims_rate_pua</code>: Number of initial claims per 100
-people in the 2019 labor force, PUA (Pandemic Unemployment Assistance)
-only
-<ul>
-<li><code>initclaims_count_pua</code>: Count of initial claims, PUA
-(Pandemic Unemployment Assistance) only</li>
-</ul></li>
-<li><code>initclaims_rate_combined</code>: Number of initial claims per
-100 people in the 2019 labor force, combining Regular and PUA claims
-<ul>
-<li><code>initclaims_count_combined</code>: Count of initial claims,
-combining Regular and PUA claims</li>
-</ul></li>
-<li><code>contclaims_rate_regular</code>: Number of continued claims per
-100 people in the 2019 labor force, Regular UI only
-<ul>
-<li><code>contclaims_count_regular</code>: Count of continued claims,
-Regular UI only</li>
-</ul></li>
-<li><code>contclaims_rate_pua</code>: Number of continued claims per 100
-people in the 2019 labor force, PUA (Pandemic Unemployment Assistance)
-only
-<ul>
-<li><code>contclaims_count_pua</code>: Count of continued claims, PUA
-(Pandemic Unemployment Assistance) only</li>
-</ul></li>
-<li><code>contclaims_rate_peuc</code>: Number of continued claims per
-100 people in the 2019 labor force, PEUC (Pandemic Emergency
-Unemployment Compensation) only
-<ul>
-<li><code>contclaims_count_peuc</code>: Count of continued claims, PEUC
-(Pandemic Emergency Unemployment Compensation) only</li>
-</ul></li>
-<li><code>contclaims_rate_combined</code>: Number of continued claims
-per 100 people in the 2019 labor force, combining Regular, PUA and PEUC
-claims
-<ul>
-<li><code>contclaims_count_combined</code>: Count of continued claims,
-combining Regular, PUA and PEUC claims</li>
-</ul></li>
 </ul>
 <h3 id="womply">Womply</h3>
 <p>Small business openings and revenue data from <a
@@ -688,7 +639,7 @@ for more details on this file):</p>
 <ul>
 <li><em>Womply - ZCTA - 2020.csv</em></li>
 </ul>
-<h3 id="zearn">Zearn</h3>
+<h2 id="zearn">Zearn</h2>
 <p>Online math learning data from <a
 href="https://www.zearn.org/">Zearn</a>.</p>
 <ul>

@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2026-02-24
+subtitle: last updated on 2026-09-17
 documentclass: scrartcl
 ---
 
@@ -24,7 +24,7 @@ This document is updated regularly and the following information is subject to c
 
 For further information or if you have any questions please feel free to reach out to [info@opportunityinsights.org](mailto:info@opportunityinsights.org) and someone on our team will be in touch.
 
-# Data Series
+# Active Data Series
 
 ## Consumer Spending
 
@@ -109,34 +109,6 @@ As of August 15, 2023 we receive a larger sample of consumer spending data from 
 We further refined our holiday adjustment methodology at the weekly level. As described in Appendix B.2 of [the companion paper](https://opportunityinsights.org/wp-content/uploads/2020/05/tracker_paper.pdf) and the revisions statement on July 21st 2023, we seasonally adjust the data by calculating, for each week and day, the year-on-year change relative to the 2019 value. To account for holidays, the year-on-year change for dates with holidays after 2019 is calculated relative to the day or week of the same holiday in 2019. 
 
 From July 21st, 2023 to March 14th, 2024, our processing steps sometimes aligned the weekly data with the corresponding 2019 values by aligning both values with the week of the holiday in 2020. This resulted in a few cases where the values of the published indexed series were shifted a week forwards or backwards to match the weeks relative to the holiday in 2020. In the latest release, this has been corrected: the holiday adjustments are only applied to the 2019 values in our calculations, so the final indexed value is never shifted. This correction caused small revisions around some federal holidays.
-
-## Small Business Revenue & Small Businesses Open
-
-### Revisions on March 4th 2022
-
-We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.
-
-We detect cases where a payment processor disappears by detecting sharp drops in businesses operating, at the national and the state level. We then adjust the series to remove these drops at the State x Industry level, using the following assumptions:
-
-- In the initial Covid period (March to July 2020) we assume momentum, and impute the value of merchants/sales for the week to continue the rate of change we observe in the 4 weeks prior.
-
-- In the rest of the series (before March 2020 and after July 2020) we assume the series stays constant for the adjusted week.
-
-After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level.
-
-Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.
-
-### Revisions on May 17th 2022
-
-We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4, 2022 data revision.
-
-### Revisions on June 26th 2023
-
-We added a supplemental file: 
-
-- *Womply - ZCTA - 2020.csv*: Small business revenue levels in April and July 2020 at the ZIP-code level.
-
-For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ## Job Postings
 
@@ -298,6 +270,22 @@ We added a supplemental file:
 
 For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
+### Revisions on September 17th 2026
+
+The employment series was overhauled on September 17, 2026 to roll out a new series built using a continuing unit methodology from Paychex client data. This new methodology has been applied to all series, from January 2016 through the present and differs from the prior methodology in the following ways.  
+
+- **Continuing employers:** Because Paychex's client base changes over time, we now measure employment growth only among continuing employers: those present in the current week, the prior week, and the week four weeks earlier. The four-week lookback removes employers that appear intermittently or that migrate gradually between payroll providers. Employers present only in the prior week (exits) or only in the current week (entries) are excluded rather than reweighted; this replaces the cell weighting scheme described above. For each geography and subgroup we compute the week-to-week growth in employment among continuing employers and chain these growth rates into an index. The index is normalized to the week ending January 7, 2023, and the published history now begins in January 2016.
+
+- **Seasonal adjustment:** The new series displays stronger seasonal patterns, so we now publish seasonally adjusted versions of each series (suffix `_s`), which are the default on the tracker website; the unadjusted series remain available for download from the project's [GitHub repository](https://github.com/OpportunityInsights/EconomicTracker) and continue to be updated as well. Each series is adjusted separately using a robust seasonal-trend decomposition based on loess (STL) with a 52-week seasonal period, estimated on complete calendar years only. Seasonal factors from the most recent complete year are applied to the current partial year, and all factors are re-estimated when each year completes. Values from the first week of December through the first week of January, where payroll timing distorts the adjusted series, are replaced with a centered 12-week rolling median.
+
+- **Outlier handling:** County and metro series are winsorized at the 99th percentile of their own values. At the state, county and metro levels a series is suppressed if it ever exceeds a growth ceiling (+200% for states and metros, +300% for counties) or if its maximum over the most recent 52 weeks falls below a collapse floor (-70% for states, -80% for metros, -90% for counties). Series flagged by manual review are also suppressed.
+
+- **Publication timing:** Each reference week is published once, after its payroll collection is complete, roughly four weeks after the week ends; it is not revised in subsequent weekly updates. The full history is periodically rebuilt to incorporate late payrolls and methodology changes.
+
+- **Series changes:** The wage quartile series `emp_incq1` to `emp_incq4` are renamed `emp_wage_q1` to `emp_wage_q4`, and the top quartile is again published for all dates. Seasonally adjusted counterparts are added for the total, wage quartile and supersector series. The following series are no longer published: `emp_incmiddle`, `emp_incbelowmed`, `emp_incabovemed`, `emp_retail`, `emp_retail_inclow`, `emp_retail_incmiddle`, `emp_retail_inchigh`, `emp_s72`, `emp_subset_unweighted_q1` to `emp_subset_unweighted_q4`, and `emp_subset_reweighted_q1` to `emp_subset_reweighted_q4`. The wage quartile and supersector definitions are unchanged.
+
+The new data and methodology track public measures such as the CES and the Quarterly Census of Employment and Wages (QCEW) much more closely than before. Because growth is measured only among continuing employers, the series omits the contribution of firm births net of deaths, which cannot be distinguished from employers entering or leaving Paychex, and is best interpreted as employment growth within an evolving matched sample of employers rather than as a level of total employment. For a full description of the methodology and its validation against the QCEW and CES, see Bell, Dunn, English, Hood, Mance, Mason, Quistorff and Stepner, ["Expanding the Frontier of Economic Measurement: Weekly Regional Employment Statistics"](https://conference.nber.org/conf_papers/f247909.pdf) (2026).
+
 ## Unemployment Claims
 
 ### Revisions on July 29th 2021
@@ -307,6 +295,36 @@ The unemployment data was revised on July 29, 2021 to correct a data processing 
 ### Revisions on July 20th 2023
 
 The unemployment data was revised on July 20, 2023 to change the frequency of the county level Iowa initial claims data from the weekly frequency to the monthly frequency in light of changes in the underlying data's publication at the Iowa Workforce Development - Labor Market Information Division. 
+
+# Archived Data Series
+
+## Small Business Revenue & Small Businesses Open
+
+### Revisions on March 4th 2022
+
+We now derive our published datasets using a county-level panel of small businesses. In each calendar year, we follow the sample of businesses operating during the first week of the year (i.e. we start following a new panel each calendar year). No new businesses enter our panel during the calendar year. Businesses may exit because they stop operating or because the underlying payment processors ceased providing data.
+
+We detect cases where a payment processor disappears by detecting sharp drops in businesses operating, at the national and the state level. We then adjust the series to remove these drops at the State x Industry level, using the following assumptions:
+
+- In the initial Covid period (March to July 2020) we assume momentum, and impute the value of merchants/sales for the week to continue the rate of change we observe in the 4 weeks prior.
+
+- In the rest of the series (before March 2020 and after July 2020) we assume the series stays constant for the adjusted week.
+
+After performing these adjustments, we aggregate up to the State level, the National x Industry level, and the National level.
+
+Since the no-entry panel does not cover the ZIP code level, we impute the ZIP code level data to reconcile it with the rest of the geographic levels. We perform an additive adjustment on the ZIP level series so that the weighted sum of the ZIP series aligns with the county level same store series. In doing this, we get the levels from the County no-entry panel, and the within-county variation from the ZIP level data.
+
+### Revisions on May 17th 2022
+
+We are now releasing county-level and city-level data derived from the same panel of small businesses described in the March 4, 2022 data revision.
+
+### Revisions on June 26th 2023
+
+We added a supplemental file: 
+
+- *Womply - ZCTA - 2020.csv*: Small business revenue levels in April and July 2020 at the ZIP-code level.
+
+For more details, please see the [data documentation](https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_documentation.md).
 
 ## Online Math Participation and Student Progress in Math
 
