@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2026-09-17
+subtitle: last updated on 2026-10-16
 documentclass: scrartcl
 ---
 
@@ -285,6 +285,10 @@ The employment series was overhauled on September 17, 2026 to roll out a new ser
 - **Series changes:** The wage quartile series `emp_incq1` to `emp_incq4` are renamed `emp_wage_q1` to `emp_wage_q4`, and the top quartile is again published for all dates. Seasonally adjusted counterparts are added for the total, wage quartile and supersector series. The following series are no longer published: `emp_incmiddle`, `emp_incbelowmed`, `emp_incabovemed`, `emp_retail`, `emp_retail_inclow`, `emp_retail_incmiddle`, `emp_retail_inchigh`, `emp_s72`, `emp_subset_unweighted_q1` to `emp_subset_unweighted_q4`, and `emp_subset_reweighted_q1` to `emp_subset_reweighted_q4`. The wage quartile and supersector definitions are unchanged.
 
 The new data and methodology track public measures such as the CES and the Quarterly Census of Employment and Wages (QCEW) much more closely than before. Because growth is measured only among continuing employers, the series omits the contribution of firm births net of deaths, which cannot be distinguished from employers entering or leaving Paychex, and is best interpreted as employment growth within an evolving matched sample of employers rather than as a level of total employment. For a full description of the methodology and its validation against the QCEW and CES, see Bell, Dunn, English, Hood, Mance, Mason, Quistorff and Stepner, ["Expanding the Frontier of Economic Measurement: Weekly Regional Employment Statistics"](https://conference.nber.org/conf_papers/f247909.pdf) (2026).
+
+### Revisions on October 16th 2026
+
+The employment series was revised on October 16, 2026 to correct an employee counting error in the processing pipeline. A type conversion applied when payroll records were read was setting some employees' hours values to zero rather than preserving them and later imputing them, so weekly raw employment counts among continuing employers were understated. Because this processing was consistent, however, the effect on the growth rate derived final series is muted. In fixing the type conversion the Alteryx components of the pipeline have been migrated to Python.
 
 ## Unemployment Claims
 

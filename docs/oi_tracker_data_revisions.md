@@ -3,7 +3,7 @@
 <h1 class="title"><div class="line-block">Opportunity Insights Economic
 Tracker<br />
 Data Revisions</div></h1>
-<p class="subtitle">last updated on 2026-09-17</p>
+<p class="subtitle">last updated on 2026-10-16</p>
 </header>
 <p><a href="https://raw.githubusercontent.com/OpportunityInsights/EconomicTracker/main/docs/oi_tracker_data_revisions.pdf"><img src="pdf-icon.svg" alt="PDF Download" width="50" style="display:inline;"/>
 Click here to download a PDF version of this document</a></p>
@@ -724,6 +724,17 @@ Stepner, <a
 href="https://conference.nber.org/conf_papers/f247909.pdf">“Expanding
 the Frontier of Economic Measurement: Weekly Regional Employment
 Statistics”</a> (2026).</p>
+<h3 id="revisions-on-october-16th-2026">Revisions on October 16th
+2026</h3>
+<p>The employment series was revised on October 16, 2026 to correct an
+employee counting error in the processing pipeline. A type conversion
+applied when payroll records were read was setting some employees’ hours
+values to zero rather than preserving them and later imputing them, so
+weekly raw employment counts among continuing employers were
+understated. Because this processing was consistent, however, the effect
+on the growth rate derived final series is muted. In fixing the type
+conversion the Alteryx components of the pipeline have been migrated to
+Python.</p>
 <h2 id="unemployment-claims">Unemployment Claims</h2>
 <h3 id="revisions-on-july-29th-2021">Revisions on July 29th 2021</h3>
 <p>The unemployment data was revised on July 29, 2021 to correct a data
