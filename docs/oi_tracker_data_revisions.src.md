@@ -7,7 +7,7 @@ numbersections: true
 title: |
   | Opportunity Insights Economic Tracker
   | Data Revisions
-subtitle: last updated on 2026-10-16
+subtitle: last updated on 2026-11-23
 documentclass: scrartcl
 ---
 
@@ -172,6 +172,10 @@ On January 16th, 2026 Lightcast updated their job postings database to include i
 ### Revisions on February 24th 2026
 
 On February 16th, 2026 Lightcast revised their job postings database retroactively lowering the level of postings throughout 2023 and into mid 2024. This revision undoes a large part of the upwards revision made in the previous January 16th update. More information from Lightcast on the changes will be included when and if it becomes available. 
+
+### Revisions on November 23rd 2026
+
+Beginning on the week ending October 30th, 2026, Lightcast was unable to collect postings from a major national job board nor able to reattribute postings collected later, which artificially lowered the count of new job postings in the weeks ending October 30th and November 6th, 2026. We have replaced the posting counts for those two weeks with values linearly interpolated between the week ending October 23rd and the week ending November 13th, 2026 to correct for the anomalous dip.
 
 ## Employment
 
